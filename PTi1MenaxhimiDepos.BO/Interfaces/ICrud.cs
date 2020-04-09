@@ -11,8 +11,8 @@ namespace PTi1MenaxhimiDepos.DAL
     {
         bool Add(T obj);
         bool Delete(int id);
-        DataTable ReadAll();
-        DataTable ReadById(int id);
+        List<T> ReadAll();
+        T ReadById(int id);
         bool Update(int id, T obj);
     }
 }

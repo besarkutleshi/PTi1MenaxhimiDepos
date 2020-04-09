@@ -19,7 +19,16 @@ namespace PTi1MenaxhimiDepos.BO
         public string Phone { get; set; }
         public Address Address { get; set; }
 
-        public Employee(string name, string surname, string email, string phone, Address address,int roleid)
+        public Employee(string name, string surname, string email, string phone, Address address)
+        {
+            this.Name = name;
+            this.Surname = surname;
+            this.Email = email;
+            this.Phone = phone;
+            this.Address = address;
+        }
+
+        public Employee(string name, string surname, string email, string phone, Address address, int roleid)
         {
             this.Name = name;
             this.Surname = surname;

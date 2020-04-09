@@ -89,20 +89,28 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public DataTable ReadAll()
+        public List<Employee> ReadAll()
         {
             try
             {
-                DataTable dt = new DataTable();
-                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                List<Employee> employees = null;
+                using (var con = DataConnection.Connection())
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Select * from vw_GetAll_Personel", con);
-                    cmd.ExecuteNonQuery();
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    sda.Fill(dt);
-                    return dt;
+                    var cmd = DataConnection.Command(con, "sp_GetAll_Personel", CommandType.StoredProcedure);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    if (sdr.HasRows)
+                    {
+                        employees = new List<Employee>();
+                        Employee obj = null;
+                        while (sdr.Read())
+                        {
+                            obj = GetEmployee(sdr);
+                            employees.Add(obj);
+                        }
+                    }
                 }
+                return employees;
             }
             catch (Exception ex)
             {
@@ -111,28 +119,41 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public DataTable ReadById(int id)
+        public Employee ReadById(int id)
         {
             try
             {
-                DataTable dt = new DataTable();
-                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                Employee employee = null;
+                using (var con = DataConnection.Connection())
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_ReadById_Personel", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", id);
-                    cmd.ExecuteNonQuery();
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    sda.Fill(dt);
-                    return dt;
+                    var cmd = DataConnection.Command(con, "sp_Get_Personel_By_ID", CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "@ID", id);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    if (sdr.HasRows)
+                    {
+                        while (sdr.Read())
+                        {
+                            employee = GetEmployee(sdr);
+                        }
+                    }
                 }
+                return employee;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 return null;
             }
+        }
+
+        public Employee GetEmployee(SqlDataReader sdr)
+        {
+            Employee employee = new Employee(sdr["NAME"].ToString(), sdr["SURNAME"].ToString(), sdr["EMAIL"].ToString(), sdr["PHONE"].ToString(),
+                                new Address(sdr["STREET"].ToString(), sdr["CITY"].ToString(), sdr["COUNTRY"].ToString(), long.Parse(sdr["POSTALCODE"].ToString())));
+            employee.Role.Name = sdr["ROLE"].ToString();
+            employee.Username = sdr["INSERTBY"].ToString();
+            return employee;
         }
 
         public bool Update(int id, Employee obj)
