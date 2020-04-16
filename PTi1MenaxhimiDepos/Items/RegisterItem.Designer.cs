@@ -252,7 +252,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegisterItem";

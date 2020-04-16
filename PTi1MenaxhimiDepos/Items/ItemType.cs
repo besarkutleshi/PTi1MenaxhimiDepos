@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PTi1MenaxhimiDepos
+namespace PTi1MenaxhimiDepos.Items
 {
-    public partial class Login : Form
+    public partial class ItemType : Form
     {
-        public Login()
+        public ItemType()
         {
             InitializeComponent();
-        }
-
-        private void btnlogin_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

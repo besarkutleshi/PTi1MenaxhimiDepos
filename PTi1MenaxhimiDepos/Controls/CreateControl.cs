@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-
+using PTi1MenaxhimiDepos.Items;
 namespace PTi1MenaxhimiDepos.Controls
 {
     public class CreateControl
@@ -95,7 +95,7 @@ namespace PTi1MenaxhimiDepos.Controls
         public void PrintButtonsItems(TabPage tabPage, RadGridView obj, string[] values)
         {
             Button btnRegisterInvoice = new Button();
-            btnRegisterInvoice.Click += BtnRegisterInvoice_Click; ;
+            btnRegisterInvoice.Click += BtnRegisterInvoice_Click;
             Image invoice = CreateImage(new Bitmap(Properties.Resources.invoice));
             tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterInvoice, new Point(13, 20), new Size(75, 60), null, invoice));
             Label lblinvoice = new Label();
@@ -113,7 +113,7 @@ namespace PTi1MenaxhimiDepos.Controls
             Label lbltype = new Label();
             tabPage.Controls.Add(ControlShow.GetButtonss(lbltype, new Point(205, 85), new Size(75, 20), "Type"));
             Button btnRegisterUnit = new Button();
-            btnRegisterType.Click += BtnRegisterType_Click;
+            btnRegisterUnit.Click += BtnRegisterUnit_Click;
             Image unit = CreateImage(new Bitmap(Properties.Resources.unit));
             tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterUnit, new Point(274, 20), new Size(75, 60), null, unit));
             Label lblunit = new Label();
@@ -127,14 +127,24 @@ namespace PTi1MenaxhimiDepos.Controls
             PrintControls(tabPage, obj, values);
         }
 
+        private void BtnRegisterUnit_Click(object sender, EventArgs e)
+        {
+            ItemUnit obj = new ItemUnit();
+            obj.ShowDialog();
+        }
         private void BtnRegisterInvoice_Click(object sender, EventArgs e)
         {
+
         }
         private void BtnRegisterCategory_Click(object sender, EventArgs e)
         {
+            ItemCategory obj = new ItemCategory();
+            obj.ShowDialog();
         }
         private void BtnRegisterType_Click(object sender, EventArgs e)
         {
+            ItemType obj = new ItemType();
+            obj.ShowDialog();
         }
         private void BtnRegisterItem_Click(object sender, EventArgs e)
         {

@@ -129,6 +129,7 @@
             this.btnlogin.Text = "Login";
             this.btnlogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // Login
             // 
