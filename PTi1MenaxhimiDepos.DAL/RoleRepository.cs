@@ -7,9 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PTi1MenaxhimiDepos.BO;
+using PTi1MenaxhimiDepos.DAL.Interface;
+
 namespace PTi1MenaxhimiDepos.DAL
 {
-    public class RoleRepository : ICrud<Role>
+    public class RoleRepository : ICrud<Role>,IGetObject<Role>
     {
         public bool Add(Role obj)
         {
@@ -84,18 +86,25 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public DataTable ReadAll()
+        public Role Get(SqlDataReader sdr)
+        {
+            return new Role(sdr["NAME"].ToString(), sdr["CODE"].ToString(), sdr["DESCRIPTION"].ToString());
+        }
+
+        public List<Role> ReadAll()
         {
             try
             {
-                DataTable dt = new DataTable();
+                List<Role> dt = new List<Role>();
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Select * from vw_ReadAll_Role", con);
-                    cmd.ExecuteNonQuery();
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    sda.Fill(dt);
+                    var cmd = DataConnection.Command(con, "sp_GetAll_Roles", CommandType.StoredProcedure);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        dt.Add(Get(sdr));
+                    }
                 }
                 return dt;
             }
@@ -106,22 +115,23 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public DataTable ReadById(int id)
+        public Role ReadById(int id)
         {
             try
             {
-                DataTable dt = new DataTable();
+                Role role = null;
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_ReadByID_Role", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", id);
-                    cmd.ExecuteNonQuery();
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    sda.Fill(dt);
-                    return dt;
+                    var cmd = DataConnection.Command(con, "sp_ReadByID_Role", CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "ID", id);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        role = Get(sdr);
+                    }
                 }
+                return role;
             }
             catch (Exception ex)
             {

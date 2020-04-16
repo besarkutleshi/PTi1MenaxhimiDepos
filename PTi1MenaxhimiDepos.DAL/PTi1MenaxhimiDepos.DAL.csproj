@@ -46,6 +46,7 @@
     <Compile Include="ClientsRepository.cs" />
     <Compile Include="EmployeeRepository.cs" />
     <Compile Include="DataConnection.cs" />
+    <Compile Include="Interface\IGetObject.cs" />
     <Compile Include="ItemCategoryRepository.cs" />
     <Compile Include="ItemRepository.cs" />
     <Compile Include="ItemTypeRepository.cs" />

@@ -7,9 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PTi1MenaxhimiDepos.BO;
+using PTi1MenaxhimiDepos.DAL.Interface;
+
 namespace PTi1MenaxhimiDepos.DAL
 {
-    public class ItemTypeRepository : ICrud<ItemType>
+    public class ItemTypeRepository : ICrud<ItemType>,IGetObject<ItemType>
     {
         public bool Add(ItemType obj)
         {
@@ -81,18 +83,26 @@ namespace PTi1MenaxhimiDepos.DAL
                 return false;
             }
         }
-        public DataTable ReadAll()
+
+        public ItemType Get(SqlDataReader sdr)
+        {
+            return new ItemType(int.Parse(sdr["TYPEID"].ToString()), sdr["NAME"].ToString(), sdr["DESCRIPTION"].ToString());
+        }
+
+        public List<ItemType> ReadAll()
         {
             try
             {
-                DataTable dt = new DataTable();
+                List<ItemType> dt = new List<ItemType>();
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM vw_ReadAll_Type", con);
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    cmd.ExecuteNonQuery();
-                    sda.Fill(dt);
+                    var cmd = DataConnection.Command(con, "sp_GetAll_Types", CommandType.StoredProcedure);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        dt.Add(Get(sdr));
+                    }
                 }
                 return dt;
             }
@@ -102,22 +112,23 @@ namespace PTi1MenaxhimiDepos.DAL
                 return null;
             }
         }
-        public DataTable ReadById(int id)
+        public ItemType ReadById(int id)
         {
             try
             {
-                DataTable dt = new DataTable();
+                ItemType obj = null;
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_ReadById_Type", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", id);
-                    cmd.ExecuteNonQuery();
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    sda.Fill(dt);
+                    var cmd = DataConnection.Command(con, "sp_ReadById_Type", CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "@ID", id);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        obj = Get(sdr);
+                    }
                 }
-                return dt;
+                return obj;
             }
             catch (Exception ex)
             {

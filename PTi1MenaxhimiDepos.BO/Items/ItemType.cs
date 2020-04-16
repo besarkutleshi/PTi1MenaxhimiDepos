@@ -12,7 +12,10 @@ namespace PTi1MenaxhimiDepos.BO
         public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-
+        public ItemType(string name)
+        {
+            Name = name;
+        }
         public ItemType(int iD, string name, string description)
         {
             ID = iD;

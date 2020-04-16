@@ -7,9 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PTi1MenaxhimiDepos.BO;
+using PTi1MenaxhimiDepos.DAL.Interface;
+
 namespace PTi1MenaxhimiDepos.DAL
 {
-    public class ItemUnitRepository : ICrud<ItemUnit>
+    public class ItemUnitRepository : ICrud<ItemUnit>,IGetObject<ItemUnit>
     {
         public bool Add(ItemUnit obj)
         {
@@ -83,18 +85,26 @@ namespace PTi1MenaxhimiDepos.DAL
                 return false;
             }
         }
-        public DataTable ReadAll()
+
+        public ItemUnit Get(SqlDataReader sdr)
+        {
+            return new ItemUnit(int.Parse(sdr["UNITID"].ToString()), sdr["NAME"].ToString(), sdr["DESCRIPTION"].ToString());
+        }
+
+        public List<ItemUnit> ReadAll()
         {
             try
             {
-                DataTable dt = new DataTable();
+                List<ItemUnit> dt = new List<ItemUnit>();
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("select * from vw_ReadAll_Unit", con);
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    cmd.ExecuteNonQuery();
-                    sda.Fill(dt);
+                    var cmd = DataConnection.Command(con, "sp_GetAll_Unit", CommandType.StoredProcedure);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        dt.Add(Get(sdr));
+                    }
                 }
                 return dt;
             }
@@ -104,22 +114,23 @@ namespace PTi1MenaxhimiDepos.DAL
                 return null;
             }
         }
-        public DataTable ReadById(int id)
+        public ItemUnit ReadById(int id)
         {
             try
             {
-                DataTable dt = new DataTable();
+                ItemUnit obj = null;
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_ReadById_Unit", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", id);
-                    cmd.ExecuteNonQuery();
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    sda.Fill(dt);
+                    var cmd = DataConnection.Command(con, "sp_GetAll_Unit", CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "@ID", id);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        obj = Get(sdr);
+                    }
                 }
-                return dt;
+                return obj;
             }
             catch (Exception ex)
             {

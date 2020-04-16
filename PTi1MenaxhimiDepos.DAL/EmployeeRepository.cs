@@ -1,4 +1,5 @@
 ﻿using PTi1MenaxhimiDepos.BO;
+using PTi1MenaxhimiDepos.DAL.Interface;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace PTi1MenaxhimiDepos.DAL
 {
-    public class EmployeeRepostiory : ICrud<Employee>
+    public class EmployeeRepostiory : ICrud<Employee>,IGetObject<Employee>
     {
         public bool Add(Employee obj)
         {
@@ -105,7 +106,7 @@ namespace PTi1MenaxhimiDepos.DAL
                         Employee obj = null;
                         while (sdr.Read())
                         {
-                            obj = GetEmployee(sdr);
+                            obj = Get(sdr);
                             employees.Add(obj);
                         }
                     }
@@ -134,7 +135,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     {
                         while (sdr.Read())
                         {
-                            employee = GetEmployee(sdr);
+                            employee = Get(sdr);
                         }
                     }
                 }
@@ -147,12 +148,11 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public Employee GetEmployee(SqlDataReader sdr)
+        public Employee Get(SqlDataReader sdr)
         {
             Employee employee = new Employee(sdr["NAME"].ToString(), sdr["SURNAME"].ToString(), sdr["EMAIL"].ToString(), sdr["PHONE"].ToString(),
                                 new Address(sdr["STREET"].ToString(), sdr["CITY"].ToString(), sdr["COUNTRY"].ToString(), long.Parse(sdr["POSTALCODE"].ToString())));
             employee.Role.Name = sdr["ROLE"].ToString();
-            employee.Username = sdr["INSERTBY"].ToString();
             return employee;
         }
 

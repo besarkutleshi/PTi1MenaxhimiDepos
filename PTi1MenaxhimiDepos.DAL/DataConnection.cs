@@ -54,6 +54,8 @@ namespace PTi1MenaxhimiDepos.DAL
             SqlParameter sqlParameter = cmd.CreateParameter();
             sqlParameter.ParameterName = parametername;
             sqlParameter.Direction = parameterDirection;
+            sqlParameter.DbType = DbType.Int32;
+            cmd.Parameters.Add(sqlParameter);
         }
         public static int GetValue(SqlCommand cmd)
         {

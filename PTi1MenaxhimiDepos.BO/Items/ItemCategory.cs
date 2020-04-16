@@ -14,6 +14,10 @@ namespace PTi1MenaxhimiDepos.BO
         public string Name { get; set; }
         public string Description { get; set; }
 
+        public ItemCategory(string name)
+        {
+            Name = name;
+        }
         public ItemCategory(int iD, string name, string description)
         {
             ID = iD;

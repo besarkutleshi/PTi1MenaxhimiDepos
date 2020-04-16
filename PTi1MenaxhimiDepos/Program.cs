@@ -15,7 +15,7 @@ namespace PTi1MenaxhimiDepos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sale.Sale());
+            Application.Run(new Main());
         }
     }
 }

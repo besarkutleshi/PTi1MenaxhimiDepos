@@ -7,10 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PTi1MenaxhimiDepos.BO;
+using PTi1MenaxhimiDepos.DAL.Interface;
 
 namespace PTi1MenaxhimiDepos.DAL
 {
-    public class ClientsRepository : ICrud<Client>
+    public class ClientsRepository : ICrud<Client>,IGetObject<Client>
     {
         public bool Add(Client obj)
         {
@@ -92,7 +93,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     SqlDataReader sdr = cmd.ExecuteReader();
                     while (sdr.Read())
                     {
-                        clients.Add(GetClient(sdr));
+                        clients.Add(Get(sdr));
                     }
                 }
                 return clients;
@@ -104,7 +105,7 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public Client GetClient(SqlDataReader sdr)
+        public Client Get(SqlDataReader sdr)
         {
             Client obj = new Client(sdr["NAME"].ToString(), sdr["USERNAME"].ToString(), sdr["PHONE"].ToString(), sdr["EMAIL"].ToString(),
                             new Address(sdr["STREET"].ToString(), sdr["CITY"].ToString(), sdr["COUNTRY"].ToString(), long.Parse(sdr["POSTALCODE"].ToString())));
@@ -124,7 +125,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     SqlDataReader sdr = cmd.ExecuteReader();
                     while (sdr.Read())
                     {
-                        client = GetClient(sdr);
+                        client = Get(sdr);
                     }
                 }
                 return client;

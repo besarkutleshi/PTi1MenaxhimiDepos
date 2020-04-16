@@ -7,9 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PTi1MenaxhimiDepos.BO;
+using PTi1MenaxhimiDepos.DAL.Interface;
+
 namespace PTi1MenaxhimiDepos.DAL
 {
-    public class PointofSalesRepository : ICrud<PointofSale>
+    public class PointofSalesRepository : ICrud<PointofSale>,IGetObject<PointofSale>
     {
         public bool Add(PointofSale obj)
         {
@@ -86,20 +88,27 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public DataTable ReadAll()
+        public PointofSale Get(SqlDataReader sdr)
+        {
+            return new PointofSale(sdr["NAME"].ToString(), sdr["CITY"].ToString(), int.Parse(sdr["PHONE"].ToString()), sdr["DESCRITPTION"].ToString());
+        }
+
+        public List<PointofSale> ReadAll()
         {
             try
             {
-                DataTable dt = new DataTable();
+                List<PointofSale> poss = new List<PointofSale>();
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Select * from vw_ReadAll_POS", con);
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    cmd.ExecuteNonQuery();
-                    sda.Fill(dt);
+                    var cmd = DataConnection.Command(con, "sp_GetAll_Pos", CommandType.StoredProcedure);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        poss.Add(Get(sdr));
+                    }
                 }
-                return dt;
+                return poss;
             }
             catch (Exception ex)
             {
@@ -108,22 +117,23 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public DataTable ReadById(int id)
+        public PointofSale ReadById(int id)
         {
             try
             {
-                DataTable dt = new DataTable();
+                PointofSale pos = null;
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_ReadById_POS", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", id);
-                    cmd.ExecuteNonQuery();
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    sda.Fill(dt);
+                    var cmd = DataConnection.Command(con, "sp_GetAll_Pos", CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "@ID", id);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        pos = Get(sdr);
+                    }
                 }
-                return dt;
+                return pos;
             }
             catch (Exception ex)
             {

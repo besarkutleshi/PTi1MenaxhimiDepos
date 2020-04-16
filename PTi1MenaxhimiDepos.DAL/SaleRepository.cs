@@ -27,7 +27,7 @@ namespace PTi1MenaxhimiDepos.DAL
             }
             catch (Exception)
             {
-                throw;
+                return null;
             }
         }
 

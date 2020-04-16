@@ -9,5 +9,10 @@ namespace PTi1MenaxhimiDepos.BO
     public class Supplier:AuditionAtributtes
     {
         public int ID { get; set; }
+        public string Name { get; set; }
+        public Supplier(string name)
+        {
+            Name = name;
+        }
     }
 }
