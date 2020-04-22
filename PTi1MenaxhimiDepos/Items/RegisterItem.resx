@@ -122,7 +122,7 @@
     <value>Segoe UI, 10.25pt</value>
   </data>
   <data name="dgwItems.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 299</value>
+    <value>12, 347</value>
   </data>
   <data name="dgwItems.Size" type="System.Drawing.Size, System.Drawing">
     <value>1459, 371</value>
@@ -225,7 +225,7 @@
     <value>Segoe UI, 14.2pt, style=Bold</value>
   </data>
   <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1161, 238</value>
+    <value>1330, 286</value>
   </data>
   <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 55</value>
@@ -239,6 +239,9 @@
   <data name="btnUpdate.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
+  <data name="btnUpdate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
     <value>btnUpdate</value>
   </data>
@@ -249,13 +252,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.2pt, style=Bold</value>
   </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1330, 238</value>
+    <value>1330, 286</value>
   </data>
   <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 55</value>
@@ -279,7 +282,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="txtname.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
@@ -764,6 +767,39 @@
   <data name="&gt;&gt;cmdSupplier.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="btnDelete.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.2pt, style=Bold</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1330, 213</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 55</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnDelete.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnDelete.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -771,7 +807,7 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1478, 682</value>
+    <value>1477, 730</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">

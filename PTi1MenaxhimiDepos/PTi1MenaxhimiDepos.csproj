@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Controls\ControlShow.cs" />
     <Compile Include="Controls\CreateControl.cs" />
+    <Compile Include="HelpClass.cs" />
     <Compile Include="Items\ItemCategory.cs">
       <SubType>Form</SubType>
     </Compile>

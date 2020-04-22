@@ -15,6 +15,7 @@ namespace PTi1MenaxhimiDepos
 {
     public partial class RegisterItem : Form
     {
+        string Barcode = null;
         public RegisterItem()
         {
             InitializeComponent();
@@ -35,23 +36,15 @@ namespace PTi1MenaxhimiDepos
                 || cmbunit.SelectedIndex == -1 || cmdSupplier.SelectedIndex == -1)
             {
                 MessageBox.Show("Please Fill In Empty Box's", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                return;
-            }
-            bool isAvtive = false;
-            if(cmbActive.SelectedIndex == 0)
-            {
-                isAvtive = true;
             }
             else
             {
-                isAvtive = false;
-            }
-            int a = (int)cmbunit.SelectedValue;
-            Item obj = new Item(txtbarcode.Text, txtname.Text,(int)cmbunit.SelectedValue,(int)cmbcategory.SelectedValue,(int)cmbtype.SelectedValue,isAvtive,int.Parse(txtstock.Text),txtDescription.Text);
-            if (ItemBLL.InsertItem(obj))
-            {
-                HelperClass.LoadGridItem(ItemBLL.GetItems(), dgwItems);
-                txtbarcode.Text = txtDescription.Text = txtname.Text = txtSearch.Text = txtstock.Text = "";
+                Item obj = new Item(txtbarcode.Text, txtname.Text, (int)cmbunit.SelectedValue, (int)cmbcategory.SelectedValue, (int)cmbtype.SelectedValue, IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
+                if (ItemBLL.InsertItem(obj))
+                {
+                    HelperClass.LoadGridItem(ItemBLL.GetItems(), dgwItems);
+                    txtbarcode.Text = txtDescription.Text = txtname.Text = txtSearch.Text = txtstock.Text = "";
+                }
             }
         }
 
@@ -66,7 +59,6 @@ namespace PTi1MenaxhimiDepos
                 }
                 else
                 {
-
                     BO.Item item = ItemBLL.GetItemByName(txtSearch.Text);
                     HelperClass.DoesExist(item, dgwItems);
                 }
@@ -83,6 +75,35 @@ namespace PTi1MenaxhimiDepos
             {
                 HelperClass.LoadGridItem(ItemBLL.GetItems(),dgwItems);
             }
+        }
+
+        private void dgwItems_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            Barcode = HelpClass.GetValue(e, dgwItems, 0);
+            txtbarcode.Text = HelpClass.GetValue(e, dgwItems, 0);
+            txtname.Text = HelpClass.GetValue(e, dgwItems, 1);
+            cmbunit.Text = HelpClass.GetValue(e, dgwItems, 2);
+            cmbcategory.Text = HelpClass.GetValue(e, dgwItems, 3);
+            cmbtype.Text = HelpClass.GetValue(e, dgwItems, 4);
+            cmdSupplier.Text = HelpClass.GetValue(e, dgwItems, 5);
+            cmbActive.Text = HelpClass.GetValue(e, dgwItems, 6);
+            txtstock.Text = HelpClass.GetValue(e, dgwItems, 7);
+            txtDescription.Text = HelpClass.GetValue(e, dgwItems, 8);
+            btnDelete.Visible = btnUpdate.Visible = true; btnSave.Visible = false;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Item obj = new Item(txtbarcode.Text, txtname.Text, (int)cmbunit.SelectedValue, (int)cmbcategory.SelectedValue, (int)cmbtype.SelectedValue, IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
+        
+        }
+
+        private bool IsActive()
+        {
+            if (cmbActive.SelectedIndex == 0)
+                return true;
+            else
+                return false;
         }
     }
 }

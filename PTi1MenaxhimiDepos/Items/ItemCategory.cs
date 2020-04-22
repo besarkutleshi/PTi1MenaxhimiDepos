@@ -78,24 +78,33 @@ namespace PTi1MenaxhimiDepos.Items
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (ItemBLL.DeleteCategory(category.ID))
+            if(MessageBox.Show("Are you sure","Sure",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                btnSave.Visible = true; btnDelete.Visible = false; btnUpdate.Visible = false;
-                txtname.Text = txtdescription.Text = "";
-                HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
+                if (ItemBLL.DeleteCategory(category.ID))
+                {
+                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
+                }
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            category.Name = txtname.Text;
-            category.Description = txtdescription.Text;
-            category.Username = "besarkutleshi";
-            if (ItemBLL.UpdateCategory(category.ID,category))
+            if(category.Name == txtname.Text && category.Description == txtdescription.Text)
             {
-                btnSave.Visible = true; btnDelete.Visible = false; btnUpdate.Visible = false;
-                txtname.Text = txtdescription.Text = "";
-                HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
+                MessageBox.Show("You do not change anything", "Not Change", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            }
+            else
+            {
+                category.Name = txtname.Text;
+                category.Description = txtdescription.Text;
+                category.Username = "besarkutleshi";
+                if (MessageBox.Show("Are you sure", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (ItemBLL.UpdateCategory(category.ID, category))
+                    {
+                        HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
+                    }
+                }
             }
         }
     }

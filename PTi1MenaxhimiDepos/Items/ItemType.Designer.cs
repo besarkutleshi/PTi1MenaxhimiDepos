@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.txtname = new Telerik.WinControls.UI.RadTextBox();
             this.txtdescription = new Telerik.WinControls.UI.RadTextBox();
             this.btnSave = new Telerik.WinControls.UI.RadButton();
@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnSearch = new Telerik.WinControls.UI.RadButton();
             this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
+            this.btndelete = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
@@ -47,6 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwTypes.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btndelete)).BeginInit();
             this.SuspendLayout();
             // 
             // txtname
@@ -54,22 +56,22 @@
             this.txtname.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtname.Location = new System.Drawing.Point(26, 36);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(174, 37);
+            this.txtname.Size = new System.Drawing.Size(227, 37);
             this.txtname.TabIndex = 0;
             // 
             // txtdescription
             // 
             this.txtdescription.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtdescription.Location = new System.Drawing.Point(233, 36);
+            this.txtdescription.Location = new System.Drawing.Point(296, 36);
             this.txtdescription.Name = "txtdescription";
-            this.txtdescription.Size = new System.Drawing.Size(174, 37);
+            this.txtdescription.Size = new System.Drawing.Size(227, 37);
             this.txtdescription.TabIndex = 1;
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = global::PTi1MenaxhimiDepos.Properties.Resources.add_1_icon;
-            this.btnSave.Location = new System.Drawing.Point(476, 36);
+            this.btnSave.Location = new System.Drawing.Point(651, 152);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(137, 56);
             this.btnSave.TabIndex = 2;
@@ -81,12 +83,14 @@
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Image = global::PTi1MenaxhimiDepos.Properties.Resources.update;
-            this.btnUpdate.Location = new System.Drawing.Point(648, 36);
+            this.btnUpdate.Location = new System.Drawing.Point(651, 90);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(137, 56);
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dgwTypes
             // 
@@ -95,11 +99,14 @@
             // 
             // 
             // 
+            this.dgwTypes.MasterTemplate.AllowDeleteRow = false;
+            this.dgwTypes.MasterTemplate.AllowEditRow = false;
             this.dgwTypes.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwTypes.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgwTypes.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dgwTypes.Name = "dgwTypes";
             this.dgwTypes.Size = new System.Drawing.Size(776, 278);
             this.dgwTypes.TabIndex = 4;
+            this.dgwTypes.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwTypes_CellDoubleClick);
             // 
             // label1
             // 
@@ -115,7 +122,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label2.Location = new System.Drawing.Point(229, 9);
+            this.label2.Location = new System.Drawing.Point(292, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 24);
             this.label2.TabIndex = 3;
@@ -152,6 +159,19 @@
             this.txtSearch.TabIndex = 9;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // btndelete
+            // 
+            this.btndelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndelete.Image = global::PTi1MenaxhimiDepos.Properties.Resources.cancel_icon;
+            this.btndelete.Location = new System.Drawing.Point(651, 17);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(137, 56);
+            this.btndelete.TabIndex = 3;
+            this.btndelete.Text = "Delete";
+            this.btndelete.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btndelete.Visible = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
             // ItemType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -163,6 +183,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgwTypes);
+            this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtdescription);
@@ -180,6 +201,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwTypes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btndelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +219,6 @@
         private System.Windows.Forms.Label label3;
         private Telerik.WinControls.UI.RadButton btnSearch;
         private Telerik.WinControls.UI.RadTextBox txtSearch;
+        private Telerik.WinControls.UI.RadButton btndelete;
     }
 }

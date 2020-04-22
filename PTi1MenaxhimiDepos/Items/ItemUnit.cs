@@ -14,6 +14,7 @@ namespace PTi1MenaxhimiDepos.Items
 {
     public partial class ItemUnit : Form
     {
+        BO.ItemUnit unit = null;
         public ItemUnit()
         {
             InitializeComponent();
@@ -59,6 +60,62 @@ namespace PTi1MenaxhimiDepos.Items
             if(txtSearch.Text == "")
             {
                 HelperClass.LoadGrid(ItemBLL.GetItemUnits(),dgwTypes);
+            }
+        }
+
+        private void dgwTypes_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            unit = new BO.ItemUnit(int.Parse(HelpClass.GetValue(e, dgwTypes, 0)), HelpClass.GetValue(e, dgwTypes, 1), HelpClass.GetValue(e, dgwTypes, 2));
+            txtname.Text = unit.Name; txtdescription.Text = unit.Description;
+            btnDelete.Visible = btnUpdate.Visible = true; btnSave.Visible = false;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if(unit.Name == txtname.Text && unit.Description == txtdescription.Text)
+            {
+                MessageBox.Show("You do not change anything", "Not Change", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if(MessageBox.Show("Are you sure","Sure",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                unit.Name = txtname.Text;
+                unit.Description = txtdescription.Text;
+                unit.Username = "besarkutleshi";
+                if (ItemBLL.UpdateUnitType(unit.ID, unit))
+                {
+                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
+                    HelperClass.LoadGrid(ItemBLL.GetItemUnits(),dgwTypes);
+                    unit = null;
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (ItemBLL.DeleteUnitType(unit.ID))
+                {
+                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
+                    HelperClass.LoadGrid(ItemBLL.GetItemUnits(), dgwTypes);
+                    unit = null;
+                }
+            }
+        }
+
+        private void txtname_TextChanged(object sender, EventArgs e)
+        {
+            if(txtname.Text == "" && txtdescription.Text == "")
+            {
+                HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
+            }
+        }
+
+        private void txtdescription_TextChanged(object sender, EventArgs e)
+        {
+            if (txtname.Text == "" && txtdescription.Text == "")
+            {
+                HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
             }
         }
     }

@@ -47,7 +47,6 @@ namespace PTi1MenaxhimiDepos.BL
         public static void LoadGridItem(List<Item> items,RadGridView grid)
         {
             grid.DataSource = ItemBLL.ConvertToDataTableItems(items);
-        } 
-
+        }
     }
 }

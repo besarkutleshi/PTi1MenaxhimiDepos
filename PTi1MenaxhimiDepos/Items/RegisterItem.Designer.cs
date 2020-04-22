@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterItem));
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             this.dgwItems = new Telerik.WinControls.UI.RadGridView();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
@@ -57,6 +57,7 @@
             this.cmbActive = new Telerik.WinControls.UI.RadDropDownList();
             this.radDropDownList5 = new Telerik.WinControls.UI.RadDropDownList();
             this.cmdSupplier = new Telerik.WinControls.UI.RadDropDownList();
+            this.btnDelete = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgwItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwItems.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
@@ -83,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbActive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDropDownList5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // dgwItems
@@ -91,9 +93,12 @@
             // 
             // 
             // 
+            this.dgwItems.MasterTemplate.AllowDeleteRow = false;
+            this.dgwItems.MasterTemplate.AllowEditRow = false;
             this.dgwItems.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwItems.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.dgwItems.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dgwItems.Name = "dgwItems";
+            this.dgwItems.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwItems_CellDoubleClick);
             // 
             // radLabel10
             // 
@@ -118,6 +123,7 @@
             resources.ApplyResources(this.btnUpdate, "btnUpdate");
             this.btnUpdate.Image = global::PTi1MenaxhimiDepos.Properties.Resources.update;
             this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -209,10 +215,10 @@
             // cmbActive
             // 
             resources.ApplyResources(this.cmbActive, "cmbActive");
-            radListDataItem3.Text = "True";
-            radListDataItem4.Text = "False";
-            this.cmbActive.Items.Add(radListDataItem3);
-            this.cmbActive.Items.Add(radListDataItem4);
+            radListDataItem1.Text = "True";
+            radListDataItem2.Text = "False";
+            this.cmbActive.Items.Add(radListDataItem1);
+            this.cmbActive.Items.Add(radListDataItem2);
             this.cmbActive.Name = "cmbActive";
             // 
             // radDropDownList5
@@ -224,6 +230,12 @@
             // 
             resources.ApplyResources(this.cmdSupplier, "cmdSupplier");
             this.cmdSupplier.Name = "cmdSupplier";
+            // 
+            // btnDelete
+            // 
+            resources.ApplyResources(this.btnDelete, "btnDelete");
+            this.btnDelete.Image = global::PTi1MenaxhimiDepos.Properties.Resources.cancel_icon;
+            this.btnDelete.Name = "btnDelete";
             // 
             // RegisterItem
             // 
@@ -252,6 +264,7 @@
             this.Controls.Add(this.radLabel10);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -286,6 +299,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbActive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDropDownList5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +331,6 @@
         private Telerik.WinControls.UI.RadDropDownList cmbActive;
         private Telerik.WinControls.UI.RadDropDownList radDropDownList5;
         private Telerik.WinControls.UI.RadDropDownList cmdSupplier;
+        private Telerik.WinControls.UI.RadButton btnDelete;
     }
 }
