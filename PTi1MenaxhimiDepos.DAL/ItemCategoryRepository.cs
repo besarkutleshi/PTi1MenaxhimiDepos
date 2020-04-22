@@ -28,16 +28,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     o.Parameters.AddWithValue("@InsertBy", obj.Username);
                     value = DataConnection.GetValue(o);
                 }
-                if (value == 1)
-                {
-                    MessageBox.Show("Register Successful", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Register Failed", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(value, "Register");
             }
             catch (Exception ex)
             {
@@ -59,16 +50,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     cmd.Parameters.AddWithValue("@ID", id);
                     value = DataConnection.GetValue(cmd);
                 }
-                if (value == 1)
-                {
-                    MessageBox.Show("Delete Successful", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Delete Failed", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(value, "Delete");
             }
             catch (Exception ex)
             {
@@ -92,16 +74,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     cc.Parameters.AddWithValue("@UpdateBy", obj.Username);
                     value = DataConnection.GetValue(cc);
                 }
-                if (value == 1)
-                {
-                    MessageBox.Show("Update Successful", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Update Failed", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(value, "Update");
             }
             catch (Exception ex)
             {

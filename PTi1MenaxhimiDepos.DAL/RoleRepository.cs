@@ -17,36 +17,19 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                if (obj.Equals(obj))
+                int val = 0;
+                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
-                    MessageBox.Show("Role Exist \nRegister Failed", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Insert_Role", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Name", obj.Name);
+                    cmd.Parameters.AddWithValue("@Code", obj.Code);
+                    cmd.Parameters.AddWithValue("@Description", obj.Description);
+                    cmd.Parameters.AddWithValue("@InsertBy", obj.Username);
+                    val = DataConnection.GetValue(cmd);
                 }
-                else
-                {
-                    int val = 0;
-                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
-                    {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand("sp_Insert_Role", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Name", obj.Name);
-                        cmd.Parameters.AddWithValue("@Code", obj.Code);
-                        cmd.Parameters.AddWithValue("@Description", obj.Description);
-                        cmd.Parameters.AddWithValue("@InsertBy", obj.Username);
-                        val = DataConnection.GetValue(cmd);
-                    }
-                    if (val == 1)
-                    {
-                        MessageBox.Show("Register Successful", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Register Failed", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                        return false;
-                    }
-                }
+                return HelperClass.GetValue(val, "Register");
             }
             catch (Exception ex)
             {
@@ -68,16 +51,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     cmd.Parameters.AddWithValue("@ID", id);
                     val = DataConnection.GetValue(cmd);
                 }
-                if (val == 1)
-                {
-                    MessageBox.Show("Delete Successful", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Delete Failed", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(val, "Delete");
             }
             catch (Exception ex)
             {
@@ -140,6 +114,31 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
+        public Role ReadByName(string name)
+        {
+            try
+            {
+                Role role = null;
+                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                {
+                    con.Open();
+                    var cmd = DataConnection.Command(con, "sp_ReadByName_Role", CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "Name", name);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        role = Get(sdr);
+                    }
+                }
+                return role;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
         public bool Update(int id, Role obj)
         {
             try
@@ -157,16 +156,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
                     val = DataConnection.GetValue(cmd);
                 }
-                if (val == 1)
-                {
-                    MessageBox.Show("Update Successful", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Update Failed", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(val, "Update");
             }
             catch (Exception ex)
             {

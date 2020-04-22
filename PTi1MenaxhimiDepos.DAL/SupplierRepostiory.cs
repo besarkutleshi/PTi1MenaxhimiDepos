@@ -1,4 +1,7 @@
-﻿using System;
+﻿using PTi1MenaxhimiDepos.BO;
+using PTi1MenaxhimiDepos.DAL;
+using PTi1MenaxhimiDepos.DAL.Interface;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -6,14 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PTi1MenaxhimiDepos.BO;
-using PTi1MenaxhimiDepos.DAL.Interface;
 
 namespace PTi1MenaxhimiDepos.DAL
 {
-    public class ItemUnitRepository : ICrud<ItemUnit>,IGetObject<ItemUnit>
+    class SupplierRepository :ICrud<Supplier>,IGetObject<Supplier>
     {
-        public bool Add(ItemUnit obj)
+        public bool Add(Supplier obj)
         {
             try
             {
@@ -21,10 +22,13 @@ namespace PTi1MenaxhimiDepos.DAL
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Insert_Unit", con);
+                    SqlCommand cmd = new SqlCommand("sp_AddSupplier", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Name", obj.Name);
                     cmd.Parameters.AddWithValue("@Description", obj.Description);
+                    cmd.Parameters.AddWithValue("@City", obj.City);
+                    cmd.Parameters.AddWithValue("@Phone", obj.Phone);
+                    cmd.Parameters.AddWithValue("@Mail", obj.Mail);
                     cmd.Parameters.AddWithValue("@InsertBy", obj.Username);
                     value = DataConnection.GetValue(cmd);
                 }
@@ -35,9 +39,8 @@ namespace PTi1MenaxhimiDepos.DAL
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 return false;
             }
-
-
         }
+
         public bool Delete(int id)
         {
             try
@@ -46,10 +49,13 @@ namespace PTi1MenaxhimiDepos.DAL
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Delete_Unit", con);
+                    SqlCommand cmd = new SqlCommand("sp_DeleteSupplier", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", id);
-                    value = DataConnection.GetValue(cmd);
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Parameters.Add(new SqlParameter("@Value", SqlDbType.Int));
+                    cmd.Parameters["@Value"].Direction = ParameterDirection.Output;
+                    cmd.ExecuteNonQuery();
+                    value = int.Parse(cmd.Parameters["@Value"].Value.ToString());
                 }
                 return HelperClass.GetValue(value, "Delete");
             }
@@ -60,20 +66,22 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public ItemUnit Get(SqlDataReader sdr)
+        public Supplier Get(SqlDataReader sdr)
         {
-            return new ItemUnit(int.Parse(sdr["UNITID"].ToString()), sdr["NAME"].ToString(), sdr["DESCRIPTION"].ToString());
+            Supplier obj = new Supplier(int.Parse(sdr["SUPPLIERID"].ToString()), sdr["NAME"].ToString(), sdr["DESCRIPTION"].ToString(), sdr["CITY"].ToString(),
+                sdr["Phone"].ToString(), sdr["MAIL"].ToString());
+            return obj;
         }
 
-        public List<ItemUnit> ReadAll()
+        public List<Supplier> ReadAll()
         {
             try
             {
-                List<ItemUnit> dt = new List<ItemUnit>();
+                List<Supplier> dt = new List<Supplier>();
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    var cmd = DataConnection.Command(con, "sp_GetAll_Unit", CommandType.StoredProcedure);
+                    SqlCommand cmd = new SqlCommand("sp_GetAll_Suppliers", con);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     while (sdr.Read())
                     {
@@ -88,16 +96,18 @@ namespace PTi1MenaxhimiDepos.DAL
                 return null;
             }
         }
-        public ItemUnit ReadById(int id)
+
+        public Supplier ReadById(int id)
         {
             try
             {
-                ItemUnit obj = null;
+                Supplier obj = null;
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    var cmd = DataConnection.Command(con, "sp_ReadById_Unit", CommandType.StoredProcedure);
-                    DataConnection.AddParameter(cmd, "@ID", id);
+                    SqlCommand cmd = new SqlCommand("sp_GetById_Suppliers", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID", id);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     while (sdr.Read())
                     {
@@ -113,16 +123,17 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public ItemUnit ReadByName(string name)
+        public Supplier ReadByName(string name)
         {
             try
             {
-                ItemUnit obj = null;
+                Supplier obj = null;
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    var cmd = DataConnection.Command(con, "sp_ReadByName_Unit", CommandType.StoredProcedure);
-                    DataConnection.AddParameter(cmd, "@Name", name);
+                    SqlCommand cmd = new SqlCommand("sp_GetByName_Suppliers", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Name", name);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     while (sdr.Read())
                     {
@@ -137,7 +148,8 @@ namespace PTi1MenaxhimiDepos.DAL
                 return null;
             }
         }
-        public bool Update(int id, ItemUnit obj)
+
+        public bool Update(int id, Supplier obj)
         {
             try
             {
@@ -145,13 +157,16 @@ namespace PTi1MenaxhimiDepos.DAL
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Update_unit", con);
+                    SqlCommand cmd = new SqlCommand("", con); // ***Duhet me bo StoreProceduren ne DB 
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.Parameters.AddWithValue("@Id", id);
                     cmd.Parameters.AddWithValue("@Name", obj.Name);
                     cmd.Parameters.AddWithValue("@Description", obj.Description);
-                    cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
+                    cmd.Parameters.AddWithValue("@Phone", obj.Phone);
+                    cmd.Parameters.AddWithValue("@Mail", obj.Mail);
+                    cmd.Parameters.AddWithValue("@City", obj.City);
                     value = DataConnection.GetValue(cmd);
+
                 }
                 return HelperClass.GetValue(value, "Update");
             }

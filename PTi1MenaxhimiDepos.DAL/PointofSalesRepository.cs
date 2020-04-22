@@ -32,16 +32,7 @@ namespace PTi1MenaxhimiDepos.DAL
                         cmd.Parameters.AddWithValue("@InsertBy", obj.Username);
                         value = DataConnection.GetValue(cmd);
                     }
-                    if (value == 1)
-                    {
-                        MessageBox.Show("Register Successful", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Register Failed", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                        return false;
-                    }
+                    return HelperClass.GetValue(value, "Register");
                 }
                 else
                 {
@@ -70,16 +61,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     cmd.Parameters.AddWithValue("@ID", id);
                     value = DataConnection.GetValue(cmd);
                 }
-                if (value == 1)
-                {
-                    MessageBox.Show("Delete Successful", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Delete Failed", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(value, "Delete");
             }
             catch (Exception ex)
             {
@@ -125,8 +107,33 @@ namespace PTi1MenaxhimiDepos.DAL
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    var cmd = DataConnection.Command(con, "sp_GetAll_Pos", CommandType.StoredProcedure);
+                    var cmd = DataConnection.Command(con, "sp_ReadById_POS", CommandType.StoredProcedure);
                     DataConnection.AddParameter(cmd, "@ID", id);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        pos = Get(sdr);
+                    }
+                }
+                return pos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public PointofSale ReadByName(string name)
+        {
+            try
+            {
+                PointofSale pos = null;
+                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                {
+                    con.Open();
+                    var cmd = DataConnection.Command(con, "sp_ReadByName_POS", CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "@Name", name);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     while (sdr.Read())
                     {
@@ -160,16 +167,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     cmd.Parameters.AddWithValue("@Update", obj.Username);
                     value = DataConnection.GetValue(cmd);
                 }
-                if (value == 1)
-                {
-                    MessageBox.Show("Update Successful", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Update Failed", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(value, "Update");
             }
             catch (Exception ex)
             {

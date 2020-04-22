@@ -47,6 +47,7 @@
     <Compile Include="ClientsRepository.cs" />
     <Compile Include="EmployeeRepository.cs" />
     <Compile Include="DataConnection.cs" />
+    <Compile Include="HelperClass.cs" />
     <Compile Include="Interface\IGetObject.cs" />
     <Compile Include="ItemCategoryRepository.cs" />
     <Compile Include="ItemRepository.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleRepository.cs" />
     <Compile Include="SaleRepository.cs" />
+    <Compile Include="SupplierRepostiory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PTi1MenaxhimiDepos.BO\PTi1MenaxhimiDepos.BO.csproj">

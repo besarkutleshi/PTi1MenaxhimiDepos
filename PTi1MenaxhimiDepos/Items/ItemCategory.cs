@@ -66,5 +66,10 @@ namespace PTi1MenaxhimiDepos.Items
                 HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
             }
         }
+
+        private void dgwCategories_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.label2 = new System.Windows.Forms.Label();
             this.dgwCategories = new Telerik.WinControls.UI.RadGridView();
             this.btnUpdate = new Telerik.WinControls.UI.RadButton();
@@ -67,10 +67,11 @@
             // 
             // 
             this.dgwCategories.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwCategories.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.dgwCategories.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgwCategories.Name = "dgwCategories";
             this.dgwCategories.Size = new System.Drawing.Size(776, 278);
             this.dgwCategories.TabIndex = 6;
+            this.dgwCategories.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwCategories_CellDoubleClick);
             // 
             // btnUpdate
             // 
