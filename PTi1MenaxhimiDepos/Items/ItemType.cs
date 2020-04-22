@@ -21,22 +21,18 @@ namespace PTi1MenaxhimiDepos.Items
 
         private void ItemType_Load(object sender, EventArgs e)
         {
-            List<PTi1MenaxhimiDepos.BO.ItemType> items = ItemBLL.GetItemTypes();
-            LoadGrid(items);
-        }
-
-        public void LoadGrid(List<BO.ItemType> itemTypes)
-        {
-            dgwTypes.DataSource = ItemBLL.ReturnDt(itemTypes);
+            HelperClass.LoadGrid(ItemBLL.GetItemTypes(), dgwTypes);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             PTi1MenaxhimiDepos.BO.ItemType itemtype = new BO.ItemType(0, txtname.Text, txtdescription.Text);
             itemtype.Username = "besarkutleshi";
-            ItemBLL.InsertItemType(itemtype);
-            LoadGrid(ItemBLL.GetItemTypes());
-            txtdescription.Text = txtname.Text = "";
+            if (ItemBLL.InsertItemType(itemtype))
+            {
+                HelperClass.LoadGrid(ItemBLL.GetItemTypes(), dgwTypes);
+                txtdescription.Text = txtname.Text = "";
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -44,30 +40,12 @@ namespace PTi1MenaxhimiDepos.Items
             if (txtSearch.Text.All(char.IsDigit))
             {
                 BO.ItemType item = ItemBLL.GetItemType(int.Parse(txtSearch.Text));
-                if(item == null)
-                {
-                    MessageBox.Show("Nothing To Show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    List<BO.ItemType> items = new List<BO.ItemType>();
-                    items.Add(item);
-                    LoadGrid(items);
-                }
+                HelperClass.DoesExist(item, dgwTypes);
             }
             else
             {
                 BO.ItemType item = ItemBLL.GetItemType(txtSearch.Text);
-                if (item == null)
-                {
-                    MessageBox.Show("Nothing To Show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    List<BO.ItemType> items = new List<BO.ItemType>();
-                    items.Add(item);
-                    LoadGrid(items);
-                }
+                HelperClass.DoesExist(item, dgwTypes);
             }
         }
 
@@ -75,7 +53,7 @@ namespace PTi1MenaxhimiDepos.Items
         {
             if(txtSearch.Text == "")
             {
-                LoadGrid(ItemBLL.GetItemTypes());
+                HelperClass.LoadGrid(ItemBLL.GetItemTypes(),dgwTypes);
             }
         }
     }

@@ -61,14 +61,16 @@
             // 
             // dgwCategories
             // 
+            this.dgwCategories.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.dgwCategories.Location = new System.Drawing.Point(12, 208);
             // 
             // 
             // 
+            this.dgwCategories.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.dgwCategories.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dgwCategories.Name = "dgwCategories";
             this.dgwCategories.Size = new System.Drawing.Size(776, 278);
-            this.dgwCategories.TabIndex = 10;
+            this.dgwCategories.TabIndex = 6;
             // 
             // btnUpdate
             // 
@@ -77,7 +79,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(647, 35);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(137, 56);
-            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -88,9 +90,10 @@
             this.btnSave.Location = new System.Drawing.Point(475, 35);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(137, 56);
-            this.btnSave.TabIndex = 7;
+            this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtdescription
             // 
@@ -98,7 +101,7 @@
             this.txtdescription.Location = new System.Drawing.Point(232, 35);
             this.txtdescription.Name = "txtdescription";
             this.txtdescription.Size = new System.Drawing.Size(174, 37);
-            this.txtdescription.TabIndex = 6;
+            this.txtdescription.TabIndex = 1;
             // 
             // txtname
             // 
@@ -106,7 +109,7 @@
             this.txtname.Location = new System.Drawing.Point(25, 35);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(174, 37);
-            this.txtname.TabIndex = 5;
+            this.txtname.TabIndex = 0;
             // 
             // label1
             // 
@@ -124,7 +127,8 @@
             this.txtSearch.Location = new System.Drawing.Point(16, 164);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(258, 37);
-            this.txtSearch.TabIndex = 5;
+            this.txtSearch.TabIndex = 3;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label3
             // 
@@ -144,8 +148,9 @@
             this.btnSearch.Location = new System.Drawing.Point(280, 164);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(52, 38);
-            this.btnSearch.TabIndex = 7;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ItemCategory
             // 
@@ -166,6 +171,7 @@
             this.Name = "ItemCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItemCategory";
+            this.Load += new System.EventHandler(this.ItemCategory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwCategories.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCategories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();

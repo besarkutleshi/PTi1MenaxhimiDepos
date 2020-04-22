@@ -25,13 +25,9 @@ namespace PTi1MenaxhimiDepos
             cmbcategory.DataSource = ItemBLL.GetCategories();cmbcategory.DisplayMember = "Name";cmbcategory.ValueMember = "ID";
             cmbtype.DataSource = ItemBLL.GetItemTypes();cmbtype.DisplayMember = "Name"; cmbtype.ValueMember = "ID";
             cmbunit.DataSource = ItemBLL.GetItemUnits();cmbunit.DisplayMember = "Name"; cmbunit.ValueMember = "ID";
-            LoadDataGrid(ItemBLL.GetItems());
+            HelperClass.LoadGridItem(ItemBLL.GetItems(),dgwItems);
         }
 
-        private void LoadDataGrid(List<Item> items)
-        {
-            dgwItems.DataSource = ItemBLL.ConvertToDataTableItems(items);
-        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -54,7 +50,8 @@ namespace PTi1MenaxhimiDepos
             Item obj = new Item(txtbarcode.Text, txtname.Text,(int)cmbunit.SelectedValue,(int)cmbcategory.SelectedValue,(int)cmbtype.SelectedValue,isAvtive,int.Parse(txtstock.Text),txtDescription.Text);
             if (ItemBLL.InsertItem(obj))
             {
-                LoadDataGrid(ItemBLL.GetItems());
+                HelperClass.LoadGridItem(ItemBLL.GetItems(), dgwItems);
+                txtbarcode.Text = txtDescription.Text = txtname.Text = txtSearch.Text = txtstock.Text = "";
             }
         }
 
@@ -65,30 +62,13 @@ namespace PTi1MenaxhimiDepos
                 if (txtSearch.Text.All(char.IsDigit))
                 {
                     BO.Item item = ItemBLL.GetItem(int.Parse(txtSearch.Text));
-                    if(item == null)
-                    {
-                        MessageBox.Show("Nothing to show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        List<BO.Item> items = new List<Item>();
-                        items.Add(item);
-                        LoadDataGrid(items);
-                    }
+                    HelperClass.DoesExist(item, dgwItems);
                 }
                 else
                 {
+
                     BO.Item item = ItemBLL.GetItemByName(txtSearch.Text);
-                    if (item == null)
-                    {
-                        MessageBox.Show("Nothing to show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        List<BO.Item> items = new List<Item>();
-                        items.Add(item);
-                        LoadDataGrid(items);
-                    }
+                    HelperClass.DoesExist(item, dgwItems);
                 }
             }
             else
@@ -101,7 +81,7 @@ namespace PTi1MenaxhimiDepos
         {
             if(txtSearch.Text == "")
             {
-                LoadDataGrid(ItemBLL.GetItems());
+                HelperClass.LoadGridItem(ItemBLL.GetItems(),dgwItems);
             }
         }
     }

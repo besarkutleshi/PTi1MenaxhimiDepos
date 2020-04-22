@@ -28,6 +28,10 @@ namespace PTi1MenaxhimiDepos.BL
             return itemCategories.ReadById(id);
         }
 
+        public static ItemCategory GetItemCategory(string name)
+        {
+            return itemCategories.ReadByName(name);
+        }
         public static bool InsertCategory(ItemCategory category)
         {
             return itemCategories.Add(category);

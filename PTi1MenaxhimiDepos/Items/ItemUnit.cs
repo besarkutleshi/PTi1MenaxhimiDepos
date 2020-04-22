@@ -18,14 +18,9 @@ namespace PTi1MenaxhimiDepos.Items
         {
             InitializeComponent();
         }
-
-        private void LoadGrid(List<BO.ItemUnit> itemUnits)
-        {
-            dgwTypes.DataSource = ItemBLL.ReturnDt(itemUnits);
-        }
         private void ItemUnit_Load(object sender, EventArgs e)
         {
-            LoadGrid(ItemBLL.GetItemUnits());
+            HelperClass.LoadGrid(ItemBLL.GetItemUnits(), dgwTypes);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -40,7 +35,7 @@ namespace PTi1MenaxhimiDepos.Items
                 unit.Username = "besarkutleshi";
                 if (ItemBLL.InsertUnitType(unit))
                 {
-                    LoadGrid(ItemBLL.GetItemUnits());
+                    HelperClass.LoadGrid(ItemBLL.GetItemUnits(),dgwTypes);
                 }
             }
         }
@@ -50,26 +45,12 @@ namespace PTi1MenaxhimiDepos.Items
             if (txtSearch.Text.All(char.IsDigit))
             {
                 BO.ItemUnit unit = ItemBLL.GetUnit(int.Parse(txtSearch.Text));
-                Search(unit);
+                HelperClass.DoesExist(unit, dgwTypes);
             }
             else
             {
                 BO.ItemUnit unit = ItemBLL.GetUnit(txtSearch.Text);
-                Search(unit);
-            }
-        }
-
-        private void Search(BO.ItemUnit unit)
-        {
-            if (unit == null)
-            {
-                MessageBox.Show("Nothing to show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-            }
-            else
-            {
-                List<BO.ItemUnit> units = new List<BO.ItemUnit>();
-                units.Add(unit);
-                LoadGrid(units);
+                HelperClass.DoesExist(unit, dgwTypes);
             }
         }
 
@@ -77,7 +58,7 @@ namespace PTi1MenaxhimiDepos.Items
         {
             if(txtSearch.Text == "")
             {
-                LoadGrid(ItemBLL.GetItemUnits());
+                HelperClass.LoadGrid(ItemBLL.GetItemUnits(),dgwTypes);
             }
         }
     }
