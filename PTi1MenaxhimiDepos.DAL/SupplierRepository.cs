@@ -120,7 +120,7 @@ namespace AccessLayer
             using (SqlConnection con = new SqlConnection(HelperClass.constring))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("", con); // ***Duhet me bo StoreProceduren ne DB 
+                SqlCommand cmd = new SqlCommand("sp_UpdateSupplier", con); // ***Duhet me bo StoreProceduren ne DB 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", id);
                 cmd.Parameters.AddWithValue("@Name", obj.Name);
