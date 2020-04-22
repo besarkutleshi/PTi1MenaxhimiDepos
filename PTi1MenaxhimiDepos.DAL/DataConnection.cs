@@ -48,6 +48,7 @@ namespace PTi1MenaxhimiDepos.DAL
                 sqlParameter.Value = DBNull.Value;
             }
             sqlParameter.Value = value;
+            cmd.Parameters.Add(sqlParameter);
         }
         public static void AddParameter(SqlCommand cmd, string parametername,ParameterDirection parameterDirection)
         {

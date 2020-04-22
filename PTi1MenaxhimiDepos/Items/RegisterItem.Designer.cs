@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterItem));
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
             this.dgwItems = new Telerik.WinControls.UI.RadGridView();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
@@ -92,7 +92,7 @@
             // 
             // 
             this.dgwItems.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwItems.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgwItems.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.dgwItems.Name = "dgwItems";
             // 
             // radLabel10
@@ -104,12 +104,14 @@
             // 
             resources.ApplyResources(this.txtSearch, "txtSearch");
             this.txtSearch.Name = "txtSearch";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnSearch
             // 
             resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Search_icon;
             this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnUpdate
             // 
@@ -207,10 +209,10 @@
             // cmbActive
             // 
             resources.ApplyResources(this.cmbActive, "cmbActive");
-            radListDataItem1.Text = "True";
-            radListDataItem2.Text = "False";
-            this.cmbActive.Items.Add(radListDataItem1);
-            this.cmbActive.Items.Add(radListDataItem2);
+            radListDataItem3.Text = "True";
+            radListDataItem4.Text = "False";
+            this.cmbActive.Items.Add(radListDataItem3);
+            this.cmbActive.Items.Add(radListDataItem4);
             this.cmbActive.Name = "cmbActive";
             // 
             // radDropDownList5

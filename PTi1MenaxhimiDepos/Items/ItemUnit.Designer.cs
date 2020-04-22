@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSearch = new Telerik.WinControls.UI.RadButton();
             this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
@@ -69,6 +69,7 @@
             this.btnSearch.Size = new System.Drawing.Size(52, 38);
             this.btnSearch.TabIndex = 20;
             this.btnSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -77,6 +78,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(258, 37);
             this.txtSearch.TabIndex = 19;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label2
             // 
@@ -100,11 +102,13 @@
             // 
             // dgwTypes
             // 
+            this.dgwTypes.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.dgwTypes.Location = new System.Drawing.Point(14, 188);
             // 
             // 
             // 
-            this.dgwTypes.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgwTypes.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.dgwTypes.MasterTemplate.ViewDefinition = tableViewDefinition4;
             this.dgwTypes.Name = "dgwTypes";
             this.dgwTypes.Size = new System.Drawing.Size(776, 278);
             this.dgwTypes.TabIndex = 18;
@@ -130,6 +134,7 @@
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtdescription
             // 
@@ -166,6 +171,7 @@
             this.Name = "ItemUnit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItemUnit";
+            this.Load += new System.EventHandler(this.ItemUnit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwTypes.MasterTemplate)).EndInit();

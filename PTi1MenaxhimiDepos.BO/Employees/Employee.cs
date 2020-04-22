@@ -1,4 +1,4 @@
-﻿using PTi1MenaxhimiDepos.BO.Interfaces;
+﻿using PTi1MenaxhimiDepos.BO;
 using System;
 using System.Collections.Generic;
 using System.Data;

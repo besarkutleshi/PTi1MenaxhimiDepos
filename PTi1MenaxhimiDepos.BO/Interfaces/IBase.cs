@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PTi1MenaxhimiDepos.BO.Interfaces
+namespace PTi1MenaxhimiDepos.BO
 {
     public interface IBase
     {

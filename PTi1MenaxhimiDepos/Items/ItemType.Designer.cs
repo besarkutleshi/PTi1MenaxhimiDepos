@@ -75,6 +75,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnUpdate
             // 
@@ -89,10 +90,12 @@
             // 
             // dgwTypes
             // 
+            this.dgwTypes.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.dgwTypes.Location = new System.Drawing.Point(12, 213);
             // 
             // 
             // 
+            this.dgwTypes.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.dgwTypes.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgwTypes.Name = "dgwTypes";
             this.dgwTypes.Size = new System.Drawing.Size(776, 278);
@@ -138,6 +141,7 @@
             this.btnSearch.Size = new System.Drawing.Size(52, 38);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -146,6 +150,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(258, 37);
             this.txtSearch.TabIndex = 9;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // ItemType
             // 
@@ -166,6 +171,7 @@
             this.Name = "ItemType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItemType";
+            this.Load += new System.EventHandler(this.ItemType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdescription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();

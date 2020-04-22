@@ -118,7 +118,8 @@ namespace PTi1MenaxhimiDepos.DAL
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    var cmd = DataConnection.Command(con, "sp_GetAll_Item_ByID", CommandType.StoredProcedure);
+                    var cmd = DataConnection.Command(con, "sp_GetAll_Item_ByBarcode", CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "@Barcode", id);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     while (sdr.Read())
                     {

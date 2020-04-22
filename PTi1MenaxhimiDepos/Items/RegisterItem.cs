@@ -25,19 +25,18 @@ namespace PTi1MenaxhimiDepos
             cmbcategory.DataSource = ItemBLL.GetCategories();cmbcategory.DisplayMember = "Name";cmbcategory.ValueMember = "ID";
             cmbtype.DataSource = ItemBLL.GetItemTypes();cmbtype.DisplayMember = "Name"; cmbtype.ValueMember = "ID";
             cmbunit.DataSource = ItemBLL.GetItemUnits();cmbunit.DisplayMember = "Name"; cmbunit.ValueMember = "ID";
-            LoadDataGrid();
+            LoadDataGrid(ItemBLL.GetItems());
         }
 
-        private void LoadDataGrid()
+        private void LoadDataGrid(List<Item> items)
         {
-            List<Item> items = ItemBLL.GetItems();
-            dgwItems.DataSource = ItemBLL.ConvertToDataTable(items);
+            dgwItems.DataSource = ItemBLL.ConvertToDataTableItems(items);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtname.Text == "" || txtbarcode.Text == "" || txtstock.Text == "" || cmbActive.SelectedIndex == 0 || cmbcategory.SelectedIndex == 0 || cmbtype.SelectedIndex == 0
-                || cmbunit.SelectedIndex == 0 || cmdSupplier.SelectedIndex == 0)
+            if(txtname.Text == "" || txtbarcode.Text == "" || txtstock.Text == "" || cmbActive.SelectedIndex == -1 || cmbcategory.SelectedIndex == -1 || cmbtype.SelectedIndex == -1
+                || cmbunit.SelectedIndex == -1 || cmdSupplier.SelectedIndex == -1)
             {
                 MessageBox.Show("Please Fill In Empty Box's", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 return;
@@ -55,7 +54,54 @@ namespace PTi1MenaxhimiDepos
             Item obj = new Item(txtbarcode.Text, txtname.Text,(int)cmbunit.SelectedValue,(int)cmbcategory.SelectedValue,(int)cmbtype.SelectedValue,isAvtive,int.Parse(txtstock.Text),txtDescription.Text);
             if (ItemBLL.InsertItem(obj))
             {
-                LoadDataGrid();
+                LoadDataGrid(ItemBLL.GetItems());
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(txtSearch.Text != "")
+            {
+                if (txtSearch.Text.All(char.IsDigit))
+                {
+                    BO.Item item = ItemBLL.GetItem(int.Parse(txtSearch.Text));
+                    if(item == null)
+                    {
+                        MessageBox.Show("Nothing to show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        List<BO.Item> items = new List<Item>();
+                        items.Add(item);
+                        LoadDataGrid(items);
+                    }
+                }
+                else
+                {
+                    BO.Item item = ItemBLL.GetItemByName(txtSearch.Text);
+                    if (item == null)
+                    {
+                        MessageBox.Show("Nothing to show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        List<BO.Item> items = new List<Item>();
+                        items.Add(item);
+                        LoadDataGrid(items);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Search box is empty", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSearch.Text == "")
+            {
+                LoadDataGrid(ItemBLL.GetItems());
             }
         }
     }
