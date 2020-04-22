@@ -221,5 +221,11 @@
   <ItemGroup>
     <None Include="Resources\invoice.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-clear-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

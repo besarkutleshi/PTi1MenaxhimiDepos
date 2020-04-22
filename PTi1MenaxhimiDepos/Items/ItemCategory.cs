@@ -13,6 +13,7 @@ namespace PTi1MenaxhimiDepos.Items
 {
     public partial class ItemCategory : Form
     {
+        BO.ItemCategory category = null;
         public ItemCategory()
         {
             InitializeComponent();
@@ -41,7 +42,6 @@ namespace PTi1MenaxhimiDepos.Items
                 {
                     HelperClass.LoadGrid(ItemBLL.GetCategories(),dgwCategories);
                 }
-
             }
         }
 
@@ -69,7 +69,34 @@ namespace PTi1MenaxhimiDepos.Items
 
         private void dgwCategories_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
+            category = new BO.ItemCategory(int.Parse(dgwCategories.Rows[e.RowIndex].Cells[0].Value.ToString()), dgwCategories.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                dgwCategories.Rows[e.RowIndex].Cells[2].Value.ToString());
+            txtname.Text = category.Name;
+            txtdescription.Text = category.Description;
+            btnDelete.Visible = btnUpdate.Visible = true; btnSave.Visible = false;
+        }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (ItemBLL.DeleteCategory(category.ID))
+            {
+                btnSave.Visible = true; btnDelete.Visible = false; btnUpdate.Visible = false;
+                txtname.Text = txtdescription.Text = "";
+                HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            category.Name = txtname.Text;
+            category.Description = txtdescription.Text;
+            category.Username = "besarkutleshi";
+            if (ItemBLL.UpdateCategory(category.ID,category))
+            {
+                btnSave.Visible = true; btnDelete.Visible = false; btnUpdate.Visible = false;
+                txtname.Text = txtdescription.Text = "";
+                HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
+            }
         }
     }
 }

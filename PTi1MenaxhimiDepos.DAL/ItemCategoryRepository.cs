@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -52,9 +53,9 @@ namespace PTi1MenaxhimiDepos.DAL
                 }
                 return HelperClass.GetValue(value, "Delete");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                MessageBox.Show("This category is in use , plase remove items to delete this category", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -71,7 +72,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     cc.Parameters.AddWithValue("@ID", id);
                     cc.Parameters.AddWithValue("@Name", obj.Name);
                     cc.Parameters.AddWithValue("@Description", obj.Description);
-                    cc.Parameters.AddWithValue("@UpdateBy", obj.Username);
+                    cc.Parameters.AddWithValue("@UpdateByUser", obj.Username);
                     value = DataConnection.GetValue(cc);
                 }
                 return HelperClass.GetValue(value, "Update");

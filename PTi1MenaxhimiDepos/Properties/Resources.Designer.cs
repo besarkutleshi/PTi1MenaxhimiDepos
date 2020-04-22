@@ -63,6 +63,16 @@ namespace PTi1MenaxhimiDepos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_edit_clear_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-edit-clear-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_1_icon {
             get {
                 object obj = ResourceManager.GetObject("add-1-icon", resourceCulture);
@@ -96,6 +106,16 @@ namespace PTi1MenaxhimiDepos.Properties {
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancel_icon {
+            get {
+                object obj = ResourceManager.GetObject("cancel-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
