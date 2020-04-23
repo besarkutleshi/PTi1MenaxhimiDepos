@@ -13,13 +13,16 @@ namespace PTi1MenaxhimiDepos.Controls
     {
         public static Control GetButtonss(Control control, Point location, Size size, string text = null, Image img = null)
         {
-            if (control is Button)
+            if (control is RadButton)
             {
-                Button obj = (Button)control;
+                RadButton obj = (RadButton)control;
                 obj.Image = img;
                 obj.Height = 60;
-                obj.FlatAppearance.BorderSize = 1;
-                obj.FlatStyle = FlatStyle.Popup;
+                //obj.FlatAppearance.BorderSize = 1;
+                //obj.FlatStyle = FlatStyle.Popup;
+                obj.BackColor = Color.White;
+                obj.ImageAlignment = ContentAlignment.MiddleCenter;
+                obj.Cursor = Cursors.Hand;
                 obj.Location = location;
                 obj.Size = size;
                 obj.Text = text;
@@ -35,11 +38,12 @@ namespace PTi1MenaxhimiDepos.Controls
                 obj.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill;
                 return obj;
             }
-            else if (control is TextBox)
+            else if (control is RadTextBox)
             {
-                TextBox txt = (TextBox)control;
+                RadTextBox txt = (RadTextBox)control;
                 txt.Text = text;
                 txt.Size = size;
+                txt.ReadOnly = true;
                 txt.Location = location;
                 return txt;
             }

@@ -303,6 +303,16 @@ namespace PTi1MenaxhimiDepos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap User_Files_icon {
+            get {
+                object obj = ResourceManager.GetObject("User-Files-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_icon {
             get {
                 object obj = ResourceManager.GetObject("user-icon", resourceCulture);

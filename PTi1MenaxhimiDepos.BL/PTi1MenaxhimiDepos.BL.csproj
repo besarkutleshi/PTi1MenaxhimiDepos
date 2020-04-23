@@ -45,9 +45,9 @@
   <ItemGroup>
     <Compile Include="AccountBLL.cs" />
     <Compile Include="Collaboration.cs" />
-    <Compile Include="Convert.cs" />
     <Compile Include="HelperClass.cs" />
     <Compile Include="ItemBLL.cs" />
+    <Compile Include="PosBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaleBLL.cs" />
   </ItemGroup>

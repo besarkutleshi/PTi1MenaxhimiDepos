@@ -30,9 +30,9 @@ namespace PTi1MenaxhimiDepos.BL
             grid.DataSource = ItemBLL.ReturnDt(ts);
         }
 
-        public static void DoesExist(Item obj,RadGridView grid)
+        public static void DoesExistItem(Item obj, RadGridView grid)
         {
-            if(obj == null)
+            if (obj == null)
             {
                 MessageBox.Show("Nothing to show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }

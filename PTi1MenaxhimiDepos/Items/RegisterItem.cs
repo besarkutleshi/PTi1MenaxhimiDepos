@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Convert = PTi1MenaxhimiDepos.BL.Convert;
 
 namespace PTi1MenaxhimiDepos
 {
@@ -58,12 +57,12 @@ namespace PTi1MenaxhimiDepos
                 if (txtSearch.Text.All(char.IsDigit))
                 {
                     BO.Item item = ItemBLL.GetItem(int.Parse(txtSearch.Text));
-                    HelperClass.DoesExist(item, dgwItems);
+                    HelperClass.DoesExistItem(item, dgwItems);
                 }
                 else
                 {
                     BO.Item item = ItemBLL.GetItemByName(txtSearch.Text);
-                    HelperClass.DoesExist(item, dgwItems);
+                    HelperClass.DoesExistItem(item, dgwItems);
                 }
             }
             else

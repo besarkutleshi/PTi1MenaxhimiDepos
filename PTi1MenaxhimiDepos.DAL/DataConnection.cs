@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PTi1MenaxhimiDepos.DAL
 {
@@ -62,7 +63,35 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             AddParameter(cmd, "@Value", ParameterDirection.Output);
             cmd.ExecuteNonQuery();
+            if (cmd.Parameters["@Value"].Value == DBNull.Value)
+            {
+                return 0;
+            }
             return int.Parse(cmd.Parameters["@Value"].Value.ToString());
+        }
+
+        public static bool DoesExist(string procedure,object parametername,object value)
+        {
+            try
+            {
+                int val = 0;
+                using(var con = Connection())
+                {
+                    con.Open();
+                    var cmd = Command(con, procedure, CommandType.StoredProcedure);
+                    AddParameter(cmd, parametername.ToString(), value);
+                    val = GetValue(cmd);
+                }
+                if (val == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return true;
+            }
         }
     }
 }

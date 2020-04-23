@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSearch = new Telerik.WinControls.UI.RadButton();
             this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
@@ -109,7 +109,7 @@
             // 
             // dgwTypes
             // 
-            this.dgwTypes.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.dgwTypes.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.dgwTypes.Location = new System.Drawing.Point(8, 223);
             // 
             // 
@@ -117,7 +117,7 @@
             this.dgwTypes.MasterTemplate.AllowDeleteRow = false;
             this.dgwTypes.MasterTemplate.AllowEditRow = false;
             this.dgwTypes.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwTypes.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.dgwTypes.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgwTypes.Name = "dgwTypes";
             this.dgwTypes.Size = new System.Drawing.Size(776, 278);
             this.dgwTypes.TabIndex = 18;

@@ -41,8 +41,6 @@
             this.btnbashkpunimet = new System.Windows.Forms.Button();
             this.btnregister = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnpuntoret = new System.Windows.Forms.Button();
             this.btnartikujt = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -81,8 +79,6 @@
             this.tabPage1.Controls.Add(this.btnbashkpunimet);
             this.tabPage1.Controls.Add(this.btnregister);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.btnpuntoret);
             this.tabPage1.Controls.Add(this.btnartikujt);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label6);
@@ -104,7 +100,7 @@
             this.btnhyrjet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnhyrjet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.btnhyrjet.Image = global::PTi1MenaxhimiDepos.Properties.Resources.chart1;
-            this.btnhyrjet.Location = new System.Drawing.Point(408, 12);
+            this.btnhyrjet.Location = new System.Drawing.Point(408, 8);
             this.btnhyrjet.Margin = new System.Windows.Forms.Padding(4);
             this.btnhyrjet.Name = "btnhyrjet";
             this.btnhyrjet.Size = new System.Drawing.Size(123, 66);
@@ -115,7 +111,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label13.Location = new System.Drawing.Point(1096, 88);
+            this.label13.Location = new System.Drawing.Point(972, 88);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(58, 22);
@@ -130,23 +126,24 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.button6.Image = global::PTi1MenaxhimiDepos.Properties.Resources.store_icon;
-            this.button6.Location = new System.Drawing.Point(1063, 14);
+            this.button6.Location = new System.Drawing.Point(936, 8);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(123, 66);
             this.button6.TabIndex = 0;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label1.Location = new System.Drawing.Point(959, 88);
+            this.label1.Location = new System.Drawing.Point(819, 88);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 22);
+            this.label1.Size = new System.Drawing.Size(109, 22);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Banka";
+            this.label1.Text = "Administrata";
             // 
             // button2
             // 
@@ -155,13 +152,14 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.button2.Image = global::PTi1MenaxhimiDepos.Properties.Resources.bank_icon;
-            this.button2.Location = new System.Drawing.Point(932, 14);
+            this.button2.Image = global::PTi1MenaxhimiDepos.Properties.Resources.User_Files_icon;
+            this.button2.Location = new System.Drawing.Point(805, 8);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 66);
             this.button2.TabIndex = 0;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnshitja
             // 
@@ -195,7 +193,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label8.Location = new System.Drawing.Point(821, 88);
+            this.label8.Location = new System.Drawing.Point(687, 88);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 22);
@@ -210,7 +208,7 @@
             this.btnbashkpunimet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbashkpunimet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.btnbashkpunimet.Image = global::PTi1MenaxhimiDepos.Properties.Resources.company;
-            this.btnbashkpunimet.Location = new System.Drawing.Point(801, 14);
+            this.btnbashkpunimet.Location = new System.Drawing.Point(670, 8);
             this.btnbashkpunimet.Margin = new System.Windows.Forms.Padding(4);
             this.btnbashkpunimet.Name = "btnbashkpunimet";
             this.btnbashkpunimet.Size = new System.Drawing.Size(123, 66);
@@ -243,32 +241,6 @@
             this.label3.Size = new System.Drawing.Size(65, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "Artikujt";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label7.Location = new System.Drawing.Point(693, 88);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 22);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Puntoret";
-            // 
-            // btnpuntoret
-            // 
-            this.btnpuntoret.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.btnpuntoret.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnpuntoret.FlatAppearance.BorderSize = 0;
-            this.btnpuntoret.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnpuntoret.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.btnpuntoret.Image = global::PTi1MenaxhimiDepos.Properties.Resources.employee;
-            this.btnpuntoret.Location = new System.Drawing.Point(670, 14);
-            this.btnpuntoret.Margin = new System.Windows.Forms.Padding(4);
-            this.btnpuntoret.Name = "btnpuntoret";
-            this.btnpuntoret.Size = new System.Drawing.Size(123, 66);
-            this.btnpuntoret.TabIndex = 0;
-            this.btnpuntoret.UseVisualStyleBackColor = false;
             // 
             // btnartikujt
             // 
@@ -315,7 +287,7 @@
             this.btndaljet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndaljet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.btndaljet.Image = global::PTi1MenaxhimiDepos.Properties.Resources.chart11;
-            this.btndaljet.Location = new System.Drawing.Point(539, 12);
+            this.btndaljet.Location = new System.Drawing.Point(539, 8);
             this.btndaljet.Margin = new System.Windows.Forms.Padding(4);
             this.btndaljet.Name = "btndaljet";
             this.btndaljet.Size = new System.Drawing.Size(123, 66);
@@ -358,6 +330,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -380,8 +353,6 @@
         private System.Windows.Forms.Button btnbashkpunimet;
         private System.Windows.Forms.Button btnregister;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnpuntoret;
         private System.Windows.Forms.Button btnartikujt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;

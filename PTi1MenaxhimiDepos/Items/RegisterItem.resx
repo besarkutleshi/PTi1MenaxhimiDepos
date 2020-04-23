@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dgwItems.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.25pt</value>
+    <value>Segoe UI, 13.25pt</value>
   </data>
   <data name="dgwItems.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 347</value>
@@ -894,9 +894,6 @@
     <value>1477, 730</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>

@@ -17,7 +17,7 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                if (!obj.Equals(obj))
+                if (!DataConnection.DoesExist("sp_DoesExist_POS","Name",obj.Name))
                 {
                     int value = 0;
                     using (SqlConnection con = new SqlConnection(DataConnection.Constring))
@@ -72,7 +72,7 @@ namespace PTi1MenaxhimiDepos.DAL
 
         public PointofSale Get(SqlDataReader sdr)
         {
-            return new PointofSale(sdr["NAME"].ToString(), sdr["CITY"].ToString(), int.Parse(sdr["PHONE"].ToString()), sdr["DESCRITPTION"].ToString());
+            return new PointofSale(int.Parse(sdr["POSID"].ToString()),sdr["NAME"].ToString(), sdr["CITY"].ToString(), sdr["PHONE"].ToString(), sdr["DESCRITPTION"].ToString());
         }
 
         public List<PointofSale> ReadAll()
@@ -164,7 +164,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     cmd.Parameters.AddWithValue("@City", obj.City);
                     cmd.Parameters.AddWithValue("@Phone", obj.Phone);
                     cmd.Parameters.AddWithValue("@Description", obj.Description);
-                    cmd.Parameters.AddWithValue("@Update", obj.Username);
+                    cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
                     value = DataConnection.GetValue(cmd);
                 }
                 return HelperClass.GetValue(value, "Update");

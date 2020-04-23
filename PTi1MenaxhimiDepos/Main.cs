@@ -1,5 +1,6 @@
 ﻿using PTi1MenaxhimiDepos.BL;
 using PTi1MenaxhimiDepos.Controls;
+using PTi1MenaxhimiDepos.POS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
+using PTi1MenaxhimiDepos.POS;
 
 namespace PTi1MenaxhimiDepos
 {
@@ -62,6 +64,31 @@ namespace PTi1MenaxhimiDepos
                 }
             }
             return false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (TabPages("Administrata"))
+            {
+                return;
+            }
+            string[] values = new string[4];
+            TabPage tabPage = new TabPage("Administrata");
+            tabControl1.TabPages.Add(tabPage);
+            RadGridView obj = new RadGridView();
+            obj.DataSource = SaleBLL.GetInvoicesToday();
+            control.PrintButtonsAdministration(tabPage);
+            tabControl1.SelectedTab = tabPage;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            POS.POS obj = new POS.POS();
+            obj.ShowDialog();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
         }
     }
 }
