@@ -141,13 +141,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgwItems.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="radLabel10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="radLabel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 213</value>
+    <value>12, 262</value>
   </data>
   <data name="radLabel10.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 30</value>
@@ -168,13 +168,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radLabel10.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 16.25pt</value>
   </data>
   <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 249</value>
+    <value>12, 298</value>
   </data>
   <data name="txtSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 42</value>
@@ -192,103 +192,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.25pt</value>
-  </data>
-  <data name="btnSearch.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 249</value>
-  </data>
-  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 44</value>
-  </data>
-  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
-    <value>btnSearch</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.2pt, style=Bold</value>
-  </data>
-  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1330, 286</value>
-  </data>
-  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 55</value>
-  </data>
-  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="btnUpdate.Text" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="btnUpdate.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="btnUpdate.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
-    <value>btnUpdate</value>
-  </data>
-  <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
     <value>24</value>
-  </data>
-  <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.2pt, style=Bold</value>
-  </data>
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1330, 286</value>
-  </data>
-  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 55</value>
-  </data>
-  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="btnSave.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
-    <value>btnSave</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>25</value>
   </data>
   <data name="txtname.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="txtname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 56</value>
+    <value>610, 56</value>
   </data>
   <data name="txtname.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 37</value>
@@ -306,13 +216,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtname.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="radLabel5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="radLabel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1210, 12</value>
+    <value>1210, 128</value>
   </data>
   <data name="radLabel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 30</value>
@@ -339,7 +249,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="radLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>909, 12</value>
+    <value>909, 128</value>
   </data>
   <data name="radLabel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 30</value>
@@ -366,7 +276,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="radLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>596, 12</value>
+    <value>596, 128</value>
   </data>
   <data name="radLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 30</value>
@@ -393,7 +303,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="radLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 12</value>
+    <value>610, 12</value>
   </data>
   <data name="radLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 30</value>
@@ -420,7 +330,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="radLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>311, 12</value>
   </data>
   <data name="radLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 30</value>
@@ -441,13 +351,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radLabel1.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="radLabel9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="radLabel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>893, 128</value>
+    <value>1206, 12</value>
   </data>
   <data name="radLabel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 30</value>
@@ -474,7 +384,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="radLabel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>596, 128</value>
+    <value>909, 12</value>
   </data>
   <data name="radLabel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 30</value>
@@ -501,7 +411,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>893, 164</value>
+    <value>1206, 56</value>
   </data>
   <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 37</value>
@@ -525,7 +435,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="txtstock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>596, 164</value>
+    <value>909, 56</value>
   </data>
   <data name="txtstock.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 37</value>
@@ -603,7 +513,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="cmbcategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>909, 56</value>
+    <value>909, 164</value>
   </data>
   <data name="cmbcategory.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 37</value>
@@ -627,7 +537,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="cmbtype.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1206, 56</value>
+    <value>1206, 164</value>
   </data>
   <data name="cmbtype.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 37</value>
@@ -651,7 +561,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="cmbunit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>596, 56</value>
+    <value>596, 164</value>
   </data>
   <data name="cmbunit.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 37</value>
@@ -675,7 +585,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="txtbarcode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 56</value>
+    <value>311, 56</value>
   </data>
   <data name="txtbarcode.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 37</value>
@@ -693,7 +603,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtbarcode.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="cmbActive.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
@@ -767,6 +677,96 @@
   <data name="&gt;&gt;cmdSupplier.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.25pt</value>
+  </data>
+  <data name="btnSearch.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 298</value>
+  </data>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 44</value>
+  </data>
+  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.2pt, style=Bold</value>
+  </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1330, 286</value>
+  </data>
+  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 55</value>
+  </data>
+  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="btnUpdate.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnUpdate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
+    <value>btnUpdate</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.2pt, style=Bold</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1330, 286</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 55</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnSave.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
   <data name="btnDelete.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.2pt, style=Bold</value>
   </data>
@@ -798,7 +798,91 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>25</value>
+  </data>
+  <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.2pt, style=Bold</value>
+  </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1176, 286</value>
+  </data>
+  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 55</value>
+  </data>
+  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="btnClear.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="txtid.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtid.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="txtid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 56</value>
+  </data>
+  <data name="txtid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 37</value>
+  </data>
+  <data name="txtid.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtid.Name" xml:space="preserve">
+    <value>txtid</value>
+  </data>
+  <data name="&gt;&gt;txtid.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtid.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="radLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="radLabel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 20</value>
+  </data>
+  <data name="radLabel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 30</value>
+  </data>
+  <data name="radLabel11.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="radLabel11.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.Name" xml:space="preserve">
+    <value>radLabel11</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -810,6 +894,9 @@
     <value>1477, 730</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>

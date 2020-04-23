@@ -66,7 +66,7 @@ namespace PTi1MenaxhimiDepos.Items
         private void dgwTypes_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
             unit = new BO.ItemUnit(int.Parse(HelpClass.GetValue(e, dgwTypes, 0)), HelpClass.GetValue(e, dgwTypes, 1), HelpClass.GetValue(e, dgwTypes, 2));
-            txtname.Text = unit.Name; txtdescription.Text = unit.Description;
+            txtID.Text = unit.ID.ToString(); txtname.Text = unit.Name; txtdescription.Text = unit.Description;
             btnDelete.Visible = btnUpdate.Visible = true; btnSave.Visible = false;
         }
 
@@ -83,7 +83,7 @@ namespace PTi1MenaxhimiDepos.Items
                 unit.Username = "besarkutleshi";
                 if (ItemBLL.UpdateUnitType(unit.ID, unit))
                 {
-                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
+                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
                     HelperClass.LoadGrid(ItemBLL.GetItemUnits(),dgwTypes);
                     unit = null;
                 }
@@ -96,27 +96,15 @@ namespace PTi1MenaxhimiDepos.Items
             {
                 if (ItemBLL.DeleteUnitType(unit.ID))
                 {
-                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
+                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
                     HelperClass.LoadGrid(ItemBLL.GetItemUnits(), dgwTypes);
                     unit = null;
                 }
             }
         }
-
-        private void txtname_TextChanged(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-            if(txtname.Text == "" && txtdescription.Text == "")
-            {
-                HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
-            }
-        }
-
-        private void txtdescription_TextChanged(object sender, EventArgs e)
-        {
-            if (txtname.Text == "" && txtdescription.Text == "")
-            {
-                HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
-            }
+            HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription,txtID);
         }
     }
 }

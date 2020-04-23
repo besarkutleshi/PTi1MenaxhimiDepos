@@ -47,16 +47,20 @@ namespace PTi1MenaxhimiDepos.DAL
 
         public bool Delete(int id)
         {
+            throw new Exception("Can not delete by id, try to delete by barcode");
+        }
+
+        public bool Delete(string barcode)
+        {
             try
             {
                 int val = 0;
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_DeleteItem", con);
+                    SqlCommand cmd = new SqlCommand("sp_Delete_Item", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Barcode", id.ToString());
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@Barcode", barcode);
                     val = DataConnection.GetValue(cmd);
                 }
                 return HelperClass.GetValue(val, "Delete");
@@ -125,16 +129,16 @@ namespace PTi1MenaxhimiDepos.DAL
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_UpdateItem", con);
+                    SqlCommand cmd = new SqlCommand("sp_Update_Item", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ItemID", id);
                     cmd.Parameters.AddWithValue("@Barcode", obj.Barcode);
                     cmd.Parameters.AddWithValue("@Name", obj.Name);
-                    cmd.Parameters.AddWithValue("@UnitID", obj.Unit.ID);
-                    cmd.Parameters.AddWithValue("@CategoryID", obj.Category.ID);
-                    cmd.Parameters.AddWithValue("@TypeID", obj.Type.ID);
-                    cmd.Parameters.AddWithValue("@SupplierID", obj.Supplier.ID);
-                    cmd.Parameters.AddWithValue("@Active", obj.Active);
+                    cmd.Parameters.AddWithValue("@UnitID", obj.UnitID);
+                    cmd.Parameters.AddWithValue("@CategoryID", obj.CategoryId);
+                    cmd.Parameters.AddWithValue("@TypeID", obj.TypeID);
+                    cmd.Parameters.AddWithValue("@SupplierID", obj.SupplierID);
+                    cmd.Parameters.AddWithValue("@Activ", obj.Active);
                     cmd.Parameters.AddWithValue("@StockQuantity", obj.StockQuantity);
                     cmd.Parameters.AddWithValue("@Description", obj.Description);
                     cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
@@ -201,7 +205,7 @@ namespace PTi1MenaxhimiDepos.DAL
 
         public Item Get(SqlDataReader sdr)
         {
-            Item obj = new Item(sdr["BARCODE"].ToString(), sdr["NAME"].ToString(),bool.Parse(sdr["ACTIV"].ToString()), int.Parse(sdr["STOCKQUANTITY"].ToString()), sdr["DESCRIPTION"].ToString());
+            Item obj = new Item(int.Parse(sdr["ITEMID"].ToString()),sdr["BARCODE"].ToString(), sdr["NAME"].ToString(),bool.Parse(sdr["ACTIV"].ToString()), int.Parse(sdr["STOCKQUANTITY"].ToString()), sdr["DESCRIPTION"].ToString());
             obj.Category = new ItemCategory(sdr["CATEGORY"].ToString());
             obj.Type = new ItemType(sdr["TYPE"].ToString());
             obj.Supplier = new Supplier(sdr["SUPPLIER"].ToString());

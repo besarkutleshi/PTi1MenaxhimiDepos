@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace PTi1MenaxhimiDepos.DAL
 {
-    class SupplierRepository :ICrud<Supplier>,IGetObject<Supplier>
+    public class SupplierRepository :ICrud<Supplier>,IGetObject<Supplier>
     {
         public bool Add(Supplier obj)
         {
@@ -52,10 +52,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     SqlCommand cmd = new SqlCommand("sp_DeleteSupplier", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Id", id);
-                    cmd.Parameters.Add(new SqlParameter("@Value", SqlDbType.Int));
-                    cmd.Parameters["@Value"].Direction = ParameterDirection.Output;
-                    cmd.ExecuteNonQuery();
-                    value = int.Parse(cmd.Parameters["@Value"].Value.ToString());
+                    value = DataConnection.GetValue(cmd);
                 }
                 return HelperClass.GetValue(value, "Delete");
             }
@@ -157,7 +154,7 @@ namespace PTi1MenaxhimiDepos.DAL
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("", con); // ***Duhet me bo StoreProceduren ne DB 
+                    SqlCommand cmd = new SqlCommand("sp_UpdateSupplier", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Id", id);
                     cmd.Parameters.AddWithValue("@Name", obj.Name);
@@ -165,6 +162,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     cmd.Parameters.AddWithValue("@Phone", obj.Phone);
                     cmd.Parameters.AddWithValue("@Mail", obj.Mail);
                     cmd.Parameters.AddWithValue("@City", obj.City);
+                    cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
                     value = DataConnection.GetValue(cmd);
 
                 }

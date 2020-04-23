@@ -19,15 +19,6 @@ namespace PTi1MenaxhimiDepos.Items
             InitializeComponent();
         }
 
-        private void LoadGrid(List<BO.ItemCategory> categories)
-        {
-            dgwCategories.DataSource = ItemBLL.ReturnDt(categories);
-        }
-        private void ItemCategory_Load(object sender, EventArgs e)
-        {
-            LoadGrid(ItemBLL.GetCategories());
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             if(txtname.Text == "" || txtdescription.Text == "")
@@ -41,6 +32,7 @@ namespace PTi1MenaxhimiDepos.Items
                 if (ItemBLL.InsertCategory(category))
                 {
                     HelperClass.LoadGrid(ItemBLL.GetCategories(),dgwCategories);
+                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
                 }
             }
         }
@@ -71,6 +63,7 @@ namespace PTi1MenaxhimiDepos.Items
         {
             category = new BO.ItemCategory(int.Parse(dgwCategories.Rows[e.RowIndex].Cells[0].Value.ToString()), dgwCategories.Rows[e.RowIndex].Cells[1].Value.ToString(),
                 dgwCategories.Rows[e.RowIndex].Cells[2].Value.ToString());
+            txtID.Text = category.ID.ToString();
             txtname.Text = category.Name;
             txtdescription.Text = category.Description;
             btnDelete.Visible = btnUpdate.Visible = true; btnSave.Visible = false;
@@ -82,7 +75,8 @@ namespace PTi1MenaxhimiDepos.Items
             {
                 if (ItemBLL.DeleteCategory(category.ID))
                 {
-                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
+                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
+                    HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
                 }
             }
         }
@@ -102,10 +96,21 @@ namespace PTi1MenaxhimiDepos.Items
                 {
                     if (ItemBLL.UpdateCategory(category.ID, category))
                     {
-                        HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription);
+                        HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
+                        HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
                     }
                 }
             }
+        }
+
+        private void ItemCategory_Load(object sender, EventArgs e)
+        {
+            HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
         }
     }
 }

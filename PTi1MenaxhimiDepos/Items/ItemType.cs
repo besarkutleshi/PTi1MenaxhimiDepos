@@ -33,7 +33,7 @@ namespace PTi1MenaxhimiDepos.Items
             if (ItemBLL.InsertItemType(itemtype))
             {
                 HelperClass.LoadGrid(ItemBLL.GetItemTypes(), dgwTypes);
-                txtdescription.Text = txtname.Text = "";
+                HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtname, txtdescription, txtid);
             }
         }
 
@@ -63,8 +63,10 @@ namespace PTi1MenaxhimiDepos.Items
         {
             type = new BO.ItemType(int.Parse(dgwTypes.Rows[e.RowIndex].Cells[0].Value.ToString()),
                 dgwTypes.Rows[e.RowIndex].Cells[1].Value.ToString(), dgwTypes.Rows[e.RowIndex].Cells[2].Value.ToString());
+            txtid.Text = type.ID.ToString();
             txtname.Text = type.Name;txtdescription.Text = type.Description;
-            btndelete.Visible = btnUpdate.Visible = true; btnSave.Visible = false;
+            btndelete.Visible = btnUpdate.Visible = true; 
+            btnSave.Visible = false;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -82,7 +84,7 @@ namespace PTi1MenaxhimiDepos.Items
                 {
                     if (ItemBLL.UpdateItemType(type.ID, type))
                     {
-                        HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtname, txtdescription);
+                        HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtname, txtdescription, txtid);
                         HelperClass.LoadGrid(ItemBLL.GetItemTypes(), dgwTypes);
                     }
                 }
@@ -95,12 +97,15 @@ namespace PTi1MenaxhimiDepos.Items
             {
                 if (ItemBLL.DeleteItemType(type.ID))
                 {
-                    HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtname, txtdescription);
+                    HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtname, txtdescription, txtid);
                     HelperClass.LoadGrid(ItemBLL.GetItemTypes(), dgwTypes);
                 }
             }
         }
 
-      
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtname, txtdescription, txtid);
+        }
     }
 }

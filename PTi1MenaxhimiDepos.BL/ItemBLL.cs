@@ -131,14 +131,14 @@ namespace PTi1MenaxhimiDepos.BL
             return Item.ReadById(id);
         }
 
-        public static bool DeleteItem(int id)
+        public static bool DeleteItem(string barcode)
         {
-            return Item.Delete(id);
+            return Item.Delete(barcode);
         }
 
-        public static bool UpdateItem(int id, Item type)
+        public static bool UpdateItem(int id, Item obj)
         {
-            return Item.Update(id, type);
+            return Item.Update(id, obj);
         }
 
         public static Item GetItemByName(string name)
@@ -170,16 +170,17 @@ namespace PTi1MenaxhimiDepos.BL
                     }
                     else
                     {
-                        object[] values = new object[9];
-                        values[0] = item.Barcode;
-                        values[1] = item.Name;
-                        values[2] = item.Unit.Name;
-                        values[3] = item.Category.Name;
-                        values[4] = item.Type.Name;
-                        values[5] = item.Supplier.Name;
-                        values[6] = item.Active;
-                        values[7] = item.StockQuantity;
-                        values[8] = item.Description;
+                        object[] values = new object[10];
+                        values[0] = item.ID;
+                        values[1] = item.Barcode;
+                        values[2] = item.Name;
+                        values[3] = item.Unit.Name;
+                        values[4] = item.Category.Name;
+                        values[5] = item.Type.Name;
+                        values[6] = item.Supplier.Name;
+                        values[7] = item.Active;
+                        values[8] = item.StockQuantity;
+                        values[9] = item.Description;
                         dataTable.Rows.Add(values);
                     }
                 }

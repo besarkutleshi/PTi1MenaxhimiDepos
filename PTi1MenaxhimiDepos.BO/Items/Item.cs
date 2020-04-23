@@ -8,20 +8,23 @@ namespace PTi1MenaxhimiDepos.BO
 {
     public class Item : AuditionAtributtes
     {
-        public Item(string barcode, string name, int unit, int category, int type, bool active, int stockquantity,string description)
+        public Item(int id,string barcode, string name, int unit, int category, int type,int supplier, bool active, int stockquantity,string description)
         {
+            ID = id;
             Barcode = barcode;
             Name = name;
             UnitID = unit;
             CategoryId = category;
             TypeID = type;
+            SupplierID = supplier;
             Active = active;
             Description = description;
             StockQuantity = stockquantity;
         }
 
-        public Item(string barcode, string name, bool active, int stockquantity, string description)
+        public Item(int id,string barcode, string name, bool active, int stockquantity, string description)
         {
+            ID = id;
             Barcode = barcode;
             Name = name;
             Active = active;
@@ -29,6 +32,7 @@ namespace PTi1MenaxhimiDepos.BO
             StockQuantity = stockquantity;
         }
 
+        public int ID { get; set; }
         public string Barcode { get; set; }
         public string Name { get; set; }
         public virtual ItemUnit Unit { get; set; }
