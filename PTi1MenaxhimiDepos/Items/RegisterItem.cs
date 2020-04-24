@@ -26,7 +26,7 @@ namespace PTi1MenaxhimiDepos
             cmbcategory.DataSource = ItemBLL.GetCategories();cmbcategory.DisplayMember = "Name";cmbcategory.ValueMember = "ID";
             cmbtype.DataSource = ItemBLL.GetItemTypes();cmbtype.DisplayMember = "Name"; cmbtype.ValueMember = "ID";
             cmbunit.DataSource = ItemBLL.GetItemUnits();cmbunit.DisplayMember = "Name"; cmbunit.ValueMember = "ID";
-            cmdSupplier.DataSource = Collaboration.GetSuppliers(); cmdSupplier.DisplayMember = "Name";cmdSupplier.ValueMember = "ID";
+            cmdSupplier.DataSource = CollaborationBLL.GetSuppliers(); cmdSupplier.DisplayMember = "Name";cmdSupplier.ValueMember = "ID";
             cmbActive.SelectedIndex = 0;
             HelperClass.LoadGridItem(ItemBLL.GetItems(),dgwItems);
         }
@@ -86,11 +86,11 @@ namespace PTi1MenaxhimiDepos
             Barcode = HelpClass.GetValue(e, dgwItems, 1);
             txtbarcode.Text = HelpClass.GetValue(e, dgwItems, 1);
             txtname.Text = HelpClass.GetValue(e, dgwItems, 2);
-            cmbunit.SelectedIndex = -1;
-            cmbcategory.SelectedIndex = -1;
-            cmbtype.SelectedIndex = -1;
-            cmdSupplier.SelectedIndex = -1;
-            cmbActive.SelectedIndex = -1;
+            cmbunit.Text = HelpClass.GetValue(e, dgwItems, 3);
+            cmbcategory.Text = HelpClass.GetValue(e, dgwItems, 4);
+            cmbtype.Text = HelpClass.GetValue(e, dgwItems, 5);
+            cmdSupplier.Text = HelpClass.GetValue(e, dgwItems, 6);
+            cmbActive.SelectedIndex = 0;
             txtstock.Text = HelpClass.GetValue(e, dgwItems, 8);
             txtDescription.Text = HelpClass.GetValue(e, dgwItems, 9);
             btnDelete.Visible = btnUpdate.Visible = true; btnSave.Visible = false;
@@ -107,7 +107,16 @@ namespace PTi1MenaxhimiDepos
                 }
                 else
                 {
-                    Item obj = new Item(ID, txtbarcode.Text, txtname.Text, (int)cmbunit.SelectedValue, (int)cmbcategory.SelectedValue, (int)cmbtype.SelectedValue, (int)cmdSupplier.SelectedValue, IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
+                    List<BO.ItemUnit> units = (List<BO.ItemUnit>)cmbunit.DataSource;
+                    List<BO.ItemCategory> categories = (List<BO.ItemCategory>)cmbcategory.DataSource;
+                    List<BO.ItemType> type = (List<BO.ItemType>)cmbtype.DataSource;
+                    List<BO.Supplier> supplier = (List<BO.Supplier>)cmdSupplier.DataSource;
+                    int unitid = units.Where(u => u.Name == cmbunit.Text).Select(u => u.ID).FirstOrDefault();
+                    int categoryid = categories.Where(c => c.Name == cmbcategory.Text).Select(c => c.ID).FirstOrDefault();
+                    int typeid = type.Where(t => t.Name == cmbtype.Text).Select(t => t.ID).FirstOrDefault();
+                    int supplierid = supplier.Where(s => s.Name == cmdSupplier.Text).Select(s => s.ID).FirstOrDefault();
+                    Item obj = new Item(ID, txtbarcode.Text, txtname.Text, unitid, categoryid, typeid, supplierid, IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
+                    obj.Username = "besarkutleshi";
                     if (ItemBLL.UpdateItem(ID,obj))
                     {
                         HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);

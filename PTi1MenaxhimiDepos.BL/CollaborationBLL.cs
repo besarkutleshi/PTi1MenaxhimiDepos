@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using PTi1MenaxhimiDepos.DAL;
 namespace PTi1MenaxhimiDepos.BL
 {
-    public class Collaboration
+    public class CollaborationBLL
     {
         static SupplierRepository supplierRep = new SupplierRepository();
         static ClientsRepository clientsRep = new ClientsRepository();
-
+        static EmployeeRepostiory empRep = new EmployeeRepostiory();
         #region Supplier
         public static bool InsertSupplier(Supplier supplier)
         {
@@ -46,6 +46,31 @@ namespace PTi1MenaxhimiDepos.BL
 
         #region Client
 
+
+        #endregion
+
+        #region Employee
+        public static bool InsertEmployee(BO.Employee obj)
+        {
+            return empRep.Add(obj);
+        }
+        public static bool DeleteEmployee(int id)
+        {
+            return empRep.Delete(id);
+        }
+        public static bool UpdateEmployee(int id,BO.Employee obj)
+        {
+            return empRep.Update(id, obj);
+        }
+        public static List<BO.Employee> GetEmployees() => empRep.ReadAll();
+        //{
+        //    return empRep.ReadAll();
+        //}
+        public static BO.Employee GetEmployee(int id)
+        {
+            return empRep.ReadById(id);
+        }
+        public static BO.Employee GetEmployee(string name) => empRep.ReadByName(name);
 
         #endregion
 

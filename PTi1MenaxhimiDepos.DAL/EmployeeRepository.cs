@@ -31,7 +31,6 @@ namespace PTi1MenaxhimiDepos.DAL
                     cmd.Parameters.AddWithValue("@City", obj.Address.City);
                     cmd.Parameters.AddWithValue("@Country", obj.Address.Country);
                     cmd.Parameters.AddWithValue("@PostalCode", obj.Address.PostalCode);
-                    cmd.Parameters.AddWithValue("RoleID", obj.Role.ID);
                     cmd.Parameters.AddWithValue("InsertBy", obj.Username);
                     val = DataConnection.GetValue(cmd);
                     return HelperClass.GetValue(val, "Register");
@@ -152,9 +151,9 @@ namespace PTi1MenaxhimiDepos.DAL
 
         public Employee Get(SqlDataReader sdr)
         {
-            Employee employee = new Employee(sdr["NAME"].ToString(), sdr["SURNAME"].ToString(), sdr["EMAIL"].ToString(), sdr["PHONE"].ToString(),
+            Employee employee = new Employee(int.Parse(sdr["PERSONID"].ToString()),sdr["NAME"].ToString(), sdr["SURNAME"].ToString(), sdr["EMAIL"].ToString(), sdr["PHONE"].ToString(),
                                 new Address(sdr["STREET"].ToString(), sdr["CITY"].ToString(), sdr["COUNTRY"].ToString(), long.Parse(sdr["POSTALCODE"].ToString())));
-            employee.Role.Name = sdr["ROLE"].ToString();
+            employee.Fullname = sdr["FULLNAME"].ToString();
             return employee;
         }
 
@@ -177,7 +176,6 @@ namespace PTi1MenaxhimiDepos.DAL
                     cmd.Parameters.AddWithValue("@City", obj.Address.City);
                     cmd.Parameters.AddWithValue("@Country", obj.Address.Country);
                     cmd.Parameters.AddWithValue("@PostalCode", obj.Address.PostalCode);
-                    cmd.Parameters.AddWithValue("RoleID", obj.Role.ID);
                     cmd.Parameters.AddWithValue("UpdateBy", obj.Username);
                     val = DataConnection.GetValue(cmd);
                 }

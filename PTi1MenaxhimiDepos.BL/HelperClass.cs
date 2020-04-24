@@ -27,6 +27,25 @@ namespace PTi1MenaxhimiDepos.BL
 
         public static void LoadGrid<T>(List<T> ts, RadGridView grid)
         {
+            object obj = null;
+            foreach (var item in ts)
+            {
+                obj = item;
+                break;
+            }
+            if (obj is PTi1MenaxhimiDepos.BO.Account.User)
+            {
+                grid.DataSource = AdministrationBLL.ReturnUsers(AdministrationBLL.GetUsers());
+                return;
+            }
+            if(obj is PTi1MenaxhimiDepos.BO.Item)
+            {
+
+            }
+            //if(obj.GetType() == typeof(PTi1MenaxhimiDepos.BO.Account.User))
+            //{
+
+            //}
             grid.DataSource = ItemBLL.ReturnDt(ts);
         }
 

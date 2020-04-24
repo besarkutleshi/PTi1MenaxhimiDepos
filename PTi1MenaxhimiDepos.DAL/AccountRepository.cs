@@ -66,10 +66,10 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             User obj = new User();
             obj.ID = int.Parse(sdr["USERID"].ToString());
-            obj.Employee.Name = sdr["EMPLOYEE"].ToString();
+            obj.Employee = new BO.Employee(sdr["EMPLOYEE"].ToString());
             obj.UserName = sdr["USERNAME"].ToString();
             obj.Password = sdr["PASSWORD"].ToString();
-            obj.Role.Name = sdr["ROLE"].ToString();
+            obj.Role = new BO.Role( sdr["ROLE"].ToString());
             obj.Description = sdr["DESCRIPTION"].ToString();
             return obj;
         }
@@ -131,7 +131,7 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        public User ReadById(string username)
+        public User ReadByUsername(string username)
         {
             try
             {
@@ -169,7 +169,7 @@ namespace PTi1MenaxhimiDepos.DAL
                 {
                     con.Open();
                     var cmd = DataConnection.Command(con, "sp_Update_User", CommandType.StoredProcedure);
-                    DataConnection.AddParameter(cmd, "@@ID", id);
+                    DataConnection.AddParameter(cmd, "@ID", id);
                     value = Parameteres(obj, cmd);
                 }
                 return HelperClass.GetValue(value, "Update");
@@ -186,9 +186,9 @@ namespace PTi1MenaxhimiDepos.DAL
             DataConnection.AddParameter(cmd, "@EmployeeID", obj.EmployeeID);
             DataConnection.AddParameter(cmd, "@Username", obj.UserName);
             DataConnection.AddParameter(cmd, "@Password", obj.Password);
-            DataConnection.AddParameter(cmd, "@RoleID", obj.RoleID);
             DataConnection.AddParameter(cmd, "@Description", obj.Description);
-            DataConnection.AddParameter(cmd, "@InsertBy", obj.Username);
+            DataConnection.AddParameter(cmd, "@RoleID", obj.RoleID);
+            DataConnection.AddParameter(cmd, "@UpdateBy", obj.Username);
             return DataConnection.GetValue(cmd);
         }
     }

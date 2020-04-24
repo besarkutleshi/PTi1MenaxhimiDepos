@@ -325,7 +325,7 @@
             this.ClientSize = new System.Drawing.Size(1817, 990);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.tabControl2);
-            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";

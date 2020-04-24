@@ -12,16 +12,16 @@ namespace PTi1MenaxhimiDepos.BO
 {
     public class Employee :AuditionAtributtes,IBase
     {
-        public int RoleID { get; set; }
-        public virtual Role Role { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
         public Address Address { get; set; }
-
-        public Employee(string name, string surname, string email, string phone, Address address)
+        public string Fullname { get; set; }
+        public Employee(int id,string name, string surname, string email, string phone, Address address)
         {
+            this.ID = id;
             this.Name = name;
             this.Surname = surname;
             this.Email = email;
@@ -29,14 +29,20 @@ namespace PTi1MenaxhimiDepos.BO
             this.Address = address;
         }
 
-        public Employee(string name, string surname, string email, string phone, Address address, int roleid)
+        //public Employee(int id,string name, string surname, string email, string phone, Address address)
+        //{
+        //    this.ID = id;
+        //    this.Name = name;
+        //    this.Surname = surname;
+        //    this.Email = email;
+        //    this.Phone = phone;
+        //    this.Address = address;
+        //}
+
+        public Employee(string name)
         {
             this.Name = name;
-            this.Surname = surname;
-            this.Email = email;
-            this.Phone = phone;
-            this.Address = address;
-            this.RoleID = roleid;
         }
+
     }
 }

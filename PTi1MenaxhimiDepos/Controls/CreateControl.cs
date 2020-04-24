@@ -158,33 +158,22 @@ namespace PTi1MenaxhimiDepos.Controls
         {
             RadButton Employee = new RadButton();
             Employee.Click += Employee_Click;
-            Image invoice = CreateImage(new Bitmap(Properties.Resources.invoice));
+            Image invoice = CreateImage(new Bitmap(Properties.Resources.employee));
             tabPage.Controls.Add(ControlShow.GetButtonss(Employee, new Point(13, 20), new Size(75, 60), null, invoice));
             Label lblinvoice = new Label();
             tabPage.Controls.Add(ControlShow.GetButtonss(lblinvoice, new Point(19, 85), new Size(75, 20), "Employee"));
             RadButton User = new RadButton();
             User.Click += User_Click;
-            Image hapeimg = CreateImage(new Bitmap(Properties.Resources.add_item_icon));
+            Image hapeimg = CreateImage(new Bitmap(Properties.Resources.Admin_icon));
             tabPage.Controls.Add(ControlShow.GetButtonss(User, new Point(100, 20), new Size(75, 60), null, hapeimg));
             Label lblitem = new Label();
             tabPage.Controls.Add(ControlShow.GetButtonss(lblitem, new Point(115, 85), new Size(75, 20), "User"));
             RadButton Role = new RadButton();
             Role.Click += Role_Click;
-            Image type = CreateImage(new Bitmap(Properties.Resources.type));
+            Image type = CreateImage(new Bitmap(Properties.Resources.TinkerTool_icon));
             tabPage.Controls.Add(ControlShow.GetButtonss(Role, new Point(187, 20), new Size(75, 60), null, type));
             Label lbltype = new Label();
             tabPage.Controls.Add(ControlShow.GetButtonss(lbltype, new Point(203, 85), new Size(75, 20), "Role"));
-            RadButton ChangePasswrod = new RadButton();
-            ChangePasswrod.Click += ChangePasswrod_Click;
-            Image unit = CreateImage(new Bitmap(Properties.Resources.unit));
-            tabPage.Controls.Add(ControlShow.GetButtonss(ChangePasswrod, new Point(274, 20), new Size(75, 60), null, unit));
-            Label lblunit = new Label();
-            tabPage.Controls.Add(ControlShow.GetButtonss(lblunit, new Point(280, 85), new Size(75, 20), "Passwrod"));
-        }
-
-        private void ChangePasswrod_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void Role_Click(object sender, EventArgs e)
@@ -194,7 +183,8 @@ namespace PTi1MenaxhimiDepos.Controls
 
         private void User_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Administration.User user = new Administration.User();
+            user.ShowDialog();
         }
 
         private void Employee_Click(object sender, EventArgs e)

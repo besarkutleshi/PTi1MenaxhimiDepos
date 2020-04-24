@@ -12,7 +12,7 @@ namespace PTi1MenaxhimiDepos.BO.Account
         {
 
         }
-        public User(int iD, string userName, string password, string description, int employeeID, int roleID, Role role, Employee employee)
+        public User(int iD, string userName, string password, string description, int employeeID, int roleID)
         {
             ID = iD;
             UserName = userName;
@@ -20,8 +20,14 @@ namespace PTi1MenaxhimiDepos.BO.Account
             Description = description;
             EmployeeID = employeeID;
             RoleID = roleID;
-            Role = role;
-            Employee = employee;
+        }
+
+        public User(int iD, string userName, string password, string description)
+        {
+            ID = iD;
+            UserName = userName;
+            Password = password;
+            Description = description;
         }
 
         public int ID { get; set; }

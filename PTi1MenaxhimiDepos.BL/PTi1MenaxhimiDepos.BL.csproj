@@ -43,8 +43,8 @@
     <Reference Include="Telerik.WinControls.GridView, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountBLL.cs" />
-    <Compile Include="Collaboration.cs" />
+    <Compile Include="AdministrationBLL.cs" />
+    <Compile Include="CollaborationBLL.cs" />
     <Compile Include="HelperClass.cs" />
     <Compile Include="ItemBLL.cs" />
     <Compile Include="PosBLL.cs" />

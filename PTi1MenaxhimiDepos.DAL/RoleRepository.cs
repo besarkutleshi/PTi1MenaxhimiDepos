@@ -62,7 +62,7 @@ namespace PTi1MenaxhimiDepos.DAL
 
         public Role Get(SqlDataReader sdr)
         {
-            return new Role(sdr["NAME"].ToString(), sdr["CODE"].ToString(), sdr["DESCRIPTION"].ToString());
+            return new Role(int.Parse(sdr["ROLEID"].ToString()),sdr["NAME"].ToString(), sdr["CODE"].ToString(), sdr["DESCRIPTION"].ToString());
         }
 
         public List<Role> ReadAll()

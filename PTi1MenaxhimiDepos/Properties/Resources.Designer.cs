@@ -103,6 +103,16 @@ namespace PTi1MenaxhimiDepos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Admin_icon {
+            get {
+                object obj = ResourceManager.GetObject("Admin-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bank_icon {
             get {
                 object obj = ResourceManager.GetObject("bank-icon", resourceCulture);
@@ -266,6 +276,16 @@ namespace PTi1MenaxhimiDepos.Properties {
         internal static System.Drawing.Bitmap store_icon {
             get {
                 object obj = ResourceManager.GetObject("store-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TinkerTool_icon {
+            get {
+                object obj = ResourceManager.GetObject("TinkerTool-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
