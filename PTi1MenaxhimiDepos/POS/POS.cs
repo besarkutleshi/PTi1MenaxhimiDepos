@@ -109,5 +109,10 @@ namespace PTi1MenaxhimiDepos.POS
                 }
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
+        }
     }
 }

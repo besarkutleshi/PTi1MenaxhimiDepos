@@ -115,6 +115,7 @@
             this.btnclose.Text = "Cancel";
             this.btnclose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnclose.UseVisualStyleBackColor = true;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // btnlogin
             // 

@@ -149,8 +149,6 @@ namespace PTi1MenaxhimiDepos.BL
 
         #endregion
 
-
-
         public static DataTable ConvertToDataTableItems(List<Item> rows)
         {
             try
@@ -195,37 +193,7 @@ namespace PTi1MenaxhimiDepos.BL
                 return null;
             }
         }
-        public static DataTable ReturnDt<T>(List<T> singers)
-        {
-            try
-            {
-                DataTable dataTable = new DataTable(typeof(T).Name);
-                System.Reflection.PropertyInfo[] Props = typeof(T).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
-                foreach (System.Reflection.PropertyInfo item in Props)
-                {
-                    if (item.Name == "Username")
-                    {
-                        continue;
-                    }
-                    dataTable.Columns.Add(item.Name);
-                }
-                foreach (T item in singers)
-                {
-                    var values = new object[Props.Length - 1];
-                    for (int i = 0; i < Props.Length - 1; i++)
-                    {
-                        values[i] = Props[i].GetValue(item, null);
-                    }
-                    dataTable.Rows.Add(values);
-                }
-                return dataTable;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                return null;
-            }
-        }
+        
 
     }
 }

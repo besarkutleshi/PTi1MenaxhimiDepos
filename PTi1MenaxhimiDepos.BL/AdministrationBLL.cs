@@ -14,6 +14,10 @@ namespace PTi1MenaxhimiDepos.BL
         static RoleRepository RoleRepository = new RoleRepository();
 
         #region User
+        public static BO.Account.User Login(string username,string password)
+        {
+            return AccountRepository.Login(username, password);
+        }
         public static bool InsertUser(BO.Account.User user)
         {
             return AccountRepository.Add(user);

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition14 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.txtID = new Telerik.WinControls.UI.RadTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtName = new Telerik.WinControls.UI.RadTextBox();
@@ -194,7 +194,7 @@
             this.dgwPos.MasterTemplate.AllowDeleteRow = false;
             this.dgwPos.MasterTemplate.AllowEditRow = false;
             this.dgwPos.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwPos.MasterTemplate.ViewDefinition = tableViewDefinition14;
+            this.dgwPos.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgwPos.Name = "dgwPos";
             this.dgwPos.Size = new System.Drawing.Size(845, 331);
             this.dgwPos.TabIndex = 8;
@@ -223,6 +223,7 @@
             this.btnClear.TabIndex = 19;
             this.btnClear.Text = "Clear";
             this.btnClear.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btndelete
             // 

@@ -1,6 +1,7 @@
 ﻿using PTi1MenaxhimiDepos.BO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,32 +41,42 @@ namespace PTi1MenaxhimiDepos.BL
             }
             if(obj is PTi1MenaxhimiDepos.BO.Item)
             {
-
+                grid.DataSource = ItemBLL.ConvertToDataTableItems(ItemBLL.GetItems());
+                return;
             }
-            //if(obj.GetType() == typeof(PTi1MenaxhimiDepos.BO.Account.User))
-            //{
-
-            //}
-            grid.DataSource = ItemBLL.ReturnDt(ts);
+            grid.DataSource = ReturnDt(ts);
         }
 
-        public static void DoesExistItem(Item obj, RadGridView grid)
+        public static DataTable ReturnDt<T>(List<T> singers)
         {
-            if (obj == null)
+            try
             {
-                MessageBox.Show("Nothing to show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                DataTable dataTable = new DataTable(typeof(T).Name);
+                System.Reflection.PropertyInfo[] Props = typeof(T).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+                foreach (System.Reflection.PropertyInfo item in Props)
+                {
+                    if (item.Name == "Username")
+                    {
+                        continue;
+                    }
+                    dataTable.Columns.Add(item.Name);
+                }
+                foreach (T item in singers)
+                {
+                    var values = new object[Props.Length - 1];
+                    for (int i = 0; i < Props.Length - 1; i++)
+                    {
+                        values[i] = Props[i].GetValue(item, null);
+                    }
+                    dataTable.Rows.Add(values);
+                }
+                return dataTable;
             }
-            else
+            catch (Exception ex)
             {
-                List<Item> objs = new List<Item>();
-                objs.Add(obj);
-                LoadGridItem(objs, grid);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return null;
             }
-        }
-
-        public static void LoadGridItem(List<Item> items,RadGridView grid)
-        {
-            grid.DataSource = ItemBLL.ConvertToDataTableItems(items);
         }
     }
 }

@@ -12,6 +12,7 @@ namespace PTi1MenaxhimiDepos.BL
         static SupplierRepository supplierRep = new SupplierRepository();
         static ClientsRepository clientsRep = new ClientsRepository();
         static EmployeeRepostiory empRep = new EmployeeRepostiory();
+
         #region Supplier
         public static bool InsertSupplier(Supplier supplier)
         {
@@ -45,8 +46,12 @@ namespace PTi1MenaxhimiDepos.BL
         #endregion
 
         #region Client
-
-
+        public static bool InsertClient(BO.Client obj) => clientsRep.Add(obj);
+        public static bool DeleteClient(int id) => clientsRep.Delete(id);
+        public static bool UpdateClient(int id, BO.Client obj) => clientsRep.Update(id, obj);
+        public static BO.Client GetClient(int id) => clientsRep.ReadById(id);
+        public static BO.Client GetClient(string name) => clientsRep.ReadByName(name);
+        public static List<BO.Client> GetClients() => clientsRep.ReadAll();
         #endregion
 
         #region Employee
@@ -63,9 +68,7 @@ namespace PTi1MenaxhimiDepos.BL
             return empRep.Update(id, obj);
         }
         public static List<BO.Employee> GetEmployees() => empRep.ReadAll();
-        //{
-        //    return empRep.ReadAll();
-        //}
+
         public static BO.Employee GetEmployee(int id)
         {
             return empRep.ReadById(id);

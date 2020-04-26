@@ -1,4 +1,5 @@
-﻿using PTi1MenaxhimiDepos.BO.Account;
+﻿using PTi1MenaxhimiDepos.DAL.Security;
+using PTi1MenaxhimiDepos.BO.Account;
 using PTi1MenaxhimiDepos.DAL.Interface;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,39 @@ namespace PTi1MenaxhimiDepos.DAL
 {
     public class AccountRepository : ICrud<User>,IGetObject<User>
     {
+        public User Login(string username,string password)
+        {
+            try
+            {
+                User user = null;
+                using(var con = DataConnection.Connection())
+                {
+                    con.Open();
+                    var cmd = DataConnection.Command(con, "sp_Login",CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "@Username", username);
+                    DataConnection.AddParameter(cmd, "@Password",password);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        user = Get(sdr);
+                    }
+                }
+                if(user != null)
+                {
+                    return user;
+                }
+                else
+                {
+                    MessageBox.Show("Email or password was incorrect, pleasy try again", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return null;
+            }
+        }
         public bool Add(User obj)
         {
             try

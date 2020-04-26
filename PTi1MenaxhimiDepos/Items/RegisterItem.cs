@@ -28,7 +28,7 @@ namespace PTi1MenaxhimiDepos
             cmbunit.DataSource = ItemBLL.GetItemUnits();cmbunit.DisplayMember = "Name"; cmbunit.ValueMember = "ID";
             cmdSupplier.DataSource = CollaborationBLL.GetSuppliers(); cmdSupplier.DisplayMember = "Name";cmdSupplier.ValueMember = "ID";
             cmbActive.SelectedIndex = 0;
-            HelperClass.LoadGridItem(ItemBLL.GetItems(),dgwItems);
+            HelperClass.LoadGrid(ItemBLL.GetItems(),dgwItems);
         }
 
 
@@ -44,7 +44,7 @@ namespace PTi1MenaxhimiDepos
                 Item obj = new Item(0,txtbarcode.Text, txtname.Text, (int)cmbunit.SelectedValue, (int)cmbcategory.SelectedValue, (int)cmbtype.SelectedValue, (int)cmdSupplier.SelectedValue,IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
                 if (ItemBLL.InsertItem(obj))
                 {
-                    HelperClass.LoadGridItem(ItemBLL.GetItems(), dgwItems);
+                    HelperClass.LoadGrid(ItemBLL.GetItems(), dgwItems);
                     txtbarcode.Text = txtDescription.Text = txtname.Text = txtSearch.Text = txtstock.Text = "";
                 }
             }
@@ -57,12 +57,12 @@ namespace PTi1MenaxhimiDepos
                 if (txtSearch.Text.All(char.IsDigit))
                 {
                     BO.Item item = ItemBLL.GetItem(int.Parse(txtSearch.Text));
-                    HelperClass.DoesExistItem(item, dgwItems);
+                    HelperClass.DoesExist(item, dgwItems);
                 }
                 else
                 {
                     BO.Item item = ItemBLL.GetItemByName(txtSearch.Text);
-                    HelperClass.DoesExistItem(item, dgwItems);
+                    HelperClass.DoesExist(item, dgwItems);
                 }
             }
             else
@@ -75,7 +75,7 @@ namespace PTi1MenaxhimiDepos
         {
             if(txtSearch.Text == "")
             {
-                HelperClass.LoadGridItem(ItemBLL.GetItems(),dgwItems);
+                HelperClass.LoadGrid(ItemBLL.GetItems(),dgwItems);
             }
         }
 
@@ -120,7 +120,7 @@ namespace PTi1MenaxhimiDepos
                     if (ItemBLL.UpdateItem(ID,obj))
                     {
                         HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
-                        HelperClass.LoadGridItem(ItemBLL.GetItems(), dgwItems);
+                        HelperClass.LoadGrid(ItemBLL.GetItems(), dgwItems);
                     }
                 }
             }
@@ -145,7 +145,7 @@ namespace PTi1MenaxhimiDepos
                 if (ItemBLL.DeleteItem(Barcode))
                 {
                     HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
-                    HelperClass.LoadGridItem(ItemBLL.GetItems(), dgwItems);
+                    HelperClass.LoadGrid(ItemBLL.GetItems(), dgwItems);
                 }
             }
         }

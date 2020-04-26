@@ -1,4 +1,5 @@
 ﻿using PTi1MenaxhimiDepos.BL;
+using PTi1MenaxhimiDepos.BO.Account;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace PTi1MenaxhimiDepos
 {
     public static class HelpClass
     {
+        public static User CurrentUser = null;
         public static void OnChange(RadButton btnsave, RadButton btndelete, RadButton btnupdate, params RadTextBox[] radTextBoxes)
         {
             btnsave.Visible = true; btndelete.Visible = false; btnupdate.Visible = false;
