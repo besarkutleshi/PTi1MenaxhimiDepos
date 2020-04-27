@@ -99,6 +99,7 @@
             // 
             // 
             // 
+            this.dgwItems.MasterTemplate.AllowAddNewRow = false;
             this.dgwItems.MasterTemplate.AllowDeleteRow = false;
             this.dgwItems.MasterTemplate.AllowEditRow = false;
             this.dgwItems.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;

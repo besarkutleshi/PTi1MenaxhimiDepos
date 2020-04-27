@@ -256,6 +256,7 @@
             this.btnartikujt.Size = new System.Drawing.Size(123, 66);
             this.btnartikujt.TabIndex = 0;
             this.btnartikujt.UseVisualStyleBackColor = false;
+            this.btnartikujt.Click += new System.EventHandler(this.btnartikujt_Click);
             // 
             // label4
             // 

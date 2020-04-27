@@ -98,8 +98,10 @@
             this.txtPasword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtPasword.Location = new System.Drawing.Point(8, 109);
             this.txtPasword.Name = "txtPasword";
+            this.txtPasword.PasswordChar = '●';
             this.txtPasword.Size = new System.Drawing.Size(268, 37);
             this.txtPasword.TabIndex = 3;
+            this.txtPasword.UseSystemPasswordChar = true;
             // 
             // label1
             // 

@@ -28,7 +28,7 @@ namespace PTi1MenaxhimiDepos.Items
             else
             {
                 BO.ItemCategory category = new BO.ItemCategory(0, txtname.Text, txtdescription.Text);
-                category.Username = "besarkutleshi";
+                category.Username = HelpClass.CurrentUser.UserName;
                 if (ItemBLL.InsertCategory(category))
                 {
                     HelperClass.LoadGrid(ItemBLL.GetCategories(),dgwCategories);
@@ -91,7 +91,7 @@ namespace PTi1MenaxhimiDepos.Items
             {
                 category.Name = txtname.Text;
                 category.Description = txtdescription.Text;
-                category.Username = "besarkutleshi";
+                category.Username = HelpClass.CurrentUser.UserName;
                 if (MessageBox.Show("Are you sure", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (ItemBLL.UpdateCategory(category.ID, category))

@@ -122,6 +122,8 @@ namespace PTi1MenaxhimiDepos.BL
             return Item.ReadAll();
         }
 
+        public static List<Item> GetTodayItems() => Item.ReadAllToday();
+
         public static bool InsertItem(Item obj)
         {
             return Item.Add(obj);

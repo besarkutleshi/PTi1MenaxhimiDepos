@@ -36,7 +36,7 @@ namespace PTi1MenaxhimiDepos.Administration
             else
             {
                 BO.Account.User obj = new BO.Account.User(0, txtUsername.Text, Security.Encryptt(txtPasword.Text), txtDescription.Text, (int)cmbEmployee.SelectedValue, (int)cmbRole.SelectedValue);
-                obj.Username = "besarkutleshi";
+                obj.Username = HelpClass.CurrentUser.UserName;
                 if (AdministrationBLL.InsertUser(obj))
                 {
                     HelperClass.LoadGrid(AdministrationBLL.GetUsers(), dgwUser);
@@ -97,6 +97,7 @@ namespace PTi1MenaxhimiDepos.Administration
                 Employee emp = (Employee)cmbEmployee.SelectedItem.DataBoundItem;
                 Role role = (Role)cmbRole.SelectedItem.DataBoundItem;
                 obj = new BO.Account.User(int.Parse(txtID.Text), txtUsername.Text, Security.Encryptt(txtPasword.Text), txtDescription.Text, emp.ID, role.ID);
+                obj.Username = HelpClass.CurrentUser.UserName; 
                 if (AdministrationBLL.UpdateUser(obj.ID, obj))
                 {
                     HelperClass.LoadGrid(AdministrationBLL.GetUsers(), dgwUser);

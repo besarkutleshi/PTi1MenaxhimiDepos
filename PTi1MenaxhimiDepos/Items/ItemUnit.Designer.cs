@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSearch = new Telerik.WinControls.UI.RadButton();
             this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
@@ -114,10 +114,11 @@
             // 
             // 
             // 
+            this.dgwTypes.MasterTemplate.AllowAddNewRow = false;
             this.dgwTypes.MasterTemplate.AllowDeleteRow = false;
             this.dgwTypes.MasterTemplate.AllowEditRow = false;
             this.dgwTypes.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwTypes.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgwTypes.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.dgwTypes.Name = "dgwTypes";
             this.dgwTypes.Size = new System.Drawing.Size(776, 278);
             this.dgwTypes.TabIndex = 18;
@@ -180,7 +181,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Image = global::PTi1MenaxhimiDepos.Properties.Resources.cancel_icon;
+            this.btnClear.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Actions_edit_clear_icon1;
             this.btnClear.Location = new System.Drawing.Point(504, 161);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(137, 56);

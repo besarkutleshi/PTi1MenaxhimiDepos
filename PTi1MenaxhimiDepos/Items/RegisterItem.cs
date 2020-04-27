@@ -29,6 +29,7 @@ namespace PTi1MenaxhimiDepos
             cmdSupplier.DataSource = CollaborationBLL.GetSuppliers(); cmdSupplier.DisplayMember = "Name";cmdSupplier.ValueMember = "ID";
             cmbActive.SelectedIndex = 0;
             HelperClass.LoadGrid(ItemBLL.GetItems(),dgwItems);
+            dgwItems.TableElement.SearchHighlightColor = Color.LightBlue;
         }
 
 
@@ -42,6 +43,7 @@ namespace PTi1MenaxhimiDepos
             else
             {
                 Item obj = new Item(0,txtbarcode.Text, txtname.Text, (int)cmbunit.SelectedValue, (int)cmbcategory.SelectedValue, (int)cmbtype.SelectedValue, (int)cmdSupplier.SelectedValue,IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
+                obj.Username = HelpClass.CurrentUser.UserName;
                 if (ItemBLL.InsertItem(obj))
                 {
                     HelperClass.LoadGrid(ItemBLL.GetItems(), dgwItems);
@@ -116,7 +118,7 @@ namespace PTi1MenaxhimiDepos
                     int typeid = type.Where(t => t.Name == cmbtype.Text).Select(t => t.ID).FirstOrDefault();
                     int supplierid = supplier.Where(s => s.Name == cmdSupplier.Text).Select(s => s.ID).FirstOrDefault();
                     Item obj = new Item(ID, txtbarcode.Text, txtname.Text, unitid, categoryid, typeid, supplierid, IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
-                    obj.Username = "besarkutleshi";
+                    obj.Username = HelpClass.CurrentUser.UserName;
                     if (ItemBLL.UpdateItem(ID,obj))
                     {
                         HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);

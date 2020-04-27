@@ -29,7 +29,7 @@ namespace PTi1MenaxhimiDepos.Items
         private void btnSave_Click(object sender, EventArgs e)
         {
             PTi1MenaxhimiDepos.BO.ItemType itemtype = new BO.ItemType(0, txtname.Text, txtdescription.Text);
-            itemtype.Username = "besarkutleshi";
+            itemtype.Username = HelpClass.CurrentUser.UserName;
             if (ItemBLL.InsertItemType(itemtype))
             {
                 HelperClass.LoadGrid(ItemBLL.GetItemTypes(), dgwTypes);
@@ -79,7 +79,7 @@ namespace PTi1MenaxhimiDepos.Items
             {
                 type.Name = txtname.Text;
                 type.Description = txtdescription.Text;
-                type.Username = "besarkutleshi";
+                type.Username = HelpClass.CurrentUser.UserName;
                 if (MessageBox.Show("Are you sure", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (ItemBLL.UpdateItemType(type.ID, type))

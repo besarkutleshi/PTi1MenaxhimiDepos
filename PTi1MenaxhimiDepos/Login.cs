@@ -47,5 +47,11 @@ namespace PTi1MenaxhimiDepos
         {
             Application.Exit();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txtpassword.Text = "besar123";
+            txtusername.Text = "besarkutleshi";
+        }
     }
 }

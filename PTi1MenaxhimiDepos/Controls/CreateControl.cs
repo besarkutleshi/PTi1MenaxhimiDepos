@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 using PTi1MenaxhimiDepos.Items;
+using PTi1MenaxhimiDepos.BL;
+
 namespace PTi1MenaxhimiDepos.Controls
 {
     public class CreateControl
     {
-
         private void PrintControls(TabPage tabPage, RadGridView obj, string[] values)
         {
             RadButton btn1 = new RadButton();
@@ -126,6 +127,10 @@ namespace PTi1MenaxhimiDepos.Controls
             tabPage.Controls.Add(ControlShow.GetButtonss(lblcategory, new Point(368, 85), new Size(75, 20), "Category"));
             PrintControls(tabPage, obj, values);
         }
+        public void PrintGrid(TabPage tab, RadGridView obj,Point point,Size size)
+        {
+            tab.Controls.Add(ControlShow.GetButtonss(obj,point, size));
+        }
         private void BtnRegisterUnit_Click(object sender, EventArgs e)
         {
             ItemUnit obj = new ItemUnit();
@@ -189,7 +194,6 @@ namespace PTi1MenaxhimiDepos.Controls
 
         private void Employee_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
         }
 
         #endregion

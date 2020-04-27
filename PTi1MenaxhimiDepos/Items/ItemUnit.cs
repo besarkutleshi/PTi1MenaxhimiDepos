@@ -33,7 +33,7 @@ namespace PTi1MenaxhimiDepos.Items
             else
             {
                 BO.ItemUnit unit = new BO.ItemUnit(0, txtname.Text, txtdescription.Text);
-                unit.Username = "besarkutleshi";
+                unit.Username = HelpClass.CurrentUser.UserName;
                 if (ItemBLL.InsertUnitType(unit))
                 {
                     HelperClass.LoadGrid(ItemBLL.GetItemUnits(),dgwTypes);
@@ -80,7 +80,7 @@ namespace PTi1MenaxhimiDepos.Items
             {
                 unit.Name = txtname.Text;
                 unit.Description = txtdescription.Text;
-                unit.Username = "besarkutleshi";
+                unit.Username = HelpClass.CurrentUser.UserName;
                 if (ItemBLL.UpdateUnitType(unit.ID, unit))
                 {
                     HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);

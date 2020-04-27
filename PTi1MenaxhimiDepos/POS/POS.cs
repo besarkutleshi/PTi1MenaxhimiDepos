@@ -43,13 +43,13 @@ namespace PTi1MenaxhimiDepos.POS
             if (txtSearch.Text.All(char.IsDigit))
             {
                 PointofSale obj = PosBLL.GetPointofSale(int.Parse(txtSearch.Text));
-                obj.Username = "besarkutleshi";
+                obj.Username = HelpClass.CurrentUser.UserName;
                 HelperClass.DoesExist(obj, dgwPos);
             }
             else
             {
                 PointofSale obj = PosBLL.GetPointofSale(txtSearch.Text);
-                obj.Username = "besarkutleshi";
+                obj.Username = HelpClass.CurrentUser.UserName;
                 HelperClass.DoesExist(obj, dgwPos);
             }
         }

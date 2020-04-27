@@ -1,17 +1,9 @@
 ﻿using PTi1MenaxhimiDepos.BL;
 using PTi1MenaxhimiDepos.Controls;
-using PTi1MenaxhimiDepos.POS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-using PTi1MenaxhimiDepos.POS;
 
 namespace PTi1MenaxhimiDepos
 {
@@ -27,12 +19,13 @@ namespace PTi1MenaxhimiDepos
         {
             if (TabPages("Shitjet e Dites"))
             {
-                return;
+                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
             }
             string[] values = new string[4];
             TabPage tabPage = new TabPage("Shitjet e Dites");
             tabControl1.TabPages.Add(tabPage);
             RadGridView obj = new RadGridView();
+            obj.AllowAddNewRow = false;
             obj.DataSource = SaleBLL.GetInvoicesToday();
             control.PrinButonsSales(tabPage, obj, values);
             tabControl1.SelectedTab = tabPage;
@@ -42,12 +35,13 @@ namespace PTi1MenaxhimiDepos
         {
             if(TabPages("Regjistrimet e Dites"))
             {
-                return;
+                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
             }
             string[] values = new string[4];
             TabPage tabPage = new TabPage("Regjistrimet e Dites");
             tabControl1.TabPages.Add(tabPage);
             RadGridView obj = new RadGridView();
+            obj.AllowAddNewRow = false;
             obj.DataSource = SaleBLL.GetInvoicesToday();
             control.PrintButtonsItems(tabPage, obj, values);
             tabControl1.SelectedTab = tabPage;
@@ -70,14 +64,18 @@ namespace PTi1MenaxhimiDepos
         {
             if (TabPages("Administrata"))
             {
-                return;
+                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
             }
-            string[] values = new string[4];
             TabPage tabPage = new TabPage("Administrata");
             tabControl1.TabPages.Add(tabPage);
+            control.PrintButtonsAdministration(tabPage); 
             RadGridView obj = new RadGridView();
-            obj.DataSource = SaleBLL.GetInvoicesToday();
-            control.PrintButtonsAdministration(tabPage);
+            obj.DataSource = CollaborationBLL.ReturnTableEmployees(CollaborationBLL.GetEmployees());
+            obj.AllowSearchRow = true;
+            obj.AllowEditRow = false;
+            obj.AllowAddNewRow = false;
+            obj.TableElement.SearchHighlightColor = Color.LightBlue;
+            control.PrintGrid(tabPage, obj, new Point(7, 110), new Size(1490, 480));
             tabControl1.SelectedTab = tabPage;
         }
 
@@ -95,6 +93,24 @@ namespace PTi1MenaxhimiDepos
         {
             Login obj = new Login();
             obj.ShowDialog();
+        }
+
+        private void btnartikujt_Click(object sender, EventArgs e)
+        {
+            if (TabPages("Artikujt"))
+            {
+                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
+            }
+            RadGridView obj = new RadGridView();
+            obj.AllowSearchRow = true;
+            obj.AllowEditRow = false;
+            obj.AllowAddNewRow = false;
+            obj.TableElement.SearchHighlightColor = Color.LightBlue;
+            obj.DataSource = ItemBLL.ConvertToDataTableItems(ItemBLL.GetItems());
+            TabPage tabPage = new TabPage("Artikujt");
+            tabControl1.TabPages.Add(tabPage);
+            control.PrintGrid(tabPage, obj, new Point(7, 5), new Size(1490, 590));
+            tabControl1.SelectedTab = tabPage;
         }
     }
 }

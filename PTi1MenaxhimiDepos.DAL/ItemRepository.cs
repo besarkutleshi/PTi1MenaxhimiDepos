@@ -95,6 +95,30 @@ namespace PTi1MenaxhimiDepos.DAL
                 return null;
             }
         }
+        public List<Item> ReadAllToday()
+        {
+            try
+            {
+                List<Item> dt = new List<Item>();
+                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                {
+                    con.Open();
+                    var cmd = DataConnection.Command(con, "sp_GetTodayRegistred_Items", CommandType.StoredProcedure);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        dt.Add(Get(sdr));
+                    }
+                }
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
 
         public Item ReadById(int id)
         {

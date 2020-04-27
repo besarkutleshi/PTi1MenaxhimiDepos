@@ -43,7 +43,7 @@ namespace PTi1MenaxhimiDepos.Controls
                 RadTextBox txt = (RadTextBox)control;
                 txt.Text = text;
                 txt.Size = size;
-                txt.ReadOnly = true;
+                //txt.ReadOnly = true;
                 txt.Location = location;
                 return txt;
             }

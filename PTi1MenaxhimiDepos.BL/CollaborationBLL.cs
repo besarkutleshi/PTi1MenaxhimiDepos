@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PTi1MenaxhimiDepos.DAL;
+using System.Data;
+using System.Windows.Forms;
+
 namespace PTi1MenaxhimiDepos.BL
 {
     public class CollaborationBLL
@@ -74,6 +77,59 @@ namespace PTi1MenaxhimiDepos.BL
             return empRep.ReadById(id);
         }
         public static BO.Employee GetEmployee(string name) => empRep.ReadByName(name);
+
+        public static DataTable ReturnTableEmployees(List<Employee> employees)
+        {
+            try
+            {
+                DataTable dataTable = new DataTable(typeof(Employee).Name);
+                System.Reflection.PropertyInfo[] Props = typeof(Employee).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+                foreach (System.Reflection.PropertyInfo item in Props)
+                {
+                    if (item.Name == "Username")
+                    {
+                        continue;
+                    }
+                    if(item.Name == "Address")
+                    {
+                        dataTable.Columns.Add("Street");
+                        dataTable.Columns.Add("City");
+                        dataTable.Columns.Add("Country");
+                        dataTable.Columns.Add("Postal Code");
+                        continue;
+                    }
+                    dataTable.Columns.Add(item.Name);
+                }
+                foreach (var item in employees)
+                {
+                    if (item == null)
+                    {
+                        throw new Exception();
+                    }
+                    else
+                    {
+                        object[] values = new object[10];
+                        values[0] = item.ID;
+                        values[1] = item.Name;
+                        values[2] = item.Surname;
+                        values[3] = item.Email;
+                        values[4] = item.Phone;
+                        values[5] = item.Address.Street;
+                        values[6] = item.Address.City;
+                        values[7] = item.Address.Country;
+                        values[8] = item.Address.PostalCode;
+                        values[9] = item.Fullname;
+                        dataTable.Rows.Add(values);
+                    }
+                }
+                return dataTable;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nothing to show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return null;
+            }
+        }
 
         #endregion
 

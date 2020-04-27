@@ -67,7 +67,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleRepository.cs" />
     <Compile Include="SaleRepository.cs" />
-    <Compile Include="Security\3DES.cs" />
     <Compile Include="SupplierRepostiory.cs" />
   </ItemGroup>
   <ItemGroup>
