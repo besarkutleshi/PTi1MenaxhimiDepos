@@ -138,7 +138,8 @@ namespace PTi1MenaxhimiDepos.Controls
         }
         private void BtnRegisterInvoice_Click(object sender, EventArgs e)
         {
-
+            Invoices.Invoice obj = new Invoices.Invoice();
+            obj.ShowDialog();
         }
         private void BtnRegisterCategory_Click(object sender, EventArgs e)
         {

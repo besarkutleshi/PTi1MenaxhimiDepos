@@ -25,6 +25,7 @@ namespace PTi1MenaxhimiDepos.BO
         public string Email { get; set; }
         public string Surname { get; set; }
         public Address Address { get; set; }
+        public string Fullname { get; set; }
 
     }
 }

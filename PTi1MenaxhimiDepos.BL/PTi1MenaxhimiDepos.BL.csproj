@@ -46,6 +46,7 @@
     <Compile Include="AdministrationBLL.cs" />
     <Compile Include="CollaborationBLL.cs" />
     <Compile Include="HelperClass.cs" />
+    <Compile Include="InvoiceBLL.cs" />
     <Compile Include="ItemBLL.cs" />
     <Compile Include="PosBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

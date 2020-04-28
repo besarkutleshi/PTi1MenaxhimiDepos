@@ -61,6 +61,12 @@
     <Compile Include="Controls\ControlShow.cs" />
     <Compile Include="Controls\CreateControl.cs" />
     <Compile Include="HelpClass.cs" />
+    <Compile Include="Invoices\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Items\ItemCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="Administration\User.resx">
       <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Items\ItemCategory.resx">
       <DependentUpon>ItemCategory.cs</DependentUpon>

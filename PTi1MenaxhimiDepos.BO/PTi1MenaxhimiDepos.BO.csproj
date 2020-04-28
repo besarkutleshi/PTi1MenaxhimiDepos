@@ -50,6 +50,9 @@
     <Compile Include="Employees\Role.cs" />
     <Compile Include="Interfaces\IBase.cs" />
     <Compile Include="Interfaces\ICrud.cs" />
+    <Compile Include="Invoices\DocType.cs" />
+    <Compile Include="Invoices\InvertoryBody.cs" />
+    <Compile Include="Invoices\InvertoryHeader.cs" />
     <Compile Include="Items\Item.cs" />
     <Compile Include="Items\ItemCategory.cs" />
     <Compile Include="Items\ItemType.cs" />
