@@ -58,6 +58,12 @@
     <Compile Include="Administration\User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Collab\Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collab\Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ControlShow.cs" />
     <Compile Include="Controls\CreateControl.cs" />
     <Compile Include="HelpClass.cs" />
@@ -119,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="Administration\User.resx">
       <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
