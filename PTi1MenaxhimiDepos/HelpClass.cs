@@ -14,10 +14,61 @@ namespace PTi1MenaxhimiDepos
         public static User CurrentUser = null;
         public static void OnChange(RadButton btnsave, RadButton btndelete, RadButton btnupdate, params RadTextBox[] radTextBoxes)
         {
-            btnsave.Visible = true; btndelete.Visible = false; btnupdate.Visible = false;
-            foreach (var item in radTextBoxes)
+            if(btnsave.Visible == true)
             {
-                item.Text = "";
+                btnsave.Visible = false; btndelete.Visible = btnupdate.Visible = true;
+            }
+            else
+            {
+                btnsave.Visible = true; btndelete.Visible = false; btnupdate.Visible = false;
+            }
+            Delete(radTextBoxes);
+        }
+
+        public static void Delete(params RadTextBox[] radTextBoxes)
+        {
+            if(radTextBoxes != null)
+            {
+                foreach (var item in radTextBoxes)
+                {
+                    item.Text = "";
+                }
+            }
+        }
+
+        public static void EnabledTextBoxs(params RadTextBox[] radTextBoxes)
+        {
+            if(radTextBoxes != null)
+            {
+                foreach (var item in radTextBoxes)
+                {
+                    if(item.Enabled == false)
+                    {
+                        item.Enabled = true;
+                    }
+                    else
+                    {
+                        item.Enabled = false;
+                    }
+                }
+            }
+        }
+
+        public static void EnabledComboBoxs(params RadDropDownList[] radDropDownLists)
+        {
+            if (radDropDownLists != null)
+            {
+                foreach (var item in radDropDownLists)
+                {
+                    if (item.Enabled == false)
+                    {
+                        item.Enabled = true;
+                    }
+                    else
+                    {
+                        item.Enabled = false;
+                    }
+                }
             }
         }
 
