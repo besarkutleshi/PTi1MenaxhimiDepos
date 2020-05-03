@@ -57,7 +57,7 @@
     <Compile Include="Items\ItemCategory.cs" />
     <Compile Include="Items\ItemType.cs" />
     <Compile Include="Items\ItemUnit.cs" />
-    <Compile Include="Items\Supplier.cs" />
+    <Compile Include="Suppl\Supplier.cs" />
     <Compile Include="POS\PointofSale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
