@@ -32,6 +32,11 @@ namespace PTi1MenaxhimiDepos.BO
             StockQuantity = stockquantity;
         }
 
+        public Item(string name)
+        {
+            Name = name;
+        }
+
         public int ID { get; set; }
         public string Barcode { get; set; }
         public string Name { get; set; }

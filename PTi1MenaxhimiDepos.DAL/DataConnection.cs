@@ -47,6 +47,7 @@ namespace PTi1MenaxhimiDepos.DAL
             if(value == null)
             {
                 sqlParameter.Value = DBNull.Value;
+                sqlParameter.Value = null;
             }
             sqlParameter.Value = value;
             cmd.Parameters.Add(sqlParameter);
@@ -82,7 +83,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     AddParameter(cmd, parametername.ToString(), value);
                     val = GetValue(cmd);
                 }
-                if (val == 1)
+                if (val != 0)
                     return true;
                 else
                     return false;

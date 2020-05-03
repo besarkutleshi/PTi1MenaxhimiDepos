@@ -1,4 +1,7 @@
-﻿using System;
+﻿using PTi1MenaxhimiDepos.BL;
+using PTi1MenaxhimiDepos.BO;
+using PTi1MenaxhimiDepos.BO.Invoices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,25 +13,129 @@ using System.Windows.Forms;
 
 namespace PTi1MenaxhimiDepos.Invoices
 {
-    public partial class Invoice : Form
+    public partial class Invoice : Form // search metodat me i bo edhe me ndreq te clear enabled 
     {
-        int counter = 0;
+        InvertoryHeader invertoryHeader = null;
+        InvertoryBody obj = null;
+        int counter = 1;
         public Invoice()
         {
             InitializeComponent();
+            dgwBodies.AutoGenerateColumns = false;
         }
 
         private void radGridView1_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
-            counter++;
-            if(counter == 1)
+            obj = (InvertoryBody)dgwBodies.Rows[e.RowIndex].DataBoundItem;
+            txtDiscount.Text = obj.Discount.ToString();
+            txtPrice.Text = obj.Price.ToString();
+            txtQuantity.Text = obj.Quantity.ToString();
+            cmbItem.Text = obj.Item.Name;
+            HelpClass.OnChange(btnSave, btndelete, btnUpdate);
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            if(txtDescription.Text == "" || txtDiscount.Text == "" || txtInvoiceNumber.Text == "" || txtPrice.Text == "" || txtQuantity.Text == "" ||
+                cmbInoviceType.SelectedIndex == -1 || cmbItem.SelectedIndex == -1 || cmbPos.SelectedIndex == -1 || cmbSupplier.SelectedIndex == -1)
             {
-                // paraqit artikujt brenda fatures se klikuar
+                MessageBox.Show("Please fill in empty box's", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
-            else if(counter == 2)
+            else
             {
-                // paraqit te dhenat e artikujve ne textboxa per faturen e klikuar
+                if (invertoryHeader == null)
+                {
+                    invertoryHeader = new InvertoryHeader(0, int.Parse(txtInvoiceNumber.Text), (int)cmbInoviceType.SelectedValue, (int)cmbPos.SelectedValue, txtDescription.Text
+                        ,0,(int)cmbSupplier.SelectedValue);
+                    invertoryHeader.Username = HelpClass.CurrentUser.UserName;
+                }
+                InvertoryBody obj1 = new InvertoryBody(counter++,InvoiceBLL.MaxID(), (int)cmbItem.SelectedValue, int.Parse(txtQuantity.Text), double.Parse(txtPrice.Text),
+                    double.Parse(txtDiscount.Text));
+                obj1.Item = new PTi1MenaxhimiDepos.BO.Item(cmbItem.Text);
+                obj1.Username = HelpClass.CurrentUser.UserName;
+                invertoryHeader.Bodies.Add(obj1);
+                HelpClass.Delete(txtPrice, txtQuantity, txtDiscount);
+                dgwBodies.DataSource = null;
+                dgwBodies.DataSource = invertoryHeader.Bodies;
+                HelpClass.EnabledTextBoxs(txtDescription, txtInvoiceNumber);
+                HelpClass.EnabledComboBoxs(cmbInoviceType, cmbPos, cmbSupplier);
             }
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if(invertoryHeader != null && obj != null)
+            {
+                invertoryHeader.Bodies.Remove(obj);
+                InvoiceBLL.RefreshGrid(invertoryHeader.Bodies, dgwBodies);
+                HelpClass.Delete(txtDiscount, txtPrice, txtQuantity);
+                HelpClass.OnChange(btnSave, btndelete, btnUpdate);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(invertoryHeader != null && invertoryHeader.Bodies.Count > 0)
+            {
+                InvoiceBLL.InsertPurchaseInvoice(invertoryHeader);
+                HelpClass.Delete(txtDescription, txtDiscount, txtID, txtInvoiceNumber, txtPrice, txtQuantity, txtSearch);
+                HelpClass.EnabledTextBoxs(txtDescription, txtInvoiceNumber);
+                HelpClass.EnabledComboBoxs(cmbInoviceType, cmbPos, cmbSupplier);
+                dgwBodies.DataSource = null;
+                invertoryHeader = null;
+            }
+            else
+            {
+                MessageBox.Show("Empty Invoice", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Invoice_Load(object sender, EventArgs e)
+        {
+            cmbItem.DataSource = ItemBLL.GetItems(); cmbItem.DisplayMember = "Name";cmbItem.ValueMember = "ID";
+            cmbPos.DataSource = PosBLL.GetPointofSales(); cmbPos.DisplayMember = "Name"; cmbPos.ValueMember = "ID";
+            cmbSupplier.DataSource = CollaborationBLL.GetSuppliers();cmbSupplier.DisplayMember = "Name";cmbSupplier.ValueMember = "ID";
+            cmbInoviceType.DataSource = InvoiceBLL.GetDocTypes();cmbInoviceType.DisplayMember = "Description"; cmbInoviceType.ValueMember = "DocTypeID";
+        }
+
+        public override void Refresh()
+        {
+            HelpClass.OnChange(btnSave, btndelete, btnUpdate);
+            HelpClass.Delete(txtDescription, txtDiscount, txtID, txtInvoiceNumber, txtPrice, txtQuantity, txtSearch);
+            HelpClass.EnabledTextBoxs(txtDescription, txtInvoiceNumber);
+            HelpClass.EnabledComboBoxs(cmbInoviceType, cmbPos, cmbSupplier);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            obj.Discount = double.Parse(txtDiscount.Text);
+            obj.Price = double.Parse(txtPrice.Text);
+            obj.Quantity = int.Parse(txtQuantity.Text);
+            Item item1 = (Item)cmbItem.SelectedItem.DataBoundItem;
+            obj.ItemID = item1.ID;
+            obj.Item = item1;
+            if (invertoryHeader != null && invertoryHeader.Bodies.Count > 0)
+            {
+                foreach (var item in invertoryHeader.Bodies)
+                {
+                    if(item.ID == obj.ID)
+                    {
+                        item.Item = obj.Item;
+                        item.ItemID = obj.ItemID;
+                        item.Price = obj.Price;
+                        item.Quantity = obj.Quantity;
+                        item.Discount = obj.Discount;
+                    }
+                }
+            }
+            HelpClass.Delete(txtDiscount, txtPrice, txtQuantity);
+            HelpClass.OnChange(btnSave, btndelete, btnUpdate);
+            InvoiceBLL.RefreshGrid(invertoryHeader.Bodies, dgwBodies);
         }
     }
 }

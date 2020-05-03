@@ -26,7 +26,14 @@ namespace PTi1MenaxhimiDepos.DAL
 					DataConnection.AddParameter(cmd, "@DoctypeID", invertory.DocTypeID);
 					DataConnection.AddParameter(cmd, "@PosiD", invertory.PosID);
 					DataConnection.AddParameter(cmd, "@Description", invertory.Description);
-					DataConnection.AddParameter(cmd, "@ClientID", invertory.ClientID);
+					if(invertory.ClientID == 0)
+						DataConnection.AddParameter(cmd, "@ClientID", 3);
+					else
+						DataConnection.AddParameter(cmd, "@ClientID", invertory.ClientID);
+					if(invertory.SupplierID == 0)
+						DataConnection.AddParameter(cmd, "@SupplierID", 3);
+					else
+						DataConnection.AddParameter(cmd, "@SupplierID", invertory.SupplierID);
 					DataConnection.AddParameter(cmd, "@details",ReturnDT(invertory.Bodies));
 					DataConnection.AddParameter(cmd, "@InsertBy",invertory.Username);
 					value = DataConnection.GetValue(cmd);
@@ -174,7 +181,7 @@ namespace PTi1MenaxhimiDepos.DAL
                 System.Reflection.PropertyInfo[] Props = typeof(InvertoryBody).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
                 foreach (System.Reflection.PropertyInfo item in Props)
                 {
-                    if (item.Name == "Header" || item.Name == "Item" || item.Name == "Username")
+                    if (item.Name == "Header" || item.Name == "Item" || item.Name == "Username" || item.Name == "ID" || item.Name == "Cdate")
                     {
                         continue;
                     }
@@ -188,12 +195,11 @@ namespace PTi1MenaxhimiDepos.DAL
                     }
                     else
                     {
-                        object[] values = new object[6];
+                        object[] values = new object[5];
                         values[0] = item.HeaderID;
                         values[1] = item.ItemID;
                         values[2] = item.Quantity;
                         values[3] = item.Price;
-                        values[4] = item.Cdate;
                         values[4] = item.Discount;
                         dataTable.Rows.Add(values);
                     }
@@ -214,6 +220,26 @@ namespace PTi1MenaxhimiDepos.DAL
 			obj.POS.Name = sdr["POS"].ToString();
 			obj.DocType.Description = sdr["INVOICE"].ToString();
 			return obj;
+		}
+
+		public int GetMaxID()
+		{
+			try
+			{
+				int value = 0;
+				using (var con = DataConnection.Connection())
+				{
+					con.Open();
+					var cmd = DataConnection.Command(con, "sp_GetMaxID_InvertoryHeader", CommandType.StoredProcedure);
+					value = DataConnection.GetValue(cmd);
+				}
+				return value;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+				return 0;
+			}
 		}
 	}
 }

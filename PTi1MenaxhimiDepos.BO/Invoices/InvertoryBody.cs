@@ -8,8 +8,9 @@ namespace PTi1MenaxhimiDepos.BO.Invoices
 {
     public class InvertoryBody:AuditionAtributtes
     {
-        public InvertoryBody(int headerID, int itemID,int quantity, double price,double discount)
+        public InvertoryBody(int id,int headerID, int itemID,int quantity, double price,double discount)
         {
+            ID = id;
             HeaderID = headerID;
             ItemID = itemID;
             Quantity = quantity;

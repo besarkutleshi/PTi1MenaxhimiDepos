@@ -54,7 +54,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     {
                         con.Open();
                         var cmd = DataConnection.Command(con, "sp_Insert_User",CommandType.StoredProcedure);
-                        value = Parameteres(obj, cmd);
+                        value = Parameteres(obj, cmd,"InsertBy");
                     }
                     return HelperClass.GetValue(value, "Register");
                 }
@@ -200,7 +200,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     con.Open();
                     var cmd = DataConnection.Command(con, "sp_Update_User", CommandType.StoredProcedure);
                     DataConnection.AddParameter(cmd, "@ID", id);
-                    value = Parameteres(obj, cmd);
+                    value = Parameteres(obj, cmd,"UpdateBy");
                 }
                 return HelperClass.GetValue(value, "Update");
             }
@@ -211,14 +211,14 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
-        private int Parameteres(User obj,SqlCommand cmd)
+        private int Parameteres(User obj,SqlCommand cmd,string audition)
         {
             DataConnection.AddParameter(cmd, "@EmployeeID", obj.EmployeeID);
             DataConnection.AddParameter(cmd, "@Username", obj.UserName);
             DataConnection.AddParameter(cmd, "@Password", obj.Password);
             DataConnection.AddParameter(cmd, "@Description", obj.Description);
             DataConnection.AddParameter(cmd, "@RoleID", obj.RoleID);
-            DataConnection.AddParameter(cmd, "@UpdateBy", obj.Username);
+            DataConnection.AddParameter(cmd, audition, obj.Username);
             return DataConnection.GetValue(cmd);
         }
     }
