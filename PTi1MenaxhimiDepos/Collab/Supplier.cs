@@ -37,5 +37,56 @@ namespace PTi1MenaxhimiDepos.Collab
 
             }
         }
+
+        private void btnKerkoFurnitorin_Click(object sender, EventArgs e)
+        {
+            if (txtkerkoFurnitor.Text != "")
+            {
+                BO.Supplier supplier = CollaborationBLL.GetSupplier(txtkerkoFurnitor.Text);
+                HelperClass.DoesExist(supplier, dgvParaqitja);
+            }
+        }
+
+        private void txtkerkoFurnitor_TextChanged(object sender, EventArgs e)
+        {
+
+            if (txtkerkoFurnitor.Text == "")
+            {
+                HelperClass.LoadGrid(CollaborationBLL.GetSuppliers(), dgvParaqitja);
+            }
+        }
+
+        private void btnFshij_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (CollaborationBLL.DeleteSupplier(supplier.ID));
+                {
+                    HelpClass.OnChange(btnRuaj, btnFshij, btnEdito, txtFurnitori, txtPershkrimi, txtId);
+                    HelperClass.LoadGrid(CollaborationBLL.GetSuppliers(),dgvParaqitja);
+                }
+            }
+        }
+
+        private void btnEdito_Click(object sender, EventArgs e)
+        {
+            if (supplier.Name == txtFurnitori.Text)
+            {
+                MessageBox.Show("You do not change anything", "Not Change", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            }
+            else
+            {
+                supplier.Name = txtFurnitori.Text;
+                supplier.Username = HelpClass.CurrentUser.UserName;
+                if (MessageBox.Show("Are you sure", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (CollaborationBLL.UpdateSupplier(supplier.ID, supplier))
+                    {
+                        HelpClass.OnChange(btnRuaj, btnFshij, btnEdito, txtFurnitori, txtPershkrimi, txtId);
+                        HelperClass.LoadGrid(CollaborationBLL.GetSuppliers(), dgvParaqitja);
+                    }
+                }
+            }
+        }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
             this.txtId = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -210,6 +210,7 @@
             this.btnEdito.TabIndex = 7;
             this.btnEdito.Text = "Edito";
             this.btnEdito.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdito.Click += new System.EventHandler(this.btnEdito_Click);
             // 
             // btnNderpre
             // 
@@ -232,6 +233,7 @@
             this.btnFshij.TabIndex = 7;
             this.btnFshij.Text = "Fshij";
             this.btnFshij.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFshij.Click += new System.EventHandler(this.btnFshij_Click);
             // 
             // dgvParaqitja
             // 
@@ -239,7 +241,7 @@
             // 
             // 
             // 
-            this.dgvParaqitja.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgvParaqitja.MasterTemplate.ViewDefinition = tableViewDefinition4;
             this.dgvParaqitja.Name = "dgvParaqitja";
             this.dgvParaqitja.Size = new System.Drawing.Size(756, 373);
             this.dgvParaqitja.TabIndex = 8;
@@ -250,6 +252,7 @@
             this.txtkerkoFurnitor.Name = "txtkerkoFurnitor";
             this.txtkerkoFurnitor.Size = new System.Drawing.Size(125, 24);
             this.txtkerkoFurnitor.TabIndex = 5;
+            this.txtkerkoFurnitor.TextChanged += new System.EventHandler(this.txtkerkoFurnitor_TextChanged);
             // 
             // radLabel7
             // 
@@ -266,6 +269,7 @@
             this.btnKerkoFurnitorin.Size = new System.Drawing.Size(55, 24);
             this.btnKerkoFurnitorin.TabIndex = 8;
             this.btnKerkoFurnitorin.Text = "Kerko";
+            this.btnKerkoFurnitorin.Click += new System.EventHandler(this.btnKerkoFurnitorin_Click);
             // 
             // Supplier
             // 
