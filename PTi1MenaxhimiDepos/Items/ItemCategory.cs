@@ -31,7 +31,7 @@ namespace PTi1MenaxhimiDepos.Items
                 category.Username = HelpClass.CurrentUser.UserName;
                 if (ItemBLL.InsertCategory(category))
                 {
-                    HelperClass.LoadGrid(ItemBLL.GetCategories(),dgwCategories);
+                    HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
                     HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
                 }
             }
@@ -111,6 +111,11 @@ namespace PTi1MenaxhimiDepos.Items
         private void btnClear_Click(object sender, EventArgs e)
         {
             HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
