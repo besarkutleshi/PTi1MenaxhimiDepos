@@ -93,5 +93,12 @@ namespace PTi1MenaxhimiDepos
         {
             return grid.Rows[e.RowIndex].Cells[index].Value.ToString();
         }
+
+        public static GridViewDataColumn GridViewDataColumn(string uniquename,string fieldname,string headertext)
+        {
+            GridViewDataColumn column = new GridViewTextBoxColumn(uniquename, fieldname);
+            column.HeaderText = headertext;
+            return column;
+        }
     }
 }

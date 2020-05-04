@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgwCategories = new Telerik.WinControls.UI.RadGridView();
             this.txtdescription = new Telerik.WinControls.UI.RadTextBox();
             this.txtname = new Telerik.WinControls.UI.RadTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,8 +45,7 @@
             this.btnClear = new Telerik.WinControls.UI.RadButton();
             this.txtID = new Telerik.WinControls.UI.RadTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwCategories)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwCategories.MasterTemplate)).BeginInit();
+            this.dgwCategories = new Telerik.WinControls.UI.RadGridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtdescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).BeginInit();
@@ -54,6 +55,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCategories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCategories.MasterTemplate)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -65,23 +68,6 @@
             this.label2.Size = new System.Drawing.Size(104, 24);
             this.label2.TabIndex = 8;
             this.label2.Text = "Description";
-            // 
-            // dgwCategories
-            // 
-            this.dgwCategories.Font = new System.Drawing.Font("Segoe UI", 13.25F);
-            this.dgwCategories.Location = new System.Drawing.Point(10, 230);
-            // 
-            // 
-            // 
-            this.dgwCategories.MasterTemplate.AllowAddNewRow = false;
-            this.dgwCategories.MasterTemplate.AllowDeleteRow = false;
-            this.dgwCategories.MasterTemplate.AllowEditRow = false;
-            this.dgwCategories.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwCategories.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.dgwCategories.Name = "dgwCategories";
-            this.dgwCategories.Size = new System.Drawing.Size(776, 278);
-            this.dgwCategories.TabIndex = 6;
-            this.dgwCategories.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwCategories_CellDoubleClick);
             // 
             // txtdescription
             // 
@@ -198,7 +184,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(230, 37);
             this.txtID.TabIndex = 0;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // label4
             // 
@@ -210,18 +195,50 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "ID";
             // 
+            // dgwCategories
+            // 
+            this.dgwCategories.Font = new System.Drawing.Font("Segoe UI", 13.25F);
+            this.dgwCategories.Location = new System.Drawing.Point(10, 230);
+            // 
+            // 
+            // 
+            this.dgwCategories.MasterTemplate.AllowAddNewRow = false;
+            this.dgwCategories.MasterTemplate.AllowEditRow = false;
+            this.dgwCategories.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewTextBoxColumn1.FieldName = "ID";
+            gridViewTextBoxColumn1.HeaderText = "ID";
+            gridViewTextBoxColumn1.Name = "ID";
+            gridViewTextBoxColumn1.Width = 250;
+            gridViewTextBoxColumn2.FieldName = "Name";
+            gridViewTextBoxColumn2.HeaderText = "Name";
+            gridViewTextBoxColumn2.Name = "Name";
+            gridViewTextBoxColumn2.Width = 250;
+            gridViewTextBoxColumn3.FieldName = "Description";
+            gridViewTextBoxColumn3.HeaderText = "Description";
+            gridViewTextBoxColumn3.Name = "Description";
+            gridViewTextBoxColumn3.Width = 251;
+            this.dgwCategories.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3});
+            this.dgwCategories.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgwCategories.Name = "dgwCategories";
+            this.dgwCategories.Size = new System.Drawing.Size(770, 285);
+            this.dgwCategories.TabIndex = 9;
+            this.dgwCategories.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwCategories_CellDoubleClick);
+            // 
             // ItemCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 520);
+            this.ClientSize = new System.Drawing.Size(786, 520);
+            this.Controls.Add(this.dgwCategories);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgwCategories);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnSave);
@@ -234,8 +251,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItemCategory";
             this.Load += new System.EventHandler(this.ItemCategory_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgwCategories.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwCategories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdescription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
@@ -245,6 +260,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCategories.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCategories)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,7 +270,6 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private Telerik.WinControls.UI.RadGridView dgwCategories;
         private Telerik.WinControls.UI.RadButton btnUpdate;
         private Telerik.WinControls.UI.RadButton btnSave;
         private Telerik.WinControls.UI.RadTextBox txtdescription;
@@ -266,5 +282,6 @@
         private Telerik.WinControls.UI.RadButton btnClear;
         private Telerik.WinControls.UI.RadTextBox txtID;
         private System.Windows.Forms.Label label4;
+        private Telerik.WinControls.UI.RadGridView dgwCategories;
     }
 }

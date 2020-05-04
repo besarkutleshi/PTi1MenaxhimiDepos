@@ -12,6 +12,17 @@ namespace PTi1MenaxhimiDepos.BL
 {
     public static class HelperClass
     {
+        public static bool DoesExists<T>(T obj , ref List<T> ts)
+        {
+            if(obj != null)
+            {
+                ts = new List<T>();
+                ts.Add(obj);
+                return true;
+            }
+            MessageBox.Show("Nothing to show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            return false;
+        }
         public static void DoesExist<T>(T obj,RadGridView grid)
         {
             if(obj == null)

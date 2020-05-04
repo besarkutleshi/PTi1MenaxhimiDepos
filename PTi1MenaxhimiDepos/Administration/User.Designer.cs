@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.FilterDescriptor filterDescriptor1 = new Telerik.WinControls.Data.FilterDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescription = new Telerik.WinControls.UI.RadTextBox();
@@ -41,7 +48,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtID = new Telerik.WinControls.UI.RadTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dgwUser = new Telerik.WinControls.UI.RadGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
             this.btnUpdate = new Telerik.WinControls.UI.RadButton();
@@ -49,20 +55,21 @@
             this.btndelete = new Telerik.WinControls.UI.RadButton();
             this.btnSave = new Telerik.WinControls.UI.RadButton();
             this.btnSearch = new Telerik.WinControls.UI.RadButton();
+            this.dgwUser = new Telerik.WinControls.UI.RadGridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPasword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbRole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwUser.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btndelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUser.MasterTemplate)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -176,23 +183,6 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "ID";
             // 
-            // dgwUser
-            // 
-            this.dgwUser.Font = new System.Drawing.Font("Segoe UI", 13.25F);
-            this.dgwUser.Location = new System.Drawing.Point(8, 289);
-            // 
-            // 
-            // 
-            this.dgwUser.MasterTemplate.AllowAddNewRow = false;
-            this.dgwUser.MasterTemplate.AllowDeleteRow = false;
-            this.dgwUser.MasterTemplate.AllowEditRow = false;
-            this.dgwUser.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwUser.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.dgwUser.Name = "dgwUser";
-            this.dgwUser.Size = new System.Drawing.Size(845, 331);
-            this.dgwUser.TabIndex = 9;
-            this.dgwUser.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwUser_CellDoubleClick);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -274,16 +264,65 @@
             this.btnSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // dgwUser
+            // 
+            this.dgwUser.Font = new System.Drawing.Font("Segoe UI", 13.25F);
+            this.dgwUser.Location = new System.Drawing.Point(8, 290);
+            // 
+            // 
+            // 
+            this.dgwUser.MasterTemplate.AllowAddNewRow = false;
+            this.dgwUser.MasterTemplate.AllowEditRow = false;
+            this.dgwUser.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewTextBoxColumn1.FieldName = "ID";
+            gridViewTextBoxColumn1.HeaderText = "ID";
+            gridViewTextBoxColumn1.Name = "ID";
+            gridViewTextBoxColumn1.Width = 138;
+            gridViewTextBoxColumn2.FieldName = "UserName";
+            gridViewTextBoxColumn2.HeaderText = "Username";
+            gridViewTextBoxColumn2.Name = "UserName";
+            gridViewTextBoxColumn2.Width = 138;
+            gridViewTextBoxColumn3.FieldName = "Password";
+            gridViewTextBoxColumn3.HeaderText = "Password";
+            gridViewTextBoxColumn3.Name = "Password";
+            gridViewTextBoxColumn3.Width = 138;
+            gridViewTextBoxColumn4.FieldName = "Employee.Name";
+            gridViewTextBoxColumn4.HeaderText = "Employee";
+            gridViewTextBoxColumn4.Name = "Employee";
+            gridViewTextBoxColumn4.Width = 138;
+            gridViewTextBoxColumn5.FieldName = "Role.Name";
+            gridViewTextBoxColumn5.HeaderText = "Role";
+            gridViewTextBoxColumn5.Name = "Role";
+            gridViewTextBoxColumn5.Width = 138;
+            gridViewTextBoxColumn6.FieldName = "Description";
+            gridViewTextBoxColumn6.HeaderText = "Description";
+            gridViewTextBoxColumn6.Name = "Description";
+            gridViewTextBoxColumn6.Width = 139;
+            this.dgwUser.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
+            this.dgwUser.MasterTemplate.FilterDescriptors.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
+            filterDescriptor1});
+            this.dgwUser.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgwUser.Name = "dgwUser";
+            this.dgwUser.Size = new System.Drawing.Size(845, 326);
+            this.dgwUser.TabIndex = 33;
+            this.dgwUser.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwUser_CellDoubleClick);
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 628);
+            this.Controls.Add(this.dgwUser);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dgwUser);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -310,14 +349,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbRole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwUser.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btndelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUser.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,9 +380,9 @@
         private Telerik.WinControls.UI.RadButton btnClear;
         private Telerik.WinControls.UI.RadButton btndelete;
         private Telerik.WinControls.UI.RadButton btnSave;
-        private Telerik.WinControls.UI.RadGridView dgwUser;
         private System.Windows.Forms.Label label7;
         private Telerik.WinControls.UI.RadButton btnSearch;
         private Telerik.WinControls.UI.RadTextBox txtSearch;
+        private Telerik.WinControls.UI.RadGridView dgwUser;
     }
 }

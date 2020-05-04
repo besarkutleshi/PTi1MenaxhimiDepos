@@ -16,6 +16,7 @@ namespace PTi1MenaxhimiDepos
     {
         string Barcode = null;
         int ID = 0;
+        BO.Item item = null;
         public RegisterItem()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace PTi1MenaxhimiDepos
             cmbunit.DataSource = ItemBLL.GetItemUnits();cmbunit.DisplayMember = "Name"; cmbunit.ValueMember = "ID";
             cmdSupplier.DataSource = CollaborationBLL.GetSuppliers(); cmdSupplier.DisplayMember = "Name";cmdSupplier.ValueMember = "ID";
             cmbActive.SelectedIndex = 0;
-            HelperClass.LoadGrid(ItemBLL.GetItems(),dgwItems);
+            dgwItems.DataSource = ItemBLL.GetItems();
             dgwItems.TableElement.SearchHighlightColor = Color.LightBlue;
         }
 
@@ -46,8 +47,7 @@ namespace PTi1MenaxhimiDepos
                 obj.Username = HelpClass.CurrentUser.UserName;
                 if (ItemBLL.InsertItem(obj))
                 {
-                    HelperClass.LoadGrid(ItemBLL.GetItems(), dgwItems);
-                    txtbarcode.Text = txtDescription.Text = txtname.Text = txtSearch.Text = txtstock.Text = "";
+                    Refresh();
                 }
             }
         }
@@ -59,12 +59,12 @@ namespace PTi1MenaxhimiDepos
                 if (txtSearch.Text.All(char.IsDigit))
                 {
                     BO.Item item = ItemBLL.GetItem(int.Parse(txtSearch.Text));
-                    HelperClass.DoesExist(item, dgwItems);
+                    DisplaySearchResult(item);
                 }
                 else
                 {
                     BO.Item item = ItemBLL.GetItemByName(txtSearch.Text);
-                    HelperClass.DoesExist(item, dgwItems);
+                    DisplaySearchResult(item);
                 }
             }
             else
@@ -73,30 +73,25 @@ namespace PTi1MenaxhimiDepos
             }
         }
 
+        private void DisplaySearchResult(BO.Item obj)
+        {
+            List<BO.Item> items = null;
+            if(HelperClass.DoesExists(obj,ref items))
+            {
+                dgwItems.DataSource = null;
+                dgwItems.DataSource = items;
+            }
+        }
+
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             if(txtSearch.Text == "")
             {
-                HelperClass.LoadGrid(ItemBLL.GetItems(),dgwItems);
+                dgwItems.DataSource = null;
+                dgwItems.DataSource = ItemBLL.GetItems();
             }
         }
 
-        private void dgwItems_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            ID = int.Parse(HelpClass.GetValue(e, dgwItems, 0));
-            txtid.Text = ID.ToString();
-            Barcode = HelpClass.GetValue(e, dgwItems, 1);
-            txtbarcode.Text = HelpClass.GetValue(e, dgwItems, 1);
-            txtname.Text = HelpClass.GetValue(e, dgwItems, 2);
-            cmbunit.Text = HelpClass.GetValue(e, dgwItems, 3);
-            cmbcategory.Text = HelpClass.GetValue(e, dgwItems, 4);
-            cmbtype.Text = HelpClass.GetValue(e, dgwItems, 5);
-            cmdSupplier.Text = HelpClass.GetValue(e, dgwItems, 6);
-            cmbActive.SelectedIndex = 0;
-            txtstock.Text = HelpClass.GetValue(e, dgwItems, 8);
-            txtDescription.Text = HelpClass.GetValue(e, dgwItems, 9);
-            btnDelete.Visible = btnUpdate.Visible = true; btnSave.Visible = false;
-        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -117,13 +112,16 @@ namespace PTi1MenaxhimiDepos
                     int categoryid = categories.Where(c => c.Name == cmbcategory.Text).Select(c => c.ID).FirstOrDefault();
                     int typeid = type.Where(t => t.Name == cmbtype.Text).Select(t => t.ID).FirstOrDefault();
                     int supplierid = supplier.Where(s => s.Name == cmdSupplier.Text).Select(s => s.ID).FirstOrDefault();
-                    Item obj = new Item(ID, txtbarcode.Text, txtname.Text, unitid, categoryid, typeid, supplierid, IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
-                    obj.Username = HelpClass.CurrentUser.UserName;
-                    if (ItemBLL.UpdateItem(ID,obj))
+                    item = new Item(ID, txtbarcode.Text, txtname.Text, unitid, categoryid, typeid, supplierid, IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
+                    item.Username = HelpClass.CurrentUser.UserName;
+                    if (ItemBLL.UpdateItem(ID, item))
                     {
-                        HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
-                        HelperClass.LoadGrid(ItemBLL.GetItems(), dgwItems);
+                        Refresh();
                     }
+                    supplier = null;
+                    units = null;
+                    categories = null;
+                    type = null;
                 }
             }
             catch (Exception ex)
@@ -146,15 +144,42 @@ namespace PTi1MenaxhimiDepos
             {
                 if (ItemBLL.DeleteItem(Barcode))
                 {
-                    HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
-                    HelperClass.LoadGrid(ItemBLL.GetItems(), dgwItems);
+                    Refresh();
                 }
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
+            HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
+            HelpClass.Delete(txtbarcode, txtname, txtDescription, txtstock);
+        }
+
+        public override void Refresh()
+        {
+            HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
+            HelpClass.Delete(txtbarcode, txtname, txtDescription, txtstock);
+            dgwItems.DataSource = null;
+            dgwItems.DataSource = ItemBLL.GetItems();
+            item = null;
+        }
+
+        private void dgwItems_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            item = (BO.Item)dgwItems.Rows[e.RowIndex].DataBoundItem;
+            ID = item.ID;
+            txtid.Text = ID.ToString();
+            Barcode = item.Barcode;
+            txtbarcode.Text = item.Barcode;
+            txtname.Text = item.Name;
+            cmbunit.Text = item.Unit.Name;
+            cmbcategory.Text = item.Category.Name;
+            cmbtype.Text = item.Type.Name;
+            cmdSupplier.Text = item.Supplier.Name;
+            cmbActive.SelectedIndex = 0;
+            txtstock.Text = item.StockQuantity.ToString();
+            txtDescription.Text = item.Description;
+            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
         }
     }
 }

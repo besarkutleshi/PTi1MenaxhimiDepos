@@ -22,7 +22,7 @@ namespace PTi1MenaxhimiDepos.Administration
 
         private void User_Load(object sender, EventArgs e)
         {
-            HelperClass.LoadGrid(AdministrationBLL.GetUsers(), dgwUser);
+            dgwUser.DataSource = AdministrationBLL.GetUsers();
             cmbRole.DataSource = AdministrationBLL.GetRoles(); cmbRole.DisplayMember = "Name"; cmbRole.ValueMember = "ID";
             cmbEmployee.DataSource = CollaborationBLL.GetEmployees(); cmbEmployee.DisplayMember = "Fullname"; cmbEmployee.ValueMember = "ID";
         }
@@ -39,36 +39,33 @@ namespace PTi1MenaxhimiDepos.Administration
                 obj.Username = HelpClass.CurrentUser.UserName;
                 if (AdministrationBLL.InsertUser(obj))
                 {
-                    HelperClass.LoadGrid(AdministrationBLL.GetUsers(), dgwUser);
+                    Refresh();
                 }
             }
         }
 
-        private void dgwUser_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            obj = new BO.Account.User(
-                int.Parse(HelpClass.GetValue(e,dgwUser,0)),HelpClass.GetValue(e,dgwUser,1),Security.Decrypt(HelpClass.GetValue(e,dgwUser,2))
-                ,HelpClass.GetValue(e,dgwUser,3)
-                );
-            obj.Role = new BO.Role(HelpClass.GetValue(e, dgwUser, 4));
-            obj.Employee = new BO.Employee(HelpClass.GetValue(e, dgwUser, 5));
-            cmbRole.Text = obj.Role.Name;
-            cmbEmployee.Text = obj.Employee.Name;
-            txtUsername.Text = obj.UserName; txtPasword.Text = obj.Password; txtID.Text = obj.ID.ToString(); txtDescription.Text = obj.Description;
-            btnSave.Visible = false;btndelete.Visible = btnUpdate.Visible = true;
-        }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtSearch.Text.All(char.IsDigit))
             {
                 BO.Account.User obj = AdministrationBLL.GetUser(int.Parse(txtSearch.Text));
-                HelperClass.DoesExist(obj, dgwUser);
+                DisplaySearchResult(obj);
             }
             else
             {
                 BO.Account.User obj = AdministrationBLL.GetUser(txtSearch.Text);
-                HelperClass.DoesExist(obj, dgwUser);
+                DisplaySearchResult(obj);
+            }
+        }
+
+        private void DisplaySearchResult(BO.Account.User obj)
+        {
+            List<BO.Account.User> users = null;
+            if (HelperClass.DoesExists(obj, ref users))
+            {
+                dgwUser.DataSource = null;
+                dgwUser.DataSource = users;
             }
         }
 
@@ -76,19 +73,21 @@ namespace PTi1MenaxhimiDepos.Administration
         {
             if(txtSearch.Text == "")
             {
-                HelperClass.LoadGrid(AdministrationBLL.GetUsers(), dgwUser);
+                dgwUser.DataSource = null;
+                dgwUser.DataSource = AdministrationBLL.GetUsers();
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtDescription, txtID, txtPasword, txtUsername);
+            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
+            HelpClass.Delete(txtDescription, txtID, txtPasword, txtUsername);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (obj.Username == txtUsername.Text || obj.Password == txtPasword.Text || txtDescription.Text == obj.Description
-                || cmbEmployee.Text == obj.Employee.Name || cmbRole.Text == obj.Role.Name)
+            if (obj.UserName == txtUsername.Text && obj.Password == txtPasword.Text && txtDescription.Text == obj.Description
+                && cmbEmployee.Text == obj.Employee.Name && cmbRole.Text == obj.Role.Name)
             {
                 MessageBox.Show("Nothing Change", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
@@ -100,8 +99,7 @@ namespace PTi1MenaxhimiDepos.Administration
                 obj.Username = HelpClass.CurrentUser.UserName; 
                 if (AdministrationBLL.UpdateUser(obj.ID, obj))
                 {
-                    HelperClass.LoadGrid(AdministrationBLL.GetUsers(), dgwUser);
-                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtDescription, txtID, txtPasword, txtUsername);
+                    Refresh();
                 }
             }
         }
@@ -112,10 +110,29 @@ namespace PTi1MenaxhimiDepos.Administration
             {
                 if (AdministrationBLL.DeleteUser(int.Parse(txtID.Text)))
                 {
-                    HelperClass.LoadGrid(AdministrationBLL.GetUsers(), dgwUser);
-                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtDescription, txtID, txtPasword, txtUsername);
+                    Refresh();
                 }
             }
+        }
+
+        public override void Refresh()
+        {
+            dgwUser.DataSource = null;
+            dgwUser.DataSource = AdministrationBLL.GetUsers();
+            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
+            HelpClass.Delete(txtDescription, txtID, txtPasword, txtUsername);
+        }
+
+        private void dgwUser_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            obj = (BO.Account.User)dgwUser.Rows[e.RowIndex].DataBoundItem;
+            cmbRole.Text = obj.Role.Name;
+            cmbEmployee.Text = obj.Employee.Name;
+            txtUsername.Text = obj.UserName; 
+            txtPasword.Text = Security.Decrypt(obj.Password); 
+            txtID.Text = obj.ID.ToString(); 
+            txtDescription.Text = obj.Description;
+            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
         }
     }
 }

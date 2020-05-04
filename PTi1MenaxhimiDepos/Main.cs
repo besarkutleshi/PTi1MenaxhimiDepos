@@ -102,11 +102,21 @@ namespace PTi1MenaxhimiDepos
                 tabControl1.TabPages.Remove(tabControl1.SelectedTab);
             }
             RadGridView obj = new RadGridView();
+            obj.Columns.Add(HelpClass.GridViewDataColumn("ID", "ID", "ID"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Barcode", "Barcode", "Barcode"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Name", "Name", "Name"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Unit", "Unit.Name", "Name"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Category", "Category.Name", "Category"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Type", "Type.Name", "Type"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Supplier", "Supplier.Name", "Supplier"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Active", "Active", "Active"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Stock", "StockQuantity", "Stock"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Description", "Description", "Description"));
             obj.AllowSearchRow = true;
             obj.AllowEditRow = false;
             obj.AllowAddNewRow = false;
             obj.TableElement.SearchHighlightColor = Color.LightBlue;
-            obj.DataSource = ItemBLL.ConvertToDataTableItems(ItemBLL.GetItems());
+            obj.DataSource = ItemBLL.GetItems();
             TabPage tabPage = new TabPage("Artikujt");
             tabControl1.TabPages.Add(tabPage);
             control.PrintGrid(tabPage, obj, new Point(7, 5), new Size(1490, 590));

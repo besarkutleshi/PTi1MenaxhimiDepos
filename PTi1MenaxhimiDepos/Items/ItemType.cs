@@ -23,7 +23,7 @@ namespace PTi1MenaxhimiDepos.Items
 
         private void ItemType_Load(object sender, EventArgs e)
         {
-            HelperClass.LoadGrid(ItemBLL.GetItemTypes(), dgwTypes);
+            dgwTypes.DataSource = ItemBLL.GetItemTypes();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -32,8 +32,7 @@ namespace PTi1MenaxhimiDepos.Items
             itemtype.Username = HelpClass.CurrentUser.UserName;
             if (ItemBLL.InsertItemType(itemtype))
             {
-                HelperClass.LoadGrid(ItemBLL.GetItemTypes(), dgwTypes);
-                HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtname, txtdescription, txtid);
+                Refresh();
             }
         }
 
@@ -42,12 +41,22 @@ namespace PTi1MenaxhimiDepos.Items
             if (txtSearch.Text.All(char.IsDigit))
             {
                 BO.ItemType item = ItemBLL.GetItemType(int.Parse(txtSearch.Text));
-                HelperClass.DoesExist(item, dgwTypes);
+                DisplaySearchResult(item);
             }
             else
             {
                 BO.ItemType item = ItemBLL.GetItemType(txtSearch.Text);
-                HelperClass.DoesExist(item, dgwTypes);
+                DisplaySearchResult(item);
+            }
+        }
+
+        private void DisplaySearchResult(BO.ItemType obj)
+        {
+            List<BO.ItemType> itemTypes = null;
+            if(HelperClass.DoesExists(obj,ref itemTypes))
+            {
+                dgwTypes.DataSource = null;
+                dgwTypes.DataSource = itemTypes;
             }
         }
 
@@ -55,25 +64,16 @@ namespace PTi1MenaxhimiDepos.Items
         {
             if(txtSearch.Text == "")
             {
-                HelperClass.LoadGrid(ItemBLL.GetItemTypes(),dgwTypes);
+                dgwTypes.DataSource = null;
+                dgwTypes.DataSource = ItemBLL.GetItemTypes();
             }
-        }
-
-        private void dgwTypes_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            type = new BO.ItemType(int.Parse(dgwTypes.Rows[e.RowIndex].Cells[0].Value.ToString()),
-                dgwTypes.Rows[e.RowIndex].Cells[1].Value.ToString(), dgwTypes.Rows[e.RowIndex].Cells[2].Value.ToString());
-            txtid.Text = type.ID.ToString();
-            txtname.Text = type.Name;txtdescription.Text = type.Description;
-            btndelete.Visible = btnUpdate.Visible = true; 
-            btnSave.Visible = false;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (type.Name == txtname.Text && type.Description == txtdescription.Text)
             {
-                MessageBox.Show("You do not change anything", "Not Change", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                MessageBox.Show("You do not change anything", "Not Change", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
             else
             {
@@ -84,8 +84,7 @@ namespace PTi1MenaxhimiDepos.Items
                 {
                     if (ItemBLL.UpdateItemType(type.ID, type))
                     {
-                        HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtname, txtdescription, txtid);
-                        HelperClass.LoadGrid(ItemBLL.GetItemTypes(), dgwTypes);
+                        Refresh();
                     }
                 }
             }
@@ -97,15 +96,32 @@ namespace PTi1MenaxhimiDepos.Items
             {
                 if (ItemBLL.DeleteItemType(type.ID))
                 {
-                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtname, txtdescription, txtid);
-                    HelperClass.LoadGrid(ItemBLL.GetItemTypes(), dgwTypes);
+                    Refresh();
                 }
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtname, txtdescription, txtid);
+            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
+            HelpClass.Delete(txtname, txtdescription, txtid);
+        }
+
+        public override void Refresh()
+        {
+            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
+            HelpClass.Delete(txtname, txtdescription, txtid);
+            dgwTypes.DataSource = null;
+            dgwTypes.DataSource = ItemBLL.GetItemTypes();
+        }
+
+        private void dgwTypes_CellDoubleClick(object sender, GridViewCellEventArgs e)
+        {
+            type = (BO.ItemType)dgwTypes.Rows[e.RowIndex].DataBoundItem;
+            txtid.Text = type.ID.ToString();
+            txtname.Text = type.Name;
+            txtdescription.Text = type.Description;
+            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
         }
     }
 }
