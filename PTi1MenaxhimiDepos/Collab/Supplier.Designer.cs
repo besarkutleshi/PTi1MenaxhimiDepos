@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
             this.txtId = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -46,7 +46,7 @@
             this.btnEdito = new Telerik.WinControls.UI.RadButton();
             this.btnNderpre = new Telerik.WinControls.UI.RadButton();
             this.btnFshij = new Telerik.WinControls.UI.RadButton();
-            this.gdvParaqitja = new Telerik.WinControls.UI.RadGridView();
+            this.dgvParaqitja = new Telerik.WinControls.UI.RadGridView();
             this.txtkerkoFurnitor = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.btnKerkoFurnitorin = new Telerik.WinControls.UI.RadButton();
@@ -69,8 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEdito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNderpre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFshij)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvParaqitja)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvParaqitja.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParaqitja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParaqitja.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtkerkoFurnitor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnKerkoFurnitorin)).BeginInit();
@@ -190,47 +190,61 @@
             // 
             // btnRuaj
             // 
-            this.btnRuaj.Location = new System.Drawing.Point(285, 214);
+            this.btnRuaj.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRuaj.Image = global::PTi1MenaxhimiDepos.Properties.Resources.save;
+            this.btnRuaj.Location = new System.Drawing.Point(285, 186);
             this.btnRuaj.Name = "btnRuaj";
-            this.btnRuaj.Size = new System.Drawing.Size(137, 30);
+            this.btnRuaj.Size = new System.Drawing.Size(114, 45);
             this.btnRuaj.TabIndex = 6;
             this.btnRuaj.Text = "Rauj";
+            this.btnRuaj.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRuaj.Click += new System.EventHandler(this.btnRuaj_Click);
             // 
             // btnEdito
             // 
-            this.btnEdito.Location = new System.Drawing.Point(428, 214);
+            this.btnEdito.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdito.Image = global::PTi1MenaxhimiDepos.Properties.Resources.update;
+            this.btnEdito.Location = new System.Drawing.Point(415, 186);
             this.btnEdito.Name = "btnEdito";
-            this.btnEdito.Size = new System.Drawing.Size(137, 30);
+            this.btnEdito.Size = new System.Drawing.Size(120, 45);
             this.btnEdito.TabIndex = 7;
             this.btnEdito.Text = "Edito";
+            this.btnEdito.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdito.Click += new System.EventHandler(this.btnEdito_Click);
             // 
             // btnNderpre
             // 
-            this.btnNderpre.Location = new System.Drawing.Point(428, 250);
+            this.btnNderpre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNderpre.Image = global::PTi1MenaxhimiDepos.Properties.Resources.cancel_icon;
+            this.btnNderpre.Location = new System.Drawing.Point(415, 237);
             this.btnNderpre.Name = "btnNderpre";
-            this.btnNderpre.Size = new System.Drawing.Size(137, 30);
+            this.btnNderpre.Size = new System.Drawing.Size(120, 43);
             this.btnNderpre.TabIndex = 7;
             this.btnNderpre.Text = "Nderpre";
+            this.btnNderpre.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnFshij
             // 
-            this.btnFshij.Location = new System.Drawing.Point(286, 250);
+            this.btnFshij.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFshij.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Actions_edit_clear_icon;
+            this.btnFshij.Location = new System.Drawing.Point(285, 237);
             this.btnFshij.Name = "btnFshij";
-            this.btnFshij.Size = new System.Drawing.Size(137, 30);
+            this.btnFshij.Size = new System.Drawing.Size(114, 43);
             this.btnFshij.TabIndex = 7;
             this.btnFshij.Text = "Fshij";
+            this.btnFshij.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFshij.Click += new System.EventHandler(this.btnFshij_Click);
             // 
-            // gdvParaqitja
+            // dgvParaqitja
             // 
-            this.gdvParaqitja.Location = new System.Drawing.Point(13, 306);
+            this.dgvParaqitja.Location = new System.Drawing.Point(13, 306);
             // 
             // 
             // 
-            this.gdvParaqitja.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.gdvParaqitja.Name = "gdvParaqitja";
-            this.gdvParaqitja.Size = new System.Drawing.Size(756, 373);
-            this.gdvParaqitja.TabIndex = 8;
+            this.dgvParaqitja.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            this.dgvParaqitja.Name = "dgvParaqitja";
+            this.dgvParaqitja.Size = new System.Drawing.Size(756, 373);
+            this.dgvParaqitja.TabIndex = 8;
             // 
             // txtkerkoFurnitor
             // 
@@ -238,6 +252,7 @@
             this.txtkerkoFurnitor.Name = "txtkerkoFurnitor";
             this.txtkerkoFurnitor.Size = new System.Drawing.Size(125, 24);
             this.txtkerkoFurnitor.TabIndex = 5;
+            this.txtkerkoFurnitor.TextChanged += new System.EventHandler(this.txtkerkoFurnitor_TextChanged);
             // 
             // radLabel7
             // 
@@ -254,6 +269,7 @@
             this.btnKerkoFurnitorin.Size = new System.Drawing.Size(55, 24);
             this.btnKerkoFurnitorin.TabIndex = 8;
             this.btnKerkoFurnitorin.Text = "Kerko";
+            this.btnKerkoFurnitorin.Click += new System.EventHandler(this.btnKerkoFurnitorin_Click);
             // 
             // Supplier
             // 
@@ -263,7 +279,7 @@
             this.Controls.Add(this.btnKerkoFurnitorin);
             this.Controls.Add(this.txtkerkoFurnitor);
             this.Controls.Add(this.radLabel7);
-            this.Controls.Add(this.gdvParaqitja);
+            this.Controls.Add(this.dgvParaqitja);
             this.Controls.Add(this.btnFshij);
             this.Controls.Add(this.btnNderpre);
             this.Controls.Add(this.btnEdito);
@@ -297,8 +313,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEdito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNderpre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFshij)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvParaqitja.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvParaqitja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParaqitja.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParaqitja)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtkerkoFurnitor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnKerkoFurnitorin)).EndInit();
@@ -326,9 +342,9 @@
         private Telerik.WinControls.UI.RadButton btnEdito;
         private Telerik.WinControls.UI.RadButton btnNderpre;
         private Telerik.WinControls.UI.RadButton btnFshij;
-        private Telerik.WinControls.UI.RadGridView gdvParaqitja;
         private Telerik.WinControls.UI.RadTextBox txtkerkoFurnitor;
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Telerik.WinControls.UI.RadButton btnKerkoFurnitorin;
+        public Telerik.WinControls.UI.RadGridView dgvParaqitja;
     }
 }
