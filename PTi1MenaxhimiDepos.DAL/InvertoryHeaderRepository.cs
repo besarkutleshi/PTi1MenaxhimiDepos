@@ -100,7 +100,7 @@ namespace PTi1MenaxhimiDepos.DAL
 			}
 		}
 
-		public InvertoryHeader GetPurchaseInvertoryHeadersByDocNo(int docno)
+		public InvertoryHeader GetPurchaseInvertoryHeadersByDocNo(string docno)
 		{
 			try
 			{
@@ -109,7 +109,7 @@ namespace PTi1MenaxhimiDepos.DAL
 				{
 					con.Open();
 					var cmd = DataConnection.Command(con, "sp_GetPurchaseInvertoryHeadersByDocNo", CommandType.StoredProcedure);
-					DataConnection.AddParameter(cmd, "@ID", docno);
+					DataConnection.AddParameter(cmd, "@DocNo", docno);
 					SqlDataReader sdr = cmd.ExecuteReader(); 
 					while (sdr.Read())
 					{
@@ -160,7 +160,15 @@ namespace PTi1MenaxhimiDepos.DAL
 					DataConnection.AddParameter(cmd, "@DocTypeID", invertory.DocTypeID);
 					DataConnection.AddParameter(cmd, "@PosID", invertory.PosID);
 					DataConnection.AddParameter(cmd, "@Description", invertory.Description);
-					DataConnection.AddParameter(cmd, "@ClientID", invertory.ClientID);
+					if (invertory.ClientID == 0)
+						DataConnection.AddParameter(cmd, "@ClientID", 3);
+					else
+						DataConnection.AddParameter(cmd, "@ClientID", invertory.ClientID);
+					if (invertory.SupplierID == 0)
+						DataConnection.AddParameter(cmd, "@SupplierID", 3);
+					else
+						DataConnection.AddParameter(cmd, "@SupplierID", invertory.SupplierID);
+					DataConnection.AddParameter(cmd, "@UpdateBy", invertory.Username);
 					value = DataConnection.GetValue(cmd);
 				}
 				return HelperClass.GetValue(value, "Update");
@@ -215,10 +223,11 @@ namespace PTi1MenaxhimiDepos.DAL
 
 		public InvertoryHeader Get(SqlDataReader sdr)
 		{
-			InvertoryHeader obj = new InvertoryHeader(int.Parse(sdr["INVERTORYID"].ToString()), int.Parse(sdr["DOCNO"].ToString()), Convert.ToDateTime(sdr["DOCDATE"].ToString()),
+			InvertoryHeader obj = new InvertoryHeader(int.Parse(sdr["INVERTORYID"].ToString()), sdr["DOCNO"].ToString(), Convert.ToDateTime(sdr["DOCDATE"].ToString()),
 				sdr["DESCRIPTION"].ToString());
-			obj.POS.Name = sdr["POS"].ToString();
-			obj.DocType.Description = sdr["INVOICE"].ToString();
+			obj.POS= new BO.PointofSale(sdr["POS"].ToString());
+			obj.DocType = new DocType(sdr["INVOICE"].ToString());
+			obj.Supplier = new BO.Supplier(sdr["SUPPLIER"].ToString());
 			return obj;
 		}
 

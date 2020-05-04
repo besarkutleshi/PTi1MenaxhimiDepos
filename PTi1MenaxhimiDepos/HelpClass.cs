@@ -12,17 +12,15 @@ namespace PTi1MenaxhimiDepos
     public static class HelpClass
     {
         public static User CurrentUser = null;
-        public static void OnChange(RadButton btnsave, RadButton btndelete, RadButton btnupdate, params RadTextBox[] radTextBoxes)
+        public static void VisibleButton(RadButton btnsave, RadButton btndelete, RadButton btnupdate, params RadTextBox[] radTextBoxes)
         {
-            if(btnsave.Visible == true)
-            {
-                btnsave.Visible = false; btndelete.Visible = btnupdate.Visible = true;
-            }
-            else
-            {
-                btnsave.Visible = true; btndelete.Visible = false; btnupdate.Visible = false;
-            }
+            btnsave.Visible = false; btndelete.Visible = btnupdate.Visible = true;
             Delete(radTextBoxes);
+        }
+
+        public static void NotVisibleButton(RadButton btnsave, RadButton btndelete, RadButton btnupdate)
+        {
+            btnsave.Visible = true; btndelete.Visible = btnupdate.Visible = false;
         }
 
         public static void Delete(params RadTextBox[] radTextBoxes)
@@ -36,38 +34,57 @@ namespace PTi1MenaxhimiDepos
             }
         }
 
-        public static void EnabledTextBoxs(params RadTextBox[] radTextBoxes)
+        public static void EnabledTrueTextBoxs(params RadTextBox[] radTextBoxes)
         {
             if(radTextBoxes != null)
             {
                 foreach (var item in radTextBoxes)
                 {
-                    if(item.Enabled == false)
-                    {
-                        item.Enabled = true;
-                    }
-                    else
-                    {
-                        item.Enabled = false;
-                    }
+                    item.Enabled = true;
                 }
             }
         }
 
-        public static void EnabledComboBoxs(params RadDropDownList[] radDropDownLists)
+        public static void EnabledFalseTextBoxs(params RadTextBox[] radTextBoxes)
+        {
+            if (radTextBoxes != null)
+            {
+                foreach (var item in radTextBoxes)
+                {
+                    item.Enabled = false;
+                }
+            }
+        }
+
+        public static void EnabledTrueComboBoxs(params RadDropDownList[] radDropDownLists)
         {
             if (radDropDownLists != null)
             {
                 foreach (var item in radDropDownLists)
                 {
-                    if (item.Enabled == false)
-                    {
-                        item.Enabled = true;
-                    }
-                    else
-                    {
-                        item.Enabled = false;
-                    }
+                    item.Enabled = true;
+                }
+            }
+        }
+
+        public static void EnabledFalseComboBoxs(params RadDropDownList[] radDropDownLists)
+        {
+            if (radDropDownLists != null)
+            {
+                foreach (var item in radDropDownLists)
+                {
+                    item.Enabled = false;
+                }
+            }
+        }
+
+        public static void DeleteComboBoxs(params RadDropDownList[] radDropDownLists)
+        {
+            if(radDropDownLists != null)
+            {
+                foreach (var item in radDropDownLists)
+                {
+                    item.SelectedIndex = -1;
                 }
             }
         }

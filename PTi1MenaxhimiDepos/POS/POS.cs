@@ -75,7 +75,7 @@ namespace PTi1MenaxhimiDepos.POS
                 if (PosBLL.UpdatePos(obj.ID, obj))
                 {
                     HelperClass.LoadGrid(PosBLL.GetPointofSales(), dgwPos);
-                    HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
+                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
                 }
             }
         }
@@ -87,7 +87,7 @@ namespace PTi1MenaxhimiDepos.POS
                 if (PosBLL.DeletePos(int.Parse(txtID.Text)))
                 {
                     HelperClass.LoadGrid(PosBLL.GetPointofSales(), dgwPos);
-                    HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
+                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
                 }
             }
         }
@@ -105,14 +105,14 @@ namespace PTi1MenaxhimiDepos.POS
                 if (PosBLL.InsertPos(obj))
                 {
                     HelperClass.LoadGrid(PosBLL.GetPointofSales(), dgwPos);
-                    HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
+                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
                 }
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
+            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
         }
     }
 }

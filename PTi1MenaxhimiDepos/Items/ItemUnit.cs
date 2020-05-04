@@ -83,7 +83,7 @@ namespace PTi1MenaxhimiDepos.Items
                 unit.Username = HelpClass.CurrentUser.UserName;
                 if (ItemBLL.UpdateUnitType(unit.ID, unit))
                 {
-                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
+                    HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
                     HelperClass.LoadGrid(ItemBLL.GetItemUnits(),dgwTypes);
                     unit = null;
                 }
@@ -96,7 +96,7 @@ namespace PTi1MenaxhimiDepos.Items
             {
                 if (ItemBLL.DeleteUnitType(unit.ID))
                 {
-                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
+                    HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
                     HelperClass.LoadGrid(ItemBLL.GetItemUnits(), dgwTypes);
                     unit = null;
                 }
@@ -104,7 +104,7 @@ namespace PTi1MenaxhimiDepos.Items
         }
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription,txtID);
+            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtname, txtdescription,txtID);
         }
     }
 }

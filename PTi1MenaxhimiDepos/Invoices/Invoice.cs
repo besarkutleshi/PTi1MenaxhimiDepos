@@ -31,7 +31,7 @@ namespace PTi1MenaxhimiDepos.Invoices
             txtPrice.Text = obj.Price.ToString();
             txtQuantity.Text = obj.Quantity.ToString();
             cmbItem.Text = obj.Item.Name;
-            HelpClass.OnChange(btnSave, btndelete, btnUpdate);
+            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace PTi1MenaxhimiDepos.Invoices
             {
                 if (invertoryHeader == null)
                 {
-                    invertoryHeader = new InvertoryHeader(0, int.Parse(txtInvoiceNumber.Text), (int)cmbInoviceType.SelectedValue, (int)cmbPos.SelectedValue, txtDescription.Text
+                    invertoryHeader = new InvertoryHeader(InvoiceBLL.MaxID(), txtInvoiceNumber.Text, (int)cmbInoviceType.SelectedValue, (int)cmbPos.SelectedValue, txtDescription.Text
                         ,0,(int)cmbSupplier.SelectedValue);
                     invertoryHeader.Username = HelpClass.CurrentUser.UserName;
                 }
@@ -57,8 +57,8 @@ namespace PTi1MenaxhimiDepos.Invoices
                 HelpClass.Delete(txtPrice, txtQuantity, txtDiscount);
                 dgwBodies.DataSource = null;
                 dgwBodies.DataSource = invertoryHeader.Bodies;
-                HelpClass.EnabledTextBoxs(txtDescription, txtInvoiceNumber);
-                HelpClass.EnabledComboBoxs(cmbInoviceType, cmbPos, cmbSupplier);
+                HelpClass.EnabledFalseTextBoxs(txtDescription, txtInvoiceNumber);
+                HelpClass.EnabledFalseComboBoxs(cmbInoviceType, cmbPos, cmbSupplier);
             }
         }
 
@@ -69,7 +69,7 @@ namespace PTi1MenaxhimiDepos.Invoices
                 invertoryHeader.Bodies.Remove(obj);
                 InvoiceBLL.RefreshGrid(invertoryHeader.Bodies, dgwBodies);
                 HelpClass.Delete(txtDiscount, txtPrice, txtQuantity);
-                HelpClass.OnChange(btnSave, btndelete, btnUpdate);
+                HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
             }
         }
 
@@ -83,11 +83,7 @@ namespace PTi1MenaxhimiDepos.Invoices
             if(invertoryHeader != null && invertoryHeader.Bodies.Count > 0)
             {
                 InvoiceBLL.InsertPurchaseInvoice(invertoryHeader);
-                HelpClass.Delete(txtDescription, txtDiscount, txtID, txtInvoiceNumber, txtPrice, txtQuantity, txtSearch);
-                HelpClass.EnabledTextBoxs(txtDescription, txtInvoiceNumber);
-                HelpClass.EnabledComboBoxs(cmbInoviceType, cmbPos, cmbSupplier);
-                dgwBodies.DataSource = null;
-                invertoryHeader = null;
+                Refresh();
             }
             else
             {
@@ -105,10 +101,11 @@ namespace PTi1MenaxhimiDepos.Invoices
 
         public override void Refresh()
         {
-            HelpClass.OnChange(btnSave, btndelete, btnUpdate);
+            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
             HelpClass.Delete(txtDescription, txtDiscount, txtID, txtInvoiceNumber, txtPrice, txtQuantity, txtSearch);
-            HelpClass.EnabledTextBoxs(txtDescription, txtInvoiceNumber);
-            HelpClass.EnabledComboBoxs(cmbInoviceType, cmbPos, cmbSupplier);
+            HelpClass.EnabledTrueTextBoxs(txtDescription, txtInvoiceNumber);
+            HelpClass.EnabledTrueComboBoxs(cmbInoviceType, cmbPos, cmbSupplier);
+            Clear();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -134,8 +131,50 @@ namespace PTi1MenaxhimiDepos.Invoices
                 }
             }
             HelpClass.Delete(txtDiscount, txtPrice, txtQuantity);
-            HelpClass.OnChange(btnSave, btndelete, btnUpdate);
+            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
             InvoiceBLL.RefreshGrid(invertoryHeader.Bodies, dgwBodies);
+        }
+
+        private void Clear()
+        {
+            dgwBodies.DataSource = null;
+            invertoryHeader = null;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSearch.Text == "")
+            {
+                if(invertoryHeader != null && invertoryHeader.Bodies.Count > 0)
+                {
+                    dgwBodies.DataSource = invertoryHeader.Bodies;
+                }
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(txtSearch.Text == "")
+            {
+                MessageBox.Show("Please fill in search box", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (txtSearch.Text.All(char.IsDigit) || txtSearch.Text.Any(char.IsDigit))
+                {
+
+                }
+                else
+                {
+                    if (invertoryHeader != null && invertoryHeader.Bodies.Count > 0)
+                    {
+                        List<InvertoryBody> invertoryBodies = new List<InvertoryBody>();
+                        invertoryBodies.Add(invertoryHeader.Bodies.FirstOrDefault(inb => inb.Item.Name == txtSearch.Text));
+                        InvoiceBLL.RefreshGrid(invertoryBodies, dgwBodies);
+                    }
+                }
+            }
+            //txtSearch.Text = "";
         }
     }
 }

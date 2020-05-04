@@ -16,5 +16,10 @@ namespace PTi1MenaxhimiDepos.Collab
         {
             InitializeComponent();
         }
+
+        private void btnRuaj_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

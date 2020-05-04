@@ -121,7 +121,7 @@ namespace PTi1MenaxhimiDepos
                     obj.Username = HelpClass.CurrentUser.UserName;
                     if (ItemBLL.UpdateItem(ID,obj))
                     {
-                        HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
+                        HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
                         HelperClass.LoadGrid(ItemBLL.GetItems(), dgwItems);
                     }
                 }
@@ -146,7 +146,7 @@ namespace PTi1MenaxhimiDepos
             {
                 if (ItemBLL.DeleteItem(Barcode))
                 {
-                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
+                    HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
                     HelperClass.LoadGrid(ItemBLL.GetItems(), dgwItems);
                 }
             }
@@ -154,7 +154,7 @@ namespace PTi1MenaxhimiDepos
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
+            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtbarcode, txtname, txtDescription, txtstock);
         }
     }
 }

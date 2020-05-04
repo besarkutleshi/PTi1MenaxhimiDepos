@@ -8,7 +8,7 @@ namespace PTi1MenaxhimiDepos.BO.Invoices
 {
     public class InvertoryHeader : AuditionAtributtes
     {
-        public InvertoryHeader(int invertoryID, int docNo,int docTypeID,int posID,string description, int clientID=0,int supplierid =0)
+        public InvertoryHeader(int invertoryID, string docNo,int docTypeID,int posID,string description, int clientID=0,int supplierid =0)
         {
             InvertoryID = invertoryID;
             DocNo = docNo;
@@ -20,7 +20,7 @@ namespace PTi1MenaxhimiDepos.BO.Invoices
             Bodies = new List<InvertoryBody>();
         }
 
-        public InvertoryHeader(int invertoryID, int docNo,DateTime dt,string description)
+        public InvertoryHeader(int invertoryID, string docNo,DateTime dt,string description)
         {
             InvertoryID = invertoryID;
             DocNo = docNo;
@@ -29,7 +29,7 @@ namespace PTi1MenaxhimiDepos.BO.Invoices
         }
 
         public int InvertoryID { get; set; }
-        public int DocNo { get; set; }
+        public string DocNo { get; set; }
         public DateTime DocDate { get; set; }
         public int DocTypeID { get; set; }
         public virtual DocType DocType { get; set; }

@@ -195,6 +195,7 @@
             this.btnRuaj.Size = new System.Drawing.Size(137, 30);
             this.btnRuaj.TabIndex = 6;
             this.btnRuaj.Text = "Rauj";
+            this.btnRuaj.Click += new System.EventHandler(this.btnRuaj_Click);
             // 
             // btnEdito
             // 

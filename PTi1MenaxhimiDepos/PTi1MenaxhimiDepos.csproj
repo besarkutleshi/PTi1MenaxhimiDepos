@@ -73,6 +73,18 @@
     <Compile Include="Invoices\Invoice.Designer.cs">
       <DependentUpon>Invoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoices\ListInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\ListInvoice.Designer.cs">
+      <DependentUpon>ListInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\ListInvoiceBodies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\ListInvoiceBodies.Designer.cs">
+      <DependentUpon>ListInvoiceBodies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Items\ItemCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\ListInvoice.resx">
+      <DependentUpon>ListInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\ListInvoiceBodies.resx">
+      <DependentUpon>ListInvoiceBodies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Items\ItemCategory.resx">
       <DependentUpon>ItemCategory.cs</DependentUpon>

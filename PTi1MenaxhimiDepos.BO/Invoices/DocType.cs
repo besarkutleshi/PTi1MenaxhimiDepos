@@ -8,6 +8,11 @@ namespace PTi1MenaxhimiDepos.BO.Invoices
 {
     public class DocType : AuditionAtributtes
     {
+        public DocType(string description)
+        {
+            Description = description;
+        }
+
         public DocType(int docTypeID, string code, string description)
         {
             DocTypeID = docTypeID;

@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Telerik.WinControls.UI;
 using PTi1MenaxhimiDepos.Items;
 using PTi1MenaxhimiDepos.BL;
+using PTi1MenaxhimiDepos.Invoices;
 
 namespace PTi1MenaxhimiDepos.Controls
 {
@@ -95,37 +96,47 @@ namespace PTi1MenaxhimiDepos.Controls
         #region Items
         public void PrintButtonsItems(TabPage tabPage, RadGridView obj, string[] values)
         {
+            RadButton btnListInvoice = new RadButton();
+            btnListInvoice.Click += BtnListInvoice_Click;
+            Image invoice = CreateImage(new Bitmap(Properties.Resources.invoice));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnListInvoice, new Point(13, 20), new Size(75, 60), null, invoice));
+            Label lblListinvoice = new Label();
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblListinvoice, new Point(13, 85), new Size(75,23), "ListInvoice"));
             RadButton btnRegisterInvoice = new RadButton();
             btnRegisterInvoice.Click += BtnRegisterInvoice_Click;
-            Image invoice = CreateImage(new Bitmap(Properties.Resources.invoice));
-            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterInvoice, new Point(13, 20), new Size(75, 60), null, invoice));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterInvoice, new Point(100, 20), new Size(75, 60), null, invoice));
             Label lblinvoice = new Label();
-            tabPage.Controls.Add(ControlShow.GetButtonss(lblinvoice, new Point(27, 85), new Size(75, 20),"Invoice"));
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblinvoice, new Point(110, 85), new Size(75, 20),"Invoice"));
             RadButton btnRegisterItem = new RadButton();
             btnRegisterItem.Click += BtnRegisterItem_Click;
             Image hapeimg = CreateImage(new Bitmap(Properties.Resources.add_item_icon));
-            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterItem, new Point(100, 20), new Size(75, 60), null, hapeimg));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterItem, new Point(187, 20), new Size(75, 60), null, hapeimg));
             Label lblitem = new Label();
-            tabPage.Controls.Add(ControlShow.GetButtonss(lblitem, new Point(120, 85), new Size(75, 20), "Item"));
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblitem, new Point(208, 85), new Size(75, 20), "Item"));
             RadButton btnRegisterType = new RadButton();
             btnRegisterType.Click += BtnRegisterType_Click;
             Image type = CreateImage(new Bitmap(Properties.Resources.type));
-            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterType, new Point(187, 20), new Size(75, 60), null, type));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterType, new Point(274, 20), new Size(75, 60), null, type));
             Label lbltype = new Label();
-            tabPage.Controls.Add(ControlShow.GetButtonss(lbltype, new Point(205, 85), new Size(75, 20), "Type"));
+            tabPage.Controls.Add(ControlShow.GetButtonss(lbltype, new Point(292, 85), new Size(75, 20), "Type"));
             RadButton btnRegisterUnit = new RadButton();
             btnRegisterUnit.Click += BtnRegisterUnit_Click;
             Image unit = CreateImage(new Bitmap(Properties.Resources.unit));
-            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterUnit, new Point(274, 20), new Size(75, 60), null, unit));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterUnit, new Point(361, 20), new Size(75, 60), null, unit));
             Label lblunit = new Label();
-            tabPage.Controls.Add(ControlShow.GetButtonss(lblunit, new Point(295, 85), new Size(75, 20), "Unit"));
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblunit, new Point(380, 85), new Size(75, 20), "Unit"));
             RadButton btnRegisterCategory = new RadButton();
             btnRegisterCategory.Click += BtnRegisterCategory_Click;
             Image category = CreateImage(new Bitmap(Properties.Resources.category));
-            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterCategory, new Point(361, 20), new Size(75, 60), null, category));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterCategory, new Point(448, 20), new Size(75, 60), null, category));
             Label lblcategory = new Label();
-            tabPage.Controls.Add(ControlShow.GetButtonss(lblcategory, new Point(368, 85), new Size(75, 20), "Category"));
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblcategory, new Point(453, 85), new Size(75, 20), "Category"));
             PrintControls(tabPage, obj, values);
+        }
+        private void BtnListInvoice_Click(object sender, EventArgs e)
+        {
+            ListInvoice obj = new ListInvoice();
+            obj.ShowDialog();
         }
         public void PrintGrid(TabPage tab, RadGridView obj,Point point,Size size)
         {
@@ -159,7 +170,6 @@ namespace PTi1MenaxhimiDepos.Controls
         #endregion
 
         #region Administrate
-
         public void PrintButtonsAdministration(TabPage tabPage)
         {
             RadButton Employee = new RadButton();
@@ -181,24 +191,18 @@ namespace PTi1MenaxhimiDepos.Controls
             Label lbltype = new Label();
             tabPage.Controls.Add(ControlShow.GetButtonss(lbltype, new Point(203, 85), new Size(75, 20), "Role"));
         }
-
         private void Role_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
-
         private void User_Click(object sender, EventArgs e)
         {
             Administration.User user = new Administration.User();
             user.ShowDialog();
         }
-
         private void Employee_Click(object sender, EventArgs e)
         {
         }
-
         #endregion
-
-
     }
 }

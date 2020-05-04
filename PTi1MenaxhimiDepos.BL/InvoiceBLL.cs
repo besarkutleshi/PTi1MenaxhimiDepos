@@ -22,7 +22,8 @@ namespace PTi1MenaxhimiDepos.BL
         public static bool UpdatePurchaseInoviceHeader(int id, InvertoryHeader obj) => _headerRepository.UpdatePurchaseHeader(id, obj);
         public static List<InvertoryHeader> GetPurchaseInvoicesHeader() => _headerRepository.GetPurchaseInvertoryHeaders();
         public static InvertoryHeader GetPuchaseInvoicesHeaderByID(int id) => _headerRepository.GetPurchaseInvertoryHeadersById(id);
-        public static InvertoryHeader GetPurchaseInvoicesHeaderByDosNo(int docno) => _headerRepository.GetPurchaseInvertoryHeadersByDocNo(docno);
+        public static InvertoryBody GetInvertoryBodyByItem(string item, int headerid) => _bodyRepository.GetInvertoryBodyByItem(item, headerid);
+        public static InvertoryHeader GetPurchaseInvoicesHeaderByDosNo(string docno) => _headerRepository.GetPurchaseInvertoryHeadersByDocNo(docno);
         public static bool InsertBody(InvertoryBody obj) => _bodyRepository.Add(obj);
         public static bool DeleteBody(int id) => _bodyRepository.Delete(id);
         public static bool UpdateBody(int id, InvertoryBody obj) => _bodyRepository.Update(id, obj);

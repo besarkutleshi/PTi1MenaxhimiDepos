@@ -32,7 +32,7 @@ namespace PTi1MenaxhimiDepos.Items
                 if (ItemBLL.InsertCategory(category))
                 {
                     HelperClass.LoadGrid(ItemBLL.GetCategories(),dgwCategories);
-                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
+                    HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
                 }
             }
         }
@@ -75,7 +75,7 @@ namespace PTi1MenaxhimiDepos.Items
             {
                 if (ItemBLL.DeleteCategory(category.ID))
                 {
-                    HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
+                    HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
                     HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
                 }
             }
@@ -96,7 +96,7 @@ namespace PTi1MenaxhimiDepos.Items
                 {
                     if (ItemBLL.UpdateCategory(category.ID, category))
                     {
-                        HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
+                        HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
                         HelperClass.LoadGrid(ItemBLL.GetCategories(), dgwCategories);
                     }
                 }
@@ -110,7 +110,7 @@ namespace PTi1MenaxhimiDepos.Items
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.OnChange(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
+            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate, txtname, txtdescription, txtID);
         }
     }
 }

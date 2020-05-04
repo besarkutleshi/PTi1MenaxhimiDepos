@@ -26,7 +26,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     DataConnection.AddParameter(cmd, "@ItemID", obj.ItemID);
                     DataConnection.AddParameter(cmd, "@Price", obj.Price);
                     DataConnection.AddParameter(cmd, "@Quantity", obj.Quantity);
-                    DataConnection.AddParameter(cmd, "@Discount", obj.Quantity);
+                    DataConnection.AddParameter(cmd, "@Discount", obj.Discount);
                     DataConnection.AddParameter(cmd, "@InsertBy", obj.Username);
                     value = DataConnection.GetValue(cmd);
                 }
@@ -63,7 +63,7 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             InvertoryBody obj = new InvertoryBody(int.Parse(sdr["ID"].ToString()), int.Parse(sdr["HEADERID"].ToString()), int.Parse(sdr["QUANTITY"].ToString()),
                 double.Parse(sdr["PRICE"].ToString()), Convert.ToDateTime(sdr["CDATE"].ToString()), double.Parse(sdr["DISCOUNT"].ToString()));
-            obj.Item.Name = sdr["ITEM"].ToString();
+            obj.Item = new BO.Item(sdr["ITEM"].ToString());
             return obj;
         }
 
@@ -75,8 +75,34 @@ namespace PTi1MenaxhimiDepos.DAL
                 using (var con = DataConnection.Connection())
                 {
                     con.Open();
-                    var cmd = DataConnection.Command(con, "sp_Get_InvertoryBodyByID", CommandType.StoredProcedure);
+                    var cmd = DataConnection.Command(con, "sp_GetAll_InvertoryBody_ByItem", CommandType.StoredProcedure);
                     DataConnection.AddParameter(cmd, "@ID", id);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        obj = Get(sdr);
+                    }
+                }
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public InvertoryBody GetInvertoryBodyByItem(string item, int headerid)
+        {
+            try
+            {
+                InvertoryBody obj = null;
+                using (var con = DataConnection.Connection())
+                {
+                    con.Open();
+                    var cmd = DataConnection.Command(con, "sp_GetAll_InvertoryBody_ByItem", CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "@Item", item);
+                    DataConnection.AddParameter(cmd, "@InvertoryHeader", headerid);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     while (sdr.Read())
                     {
@@ -135,7 +161,7 @@ namespace PTi1MenaxhimiDepos.DAL
                     DataConnection.AddParameter(cmd, "@ItemID", obj.ItemID);
                     DataConnection.AddParameter(cmd, "@Price", obj.Price);
                     DataConnection.AddParameter(cmd, "@Quantity", obj.Quantity);
-                    DataConnection.AddParameter(cmd, "@Discount", obj.Quantity);
+                    DataConnection.AddParameter(cmd, "@Discount", obj.Discount);
                     DataConnection.AddParameter(cmd, "@UpdateBy", obj.Username);
                     value = DataConnection.GetValue(cmd);
                 }

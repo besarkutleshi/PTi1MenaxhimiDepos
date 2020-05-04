@@ -375,6 +375,7 @@
             this.btnSearch.Size = new System.Drawing.Size(52, 37);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -383,6 +384,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(258, 37);
             this.txtSearch.TabIndex = 11;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblPos
             // 

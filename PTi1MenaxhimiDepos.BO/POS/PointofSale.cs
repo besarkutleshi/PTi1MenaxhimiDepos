@@ -10,6 +10,10 @@ namespace PTi1MenaxhimiDepos.BO
 {
     public class PointofSale:AuditionAtributtes
     {
+        public PointofSale(string name)
+        {
+            Name = name;
+        }
 
         public PointofSale(int id,string name, string city, string phone, string description)
         {

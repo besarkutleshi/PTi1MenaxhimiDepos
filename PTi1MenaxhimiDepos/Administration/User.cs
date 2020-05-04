@@ -82,7 +82,7 @@ namespace PTi1MenaxhimiDepos.Administration
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtDescription, txtID, txtPasword, txtUsername);
+            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtDescription, txtID, txtPasword, txtUsername);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace PTi1MenaxhimiDepos.Administration
                 if (AdministrationBLL.UpdateUser(obj.ID, obj))
                 {
                     HelperClass.LoadGrid(AdministrationBLL.GetUsers(), dgwUser);
-                    HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtDescription, txtID, txtPasword, txtUsername);
+                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtDescription, txtID, txtPasword, txtUsername);
                 }
             }
         }
@@ -113,7 +113,7 @@ namespace PTi1MenaxhimiDepos.Administration
                 if (AdministrationBLL.DeleteUser(int.Parse(txtID.Text)))
                 {
                     HelperClass.LoadGrid(AdministrationBLL.GetUsers(), dgwUser);
-                    HelpClass.OnChange(btnSave, btndelete, btnUpdate, txtDescription, txtID, txtPasword, txtUsername);
+                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtDescription, txtID, txtPasword, txtUsername);
                 }
             }
         }
