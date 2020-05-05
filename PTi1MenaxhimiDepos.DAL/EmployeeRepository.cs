@@ -132,15 +132,15 @@ namespace PTi1MenaxhimiDepos.DAL
                     var cmd = DataConnection.Command(con, "sp_Get_Personel_By_Name", CommandType.StoredProcedure);
                     DataConnection.AddParameter(cmd, "@Name", name);
                     SqlDataReader sdr = cmd.ExecuteReader();
-                    if (sdr.HasRows)
+                    if (sdr.HasRows) // nese ka rreshta qe na u kan kthhy hin meri
                     {
                         while (sdr.Read())
                         {
-                            employee = Get(sdr);
+                            employee = Get(sdr); // qe qitu kthehet qaj objekt
                         }
                     }
                 }
-                return employee;
+                return employee; // edhe qitu bohet return
             }
             catch (Exception ex)
             {
