@@ -49,7 +49,7 @@ namespace PTi1MenaxhimiDepos.Invoices
                         ,0,(int)cmbSupplier.SelectedValue);
                     invertoryHeader.Username = HelpClass.CurrentUser.UserName;
                 }
-                InvertoryBody obj1 = new InvertoryBody(counter++,InvoiceBLL.MaxID(), (int)cmbItem.SelectedValue, int.Parse(txtQuantity.Text), double.Parse(txtPrice.Text),
+                InvertoryBody obj1 = new InvertoryBody(counter++,InvoiceBLL.MaxID(), (int)cmbItem.SelectedValue, double.Parse(txtQuantity.Text), double.Parse(txtPrice.Text),
                     double.Parse(txtDiscount.Text));
                 obj1.Item = new PTi1MenaxhimiDepos.BO.Item(cmbItem.Text);
                 obj1.Username = HelpClass.CurrentUser.UserName;
@@ -112,7 +112,7 @@ namespace PTi1MenaxhimiDepos.Invoices
         {
             obj.Discount = double.Parse(txtDiscount.Text);
             obj.Price = double.Parse(txtPrice.Text);
-            obj.Quantity = int.Parse(txtQuantity.Text);
+            obj.Quantity = double.Parse(txtQuantity.Text);
             Item item1 = (Item)cmbItem.SelectedItem.DataBoundItem;
             obj.ItemID = item1.ID;
             obj.Item = item1;

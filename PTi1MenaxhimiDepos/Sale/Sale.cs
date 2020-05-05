@@ -1,4 +1,7 @@
-﻿using System;
+﻿using PTi1MenaxhimiDepos.BL;
+using PTi1MenaxhimiDepos.BO;
+using PTi1MenaxhimiDepos.BO.Invoices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +15,117 @@ namespace PTi1MenaxhimiDepos.Sale
 {
     public partial class Sale : Form
     {
+        InvertoryHeader header = null;
+        double Totali = 0;
         public Sale()
         {
             InitializeComponent();
+            this.cmbClients.DropDownListElement.DropDownWidth = 380;
+            this.cmbPOS.DropDownListElement.DropDownWidth = 380;
         }
 
         private void Sale_Load(object sender, EventArgs e)
         {
+            cmbClients.DataSource = CollaborationBLL.GetClients();cmbClients.DisplayMember = "Name";cmbClients.ValueMember = "ID";
+            cmbPOS.DataSource = PosBLL.GetPointofSales(); cmbPOS.DisplayMember = "Name"; cmbPOS.ValueMember = "ID";
+            dgwItems.DataSource = ItemBLL.GetItems();
             txtsearch.Focus();
+        }
+
+        private void dgwItems_CellClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            Item obj = (Item)dgwItems.Rows[e.RowIndex].DataBoundItem;
+            txtsearch.Text = obj.Name;
+            txtquantity.Focus();
+        }
+
+        private void dgwItems_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            Item obj = (Item)dgwItems.Rows[e.RowIndex].DataBoundItem;
+            if(header == null)
+            {
+                header = new InvertoryHeader(0, InvoiceBLL.MaxDocNo().ToString(), 2, (int)cmbPOS.SelectedValue, txtDescription.Text, (int)cmbClients.SelectedValue,
+                    0);
+            }
+            InvertoryBody body = new InvertoryBody(0, InvoiceBLL.MaxID(), obj.ID,1, 0.6,0);
+            AddItems(obj, body);
+        }
+
+        private string GetSum()
+        {
+            Totali = 0;
+            foreach (var item in header.Bodies)
+            {
+                if(item.Quantity > 1)
+                {
+                    Totali += item.Quantity * item.Price;
+                }
+                else
+                {
+                    Totali += item.Price;
+                }
+            }
+            return Totali.ToString("0.00");
+        }
+
+        private void AddItems(Item obj,InvertoryBody body)
+        {
+            body.Item = obj;
+            bool inn = false;
+            if(body.Quantity > 1)
+            {
+                body.Quantity -= 1;
+                header.Bodies.Add(body);
+            }
+            if (header.Bodies.Any())
+            {
+                foreach (var item in header.Bodies)
+                {
+                    if (item.Item == obj)
+                    {
+                        item.Quantity += 1;
+                        inn = true;
+                        break;
+                    }
+                }
+                if (inn == false)
+                {
+                    header.Bodies.Add(body);
+                }
+            }
+            else
+            {
+                header.Bodies.Add(body);
+            }
+            dgwitemtolist.DataSource = null;
+            dgwitemtolist.DataSource = header.Bodies;
+            txttotali.Text = GetSum();
+            HelpClass.Delete(txtDescription, txtprice, txtquantity, txtsearch);
+        }
+
+        private void txtsave_Click(object sender, EventArgs e)
+        {
+            if(txtsearch.Text == "" || txtdiscount.Text == "" || txtprice.Text == "" || txtquantity.Text == "")
+            {
+                MessageBox.Show("Please fill in empty box's!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return;
+            }
+            Item obj = ItemBLL.GetItemByName(txtsearch.Text);
+            if(obj != null)
+            {
+                if (header == null)
+                {
+                    header = new InvertoryHeader(0, InvoiceBLL.MaxDocNo().ToString(), 2, (int)cmbPOS.SelectedValue, txtDescription.Text, (int)cmbClients.SelectedValue,
+                        0);
+                }
+                InvertoryBody body = new InvertoryBody(0, InvoiceBLL.MaxID(), obj.ID,double.Parse(txtquantity.Text),double.Parse(txtprice.Text),double.Parse(txtdiscount.Text));
+                AddItems(obj, body);
+                txtsearch.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Item does not exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
         }
     }
 }

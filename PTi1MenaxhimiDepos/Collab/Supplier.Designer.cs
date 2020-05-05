@@ -28,319 +28,361 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            this.txtId = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.btnSave = new Telerik.WinControls.UI.RadButton();
+            this.btnUpdate = new Telerik.WinControls.UI.RadButton();
+            this.btnDelete = new Telerik.WinControls.UI.RadButton();
+            this.btnClear = new Telerik.WinControls.UI.RadButton();
+            this.dgwSuppliers = new Telerik.WinControls.UI.RadGridView();
+            this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
+            this.txtID = new Telerik.WinControls.UI.RadTextBox();
+            this.txtname = new Telerik.WinControls.UI.RadTextBox();
+            this.lblName = new Telerik.WinControls.UI.RadLabel();
+            this.txtcity = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.txtFurnitori = new Telerik.WinControls.UI.RadTextBox();
-            this.txtPershkrimi = new Telerik.WinControls.UI.RadTextBox();
+            this.txtphone = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.txtEmail = new Telerik.WinControls.UI.RadTextBox();
+            this.txtemail = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.txtQyteti = new Telerik.WinControls.UI.RadTextBox();
+            this.txtdecription = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.txtPhone = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
-            this.radContainerSupp = new Telerik.WinControls.UI.RadPopupContainer();
-            this.btnRuaj = new Telerik.WinControls.UI.RadButton();
-            this.btnEdito = new Telerik.WinControls.UI.RadButton();
-            this.btnNderpre = new Telerik.WinControls.UI.RadButton();
-            this.btnFshij = new Telerik.WinControls.UI.RadButton();
-            this.dgvParaqitja = new Telerik.WinControls.UI.RadGridView();
-            this.txtkerkoFurnitor = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
-            this.btnKerkoFurnitorin = new Telerik.WinControls.UI.RadButton();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.btnSearch = new Telerik.WinControls.UI.RadButton();
+            this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSuppliers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSuppliers.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtname)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFurnitori)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPershkrimi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtphone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtemail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQyteti)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdecription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radContainerSupp)).BeginInit();
-            this.radContainerSupp.PanelContainer.SuspendLayout();
-            this.radContainerSupp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRuaj)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEdito)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNderpre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFshij)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvParaqitja)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvParaqitja.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtkerkoFurnitor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnKerkoFurnitorin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtId
+            // btnSave
             // 
-            this.txtId.Location = new System.Drawing.Point(74, 41);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(125, 24);
-            this.txtId.TabIndex = 0;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = global::PTi1MenaxhimiDepos.Properties.Resources.add_1_icon;
+            this.btnSave.Location = new System.Drawing.Point(1084, 244);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(131, 56);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.Click += new System.EventHandler(this.btnRuaj_Click);
             // 
-            // radLabel1
+            // btnUpdate
             // 
-            this.radLabel1.Location = new System.Drawing.Point(13, 47);
-            this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(17, 18);
-            this.radLabel1.TabIndex = 1;
-            this.radLabel1.Text = "ID";
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Image = global::PTi1MenaxhimiDepos.Properties.Resources.update;
+            this.btnUpdate.Location = new System.Drawing.Point(1084, 244);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(131, 56);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Image = global::PTi1MenaxhimiDepos.Properties.Resources.cancel_icon;
+            this.btnDelete.Location = new System.Drawing.Point(1084, 180);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(131, 56);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Actions_edit_clear_icon;
+            this.btnClear.Location = new System.Drawing.Point(947, 244);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(131, 56);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "Fshij";
+            this.btnClear.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // dgwSuppliers
+            // 
+            this.dgwSuppliers.Font = new System.Drawing.Font("Segoe UI", 13.25F);
+            this.dgwSuppliers.Location = new System.Drawing.Point(13, 306);
+            // 
+            // 
+            // 
+            this.dgwSuppliers.MasterTemplate.AllowAddNewRow = false;
+            this.dgwSuppliers.MasterTemplate.AllowEditRow = false;
+            this.dgwSuppliers.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewTextBoxColumn1.FieldName = "ID";
+            gridViewTextBoxColumn1.HeaderText = "ID";
+            gridViewTextBoxColumn1.Name = "ID";
+            gridViewTextBoxColumn1.Width = 198;
+            gridViewTextBoxColumn2.FieldName = "Name";
+            gridViewTextBoxColumn2.HeaderText = "Name";
+            gridViewTextBoxColumn2.Name = "Name";
+            gridViewTextBoxColumn2.Width = 198;
+            gridViewTextBoxColumn3.FieldName = "City";
+            gridViewTextBoxColumn3.HeaderText = "City";
+            gridViewTextBoxColumn3.Name = "City";
+            gridViewTextBoxColumn3.Width = 198;
+            gridViewTextBoxColumn4.FieldName = "Phone";
+            gridViewTextBoxColumn4.HeaderText = "Phone";
+            gridViewTextBoxColumn4.Name = "Phone";
+            gridViewTextBoxColumn4.Width = 198;
+            gridViewTextBoxColumn5.FieldName = "Mail";
+            gridViewTextBoxColumn5.HeaderText = "Email";
+            gridViewTextBoxColumn5.Name = "Email";
+            gridViewTextBoxColumn5.Width = 198;
+            gridViewTextBoxColumn6.FieldName = "Description";
+            gridViewTextBoxColumn6.HeaderText = "Description";
+            gridViewTextBoxColumn6.Name = "Description";
+            gridViewTextBoxColumn6.Width = 196;
+            this.dgwSuppliers.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
+            this.dgwSuppliers.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgwSuppliers.Name = "dgwSuppliers";
+            this.dgwSuppliers.Size = new System.Drawing.Size(1202, 373);
+            this.dgwSuppliers.TabIndex = 8;
+            this.dgwSuppliers.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwSuppliers_CellDoubleClick);
+            // 
+            // radLabel11
+            // 
+            this.radLabel11.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.radLabel11.Location = new System.Drawing.Point(12, 5);
+            this.radLabel11.Name = "radLabel11";
+            this.radLabel11.Size = new System.Drawing.Size(28, 30);
+            this.radLabel11.TabIndex = 31;
+            this.radLabel11.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Enabled = false;
+            this.txtID.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtID.Location = new System.Drawing.Point(12, 41);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(261, 37);
+            this.txtID.TabIndex = 0;
+            // 
+            // txtname
+            // 
+            this.txtname.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtname.Location = new System.Drawing.Point(295, 41);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(261, 37);
+            this.txtname.TabIndex = 0;
+            // 
+            // lblName
+            // 
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblName.Location = new System.Drawing.Point(295, 5);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(61, 30);
+            this.lblName.TabIndex = 31;
+            this.lblName.Text = "Name";
+            // 
+            // txtcity
+            // 
+            this.txtcity.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtcity.Location = new System.Drawing.Point(574, 41);
+            this.txtcity.Name = "txtcity";
+            this.txtcity.Size = new System.Drawing.Size(261, 37);
+            this.txtcity.TabIndex = 1;
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(13, 92);
+            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.radLabel2.Location = new System.Drawing.Point(574, 5);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(48, 18);
-            this.radLabel2.TabIndex = 2;
-            this.radLabel2.Text = "Furnitori";
+            this.radLabel2.Size = new System.Drawing.Size(42, 30);
+            this.radLabel2.TabIndex = 31;
+            this.radLabel2.Text = "City";
             // 
-            // txtFurnitori
+            // txtphone
             // 
-            this.txtFurnitori.Location = new System.Drawing.Point(74, 86);
-            this.txtFurnitori.Name = "txtFurnitori";
-            this.txtFurnitori.Size = new System.Drawing.Size(125, 24);
-            this.txtFurnitori.TabIndex = 1;
-            // 
-            // txtPershkrimi
-            // 
-            this.txtPershkrimi.Location = new System.Drawing.Point(74, 131);
-            this.txtPershkrimi.Name = "txtPershkrimi";
-            this.txtPershkrimi.Size = new System.Drawing.Size(125, 24);
-            this.txtPershkrimi.TabIndex = 3;
+            this.txtphone.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtphone.Location = new System.Drawing.Point(858, 41);
+            this.txtphone.Name = "txtphone";
+            this.txtphone.Size = new System.Drawing.Size(261, 37);
+            this.txtphone.TabIndex = 2;
             // 
             // radLabel3
             // 
-            this.radLabel3.Location = new System.Drawing.Point(13, 137);
+            this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.radLabel3.Location = new System.Drawing.Point(858, 5);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(58, 18);
-            this.radLabel3.TabIndex = 4;
-            this.radLabel3.Text = "Pershkrimi";
+            this.radLabel3.Size = new System.Drawing.Size(64, 30);
+            this.radLabel3.TabIndex = 31;
+            this.radLabel3.Text = "Phone";
             // 
-            // txtEmail
+            // txtemail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(86, 93);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(125, 24);
-            this.txtEmail.TabIndex = 3;
+            this.txtemail.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtemail.Location = new System.Drawing.Point(12, 123);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(261, 37);
+            this.txtemail.TabIndex = 3;
             // 
             // radLabel4
             // 
-            this.radLabel4.Location = new System.Drawing.Point(25, 99);
+            this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.radLabel4.Location = new System.Drawing.Point(12, 87);
             this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(38, 18);
-            this.radLabel4.TabIndex = 4;
-            this.radLabel4.Text = "e-mail";
+            this.radLabel4.Size = new System.Drawing.Size(55, 30);
+            this.radLabel4.TabIndex = 31;
+            this.radLabel4.Text = "Email";
             // 
-            // txtQyteti
+            // txtdecription
             // 
-            this.txtQyteti.Location = new System.Drawing.Point(86, 3);
-            this.txtQyteti.Name = "txtQyteti";
-            this.txtQyteti.Size = new System.Drawing.Size(125, 24);
-            this.txtQyteti.TabIndex = 3;
+            this.txtdecription.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtdecription.Location = new System.Drawing.Point(295, 123);
+            this.txtdecription.Name = "txtdecription";
+            this.txtdecription.Size = new System.Drawing.Size(261, 37);
+            this.txtdecription.TabIndex = 4;
             // 
             // radLabel5
             // 
-            this.radLabel5.Location = new System.Drawing.Point(25, 9);
+            this.radLabel5.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.radLabel5.Location = new System.Drawing.Point(295, 87);
             this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(37, 18);
-            this.radLabel5.TabIndex = 4;
-            this.radLabel5.Text = "Qyteti";
+            this.radLabel5.Size = new System.Drawing.Size(107, 30);
+            this.radLabel5.TabIndex = 31;
+            this.radLabel5.Text = "Description";
             // 
-            // txtPhone
+            // radLabel10
             // 
-            this.txtPhone.Location = new System.Drawing.Point(86, 48);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(125, 24);
-            this.txtPhone.TabIndex = 3;
+            this.radLabel10.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.radLabel10.Location = new System.Drawing.Point(13, 222);
+            this.radLabel10.Name = "radLabel10";
+            this.radLabel10.Size = new System.Drawing.Size(66, 30);
+            this.radLabel10.TabIndex = 25;
+            this.radLabel10.Text = "Search";
             // 
-            // radLabel6
+            // btnSearch
             // 
-            this.radLabel6.Location = new System.Drawing.Point(25, 54);
-            this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(38, 18);
-            this.radLabel6.TabIndex = 4;
-            this.radLabel6.Text = "Phone";
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.btnSearch.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Search_icon;
+            this.btnSearch.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearch.Location = new System.Drawing.Point(280, 258);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(68, 42);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // radContainerSupp
+            // txtSearch
             // 
-            this.radContainerSupp.Location = new System.Drawing.Point(285, 41);
-            this.radContainerSupp.Name = "radContainerSupp";
-            // 
-            // radContainerSupp.PanelContainer
-            // 
-            this.radContainerSupp.PanelContainer.Controls.Add(this.txtQyteti);
-            this.radContainerSupp.PanelContainer.Controls.Add(this.txtPhone);
-            this.radContainerSupp.PanelContainer.Controls.Add(this.radLabel4);
-            this.radContainerSupp.PanelContainer.Controls.Add(this.radLabel6);
-            this.radContainerSupp.PanelContainer.Controls.Add(this.txtEmail);
-            this.radContainerSupp.PanelContainer.Controls.Add(this.radLabel5);
-            this.radContainerSupp.PanelContainer.Size = new System.Drawing.Size(248, 123);
-            // 
-            // 
-            // 
-            this.radContainerSupp.RootElement.AccessibleDescription = "Extra Detaje";
-            this.radContainerSupp.RootElement.AccessibleName = "Extra Detaje";
-            this.radContainerSupp.Size = new System.Drawing.Size(250, 125);
-            this.radContainerSupp.TabIndex = 5;
-            // 
-            // btnRuaj
-            // 
-            this.btnRuaj.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRuaj.Image = global::PTi1MenaxhimiDepos.Properties.Resources.save;
-            this.btnRuaj.Location = new System.Drawing.Point(285, 186);
-            this.btnRuaj.Name = "btnRuaj";
-            this.btnRuaj.Size = new System.Drawing.Size(114, 45);
-            this.btnRuaj.TabIndex = 6;
-            this.btnRuaj.Text = "Rauj";
-            this.btnRuaj.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRuaj.Click += new System.EventHandler(this.btnRuaj_Click);
-            // 
-            // btnEdito
-            // 
-            this.btnEdito.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdito.Image = global::PTi1MenaxhimiDepos.Properties.Resources.update;
-            this.btnEdito.Location = new System.Drawing.Point(415, 186);
-            this.btnEdito.Name = "btnEdito";
-            this.btnEdito.Size = new System.Drawing.Size(120, 45);
-            this.btnEdito.TabIndex = 7;
-            this.btnEdito.Text = "Edito";
-            this.btnEdito.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnNderpre
-            // 
-            this.btnNderpre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNderpre.Image = global::PTi1MenaxhimiDepos.Properties.Resources.cancel_icon;
-            this.btnNderpre.Location = new System.Drawing.Point(415, 237);
-            this.btnNderpre.Name = "btnNderpre";
-            this.btnNderpre.Size = new System.Drawing.Size(120, 43);
-            this.btnNderpre.TabIndex = 7;
-            this.btnNderpre.Text = "Nderpre";
-            this.btnNderpre.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnFshij
-            // 
-            this.btnFshij.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFshij.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Actions_edit_clear_icon;
-            this.btnFshij.Location = new System.Drawing.Point(285, 237);
-            this.btnFshij.Name = "btnFshij";
-            this.btnFshij.Size = new System.Drawing.Size(114, 43);
-            this.btnFshij.TabIndex = 7;
-            this.btnFshij.Text = "Fshij";
-            this.btnFshij.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // dgvParaqitja
-            // 
-            this.dgvParaqitja.Location = new System.Drawing.Point(13, 306);
-            // 
-            // 
-            // 
-            this.dgvParaqitja.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.dgvParaqitja.Name = "dgvParaqitja";
-            this.dgvParaqitja.Size = new System.Drawing.Size(756, 373);
-            this.dgvParaqitja.TabIndex = 8;
-            // 
-            // txtkerkoFurnitor
-            // 
-            this.txtkerkoFurnitor.Location = new System.Drawing.Point(13, 276);
-            this.txtkerkoFurnitor.Name = "txtkerkoFurnitor";
-            this.txtkerkoFurnitor.Size = new System.Drawing.Size(125, 24);
-            this.txtkerkoFurnitor.TabIndex = 5;
-            // 
-            // radLabel7
-            // 
-            this.radLabel7.Location = new System.Drawing.Point(13, 252);
-            this.radLabel7.Name = "radLabel7";
-            this.radLabel7.Size = new System.Drawing.Size(85, 18);
-            this.radLabel7.TabIndex = 6;
-            this.radLabel7.Text = "Kerko furnitorin";
-            // 
-            // btnKerkoFurnitorin
-            // 
-            this.btnKerkoFurnitorin.Location = new System.Drawing.Point(144, 276);
-            this.btnKerkoFurnitorin.Name = "btnKerkoFurnitorin";
-            this.btnKerkoFurnitorin.Size = new System.Drawing.Size(55, 24);
-            this.btnKerkoFurnitorin.TabIndex = 8;
-            this.btnKerkoFurnitorin.Text = "Kerko";
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 16.25F);
+            this.txtSearch.Location = new System.Drawing.Point(13, 258);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(261, 42);
+            this.txtSearch.TabIndex = 6;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 691);
-            this.Controls.Add(this.btnKerkoFurnitorin);
-            this.Controls.Add(this.txtkerkoFurnitor);
-            this.Controls.Add(this.radLabel7);
-            this.Controls.Add(this.dgvParaqitja);
-            this.Controls.Add(this.btnFshij);
-            this.Controls.Add(this.btnNderpre);
-            this.Controls.Add(this.btnEdito);
-            this.Controls.Add(this.btnRuaj);
-            this.Controls.Add(this.radContainerSupp);
-            this.Controls.Add(this.txtPershkrimi);
+            this.ClientSize = new System.Drawing.Size(1227, 691);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.radLabel10);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.radLabel5);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.radLabel4);
             this.Controls.Add(this.radLabel3);
-            this.Controls.Add(this.txtFurnitori);
             this.Controls.Add(this.radLabel2);
-            this.Controls.Add(this.radLabel1);
-            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.radLabel11);
+            this.Controls.Add(this.txtdecription);
+            this.Controls.Add(this.txtemail);
+            this.Controls.Add(this.txtphone);
+            this.Controls.Add(this.txtcity);
+            this.Controls.Add(this.txtname);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.dgwSuppliers);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnDelete);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Supplier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supplier";
-            ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            this.Load += new System.EventHandler(this.Supplier_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSuppliers.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSuppliers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtname)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFurnitori)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPershkrimi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtphone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtemail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQyteti)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdecription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
-            this.radContainerSupp.PanelContainer.ResumeLayout(false);
-            this.radContainerSupp.PanelContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radContainerSupp)).EndInit();
-            this.radContainerSupp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnRuaj)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEdito)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNderpre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFshij)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvParaqitja.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvParaqitja)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtkerkoFurnitor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnKerkoFurnitorin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Telerik.WinControls.UI.RadTextBox txtId;
-        private Telerik.WinControls.UI.RadLabel radLabel1;
+        private Telerik.WinControls.UI.RadButton btnSave;
+        private Telerik.WinControls.UI.RadButton btnUpdate;
+        private Telerik.WinControls.UI.RadButton btnDelete;
+        private Telerik.WinControls.UI.RadButton btnClear;
+        public Telerik.WinControls.UI.RadGridView dgwSuppliers;
+        private Telerik.WinControls.UI.RadLabel radLabel11;
+        private Telerik.WinControls.UI.RadTextBox txtID;
+        private Telerik.WinControls.UI.RadTextBox txtname;
+        private Telerik.WinControls.UI.RadLabel lblName;
+        private Telerik.WinControls.UI.RadTextBox txtcity;
         private Telerik.WinControls.UI.RadLabel radLabel2;
-        private Telerik.WinControls.UI.RadTextBox txtFurnitori;
-        private Telerik.WinControls.UI.RadTextBox txtPershkrimi;
+        private Telerik.WinControls.UI.RadTextBox txtphone;
         private Telerik.WinControls.UI.RadLabel radLabel3;
-        private Telerik.WinControls.UI.RadTextBox txtEmail;
+        private Telerik.WinControls.UI.RadTextBox txtemail;
         private Telerik.WinControls.UI.RadLabel radLabel4;
-        private Telerik.WinControls.UI.RadTextBox txtQyteti;
+        private Telerik.WinControls.UI.RadTextBox txtdecription;
         private Telerik.WinControls.UI.RadLabel radLabel5;
-        private Telerik.WinControls.UI.RadTextBox txtPhone;
-        private Telerik.WinControls.UI.RadLabel radLabel6;
-        private Telerik.WinControls.UI.RadPopupContainer radContainerSupp;
-        private Telerik.WinControls.UI.RadButton btnRuaj;
-        private Telerik.WinControls.UI.RadButton btnEdito;
-        private Telerik.WinControls.UI.RadButton btnNderpre;
-        private Telerik.WinControls.UI.RadButton btnFshij;
-        private Telerik.WinControls.UI.RadTextBox txtkerkoFurnitor;
-        private Telerik.WinControls.UI.RadLabel radLabel7;
-        private Telerik.WinControls.UI.RadButton btnKerkoFurnitorin;
-        public Telerik.WinControls.UI.RadGridView dgvParaqitja;
+        private Telerik.WinControls.UI.RadLabel radLabel10;
+        private Telerik.WinControls.UI.RadButton btnSearch;
+        private Telerik.WinControls.UI.RadTextBox txtSearch;
     }
 }

@@ -9,6 +9,7 @@ using Telerik.WinControls.UI;
 using PTi1MenaxhimiDepos.Items;
 using PTi1MenaxhimiDepos.BL;
 using PTi1MenaxhimiDepos.Invoices;
+using PTi1MenaxhimiDepos.Collab;
 
 namespace PTi1MenaxhimiDepos.Controls
 {
@@ -193,7 +194,7 @@ namespace PTi1MenaxhimiDepos.Controls
         }
         private void Role_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
         }
         private void User_Click(object sender, EventArgs e)
         {
@@ -203,6 +204,37 @@ namespace PTi1MenaxhimiDepos.Controls
         private void Employee_Click(object sender, EventArgs e)
         {
         }
+        #endregion
+
+        #region Collaboration
+        public void PrintButtonsCollaboration(TabPage tabPage)
+        {
+            RadButton Suppliers = new RadButton();
+            Suppliers.Click += Suppliers_Click;
+            Image invoice = CreateImage(new Bitmap(Properties.Resources.Company_icon));
+            tabPage.Controls.Add(ControlShow.GetButtonss(Suppliers, new Point(13, 20), new Size(75, 60), null, invoice));
+            Label lblinvoice = new Label();
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblinvoice, new Point(19, 85), new Size(75, 20), "Supplier"));
+            RadButton Client = new RadButton();
+            Client.Click += Client_Click;
+            Image hapeimg = CreateImage(new Bitmap(Properties.Resources.Clients_icon));
+            tabPage.Controls.Add(ControlShow.GetButtonss(Client, new Point(100, 20), new Size(75, 60), null, hapeimg));
+            Label lblitem = new Label();
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblitem, new Point(115, 85), new Size(75, 20), "Client"));
+        }
+
+        private void Client_Click(object sender, EventArgs e)
+        {
+            Client obj = new Client();
+            obj.ShowDialog();
+        }
+
+        private void Suppliers_Click(object sender, EventArgs e)
+        {
+            Supplier supplier = new Supplier();
+            supplier.ShowDialog();
+        }
+
         #endregion
     }
 }

@@ -173,9 +173,39 @@ namespace PTi1MenaxhimiDepos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Clients_icon {
+            get {
+                object obj = ResourceManager.GetObject("Clients-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap company {
             get {
                 object obj = ResourceManager.GetObject("company", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Company_icon {
+            get {
+                object obj = ResourceManager.GetObject("Company-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap company1 {
+            get {
+                object obj = ResourceManager.GetObject("company1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

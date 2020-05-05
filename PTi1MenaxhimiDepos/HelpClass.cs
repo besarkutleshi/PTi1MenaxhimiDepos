@@ -100,5 +100,12 @@ namespace PTi1MenaxhimiDepos
             column.HeaderText = headertext;
             return column;
         }
+
+        public static GridViewDataColumn GridViewDataColumn(string uniquename)
+        {
+            GridViewDataColumn column = new GridViewTextBoxColumn(uniquename, uniquename);
+            column.HeaderText = uniquename;
+            return column;
+        }
     }
 }

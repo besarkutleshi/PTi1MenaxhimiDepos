@@ -21,10 +21,11 @@ namespace PTi1MenaxhimiDepos.DAL
                 using (var con = DataConnection.Connection())
                 {
                     con.Open();
-                    var cmd = DataConnection.Command(con, "sp_AddCleint", CommandType.StoredProcedure);
+                    var cmd = DataConnection.Command(con, "sp_Insert_Client", CommandType.StoredProcedure);
                     DataConnection.AddParameter(cmd, "Name", obj.Name);
-                    DataConnection.AddParameter(cmd, "Phone", obj.Phone);
+                    DataConnection.AddParameter(cmd, "Surname", obj.Surname);
                     DataConnection.AddParameter(cmd, "Email", obj.Email);
+                    DataConnection.AddParameter(cmd, "Phone", obj.Phone);
                     DataConnection.AddParameter(cmd, "Street", obj.Address.Street);
                     DataConnection.AddParameter(cmd, "City", obj.Address.City);
                     DataConnection.AddParameter(cmd, "Country", obj.Address.Country);
@@ -49,7 +50,7 @@ namespace PTi1MenaxhimiDepos.DAL
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_DeleteClients", con);
+                    SqlCommand cmd = new SqlCommand("sp_DeleteClient", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Id", id);
                     value = DataConnection.GetValue(cmd);
@@ -89,8 +90,8 @@ namespace PTi1MenaxhimiDepos.DAL
 
         public Client Get(SqlDataReader sdr)
         {
-            Client obj = new Client(sdr["NAME"].ToString(), sdr["USERNAME"].ToString(), sdr["PHONE"].ToString(), sdr["EMAIL"].ToString(),
-                            new Address(sdr["STREET"].ToString(), sdr["CITY"].ToString(), sdr["COUNTRY"].ToString(), long.Parse(sdr["POSTALCODE"].ToString())));
+            Client obj = new Client(int.Parse(sdr["CLIENTID"].ToString()),sdr["NAME"].ToString(), sdr["SURNAME"].ToString(), sdr["PHONE"].ToString(), sdr["EMAIL"].ToString(),
+                            new Address(sdr["STREET"].ToString(), sdr["CITY"].ToString(), sdr["COUNTRY"].ToString(), sdr["POSTALCODE"].ToString()));
             return obj;
         }
 
@@ -154,10 +155,11 @@ namespace PTi1MenaxhimiDepos.DAL
                     con.Open();
                     SqlCommand cmd = new SqlCommand("sp_UpdateClients", con); // ***Duhet me bo StoreProceduren ne DB 
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Parameters.AddWithValue("@ID", id);
                     cmd.Parameters.AddWithValue("@Name", obj.Name);
-                    cmd.Parameters.AddWithValue("@Phone", obj.Phone);
+                    cmd.Parameters.AddWithValue("@Surname", obj.Surname);
                     cmd.Parameters.AddWithValue("@Email", obj.Email);
+                    cmd.Parameters.AddWithValue("@Phone", obj.Phone);
                     cmd.Parameters.AddWithValue("@Street", obj.Address.Street);
                     cmd.Parameters.AddWithValue("@City", obj.Address.City);
                     cmd.Parameters.AddWithValue("@Country", obj.Address.Country);

@@ -67,7 +67,7 @@ namespace PTi1MenaxhimiDepos.Invoices
                 obj.ItemID = items.Where(i => i.Name == cmbItem.Text).Select(i => i.ID).FirstOrDefault();
                 obj.Price = double.Parse(txtPrice.Text);
                 obj.Discount = double.Parse(txtDiscount.Text);
-                obj.Quantity = int.Parse(txtQuantity.Text);
+                obj.Quantity = double.Parse(txtQuantity.Text);
                 obj.Username = HelpClass.CurrentUser.UserName;
                 if (InvoiceBLL.UpdateBody(obj.ID, obj))
                 {
@@ -101,7 +101,7 @@ namespace PTi1MenaxhimiDepos.Invoices
             }
             else
             {
-                obj = new InvertoryBody(0,_invertoryHeaderID,(int)cmbItem.SelectedValue,int.Parse(txtQuantity.Text),double.Parse(txtPrice.Text),double.Parse(txtDiscount.Text));
+                obj = new InvertoryBody(0,_invertoryHeaderID,(int)cmbItem.SelectedValue, double.Parse(txtQuantity.Text),double.Parse(txtPrice.Text),double.Parse(txtDiscount.Text));
                 obj.Username = HelpClass.CurrentUser.UserName;
                 if (InvoiceBLL.InsertBody(obj))
                 {

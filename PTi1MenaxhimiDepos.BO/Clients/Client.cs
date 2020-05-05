@@ -11,8 +11,9 @@ namespace PTi1MenaxhimiDepos.BO
 {
     public class Client:AuditionAtributtes,IBase
     {
-        public Client(string name,string surname ,string phone, string email,Address address)
+        public Client(int id,string name,string surname ,string phone, string email,Address address)
         {
+            ID = id;
             Name = name;
             Surname = surname;
             Phone = phone;
@@ -20,6 +21,7 @@ namespace PTi1MenaxhimiDepos.BO
             Address = address;
         }
 
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }

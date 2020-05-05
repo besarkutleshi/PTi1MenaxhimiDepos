@@ -250,5 +250,25 @@ namespace PTi1MenaxhimiDepos.DAL
 				return 0;
 			}
 		}
+
+		public int GetMaxDocNo()
+		{
+			try
+			{
+				int value = 0;
+				using (var con = DataConnection.Connection())
+				{
+					con.Open();
+					var cmd = DataConnection.Command(con, "sp_GetDocNo_InvertoryHeader", CommandType.StoredProcedure);
+					value = DataConnection.GetValue(cmd);
+				}
+				return value;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+				return 0;
+			}
+		}
 	}
 }

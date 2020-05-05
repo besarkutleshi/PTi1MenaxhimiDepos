@@ -1,4 +1,5 @@
 ﻿using PTi1MenaxhimiDepos.BL;
+using PTi1MenaxhimiDepos.Collab;
 using PTi1MenaxhimiDepos.Controls;
 using System;
 using System.Drawing;
@@ -70,7 +71,16 @@ namespace PTi1MenaxhimiDepos
             tabControl1.TabPages.Add(tabPage);
             control.PrintButtonsAdministration(tabPage); 
             RadGridView obj = new RadGridView();
-            obj.DataSource = CollaborationBLL.ReturnTableEmployees(CollaborationBLL.GetEmployees());
+            obj.Columns.Add(HelpClass.GridViewDataColumn("ID"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Name"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Surname"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Email"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Phone"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Street","Address.Street","Street"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("City", "Address.City", "City"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Country", "Address.Country", "Country"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("PostalCode", "Address.PostalCode", "Postal Code"));
+            obj.DataSource = CollaborationBLL.GetEmployees();
             obj.AllowSearchRow = true;
             obj.AllowEditRow = false;
             obj.AllowAddNewRow = false;
@@ -102,16 +112,16 @@ namespace PTi1MenaxhimiDepos
                 tabControl1.TabPages.Remove(tabControl1.SelectedTab);
             }
             RadGridView obj = new RadGridView();
-            obj.Columns.Add(HelpClass.GridViewDataColumn("ID", "ID", "ID"));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Barcode", "Barcode", "Barcode"));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Name", "Name", "Name"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("ID"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Barcode"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Name"));
             obj.Columns.Add(HelpClass.GridViewDataColumn("Unit", "Unit.Name", "Name"));
             obj.Columns.Add(HelpClass.GridViewDataColumn("Category", "Category.Name", "Category"));
             obj.Columns.Add(HelpClass.GridViewDataColumn("Type", "Type.Name", "Type"));
             obj.Columns.Add(HelpClass.GridViewDataColumn("Supplier", "Supplier.Name", "Supplier"));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Active", "Active", "Active"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Active"));
             obj.Columns.Add(HelpClass.GridViewDataColumn("Stock", "StockQuantity", "Stock"));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Description", "Description", "Description"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Description"));
             obj.AllowSearchRow = true;
             obj.AllowEditRow = false;
             obj.AllowAddNewRow = false;
@@ -120,6 +130,31 @@ namespace PTi1MenaxhimiDepos
             TabPage tabPage = new TabPage("Artikujt");
             tabControl1.TabPages.Add(tabPage);
             control.PrintGrid(tabPage, obj, new Point(7, 5), new Size(1490, 590));
+            tabControl1.SelectedTab = tabPage;
+        }
+
+        private void btnbashkpunimet_Click(object sender, EventArgs e)
+        {
+            if (TabPages("Partneret"))
+            {
+                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
+            }
+            TabPage tabPage = new TabPage("Partneret");
+            tabControl1.TabPages.Add(tabPage);
+            control.PrintButtonsCollaboration(tabPage);
+            RadGridView obj = new RadGridView();
+            obj.Columns.Add(HelpClass.GridViewDataColumn("ID"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Name"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("City"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Phone"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Email"));
+            obj.Columns.Add(HelpClass.GridViewDataColumn("Description"));
+            obj.DataSource = CollaborationBLL.GetSuppliers();
+            obj.AllowSearchRow = true;
+            obj.AllowEditRow = false;
+            obj.AllowAddNewRow = false;
+            obj.TableElement.SearchHighlightColor = Color.LightBlue;
+            control.PrintGrid(tabPage, obj, new Point(7, 110), new Size(1490, 480));
             tabControl1.SelectedTab = tabPage;
         }
     }

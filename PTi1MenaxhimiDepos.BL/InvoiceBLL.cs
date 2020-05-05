@@ -31,6 +31,7 @@ namespace PTi1MenaxhimiDepos.BL
         public static InvertoryBody GetInvertoryBodyByID(int id) => _bodyRepository.GetInvertoryBodyByID(id);
         public static DataTable ReturnDataTableBodies(List<InvertoryBody> invertoryBodies) => _headerRepository.ReturnDT(invertoryBodies);
         public static int MaxID() => _headerRepository.GetMaxID();
+        public static int MaxDocNo() => _headerRepository.GetMaxDocNo();
         public static void RefreshGrid(List<InvertoryBody> invertoryBodies,RadGridView radGridView)
         {
             radGridView.DataSource = null;

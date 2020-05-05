@@ -152,7 +152,7 @@ namespace PTi1MenaxhimiDepos.DAL
         public Employee Get(SqlDataReader sdr)
         {
             Employee employee = new Employee(int.Parse(sdr["PERSONID"].ToString()),sdr["NAME"].ToString(), sdr["SURNAME"].ToString(), sdr["EMAIL"].ToString(), sdr["PHONE"].ToString(),
-                                new Address(sdr["STREET"].ToString(), sdr["CITY"].ToString(), sdr["COUNTRY"].ToString(), long.Parse(sdr["POSTALCODE"].ToString())));
+                                new Address(sdr["STREET"].ToString(), sdr["CITY"].ToString(), sdr["COUNTRY"].ToString(), sdr["POSTALCODE"].ToString()));
             employee.Fullname = sdr["FULLNAME"].ToString();
             return employee;
         }

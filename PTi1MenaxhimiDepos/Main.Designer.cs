@@ -30,23 +30,23 @@
         {
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnhyrjet = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnshitja = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnbashkpunimet = new System.Windows.Forms.Button();
-            this.btnregister = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnartikujt = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btndaljet = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.btnhyrjet = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnshitja = new System.Windows.Forms.Button();
+            this.btnbashkpunimet = new System.Windows.Forms.Button();
+            this.btnregister = new System.Windows.Forms.Button();
+            this.btnartikujt = new System.Windows.Forms.Button();
+            this.btndaljet = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +92,107 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Market";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label13.Location = new System.Drawing.Point(972, 88);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 22);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Depot";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label1.Location = new System.Drawing.Point(819, 88);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Administrata";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label2.Location = new System.Drawing.Point(42, 88);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 22);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Shitje";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label8.Location = new System.Drawing.Point(687, 88);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 22);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Partneret";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label3.Location = new System.Drawing.Point(161, 88);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 22);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Artikujt";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label4.Location = new System.Drawing.Point(268, 88);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 22);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Lista Artikujve";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label6.Location = new System.Drawing.Point(573, 88);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 22);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Daljet";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label5.Location = new System.Drawing.Point(440, 88);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 22);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Hyrjet";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.tabControl1.Location = new System.Drawing.Point(17, 171);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1788, 774);
+            this.tabControl1.TabIndex = 8;
+            // 
             // btnhyrjet
             // 
             this.btnhyrjet.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -106,17 +207,6 @@
             this.btnhyrjet.Size = new System.Drawing.Size(123, 66);
             this.btnhyrjet.TabIndex = 0;
             this.btnhyrjet.UseVisualStyleBackColor = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label13.Location = new System.Drawing.Point(972, 88);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 22);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Depot";
             // 
             // button6
             // 
@@ -133,17 +223,6 @@
             this.button6.TabIndex = 0;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label1.Location = new System.Drawing.Point(819, 88);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 22);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Administrata";
             // 
             // button2
             // 
@@ -178,28 +257,6 @@
             this.btnshitja.UseVisualStyleBackColor = false;
             this.btnshitja.Click += new System.EventHandler(this.btnshitja_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label2.Location = new System.Drawing.Point(42, 88);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 22);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Shitje";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label8.Location = new System.Drawing.Point(687, 88);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 22);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Partneret";
-            // 
             // btnbashkpunimet
             // 
             this.btnbashkpunimet.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -214,6 +271,7 @@
             this.btnbashkpunimet.Size = new System.Drawing.Size(123, 66);
             this.btnbashkpunimet.TabIndex = 0;
             this.btnbashkpunimet.UseVisualStyleBackColor = false;
+            this.btnbashkpunimet.Click += new System.EventHandler(this.btnbashkpunimet_Click);
             // 
             // btnregister
             // 
@@ -231,17 +289,6 @@
             this.btnregister.UseVisualStyleBackColor = false;
             this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label3.Location = new System.Drawing.Point(161, 88);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 22);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Artikujt";
-            // 
             // btnartikujt
             // 
             this.btnartikujt.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -258,28 +305,6 @@
             this.btnartikujt.UseVisualStyleBackColor = false;
             this.btnartikujt.Click += new System.EventHandler(this.btnartikujt_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label4.Location = new System.Drawing.Point(268, 88);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 22);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Lista Artikujve";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label6.Location = new System.Drawing.Point(573, 88);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 22);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Daljet";
-            // 
             // btndaljet
             // 
             this.btndaljet.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -294,30 +319,6 @@
             this.btndaljet.Size = new System.Drawing.Size(123, 66);
             this.btndaljet.TabIndex = 0;
             this.btndaljet.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label5.Location = new System.Drawing.Point(440, 88);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 22);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Hyrjet";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.tabControl1.Location = new System.Drawing.Point(17, 171);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1788, 774);
-            this.tabControl1.TabIndex = 8;
             // 
             // Main
             // 

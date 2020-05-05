@@ -8,7 +8,7 @@ namespace PTi1MenaxhimiDepos.BO.Invoices
 {
     public class InvertoryBody:AuditionAtributtes
     {
-        public InvertoryBody(int id,int headerID, int itemID,int quantity, double price,double discount)
+        public InvertoryBody(int id,int headerID, int itemID,double quantity, double price,double discount)
         {
             ID = id;
             HeaderID = headerID;
@@ -18,7 +18,7 @@ namespace PTi1MenaxhimiDepos.BO.Invoices
             Discount = discount;
         }
 
-        public InvertoryBody(int id,int headerid,int quantity,double price,DateTime dt,double discount)
+        public InvertoryBody(int id,int headerid,double quantity,double price,DateTime dt,double discount)
         {
             ID = id;
             HeaderID = headerid;
@@ -33,7 +33,7 @@ namespace PTi1MenaxhimiDepos.BO.Invoices
         public virtual InvertoryHeader Header { get; set; }
         public int ItemID { get; set; }
         public virtual Item Item { get; set; }
-        public int Quantity { get; set; }
+        public double Quantity { get; set; }
         public double Price { get; set; }
         public DateTime Cdate { get; set; }
         public double Discount { get; set; }
