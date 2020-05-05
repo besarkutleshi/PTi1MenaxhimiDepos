@@ -40,11 +40,9 @@ namespace PTi1MenaxhimiDepos.Collab
                 }
                 else
                 {
+                    client = new BO.Client(int.Parse(txtID.Text), txtname.Text, txtsurname.Text, txtPhone.Text, txtemail.Text
+                        , new Address(txtstreet.Text, txtcity.Text, txtCountry.Text, txtPostalCode.Text));
                     client.Address = new Address(txtstreet.Text, txtcity.Text, txtCountry.Text, txtPostalCode.Text);
-                    client.Name = txtname.Text;
-                    client.Surname = txtsurname.Text;
-                    client.Phone = txtPhone.Text;
-                    client.Email = txtemail.Text;
                     client.Username = HelpClass.CurrentUser.UserName;
                     if (CollaborationBLL.UpdateClient(client.ID, client))
                     {
@@ -148,6 +146,7 @@ namespace PTi1MenaxhimiDepos.Collab
 
         public override void Refresh()
         {
+            client = null;
             dgwClients.DataSource = null;
             dgwClients.DataSource = CollaborationBLL.GetClients();
             HelpClass.Delete(txtcity, txtCountry, txtemail, txtID, txtname, txtPhone, txtPostalCode, txtSearch, txtstreet, txtsurname);

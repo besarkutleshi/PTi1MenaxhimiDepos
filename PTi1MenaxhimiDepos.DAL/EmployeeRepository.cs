@@ -17,23 +17,31 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                int val = 0;
-                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                if (!DataConnection.DoesExist("sp_DoesExist_Personel", "Name", obj.Name + " " + obj.Surname))
                 {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Insert_Personel", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Name", obj.Name);
-                    cmd.Parameters.AddWithValue("@Surname", obj.Surname);
-                    cmd.Parameters.AddWithValue("@Email", obj.Email);
-                    cmd.Parameters.AddWithValue("@Phone", obj.Phone);
-                    cmd.Parameters.AddWithValue("@Street", obj.Address.Street);
-                    cmd.Parameters.AddWithValue("@City", obj.Address.City);
-                    cmd.Parameters.AddWithValue("@Country", obj.Address.Country);
-                    cmd.Parameters.AddWithValue("@PostalCode", obj.Address.PostalCode);
-                    cmd.Parameters.AddWithValue("InsertBy", obj.Username);
-                    val = DataConnection.GetValue(cmd);
+                    int val = 0;
+                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand("sp_Insert_Personel", con);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Name", obj.Name);
+                        cmd.Parameters.AddWithValue("@Surname", obj.Surname);
+                        cmd.Parameters.AddWithValue("@Email", obj.Email);
+                        cmd.Parameters.AddWithValue("@Phone", obj.Phone);
+                        cmd.Parameters.AddWithValue("@Street", obj.Address.Street);
+                        cmd.Parameters.AddWithValue("@City", obj.Address.City);
+                        cmd.Parameters.AddWithValue("@Country", obj.Address.Country);
+                        cmd.Parameters.AddWithValue("@PostalCode", obj.Address.PostalCode);
+                        cmd.Parameters.AddWithValue("InsertBy", obj.Username);
+                        val = DataConnection.GetValue(cmd);
+                    }
                     return HelperClass.GetValue(val, "Register");
+                }
+                else
+                {
+                    MessageBox.Show("Employee Exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return false;
                 }
             }
             catch (Exception ex)

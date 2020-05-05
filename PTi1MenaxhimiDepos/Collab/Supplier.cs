@@ -65,11 +65,7 @@ namespace PTi1MenaxhimiDepos.Collab
                 }
                 else
                 {
-                    supplier.City = txtcity.Text;
-                    supplier.Description = txtdecription.Text;
-                    supplier.Mail = txtemail.Text;
-                    supplier.Name = txtname.Text;
-                    supplier.Phone = txtphone.Text;
+                    supplier = new BO.Supplier(int.Parse(txtID.Text), txtname.Text, txtdecription.Text, txtcity.Text, txtphone.Text, txtemail.Text);
                     supplier.Username = HelpClass.CurrentUser.UserName;
                     if (CollaborationBLL.UpdateSupplier(supplier.ID, supplier))
                     {

@@ -17,18 +17,26 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                int value = 0;
-                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                if (!DataConnection.DoesExist("sp_DoesExist_ItemType", "Name", obj.Name))
                 {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Insert_Type", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Name", obj.Name);
-                    cmd.Parameters.AddWithValue("@Description", obj.Description);
-                    cmd.Parameters.AddWithValue("@InsertBy", obj.Username);
-                    value = DataConnection.GetValue(cmd);
+                    int value = 0;
+                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand("sp_Insert_Type", con);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Name", obj.Name);
+                        cmd.Parameters.AddWithValue("@Description", obj.Description);
+                        cmd.Parameters.AddWithValue("@InsertBy", obj.Username);
+                        value = DataConnection.GetValue(cmd);
+                    }
+                    return HelperClass.GetValue(value, "Register");
                 }
-                return HelperClass.GetValue(value, "Register");
+                else
+                {
+                    MessageBox.Show("Type Exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return false;
+                }
             }
             catch (Exception ex)
             {
@@ -139,19 +147,27 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                int value = 0;
-                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                if (!DataConnection.DoesExist("sp_DoesExist_ItemType", "Name", obj.Name))
                 {
-                    con.Open();
-                    SqlCommand cc = new SqlCommand("sp_Update_Type", con);
-                    cc.CommandType = CommandType.StoredProcedure;
-                    cc.Parameters.AddWithValue("@ID", id);
-                    cc.Parameters.AddWithValue("@Name", obj.Name);
-                    cc.Parameters.AddWithValue("@Description", obj.Description);
-                    cc.Parameters.AddWithValue("@UpdateBy", obj.Username);
-                    value = DataConnection.GetValue(cc);
+                    int value = 0;
+                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                    {
+                        con.Open();
+                        SqlCommand cc = new SqlCommand("sp_Update_Type", con);
+                        cc.CommandType = CommandType.StoredProcedure;
+                        cc.Parameters.AddWithValue("@ID", id);
+                        cc.Parameters.AddWithValue("@Name", obj.Name);
+                        cc.Parameters.AddWithValue("@Description", obj.Description);
+                        cc.Parameters.AddWithValue("@UpdateBy", obj.Username);
+                        value = DataConnection.GetValue(cc);
+                    }
+                    return HelperClass.GetValue(value, "Update");
                 }
-                return HelperClass.GetValue(value, "Update");
+                else
+                {
+                    MessageBox.Show("Type Exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return false;
+                }
             }
             catch (Exception ex)
             {

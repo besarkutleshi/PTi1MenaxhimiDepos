@@ -77,8 +77,7 @@ namespace PTi1MenaxhimiDepos.Items
             }
             else
             {
-                type.Name = txtname.Text;
-                type.Description = txtdescription.Text;
+                type = new BO.ItemType(int.Parse(txtid.Text), txtname.Text, txtdescription.Text);
                 type.Username = HelpClass.CurrentUser.UserName;
                 if (MessageBox.Show("Are you sure", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {

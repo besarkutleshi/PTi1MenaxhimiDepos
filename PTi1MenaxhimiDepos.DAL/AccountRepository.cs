@@ -194,15 +194,23 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                int value = 0;
-                using(var con = DataConnection.Connection())
+                if (!DataConnection.DoesExist("sp_DoesExist_User", "@Username", obj.UserName))
                 {
-                    con.Open();
-                    var cmd = DataConnection.Command(con, "sp_Update_User", CommandType.StoredProcedure);
-                    DataConnection.AddParameter(cmd, "@ID", id);
-                    value = Parameteres(obj, cmd,"UpdateBy");
+                    int value = 0;
+                    using (var con = DataConnection.Connection())
+                    {
+                        con.Open();
+                        var cmd = DataConnection.Command(con, "sp_Update_User", CommandType.StoredProcedure);
+                        DataConnection.AddParameter(cmd, "@ID", id);
+                        value = Parameteres(obj, cmd, "UpdateBy");
+                    }
+                    return HelperClass.GetValue(value, "Update");
                 }
-                return HelperClass.GetValue(value, "Update");
+                else
+                {
+                    MessageBox.Show("User Exist", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return false;
+                }
             }
             catch (Exception ex)
             {

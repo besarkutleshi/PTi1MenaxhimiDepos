@@ -84,8 +84,7 @@ namespace PTi1MenaxhimiDepos.Items
             }
             else if(MessageBox.Show("Are you sure","Sure",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                unit.Name = txtname.Text;
-                unit.Description = txtdescription.Text;
+                unit = new BO.ItemUnit(int.Parse(txtID.Text), txtname.Text, txtdescription.Text);
                 unit.Username = HelpClass.CurrentUser.UserName;
                 if (ItemBLL.UpdateUnitType(unit.ID, unit))
                 {

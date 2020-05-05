@@ -18,18 +18,26 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                int value = 0;
-                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                if (!DataConnection.DoesExist("sp_DoesExist_Category", "Name", obj.Name))
                 {
-                    con.Open();
-                    SqlCommand o = new SqlCommand("sp_Insert_Category", con);
-                    o.CommandType = CommandType.StoredProcedure;
-                    o.Parameters.AddWithValue("@Name", obj.Name);
-                    o.Parameters.AddWithValue("@Description", obj.Description);
-                    o.Parameters.AddWithValue("@InsertBy", obj.Username);
-                    value = DataConnection.GetValue(o);
+                    int value = 0;
+                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                    {
+                        con.Open();
+                        SqlCommand o = new SqlCommand("sp_Insert_Category", con);
+                        o.CommandType = CommandType.StoredProcedure;
+                        o.Parameters.AddWithValue("@Name", obj.Name);
+                        o.Parameters.AddWithValue("@Description", obj.Description);
+                        o.Parameters.AddWithValue("@InsertBy", obj.Username);
+                        value = DataConnection.GetValue(o);
+                    }
+                    return HelperClass.GetValue(value, "Register");
                 }
-                return HelperClass.GetValue(value, "Register");
+                else
+                {
+                    MessageBox.Show("Category Exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return false;
+                }
             }
             catch (Exception ex)
             {
@@ -63,19 +71,27 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                int value = 0;
-                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                if (!DataConnection.DoesExist("sp_DoesExist_Category", "Name", obj.Name))
                 {
-                    con.Open();
-                    SqlCommand cc = new SqlCommand("sp_Update_Category", con);
-                    cc.CommandType = CommandType.StoredProcedure;
-                    cc.Parameters.AddWithValue("@ID", id);
-                    cc.Parameters.AddWithValue("@Name", obj.Name);
-                    cc.Parameters.AddWithValue("@Description", obj.Description);
-                    cc.Parameters.AddWithValue("@UpdateByUser", obj.Username);
-                    value = DataConnection.GetValue(cc);
+                    int value = 0;
+                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                    {
+                        con.Open();
+                        SqlCommand cc = new SqlCommand("sp_Update_Category", con);
+                        cc.CommandType = CommandType.StoredProcedure;
+                        cc.Parameters.AddWithValue("@ID", id);
+                        cc.Parameters.AddWithValue("@Name", obj.Name);
+                        cc.Parameters.AddWithValue("@Description", obj.Description);
+                        cc.Parameters.AddWithValue("@UpdateByUser", obj.Username);
+                        value = DataConnection.GetValue(cc);
+                    }
+                    return HelperClass.GetValue(value, "Update");
                 }
-                return HelperClass.GetValue(value, "Update");
+                else
+                {
+                    MessageBox.Show("Category Exist", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return false;
+                }
             }
             catch (Exception ex)
             {

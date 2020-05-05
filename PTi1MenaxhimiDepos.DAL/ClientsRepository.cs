@@ -17,23 +17,31 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                int value = 0;
-                using (var con = DataConnection.Connection())
+                if (!DataConnection.DoesExist("sp_DoesExist_Client", "Name", obj.Name + " " + obj.Surname))
                 {
-                    con.Open();
-                    var cmd = DataConnection.Command(con, "sp_Insert_Client", CommandType.StoredProcedure);
-                    DataConnection.AddParameter(cmd, "Name", obj.Name);
-                    DataConnection.AddParameter(cmd, "Surname", obj.Surname);
-                    DataConnection.AddParameter(cmd, "Email", obj.Email);
-                    DataConnection.AddParameter(cmd, "Phone", obj.Phone);
-                    DataConnection.AddParameter(cmd, "Street", obj.Address.Street);
-                    DataConnection.AddParameter(cmd, "City", obj.Address.City);
-                    DataConnection.AddParameter(cmd, "Country", obj.Address.Country);
-                    DataConnection.AddParameter(cmd, "PostalCode", obj.Address.PostalCode);
-                    DataConnection.AddParameter(cmd, "InsertBy", obj.Username);
-                    value = DataConnection.GetValue(cmd);
+                    int value = 0;
+                    using (var con = DataConnection.Connection())
+                    {
+                        con.Open();
+                        var cmd = DataConnection.Command(con, "sp_Insert_Client", CommandType.StoredProcedure);
+                        DataConnection.AddParameter(cmd, "Name", obj.Name);
+                        DataConnection.AddParameter(cmd, "Surname", obj.Surname);
+                        DataConnection.AddParameter(cmd, "Email", obj.Email);
+                        DataConnection.AddParameter(cmd, "Phone", obj.Phone);
+                        DataConnection.AddParameter(cmd, "Street", obj.Address.Street);
+                        DataConnection.AddParameter(cmd, "City", obj.Address.City);
+                        DataConnection.AddParameter(cmd, "Country", obj.Address.Country);
+                        DataConnection.AddParameter(cmd, "PostalCode", obj.Address.PostalCode);
+                        DataConnection.AddParameter(cmd, "InsertBy", obj.Username);
+                        value = DataConnection.GetValue(cmd);
+                    }
+                    return HelperClass.GetValue(value, "Register");
                 }
-                return HelperClass.GetValue(value, "Register");
+                else
+                {
+                    MessageBox.Show("Client Exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return false;
+                }
             }
             catch (Exception ex)
             {
@@ -149,25 +157,34 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                int value = 0;
-                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                if (!DataConnection.DoesExist("sp_DoesExist_Client", "Name", obj.Name + " " + obj.Surname))
                 {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_UpdateClients", con); // ***Duhet me bo StoreProceduren ne DB 
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", id);
-                    cmd.Parameters.AddWithValue("@Name", obj.Name);
-                    cmd.Parameters.AddWithValue("@Surname", obj.Surname);
-                    cmd.Parameters.AddWithValue("@Email", obj.Email);
-                    cmd.Parameters.AddWithValue("@Phone", obj.Phone);
-                    cmd.Parameters.AddWithValue("@Street", obj.Address.Street);
-                    cmd.Parameters.AddWithValue("@City", obj.Address.City);
-                    cmd.Parameters.AddWithValue("@Country", obj.Address.Country);
-                    cmd.Parameters.AddWithValue("@PostalCode", obj.Address.PostalCode);
-                    cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
-                    value = DataConnection.GetValue(cmd);
+                    int value = 0;
+                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand("sp_UpdateClients", con); // ***Duhet me bo StoreProceduren ne DB 
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@ID", id);
+                        cmd.Parameters.AddWithValue("@Name", obj.Name);
+                        cmd.Parameters.AddWithValue("@Surname", obj.Surname);
+                        cmd.Parameters.AddWithValue("@Email", obj.Email);
+                        cmd.Parameters.AddWithValue("@Phone", obj.Phone);
+                        cmd.Parameters.AddWithValue("@Street", obj.Address.Street);
+                        cmd.Parameters.AddWithValue("@City", obj.Address.City);
+                        cmd.Parameters.AddWithValue("@Country", obj.Address.Country);
+                        cmd.Parameters.AddWithValue("@PostalCode", obj.Address.PostalCode);
+                        cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
+                        value = DataConnection.GetValue(cmd);
+                    }
+                    return HelperClass.GetValue(value, "Update");
                 }
-                return HelperClass.GetValue(value, "Update");
+                else
+                {
+                    MessageBox.Show("Client Exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return false;
+                }
+
             }
             catch (Exception ex)
             {

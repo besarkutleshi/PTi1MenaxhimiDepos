@@ -85,6 +85,14 @@ namespace PTi1MenaxhimiDepos.Controls
             Bitmap hape = Properties.Resources.iconsale;
             Image hapeimg = hape;
             tabPage.Controls.Add(ControlShow.GetButtonss(btnSale, new Point(13, 20), new Size(75, 60), null, hapeimg));
+            Label sale = new Label();
+            tabPage.Controls.Add(ControlShow.GetButtonss(sale, new Point(32, 85), new Size(75, 20), "Sale"));
+            RadButton btnRegisterInvoice = new RadButton();
+            btnRegisterInvoice.Click += BtnRegisterInvoice_Click;
+            Image invoice = CreateImage(new Bitmap(Properties.Resources.invoice));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterInvoice, new Point(100, 20), new Size(75, 60), null, invoice));
+            Label lblinvoice = new Label();
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblinvoice, new Point(110, 85), new Size(75, 20), "Invoices"));
             PrintControls(tabPage, obj, values);
         }
         private void BtnSale_Click(object sender, EventArgs e)
