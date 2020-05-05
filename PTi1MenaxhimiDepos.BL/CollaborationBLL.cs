@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using PTi1MenaxhimiDepos.DAL;
 using System.Data;
 using System.Windows.Forms;
-
 namespace PTi1MenaxhimiDepos.BL
 {
     public class CollaborationBLL
@@ -58,9 +57,9 @@ namespace PTi1MenaxhimiDepos.BL
         #endregion
 
         #region Employee
-        public static bool InsertEmployee(BO.Employee obj)
+        public static bool InsertEmployee(BO.Employee obj) // qe qitu jon bo metodat qe e thirrin .DAL EmployeeRepository 
         {
-            return _empRep.Add(obj);
+            return _empRep.Add(obj); 
         }
         public static bool DeleteEmployee(int id)
         {
@@ -70,15 +69,15 @@ namespace PTi1MenaxhimiDepos.BL
         {
             return _empRep.Update(id, obj);
         }
-        public static List<BO.Employee> GetEmployees() => _empRep.ReadAll();
+        public static List<BO.Employee> GetEmployees() => _empRep.ReadAll(); // qikjo qishtu osht e njejta si me bo qit metoden ma nalt veq ma shkrut
 
-        public static BO.Employee GetEmployee(int id)
+        public static BO.Employee GetEmployee(int id) //qe ket by id
         {
             return _empRep.ReadById(id);
         }
-        public static BO.Employee GetEmployee(string name) => _empRep.ReadByName(name);
+        public static BO.Employee GetEmployee(string name) => _empRep.ReadByName(name); // get by name
 
-        public static DataTable ReturnTableEmployees(List<Employee> employees)
+        public static DataTable ReturnTableEmployees(List<Employee> employees) // qikjo mdoket svyn sen 
         {
             try
             {
