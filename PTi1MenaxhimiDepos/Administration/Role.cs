@@ -45,6 +45,7 @@ namespace PTi1MenaxhimiDepos.Administration
                 if (role != null)
                 {
                     role = new BO.Role(int.Parse(txtID.Text), txtname.Text, txtCode.Text, txtDescription.Text);
+                    role.Username = HelpClass.CurrentUser.UserName;
                     if (AdministrationBLL.UpdateRole(role.ID, role))
                     {
                         Refresh();
@@ -68,6 +69,7 @@ namespace PTi1MenaxhimiDepos.Administration
             else
             {
                 BO.Role obj = new BO.Role(0, txtname.Text, txtCode.Text, txtDescription.Text);
+                obj.Username = HelpClass.CurrentUser.UserName;
                 if (AdministrationBLL.InsertRole(obj))
                 {
                     Refresh();
@@ -81,6 +83,7 @@ namespace PTi1MenaxhimiDepos.Administration
             txtID.Text = role.ID.ToString();
             txtname.Text = role.Name;
             txtDescription.Text = role.Description;
+            txtCode.Text = role.Code;
             HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
         }
 
@@ -88,7 +91,7 @@ namespace PTi1MenaxhimiDepos.Administration
         {
             if(txtSearch.Text == "")
             {
-                dgwRoles.DataSource = null; // qikjo niher null se nuk i qet krejt nese ka diqka ma heret duhet me bo null niher per me mush tani apet
+                dgwRoles.DataSource = null;
                 dgwRoles.DataSource = AdministrationBLL.GetRoles();
             }
         }
@@ -100,12 +103,12 @@ namespace PTi1MenaxhimiDepos.Administration
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtSearch.Text.All(char.IsDigit)) // nese krejt qka ka shkru osht numra lype me id 
+            if (txtSearch.Text.All(char.IsDigit))
             {
                 BO.Role obj = AdministrationBLL.GetRole(int.Parse(txtSearch.Text));
                 DisplaySearchResult(obj);
             }
-            else // else lype me name
+            else
             {
                 BO.Role obj = AdministrationBLL.GetRole(txtSearch.Text);
                 DisplaySearchResult(obj);
@@ -115,11 +118,20 @@ namespace PTi1MenaxhimiDepos.Administration
         private void DisplaySearchResult(BO.Role obj)
         {
             List<BO.Role> roles = null;
-            if(HelperClass.DoesExists(obj,ref roles)) // qikjo metod e kqyr a egziston qaj objekt qe e kena lyp me id ose name qe po e qet ne qit list roles qe jo thot ska sen
+            if(HelperClass.DoesExists(obj,ref roles))
             {
-                dgwRoles.DataSource = null; // qikjo niher null se nuk i qet krejt nese ka diqka ma heret duhet me bo null niher per me mush tani apet
-                dgwRoles.DataSource = roles; // qitu i 
+                dgwRoles.DataSource = null;
+                dgwRoles.DataSource = roles;
             }
+        }
+
+        public override void Refresh()
+        {
+            HelpClass.Delete(txtCode, txtDescription, txtID, txtname, txtSearch);
+            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
+            dgwRoles.DataSource = null;
+            dgwRoles.DataSource = AdministrationBLL.GetRoles();
+            txtname.Focus();
         }
     }
 }

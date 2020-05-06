@@ -19,6 +19,9 @@ namespace PTi1MenaxhimiDepos.Invoices
         public ListInvoice()
         {
             InitializeComponent();
+            this.cmbSupplier.DropDownListElement.DropDownWidth = 380;
+            this.cmbPos.DropDownListElement.DropDownWidth = 380;
+            this.cmbInoviceType.DropDownListElement.DropDownWidth = 380;
         }
 
         private void ListInvoice_Load(object sender, EventArgs e)

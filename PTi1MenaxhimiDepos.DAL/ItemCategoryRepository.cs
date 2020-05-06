@@ -71,27 +71,19 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                if (!DataConnection.DoesExist("sp_DoesExist_Category", "Name", obj.Name))
+                int value = 0;
+                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
-                    int value = 0;
-                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
-                    {
-                        con.Open();
-                        SqlCommand cc = new SqlCommand("sp_Update_Category", con);
-                        cc.CommandType = CommandType.StoredProcedure;
-                        cc.Parameters.AddWithValue("@ID", id);
-                        cc.Parameters.AddWithValue("@Name", obj.Name);
-                        cc.Parameters.AddWithValue("@Description", obj.Description);
-                        cc.Parameters.AddWithValue("@UpdateByUser", obj.Username);
-                        value = DataConnection.GetValue(cc);
-                    }
-                    return HelperClass.GetValue(value, "Update");
+                    con.Open();
+                    SqlCommand cc = new SqlCommand("sp_Update_Category", con);
+                    cc.CommandType = CommandType.StoredProcedure;
+                    cc.Parameters.AddWithValue("@ID", id);
+                    cc.Parameters.AddWithValue("@Name", obj.Name);
+                    cc.Parameters.AddWithValue("@Description", obj.Description);
+                    cc.Parameters.AddWithValue("@UpdateByUser", obj.Username);
+                    value = DataConnection.GetValue(cc);
                 }
-                else
-                {
-                    MessageBox.Show("Category Exist", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(value, "Update");
             }
             catch (Exception ex)
             {

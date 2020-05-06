@@ -185,7 +185,7 @@ namespace PTi1MenaxhimiDepos.Sale
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
-            dgwItems.DataSource = ItemBLL.GetItems()
+            dgwItems.DataSource = ItemBLL.GetItems();
         }
     }
 }

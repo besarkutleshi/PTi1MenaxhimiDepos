@@ -18,7 +18,7 @@ namespace PTi1MenaxhimiDepos.DAL
             try
             {
                 if (!DataConnection.DoesExist("sp_DoesExist_Personel", "Name", obj.Name + " " + obj.Surname))
-                {
+                 {
                     int val = 0;
                     using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                     {
@@ -76,7 +76,7 @@ namespace PTi1MenaxhimiDepos.DAL
             try
             {
                 List<Employee> employees = null;
-                using (var con = DataConnection.Connection())
+                using (var con = DataConnection.Connection()) // kto i ke msu ti kom kallxu ateher
                 {
                     con.Open();
                     var cmd = DataConnection.Command(con, "sp_GetAll_Personel", CommandType.StoredProcedure);
@@ -162,7 +162,7 @@ namespace PTi1MenaxhimiDepos.DAL
             Employee employee = new Employee(int.Parse(sdr["PERSONID"].ToString()),sdr["NAME"].ToString(), sdr["SURNAME"].ToString(), sdr["EMAIL"].ToString(), sdr["PHONE"].ToString(),
                                 new Address(sdr["STREET"].ToString(), sdr["CITY"].ToString(), sdr["COUNTRY"].ToString(), sdr["POSTALCODE"].ToString()));
             employee.Fullname = sdr["FULLNAME"].ToString();
-            return employee;
+            return employee; 
         }
 
         public bool Update(int id, Employee obj)

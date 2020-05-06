@@ -151,23 +151,15 @@ namespace PTi1MenaxhimiDepos.DAL
             try
             {
                 int value = 0;
-                if (!DataConnection.DoesExist("sp_DoesExist_DocType", "@Name", obj.Description))
+                using (var con = DataConnection.Connection())
                 {
-                    using (var con = DataConnection.Connection())
-                    {
-                        con.Open();
-                        var cmd = DataConnection.Command(con, "sp_Update_DocType", CommandType.StoredProcedure);
-                        DataConnection.AddParameter(cmd, "@ID", id);
-                        AddParams(obj, cmd, "UpdateBy");
-                        value = DataConnection.GetValue(cmd);
-                    }
-                    return HelperClass.GetValue(value, "Register");
+                    con.Open();
+                    var cmd = DataConnection.Command(con, "sp_Update_DocType", CommandType.StoredProcedure);
+                    DataConnection.AddParameter(cmd, "@ID", id);
+                    AddParams(obj, cmd, "UpdateBy");
+                    value = DataConnection.GetValue(cmd);
                 }
-                else
-                {
-                    MessageBox.Show("Invoice Type Exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(value, "Register");
             }
             catch (Exception ex)
             {

@@ -10,7 +10,7 @@ using PTi1MenaxhimiDepos.Items;
 using PTi1MenaxhimiDepos.BL;
 using PTi1MenaxhimiDepos.Invoices;
 using PTi1MenaxhimiDepos.Collab;
-
+using PTi1MenaxhimiDepos.Administration;
 namespace PTi1MenaxhimiDepos.Controls
 {
     public class CreateControl
@@ -199,10 +199,24 @@ namespace PTi1MenaxhimiDepos.Controls
             tabPage.Controls.Add(ControlShow.GetButtonss(Role, new Point(187, 20), new Size(75, 60), null, type));
             Label lbltype = new Label();
             tabPage.Controls.Add(ControlShow.GetButtonss(lbltype, new Point(203, 85), new Size(75, 20), "Role"));
+            RadButton EmpPos = new RadButton();
+            EmpPos.Click += EmpPos_Click;
+            Image Emp = CreateImage(new Bitmap(Properties.Resources.TinkerTool_icon));
+            tabPage.Controls.Add(ControlShow.GetButtonss(EmpPos, new Point(275, 20), new Size(75, 60), null, invoice));
+            Label lblemp = new Label();
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblemp, new Point(274, 85), new Size(75, 20), "EmployePos"));
         }
+
+        private void EmpPos_Click(object sender, EventArgs e)
+        {
+            EmployeePOS employeePOS = new EmployeePOS();
+            employeePOS.ShowDialog();
+        }
+
         private void Role_Click(object sender, EventArgs e)
         {
-
+            Role role = new Role();
+            role.ShowDialog();
         }
         private void User_Click(object sender, EventArgs e)
         {
@@ -211,6 +225,8 @@ namespace PTi1MenaxhimiDepos.Controls
         }
         private void Employee_Click(object sender, EventArgs e)
         {
+            Employee employee = new Employee();
+            employee.ShowDialog();
         }
         #endregion
 

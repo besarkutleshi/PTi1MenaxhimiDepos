@@ -151,28 +151,20 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                if (!DataConnection.DoesExist("sp_DoesExist_Role", "Name", obj.Name))
+                int val = 0;
+                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
-                    int val = 0;
-                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
-                    {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand("sp_Update_Role", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@ID", id);
-                        cmd.Parameters.AddWithValue("@Name", obj.Name);
-                        cmd.Parameters.AddWithValue("@Code", obj.Code);
-                        cmd.Parameters.AddWithValue("@Description", obj.Description);
-                        cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
-                        val = DataConnection.GetValue(cmd);
-                    }
-                    return HelperClass.GetValue(val, "Update");
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Update_Role", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.Parameters.AddWithValue("@Name", obj.Name);
+                    cmd.Parameters.AddWithValue("@Code", obj.Code);
+                    cmd.Parameters.AddWithValue("@Description", obj.Description);
+                    cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
+                    val = DataConnection.GetValue(cmd);
                 }
-                else
-                {
-                    MessageBox.Show("Role Exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(val, "Update");
             }
             catch (Exception ex)
             {

@@ -158,31 +158,23 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                if (!DataConnection.DoesExist("sp_DoesExist_Supplier", "Name", obj.Name))
+                int value = 0;
+                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
-                    int value = 0;
-                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
-                    {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand("sp_UpdateSupplier", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Id", id);
-                        cmd.Parameters.AddWithValue("@Name", obj.Name);
-                        cmd.Parameters.AddWithValue("@Description", obj.Description);
-                        cmd.Parameters.AddWithValue("@Phone", obj.Phone);
-                        cmd.Parameters.AddWithValue("@Mail", obj.Mail);
-                        cmd.Parameters.AddWithValue("@City", obj.City);
-                        cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
-                        value = DataConnection.GetValue(cmd);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("sp_UpdateSupplier", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Parameters.AddWithValue("@Name", obj.Name);
+                    cmd.Parameters.AddWithValue("@Description", obj.Description);
+                    cmd.Parameters.AddWithValue("@Phone", obj.Phone);
+                    cmd.Parameters.AddWithValue("@Mail", obj.Mail);
+                    cmd.Parameters.AddWithValue("@City", obj.City);
+                    cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
+                    value = DataConnection.GetValue(cmd);
 
-                    }
-                    return HelperClass.GetValue(value, "Update");
                 }
-                else
-                {
-                    MessageBox.Show("Supplier Exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(value, "Update");
             }
             catch (Exception ex)
             {

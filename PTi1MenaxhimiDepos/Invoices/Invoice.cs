@@ -22,6 +22,10 @@ namespace PTi1MenaxhimiDepos.Invoices
         {
             InitializeComponent();
             dgwBodies.AutoGenerateColumns = false;
+            this.cmbInoviceType.DropDownListElement.DropDownWidth = 380;
+            this.cmbItem.DropDownListElement.DropDownWidth = 380;
+            this.cmbPos.DropDownListElement.DropDownWidth = 380;
+            this.cmbSupplier.DropDownListElement.DropDownWidth = 380;
         }
 
         private void radGridView1_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)

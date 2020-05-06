@@ -31,17 +31,17 @@ namespace PTi1MenaxhimiDepos.Collab
             {
                 BO.Employee emp = new BO.Employee(0, txtname.Text, txtsurname.Text, txtemail.Text, txtPhone.Text,
                     new Address(txtstreet.Text, txtcity.Text, txtCountry.Text, txtPostalCode.Text));
+                emp.Username = HelpClass.CurrentUser.UserName;
                 if (CollaborationBLL.InsertEmployee(emp))
                 {
                     Refresh();
-                } // qikjo osht per me bo insert 
+                }
             }
         }
 
         private void dgwClients_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
-            employee = (BO.Employee)dgwEmployees.Rows[e.RowIndex].DataBoundItem; // qikjo osht kur tklikohet dy her per mi ni rresht ne grid hin ne qit metod edhe mushet qikjy objekt
-            //employee edhe qato tdhana i qesum ne textboxa
+            employee = (BO.Employee)dgwEmployees.Rows[e.RowIndex].DataBoundItem;
             txtcity.Text = employee.Address.City;
             txtCountry.Text = employee.Address.Country;
             txtemail.Text = employee.Email;
@@ -52,19 +52,18 @@ namespace PTi1MenaxhimiDepos.Collab
             txtstreet.Text = employee.Address.Street;
             txtPostalCode.Text = employee.Address.PostalCode.ToString();
             txtsurname.Text = employee.Address.Street;
-            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate); // qikjo i bon show buttonat per delete edhe per update se nfillim osht veq butoni save e kqyrum ma von 
+            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
         }
 
         private void Employee_Load(object sender, EventArgs e)
         {
-            dgwEmployees.DataSource = CollaborationBLL.GetEmployees(); // qikjo i qet ne list 
+            dgwEmployees.DataSource = CollaborationBLL.GetEmployees();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            //qikjo i fshin textboxat  osht ni klas qe e kom bo un qe e ka ne parameter ni array te textboxav
             HelpClass.Delete(txtcity, txtCountry, txtemail, txtID, txtname, txtPhone, txtPostalCode, txtSearch, txtstreet, txtsurname);
-            HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate); // edhe tash kjo not visible i hjek butonat per delete edhe update ioke
+            HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -79,7 +78,8 @@ namespace PTi1MenaxhimiDepos.Collab
                 if(employee != null)
                 {
                     employee = new BO.Employee(int.Parse(txtID.Text), txtname.Text, txtsurname.Text, txtemail.Text, txtPhone.Text,
-                    new Address(txtstreet.Text, txtcity.Text, txtCountry.Text, txtPostalCode.Text));// tash per me bo update i mer apet qato tdhana qe i ke shenu
+                    new Address(txtstreet.Text, txtcity.Text, txtCountry.Text, txtPostalCode.Text));
+                    employee.Username = HelpClass.CurrentUser.UserName;
                     if (CollaborationBLL.UpdateEmployee(employee.ID,employee))
                     {
                         Refresh();
@@ -105,7 +105,7 @@ namespace PTi1MenaxhimiDepos.Collab
         public override void Refresh()
         {
             dgwEmployees.DataSource = null;
-            dgwEmployees.DataSource = CollaborationBLL.GetClients();
+            dgwEmployees.DataSource = CollaborationBLL.GetEmployees();
             HelpClass.Delete(txtcity, txtCountry, txtemail, txtID, txtname, txtPhone, txtPostalCode, txtSearch, txtstreet, txtsurname);
             HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
         }

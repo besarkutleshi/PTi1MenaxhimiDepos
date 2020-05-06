@@ -157,34 +157,26 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
-                if (!DataConnection.DoesExist("sp_DoesExist_Item", "Name", obj.Name))
+                int val = 0;
+                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
-                    int val = 0;
-                    using (SqlConnection con = new SqlConnection(DataConnection.Constring))
-                    {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand("sp_Update_Item", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@ItemID", id);
-                        cmd.Parameters.AddWithValue("@Barcode", obj.Barcode);
-                        cmd.Parameters.AddWithValue("@Name", obj.Name);
-                        cmd.Parameters.AddWithValue("@UnitID", obj.UnitID);
-                        cmd.Parameters.AddWithValue("@CategoryID", obj.CategoryId);
-                        cmd.Parameters.AddWithValue("@TypeID", obj.TypeID);
-                        cmd.Parameters.AddWithValue("@SupplierID", obj.SupplierID);
-                        cmd.Parameters.AddWithValue("@Activ", obj.Active);
-                        cmd.Parameters.AddWithValue("@StockQuantity", obj.StockQuantity);
-                        cmd.Parameters.AddWithValue("@Description", obj.Description);
-                        cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
-                        val = DataConnection.GetValue(cmd);
-                    }
-                    return HelperClass.GetValue(val, "Update");
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Update_Item", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ItemID", id);
+                    cmd.Parameters.AddWithValue("@Barcode", obj.Barcode);
+                    cmd.Parameters.AddWithValue("@Name", obj.Name);
+                    cmd.Parameters.AddWithValue("@UnitID", obj.UnitID);
+                    cmd.Parameters.AddWithValue("@CategoryID", obj.CategoryId);
+                    cmd.Parameters.AddWithValue("@TypeID", obj.TypeID);
+                    cmd.Parameters.AddWithValue("@SupplierID", obj.SupplierID);
+                    cmd.Parameters.AddWithValue("@Activ", obj.Active);
+                    cmd.Parameters.AddWithValue("@StockQuantity", obj.StockQuantity);
+                    cmd.Parameters.AddWithValue("@Description", obj.Description);
+                    cmd.Parameters.AddWithValue("@UpdateBy", obj.Username);
+                    val = DataConnection.GetValue(cmd);
                 }
-                else
-                {
-                    MessageBox.Show("Item Exist!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    return false;
-                }
+                return HelperClass.GetValue(val, "Update");
             }
             catch (Exception ex)
             {

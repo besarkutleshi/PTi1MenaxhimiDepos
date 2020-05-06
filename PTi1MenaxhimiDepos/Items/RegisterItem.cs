@@ -20,6 +20,11 @@ namespace PTi1MenaxhimiDepos
         public RegisterItem()
         {
             InitializeComponent();
+            this.cmbActive.DropDownListElement.DropDownWidth = 380;
+            this.cmbcategory.DropDownListElement.DropDownWidth = 380;
+            this.cmbtype.DropDownListElement.DropDownWidth = 380;
+            this.cmbunit.DropDownListElement.DropDownWidth = 380;
+            this.cmdSupplier.DropDownListElement.DropDownWidth = 380;
         }
 
         private void RegisterItem_Load(object sender, EventArgs e)

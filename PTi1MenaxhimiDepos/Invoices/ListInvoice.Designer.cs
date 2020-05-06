@@ -75,6 +75,7 @@
             // cmbSupplier
             // 
             this.cmbSupplier.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cmbSupplier.ItemHeight = 40;
             this.cmbSupplier.Location = new System.Drawing.Point(1038, 46);
             this.cmbSupplier.Name = "cmbSupplier";
             this.cmbSupplier.Size = new System.Drawing.Size(235, 37);
@@ -94,6 +95,7 @@
             // cmbInoviceType
             // 
             this.cmbInoviceType.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cmbInoviceType.ItemHeight = 40;
             this.cmbInoviceType.Location = new System.Drawing.Point(783, 46);
             this.cmbInoviceType.Name = "cmbInoviceType";
             this.cmbInoviceType.Size = new System.Drawing.Size(235, 37);
@@ -168,6 +170,7 @@
             // cmbPos
             // 
             this.cmbPos.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cmbPos.ItemHeight = 40;
             this.cmbPos.Location = new System.Drawing.Point(1294, 45);
             this.cmbPos.Name = "cmbPos";
             this.cmbPos.Size = new System.Drawing.Size(248, 37);
@@ -198,31 +201,31 @@
             gridViewTextBoxColumn1.FieldName = "InvertoryID";
             gridViewTextBoxColumn1.HeaderText = "ID";
             gridViewTextBoxColumn1.Name = "ID";
-            gridViewTextBoxColumn1.Width = 286;
+            gridViewTextBoxColumn1.Width = 287;
             gridViewTextBoxColumn2.FieldName = "DocNo";
             gridViewTextBoxColumn2.HeaderText = "Invoice Number";
             gridViewTextBoxColumn2.Name = "Invoice Number";
-            gridViewTextBoxColumn2.Width = 286;
+            gridViewTextBoxColumn2.Width = 287;
             gridViewTextBoxColumn3.FieldName = "DocDate";
             gridViewTextBoxColumn3.HeaderText = "Date";
             gridViewTextBoxColumn3.Name = "Date";
-            gridViewTextBoxColumn3.Width = 286;
+            gridViewTextBoxColumn3.Width = 287;
             gridViewTextBoxColumn4.FieldName = "DocType.Description";
             gridViewTextBoxColumn4.HeaderText = "Invoice Type";
             gridViewTextBoxColumn4.Name = "Invoice Type";
-            gridViewTextBoxColumn4.Width = 286;
+            gridViewTextBoxColumn4.Width = 287;
             gridViewTextBoxColumn5.FieldName = "POS.Name";
             gridViewTextBoxColumn5.HeaderText = "POS";
             gridViewTextBoxColumn5.Name = "POS";
-            gridViewTextBoxColumn5.Width = 286;
+            gridViewTextBoxColumn5.Width = 287;
             gridViewTextBoxColumn6.FieldName = "Description";
             gridViewTextBoxColumn6.HeaderText = "Description";
             gridViewTextBoxColumn6.Name = "Description";
-            gridViewTextBoxColumn6.Width = 286;
+            gridViewTextBoxColumn6.Width = 287;
             gridViewTextBoxColumn7.FieldName = "Supplier.Name";
             gridViewTextBoxColumn7.HeaderText = "Supplier";
             gridViewTextBoxColumn7.Name = "Supplier";
-            gridViewTextBoxColumn7.Width = 280;
+            gridViewTextBoxColumn7.Width = 281;
             this.dgwInvoices.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,

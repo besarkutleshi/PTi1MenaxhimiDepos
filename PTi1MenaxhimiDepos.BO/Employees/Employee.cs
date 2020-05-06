@@ -29,16 +29,6 @@ namespace PTi1MenaxhimiDepos.BO
             this.Address = address;
         }
 
-        //public Employee(int id,string name, string surname, string email, string phone, Address address)
-        //{
-        //    this.ID = id;
-        //    this.Name = name;
-        //    this.Surname = surname;
-        //    this.Email = email;
-        //    this.Phone = phone;
-        //    this.Address = address;
-        //}
-
         public Employee(string name)
         {
             this.Name = name;

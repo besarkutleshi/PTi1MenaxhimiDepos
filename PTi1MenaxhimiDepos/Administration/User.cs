@@ -18,6 +18,8 @@ namespace PTi1MenaxhimiDepos.Administration
         public User()
         {
             InitializeComponent();
+            this.cmbEmployee.DropDownListElement.DropDownWidth = 380;
+            this.cmbRole.DropDownListElement.DropDownWidth = 380;
         }
 
         private void User_Load(object sender, EventArgs e)
@@ -93,9 +95,9 @@ namespace PTi1MenaxhimiDepos.Administration
             }
             else
             {
-                Employee emp = (Employee)cmbEmployee.SelectedItem.DataBoundItem;
-                Role role = (Role)cmbRole.SelectedItem.DataBoundItem;
-                obj = new BO.Account.User(int.Parse(txtID.Text), txtUsername.Text, Security.Encryptt(txtPasword.Text), txtDescription.Text, emp.ID, role.ID);
+                BO.Employee emp = (BO.Employee)cmbEmployee.SelectedItem.DataBoundItem;
+                BO.Role role = (BO.Role)cmbRole.SelectedItem.DataBoundItem;
+                obj = new BO.Account.User(int.Parse(txtID.Text), txtUsername.Text, Security.Encryptt(txtPasword.Text), txtDescription.Text, emp.ID,role.ID);
                 obj.Username = HelpClass.CurrentUser.UserName; 
                 if (AdministrationBLL.UpdateUser(obj.ID, obj))
                 {

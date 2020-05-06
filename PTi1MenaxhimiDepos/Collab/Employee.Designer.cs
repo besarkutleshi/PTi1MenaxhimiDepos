@@ -97,8 +97,8 @@
             // radLabel5
             // 
             this.radLabel5.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.radLabel5.Location = new System.Drawing.Point(436, 7);
-            this.radLabel5.Margin = new System.Windows.Forms.Padding(2);
+            this.radLabel5.Location = new System.Drawing.Point(581, 9);
+            this.radLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.Size = new System.Drawing.Size(85, 30);
             this.radLabel5.TabIndex = 53;
@@ -107,8 +107,8 @@
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.radLabel4.Location = new System.Drawing.Point(648, 7);
-            this.radLabel4.Margin = new System.Windows.Forms.Padding(2);
+            this.radLabel4.Location = new System.Drawing.Point(864, 9);
+            this.radLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(55, 30);
             this.radLabel4.TabIndex = 54;
@@ -117,8 +117,8 @@
             // radLabel3
             // 
             this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.radLabel3.Location = new System.Drawing.Point(11, 156);
-            this.radLabel3.Margin = new System.Windows.Forms.Padding(2);
+            this.radLabel3.Location = new System.Drawing.Point(15, 192);
+            this.radLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(112, 30);
             this.radLabel3.TabIndex = 59;
@@ -127,8 +127,8 @@
             // radLabel1
             // 
             this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.radLabel1.Location = new System.Drawing.Point(648, 76);
-            this.radLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.radLabel1.Location = new System.Drawing.Point(864, 94);
+            this.radLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(77, 30);
             this.radLabel1.TabIndex = 58;
@@ -137,8 +137,8 @@
             // lblPhone
             // 
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblPhone.Location = new System.Drawing.Point(11, 76);
-            this.lblPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.lblPhone.Location = new System.Drawing.Point(15, 94);
+            this.lblPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(64, 30);
             this.lblPhone.TabIndex = 57;
@@ -147,8 +147,8 @@
             // radLabel6
             // 
             this.radLabel6.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.radLabel6.Location = new System.Drawing.Point(223, 76);
-            this.radLabel6.Margin = new System.Windows.Forms.Padding(2);
+            this.radLabel6.Location = new System.Drawing.Point(297, 94);
+            this.radLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.Size = new System.Drawing.Size(60, 30);
             this.radLabel6.TabIndex = 56;
@@ -157,8 +157,8 @@
             // radLabel2
             // 
             this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.radLabel2.Location = new System.Drawing.Point(436, 76);
-            this.radLabel2.Margin = new System.Windows.Forms.Padding(2);
+            this.radLabel2.Location = new System.Drawing.Point(581, 94);
+            this.radLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(42, 30);
             this.radLabel2.TabIndex = 55;
@@ -167,8 +167,8 @@
             // lblName
             // 
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblName.Location = new System.Drawing.Point(223, 7);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2);
+            this.lblName.Location = new System.Drawing.Point(297, 9);
+            this.lblName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(61, 30);
             this.lblName.TabIndex = 60;
@@ -177,8 +177,8 @@
             // radLabel11
             // 
             this.radLabel11.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.radLabel11.Location = new System.Drawing.Point(11, 7);
-            this.radLabel11.Margin = new System.Windows.Forms.Padding(2);
+            this.radLabel11.Location = new System.Drawing.Point(15, 9);
+            this.radLabel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radLabel11.Name = "radLabel11";
             this.radLabel11.Size = new System.Drawing.Size(28, 30);
             this.radLabel11.TabIndex = 61;
@@ -187,90 +187,90 @@
             // txtsurname
             // 
             this.txtsurname.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtsurname.Location = new System.Drawing.Point(436, 41);
-            this.txtsurname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtsurname.Location = new System.Drawing.Point(581, 50);
+            this.txtsurname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtsurname.Name = "txtsurname";
-            this.txtsurname.Size = new System.Drawing.Size(196, 31);
+            this.txtsurname.Size = new System.Drawing.Size(255, 37);
             this.txtsurname.TabIndex = 46;
             // 
             // txtemail
             // 
             this.txtemail.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtemail.Location = new System.Drawing.Point(648, 41);
-            this.txtemail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtemail.Location = new System.Drawing.Point(864, 50);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(196, 31);
+            this.txtemail.Size = new System.Drawing.Size(261, 37);
             this.txtemail.TabIndex = 47;
             // 
             // txtPostalCode
             // 
             this.txtPostalCode.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtPostalCode.Location = new System.Drawing.Point(11, 190);
-            this.txtPostalCode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPostalCode.Location = new System.Drawing.Point(15, 234);
+            this.txtPostalCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(196, 31);
+            this.txtPostalCode.Size = new System.Drawing.Size(258, 37);
             this.txtPostalCode.TabIndex = 52;
             // 
             // txtCountry
             // 
             this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtCountry.Location = new System.Drawing.Point(648, 110);
-            this.txtCountry.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCountry.Location = new System.Drawing.Point(864, 135);
+            this.txtCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(196, 31);
+            this.txtCountry.Size = new System.Drawing.Size(261, 37);
             this.txtCountry.TabIndex = 51;
             // 
             // txtPhone
             // 
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtPhone.Location = new System.Drawing.Point(11, 110);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhone.Location = new System.Drawing.Point(15, 135);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(196, 31);
+            this.txtPhone.Size = new System.Drawing.Size(258, 37);
             this.txtPhone.TabIndex = 48;
             // 
             // txtstreet
             // 
             this.txtstreet.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtstreet.Location = new System.Drawing.Point(223, 110);
-            this.txtstreet.Margin = new System.Windows.Forms.Padding(2);
+            this.txtstreet.Location = new System.Drawing.Point(297, 135);
+            this.txtstreet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtstreet.Name = "txtstreet";
-            this.txtstreet.Size = new System.Drawing.Size(196, 31);
+            this.txtstreet.Size = new System.Drawing.Size(261, 37);
             this.txtstreet.TabIndex = 49;
             // 
             // txtcity
             // 
             this.txtcity.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtcity.Location = new System.Drawing.Point(436, 110);
-            this.txtcity.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcity.Location = new System.Drawing.Point(581, 135);
+            this.txtcity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcity.Name = "txtcity";
-            this.txtcity.Size = new System.Drawing.Size(196, 31);
+            this.txtcity.Size = new System.Drawing.Size(255, 37);
             this.txtcity.TabIndex = 50;
             // 
             // txtname
             // 
             this.txtname.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtname.Location = new System.Drawing.Point(223, 41);
-            this.txtname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtname.Location = new System.Drawing.Point(297, 50);
+            this.txtname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(196, 31);
+            this.txtname.Size = new System.Drawing.Size(261, 37);
             this.txtname.TabIndex = 45;
             // 
             // txtID
             // 
             this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtID.Location = new System.Drawing.Point(11, 41);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtID.Location = new System.Drawing.Point(15, 50);
+            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(196, 31);
+            this.txtID.Size = new System.Drawing.Size(258, 37);
             this.txtID.TabIndex = 44;
             // 
             // dgwEmployees
             // 
             this.dgwEmployees.Font = new System.Drawing.Font("Segoe UI", 13.25F);
-            this.dgwEmployees.Location = new System.Drawing.Point(9, 303);
-            this.dgwEmployees.Margin = new System.Windows.Forms.Padding(2);
+            this.dgwEmployees.Location = new System.Drawing.Point(12, 373);
+            this.dgwEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             // 
             // 
             // 
@@ -280,39 +280,39 @@
             gridViewTextBoxColumn1.FieldName = "ID";
             gridViewTextBoxColumn1.HeaderText = "ID";
             gridViewTextBoxColumn1.Name = "ID";
-            gridViewTextBoxColumn1.Width = 98;
+            gridViewTextBoxColumn1.Width = 132;
             gridViewTextBoxColumn2.FieldName = "Name";
             gridViewTextBoxColumn2.HeaderText = "Name";
             gridViewTextBoxColumn2.Name = "Name";
-            gridViewTextBoxColumn2.Width = 98;
+            gridViewTextBoxColumn2.Width = 132;
             gridViewTextBoxColumn3.FieldName = "Surname";
             gridViewTextBoxColumn3.HeaderText = "Surname";
             gridViewTextBoxColumn3.Name = "Surname";
-            gridViewTextBoxColumn3.Width = 98;
+            gridViewTextBoxColumn3.Width = 132;
             gridViewTextBoxColumn4.FieldName = "Phone";
             gridViewTextBoxColumn4.HeaderText = "Phone";
             gridViewTextBoxColumn4.Name = "Phone";
-            gridViewTextBoxColumn4.Width = 98;
+            gridViewTextBoxColumn4.Width = 132;
             gridViewTextBoxColumn5.FieldName = "Email";
             gridViewTextBoxColumn5.HeaderText = "Email";
             gridViewTextBoxColumn5.Name = "Email";
-            gridViewTextBoxColumn5.Width = 98;
+            gridViewTextBoxColumn5.Width = 132;
             gridViewTextBoxColumn6.FieldName = "Address.Street";
             gridViewTextBoxColumn6.HeaderText = "Street";
             gridViewTextBoxColumn6.Name = "Street";
-            gridViewTextBoxColumn6.Width = 98;
+            gridViewTextBoxColumn6.Width = 132;
             gridViewTextBoxColumn7.FieldName = "Address.City";
             gridViewTextBoxColumn7.HeaderText = "City";
             gridViewTextBoxColumn7.Name = "City";
-            gridViewTextBoxColumn7.Width = 98;
+            gridViewTextBoxColumn7.Width = 132;
             gridViewTextBoxColumn8.FieldName = "Address.Country";
             gridViewTextBoxColumn8.HeaderText = "Country";
             gridViewTextBoxColumn8.Name = "Country";
-            gridViewTextBoxColumn8.Width = 98;
+            gridViewTextBoxColumn8.Width = 132;
             gridViewTextBoxColumn9.FieldName = "Address.PostalCode";
             gridViewTextBoxColumn9.HeaderText = "Postal Code";
             gridViewTextBoxColumn9.Name = "Postal Code";
-            gridViewTextBoxColumn9.Width = 105;
+            gridViewTextBoxColumn9.Width = 134;
             this.dgwEmployees.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -325,7 +325,7 @@
             gridViewTextBoxColumn9});
             this.dgwEmployees.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgwEmployees.Name = "dgwEmployees";
-            this.dgwEmployees.Size = new System.Drawing.Size(902, 301);
+            this.dgwEmployees.Size = new System.Drawing.Size(1203, 370);
             this.dgwEmployees.TabIndex = 65;
             this.dgwEmployees.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwClients_CellDoubleClick);
             // 
@@ -333,10 +333,10 @@
             // 
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(812, 255);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(1083, 314);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(98, 44);
+            this.btnSave.Size = new System.Drawing.Size(131, 54);
             this.btnSave.TabIndex = 62;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
@@ -346,10 +346,10 @@
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(812, 253);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdate.Location = new System.Drawing.Point(1083, 311);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(98, 46);
+            this.btnUpdate.Size = new System.Drawing.Size(131, 57);
             this.btnUpdate.TabIndex = 66;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
@@ -359,8 +359,8 @@
             // radLabel10
             // 
             this.radLabel10.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.radLabel10.Location = new System.Drawing.Point(11, 230);
-            this.radLabel10.Margin = new System.Windows.Forms.Padding(2);
+            this.radLabel10.Location = new System.Drawing.Point(15, 283);
+            this.radLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radLabel10.Name = "radLabel10";
             this.radLabel10.Size = new System.Drawing.Size(66, 30);
             this.radLabel10.TabIndex = 69;
@@ -371,20 +371,20 @@
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearch.Location = new System.Drawing.Point(209, 264);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Location = new System.Drawing.Point(279, 325);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(51, 34);
+            this.btnSearch.Size = new System.Drawing.Size(68, 42);
             this.btnSearch.TabIndex = 64;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 16.25F);
-            this.txtSearch.Location = new System.Drawing.Point(9, 264);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Location = new System.Drawing.Point(12, 325);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(196, 34);
+            this.txtSearch.Size = new System.Drawing.Size(261, 42);
             this.txtSearch.TabIndex = 63;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -392,10 +392,10 @@
             // 
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
-            this.btnClear.Location = new System.Drawing.Point(695, 253);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Location = new System.Drawing.Point(926, 311);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(113, 46);
+            this.btnClear.Size = new System.Drawing.Size(151, 56);
             this.btnClear.TabIndex = 68;
             this.btnClear.Text = "Fshij";
             this.btnClear.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
@@ -405,10 +405,10 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(812, 201);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Location = new System.Drawing.Point(1083, 247);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(98, 46);
+            this.btnDelete.Size = new System.Drawing.Size(131, 57);
             this.btnDelete.TabIndex = 67;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
@@ -417,9 +417,9 @@
             // 
             // Employee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 611);
+            this.ClientSize = new System.Drawing.Size(1225, 752);
             this.Controls.Add(this.dgwEmployees);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnUpdate);
@@ -446,7 +446,10 @@
             this.Controls.Add(this.txtcity);
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.txtID);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Employee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee";
             this.Load += new System.EventHandler(this.Employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();

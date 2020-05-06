@@ -177,16 +177,19 @@
             // cmbcategory
             // 
             resources.ApplyResources(this.cmbcategory, "cmbcategory");
+            this.cmbcategory.ItemHeight = 40;
             this.cmbcategory.Name = "cmbcategory";
             // 
             // cmbtype
             // 
             resources.ApplyResources(this.cmbtype, "cmbtype");
+            this.cmbtype.ItemHeight = 40;
             this.cmbtype.Name = "cmbtype";
             // 
             // cmbunit
             // 
             resources.ApplyResources(this.cmbunit, "cmbunit");
+            this.cmbunit.ItemHeight = 40;
             this.cmbunit.Name = "cmbunit";
             // 
             // txtbarcode
@@ -197,6 +200,7 @@
             // cmbActive
             // 
             resources.ApplyResources(this.cmbActive, "cmbActive");
+            this.cmbActive.ItemHeight = 40;
             radListDataItem1.Text = "True";
             radListDataItem2.Text = "False";
             this.cmbActive.Items.Add(radListDataItem1);
@@ -211,6 +215,7 @@
             // cmdSupplier
             // 
             resources.ApplyResources(this.cmdSupplier, "cmdSupplier");
+            this.cmdSupplier.ItemHeight = 40;
             this.cmdSupplier.Name = "cmdSupplier";
             // 
             // btnSearch

@@ -19,12 +19,14 @@ namespace PTi1MenaxhimiDepos.Invoices
         public ListInvoiceBodies()
         {
             InitializeComponent();
+            this.cmbItem.DropDownListElement.DropDownWidth = 380;
         }
         private readonly int _invertoryHeaderID;
         public ListInvoiceBodies(int invertoryHeaderID)
         {
             InitializeComponent();
             this._invertoryHeaderID = invertoryHeaderID;
+            this.cmbItem.DropDownListElement.DropDownWidth = 380;
         }
         private void ListInvoiceBodies_Load(object sender, EventArgs e)
         {

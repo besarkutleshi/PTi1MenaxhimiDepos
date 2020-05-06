@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using PTi1MenaxhimiDepos.DAL;
 using System.Data;
 using System.Windows.Forms;
+using PTi1MenaxhimiDepos.BO.Employees;
+
 namespace PTi1MenaxhimiDepos.BL
 {
     public class CollaborationBLL
@@ -14,6 +16,7 @@ namespace PTi1MenaxhimiDepos.BL
         private readonly static SupplierRepository _supplierRep = new SupplierRepository();
         private readonly static ClientsRepository _clientsRep = new ClientsRepository();
         private readonly static EmployeeRepostiory _empRep = new EmployeeRepostiory();
+        private readonly static EmployeePosRepository _empPos = new EmployeePosRepository();
 
         #region Supplier
         public static bool InsertSupplier(Supplier supplier)
@@ -69,15 +72,15 @@ namespace PTi1MenaxhimiDepos.BL
         {
             return _empRep.Update(id, obj);
         }
-        public static List<BO.Employee> GetEmployees() => _empRep.ReadAll(); // qikjo qishtu osht e njejta si me bo qit metoden ma nalt veq ma shkrut
+        public static List<BO.Employee> GetEmployees() => _empRep.ReadAll();
 
-        public static BO.Employee GetEmployee(int id) //qe ket by id
+        public static BO.Employee GetEmployee(int id)
         {
             return _empRep.ReadById(id);
         }
-        public static BO.Employee GetEmployee(string name) => _empRep.ReadByName(name); // get by name
+        public static BO.Employee GetEmployee(string name) => _empRep.ReadByName(name);
 
-        public static DataTable ReturnTableEmployees(List<Employee> employees) // qikjo mdoket svyn sen 
+        public static DataTable ReturnTableEmployees(List<Employee> employees)
         {
             try
             {
@@ -130,6 +133,12 @@ namespace PTi1MenaxhimiDepos.BL
             }
         }
 
+        public static bool InsertEmployeePos(EmployeePOS obj) => _empPos.Add(obj);
+        public static bool DeleteEmpPos(int id) => _empPos.Delete(id);
+        public static bool UpdateEmpPos(int id, EmployeePOS obj) => _empPos.Update(id, obj);
+        public static List<EmployeePOS> GetEmployeePos() => _empPos.ReadAll();
+        public static EmployeePOS GetEmployeePos(int id) => _empPos.ReadById(id);
+        public static EmployeePOS GetEmployeePos(string name) => _empPos.ReadByName(name);
         #endregion
 
     }

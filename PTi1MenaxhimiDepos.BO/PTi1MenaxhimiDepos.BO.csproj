@@ -47,6 +47,7 @@
     <Compile Include="AuditionAtributtes.cs" />
     <Compile Include="Clients\Client.cs" />
     <Compile Include="Employees\Employee.cs" />
+    <Compile Include="Employees\EmployeePOS.cs" />
     <Compile Include="Employees\Role.cs" />
     <Compile Include="Interfaces\IBase.cs" />
     <Compile Include="Interfaces\ICrud.cs" />

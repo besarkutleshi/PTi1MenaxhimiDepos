@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.txtID = new Telerik.WinControls.UI.RadTextBox();
             this.lblid = new System.Windows.Forms.Label();
             this.txtInvoiceNumber = new Telerik.WinControls.UI.RadTextBox();
@@ -142,6 +142,7 @@
             // cmbInoviceType
             // 
             this.cmbInoviceType.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cmbInoviceType.ItemHeight = 40;
             this.cmbInoviceType.Location = new System.Drawing.Point(817, 31);
             this.cmbInoviceType.Name = "cmbInoviceType";
             this.cmbInoviceType.Size = new System.Drawing.Size(235, 37);
@@ -171,6 +172,7 @@
             // cmbSupplier
             // 
             this.cmbSupplier.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cmbSupplier.ItemHeight = 40;
             this.cmbSupplier.Location = new System.Drawing.Point(1072, 31);
             this.cmbSupplier.Name = "cmbSupplier";
             this.cmbSupplier.Size = new System.Drawing.Size(235, 37);
@@ -244,6 +246,7 @@
             // cmbItem
             // 
             this.cmbItem.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cmbItem.ItemHeight = 40;
             this.cmbItem.Location = new System.Drawing.Point(283, 124);
             this.cmbItem.Name = "cmbItem";
             this.cmbItem.Size = new System.Drawing.Size(248, 37);
@@ -310,34 +313,34 @@
             this.dgwBodies.MasterTemplate.AllowAddNewRow = false;
             this.dgwBodies.MasterTemplate.AllowEditRow = false;
             this.dgwBodies.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn6.FieldName = "HeaderID";
-            gridViewTextBoxColumn6.HeaderText = "Header Id";
-            gridViewTextBoxColumn6.Name = "Header ID";
-            gridViewTextBoxColumn6.Width = 257;
-            gridViewTextBoxColumn7.FieldName = "Item.Name";
-            gridViewTextBoxColumn7.HeaderText = "Item";
-            gridViewTextBoxColumn7.Name = "Item Name";
-            gridViewTextBoxColumn7.UseDataTypeConverterWhenSorting = true;
-            gridViewTextBoxColumn7.Width = 257;
-            gridViewTextBoxColumn8.FieldName = "Quantity";
-            gridViewTextBoxColumn8.HeaderText = "Quantity";
-            gridViewTextBoxColumn8.Name = "Quantity";
-            gridViewTextBoxColumn8.Width = 257;
-            gridViewTextBoxColumn9.FieldName = "Price";
-            gridViewTextBoxColumn9.HeaderText = "Price";
-            gridViewTextBoxColumn9.Name = "Price";
-            gridViewTextBoxColumn9.Width = 257;
-            gridViewTextBoxColumn10.FieldName = "Discount";
-            gridViewTextBoxColumn10.HeaderText = "Discount";
-            gridViewTextBoxColumn10.Name = "Discount";
-            gridViewTextBoxColumn10.Width = 256;
+            gridViewTextBoxColumn1.FieldName = "HeaderID";
+            gridViewTextBoxColumn1.HeaderText = "Header Id";
+            gridViewTextBoxColumn1.Name = "Header ID";
+            gridViewTextBoxColumn1.Width = 257;
+            gridViewTextBoxColumn2.FieldName = "Item.Name";
+            gridViewTextBoxColumn2.HeaderText = "Item";
+            gridViewTextBoxColumn2.Name = "Item Name";
+            gridViewTextBoxColumn2.UseDataTypeConverterWhenSorting = true;
+            gridViewTextBoxColumn2.Width = 257;
+            gridViewTextBoxColumn3.FieldName = "Quantity";
+            gridViewTextBoxColumn3.HeaderText = "Quantity";
+            gridViewTextBoxColumn3.Name = "Quantity";
+            gridViewTextBoxColumn3.Width = 257;
+            gridViewTextBoxColumn4.FieldName = "Price";
+            gridViewTextBoxColumn4.HeaderText = "Price";
+            gridViewTextBoxColumn4.Name = "Price";
+            gridViewTextBoxColumn4.Width = 257;
+            gridViewTextBoxColumn5.FieldName = "Discount";
+            gridViewTextBoxColumn5.HeaderText = "Discount";
+            gridViewTextBoxColumn5.Name = "Discount";
+            gridViewTextBoxColumn5.Width = 256;
             this.dgwBodies.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10});
-            this.dgwBodies.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5});
+            this.dgwBodies.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgwBodies.Name = "dgwBodies";
             this.dgwBodies.Size = new System.Drawing.Size(1301, 393);
             this.dgwBodies.TabIndex = 13;
@@ -399,6 +402,7 @@
             // cmbPos
             // 
             this.cmbPos.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cmbPos.ItemHeight = 40;
             this.cmbPos.Location = new System.Drawing.Point(12, 124);
             this.cmbPos.Name = "cmbPos";
             this.cmbPos.Size = new System.Drawing.Size(248, 37);

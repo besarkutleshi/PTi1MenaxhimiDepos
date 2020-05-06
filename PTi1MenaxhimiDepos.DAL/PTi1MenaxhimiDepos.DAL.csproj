@@ -56,6 +56,7 @@
     <Compile Include="AccountRepository.cs" />
     <Compile Include="ClientsRepository.cs" />
     <Compile Include="DocTypeRepository.cs" />
+    <Compile Include="EmployeePosRepository.cs" />
     <Compile Include="EmployeeRepository.cs" />
     <Compile Include="DataConnection.cs" />
     <Compile Include="HelperClass.cs" />
