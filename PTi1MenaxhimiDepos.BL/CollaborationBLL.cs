@@ -51,7 +51,11 @@ namespace PTi1MenaxhimiDepos.BL
         #endregion
 
         #region Client
-        public static bool InsertClient(BO.Client obj) => _clientsRep.Add(obj);
+        public static bool InsertClient(BO.Client obj)
+        {
+            return _clientsRep.Add(obj);
+        }
+        //public static bool InsertClient(BO.Client obj) => _clientsRep.Add(obj);
         public static bool DeleteClient(int id) => _clientsRep.Delete(id);
         public static bool UpdateClient(int id, BO.Client obj) => _clientsRep.Update(id, obj);
         public static BO.Client GetClient(int id) => _clientsRep.ReadById(id);
@@ -60,7 +64,7 @@ namespace PTi1MenaxhimiDepos.BL
         #endregion
 
         #region Employee
-        public static bool InsertEmployee(BO.Employee obj) // qe qitu jon bo metodat qe e thirrin .DAL EmployeeRepository 
+        public static bool InsertEmployee(BO.Employee obj)
         {
             return _empRep.Add(obj); 
         }

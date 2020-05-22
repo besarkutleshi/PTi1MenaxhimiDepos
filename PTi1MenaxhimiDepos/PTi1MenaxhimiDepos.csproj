@@ -165,25 +165,64 @@
     <Compile Include="Sale\Sale.Designer.cs">
       <DependentUpon>Sale.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administration\Role.en.resx">
+      <DependentUpon>Role.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\Role.resx">
       <DependentUpon>Role.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Role.sq.resx">
+      <DependentUpon>Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\User.en.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\User.sq.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Collab\Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Collab\Employee.en.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Collab\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\Employee.sq.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\EmployeePOS.en.resx">
+      <DependentUpon>EmployeePOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Collab\EmployeePOS.resx">
       <DependentUpon>EmployeePOS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Collab\EmployeePOS.sq.resx">
+      <DependentUpon>EmployeePOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\Supplier.aa.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\Supplier.en.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Collab\Supplier.resx">
       <DependentUpon>Supplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Collab\Supplier.sq.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\Invoice.en.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\Invoice.sq.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\ListInvoice.resx">
@@ -192,22 +231,67 @@
     <EmbeddedResource Include="Invoices\ListInvoiceBodies.resx">
       <DependentUpon>ListInvoiceBodies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Items\ItemCategory.en.resx">
+      <DependentUpon>ItemCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Items\ItemCategory.resx">
       <DependentUpon>ItemCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\ItemCategory.sq.resx">
+      <DependentUpon>ItemCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\ItemType.aa.resx">
+      <DependentUpon>ItemType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\ItemType.en.resx">
+      <DependentUpon>ItemType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Items\ItemType.resx">
       <DependentUpon>ItemType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Items\ItemType.sq.resx">
+      <DependentUpon>ItemType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\ItemUnit.en.resx">
+      <DependentUpon>ItemUnit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Items\ItemUnit.resx">
       <DependentUpon>ItemUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\ItemUnit.sq.resx">
+      <DependentUpon>ItemUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\RegisterItem.en.resx">
+      <DependentUpon>RegisterItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\RegisterItem.sq.resx">
+      <DependentUpon>RegisterItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.en.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.sq.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.en.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main.sq.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS\POS.en.resx">
+      <DependentUpon>POS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="POS\POS.resx">
+      <DependentUpon>POS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS\POS.sq.resx">
       <DependentUpon>POS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -227,10 +311,22 @@
     <EmbeddedResource Include="Items\RegisterItem.resx">
       <DependentUpon>RegisterItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Payment.en.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sale\Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Payment.sq.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Sale.en.resx">
+      <DependentUpon>Sale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sale\Sale.resx">
+      <DependentUpon>Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Sale.sq.resx">
       <DependentUpon>Sale.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

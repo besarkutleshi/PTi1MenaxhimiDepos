@@ -347,6 +347,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListInvoice";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListInvoice_FormClosing);
             this.Load += new System.EventHandler(this.ListInvoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmbSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbInoviceType)).EndInit();

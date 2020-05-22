@@ -136,5 +136,22 @@ namespace PTi1MenaxhimiDepos.Administration
             txtDescription.Text = obj.Description;
             HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
         }
+
+        private void User_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure ?", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

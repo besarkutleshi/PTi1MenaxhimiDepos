@@ -63,14 +63,14 @@
             this.cmbActive = new Telerik.WinControls.UI.RadDropDownList();
             this.radDropDownList5 = new Telerik.WinControls.UI.RadDropDownList();
             this.cmdSupplier = new Telerik.WinControls.UI.RadDropDownList();
+            this.txtid = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
+            this.dgwItems = new Telerik.WinControls.UI.RadGridView();
             this.btnSearch = new Telerik.WinControls.UI.RadButton();
             this.btnUpdate = new Telerik.WinControls.UI.RadButton();
             this.btnSave = new Telerik.WinControls.UI.RadButton();
             this.btnDelete = new Telerik.WinControls.UI.RadButton();
             this.btnClear = new Telerik.WinControls.UI.RadButton();
-            this.txtid = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
-            this.dgwItems = new Telerik.WinControls.UI.RadGridView();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtname)).BeginInit();
@@ -92,15 +92,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbActive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDropDownList5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwItems.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwItems)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwItems.MasterTemplate)).BeginInit();
             this.SuspendLayout();
             // 
             // radLabel10
@@ -163,6 +163,7 @@
             // 
             resources.ApplyResources(this.txtstock, "txtstock");
             this.txtstock.Name = "txtstock";
+            this.txtstock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // radLabel6
             // 
@@ -202,7 +203,9 @@
             resources.ApplyResources(this.cmbActive, "cmbActive");
             this.cmbActive.ItemHeight = 40;
             radListDataItem1.Text = "True";
+            resources.ApplyResources(radListDataItem1, "radListDataItem1");
             radListDataItem2.Text = "False";
+            resources.ApplyResources(radListDataItem2, "radListDataItem2");
             this.cmbActive.Items.Add(radListDataItem1);
             this.cmbActive.Items.Add(radListDataItem2);
             this.cmbActive.Name = "cmbActive";
@@ -217,6 +220,81 @@
             resources.ApplyResources(this.cmdSupplier, "cmdSupplier");
             this.cmdSupplier.ItemHeight = 40;
             this.cmdSupplier.Name = "cmdSupplier";
+            // 
+            // txtid
+            // 
+            resources.ApplyResources(this.txtid, "txtid");
+            this.txtid.Name = "txtid";
+            // 
+            // radLabel11
+            // 
+            resources.ApplyResources(this.radLabel11, "radLabel11");
+            this.radLabel11.Name = "radLabel11";
+            // 
+            // dgwItems
+            // 
+            resources.ApplyResources(this.dgwItems, "dgwItems");
+            // 
+            // 
+            // 
+            this.dgwItems.MasterTemplate.AllowAddNewRow = false;
+            this.dgwItems.MasterTemplate.AllowEditRow = false;
+            this.dgwItems.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.dgwItems.MasterTemplate.Caption = resources.GetString("dgwItems.MasterTemplate.Caption");
+            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
+            gridViewTextBoxColumn1.FieldName = "ID";
+            gridViewTextBoxColumn1.Name = "ID";
+            gridViewTextBoxColumn1.Width = 143;
+            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
+            gridViewTextBoxColumn2.FieldName = "Barcode";
+            gridViewTextBoxColumn2.Name = "Barcode";
+            gridViewTextBoxColumn2.Width = 143;
+            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
+            gridViewTextBoxColumn3.FieldName = "Name";
+            gridViewTextBoxColumn3.Name = "Name";
+            gridViewTextBoxColumn3.Width = 143;
+            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
+            gridViewTextBoxColumn4.FieldName = "Unit.Name";
+            gridViewTextBoxColumn4.Name = "Unit";
+            gridViewTextBoxColumn4.Width = 143;
+            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
+            gridViewTextBoxColumn5.FieldName = "Category.Name";
+            gridViewTextBoxColumn5.Name = "Category";
+            gridViewTextBoxColumn5.Width = 143;
+            resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
+            gridViewTextBoxColumn6.FieldName = "Type.Name";
+            gridViewTextBoxColumn6.Name = "Type";
+            gridViewTextBoxColumn6.Width = 143;
+            resources.ApplyResources(gridViewTextBoxColumn7, "gridViewTextBoxColumn7");
+            gridViewTextBoxColumn7.FieldName = "Supplier.Name";
+            gridViewTextBoxColumn7.Name = "Supplier";
+            gridViewTextBoxColumn7.Width = 143;
+            resources.ApplyResources(gridViewTextBoxColumn8, "gridViewTextBoxColumn8");
+            gridViewTextBoxColumn8.FieldName = "Active";
+            gridViewTextBoxColumn8.Name = "Active";
+            gridViewTextBoxColumn8.Width = 143;
+            resources.ApplyResources(gridViewTextBoxColumn9, "gridViewTextBoxColumn9");
+            gridViewTextBoxColumn9.FieldName = "StockQuantity";
+            gridViewTextBoxColumn9.Name = "Stock Quantity";
+            gridViewTextBoxColumn9.Width = 143;
+            resources.ApplyResources(gridViewTextBoxColumn10, "gridViewTextBoxColumn10");
+            gridViewTextBoxColumn10.FieldName = "Description";
+            gridViewTextBoxColumn10.Name = "Description";
+            gridViewTextBoxColumn10.Width = 146;
+            this.dgwItems.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10});
+            this.dgwItems.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgwItems.Name = "dgwItems";
+            this.dgwItems.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwItems_CellDoubleClick);
             // 
             // btnSearch
             // 
@@ -252,80 +330,6 @@
             this.btnClear.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Actions_edit_clear_icon1;
             this.btnClear.Name = "btnClear";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // txtid
-            // 
-            resources.ApplyResources(this.txtid, "txtid");
-            this.txtid.Name = "txtid";
-            // 
-            // radLabel11
-            // 
-            resources.ApplyResources(this.radLabel11, "radLabel11");
-            this.radLabel11.Name = "radLabel11";
-            // 
-            // dgwItems
-            // 
-            resources.ApplyResources(this.dgwItems, "dgwItems");
-            // 
-            // 
-            // 
-            this.dgwItems.MasterTemplate.AllowAddNewRow = false;
-            this.dgwItems.MasterTemplate.AllowEditRow = false;
-            this.dgwItems.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn1.FieldName = "ID";
-            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
-            gridViewTextBoxColumn1.Name = "ID";
-            gridViewTextBoxColumn1.Width = 144;
-            gridViewTextBoxColumn2.FieldName = "Barcode";
-            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
-            gridViewTextBoxColumn2.Name = "Barcode";
-            gridViewTextBoxColumn2.Width = 144;
-            gridViewTextBoxColumn3.FieldName = "Name";
-            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
-            gridViewTextBoxColumn3.Name = "Name";
-            gridViewTextBoxColumn3.Width = 144;
-            gridViewTextBoxColumn4.FieldName = "Unit.Name";
-            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
-            gridViewTextBoxColumn4.Name = "Unit";
-            gridViewTextBoxColumn4.Width = 144;
-            gridViewTextBoxColumn5.FieldName = "Category.Name";
-            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
-            gridViewTextBoxColumn5.Name = "Category";
-            gridViewTextBoxColumn5.Width = 144;
-            gridViewTextBoxColumn6.FieldName = "Type.Name";
-            resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
-            gridViewTextBoxColumn6.Name = "Type";
-            gridViewTextBoxColumn6.Width = 144;
-            gridViewTextBoxColumn7.FieldName = "Supplier.Name";
-            resources.ApplyResources(gridViewTextBoxColumn7, "gridViewTextBoxColumn7");
-            gridViewTextBoxColumn7.Name = "Supplier";
-            gridViewTextBoxColumn7.Width = 144;
-            gridViewTextBoxColumn8.FieldName = "Active";
-            resources.ApplyResources(gridViewTextBoxColumn8, "gridViewTextBoxColumn8");
-            gridViewTextBoxColumn8.Name = "Active";
-            gridViewTextBoxColumn8.Width = 144;
-            gridViewTextBoxColumn9.FieldName = "StockQuantity";
-            resources.ApplyResources(gridViewTextBoxColumn9, "gridViewTextBoxColumn9");
-            gridViewTextBoxColumn9.Name = "Stock Quantity";
-            gridViewTextBoxColumn9.Width = 144;
-            gridViewTextBoxColumn10.FieldName = "Description";
-            resources.ApplyResources(gridViewTextBoxColumn10, "gridViewTextBoxColumn10");
-            gridViewTextBoxColumn10.Name = "Description";
-            gridViewTextBoxColumn10.Width = 147;
-            this.dgwItems.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10});
-            this.dgwItems.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.dgwItems.Name = "dgwItems";
-            this.dgwItems.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwItems_CellDoubleClick);
             // 
             // RegisterItem
             // 
@@ -365,6 +369,7 @@
             this.MinimizeBox = false;
             this.Name = "RegisterItem";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterItem_FormClosing);
             this.Load += new System.EventHandler(this.RegisterItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
@@ -387,15 +392,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbActive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDropDownList5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwItems.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwItems.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

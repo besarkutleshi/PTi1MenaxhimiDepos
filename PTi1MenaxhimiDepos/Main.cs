@@ -3,6 +3,8 @@ using PTi1MenaxhimiDepos.Collab;
 using PTi1MenaxhimiDepos.Controls;
 using System;
 using System.Drawing;
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
@@ -156,6 +158,38 @@ namespace PTi1MenaxhimiDepos
             obj.TableElement.SearchHighlightColor = Color.LightBlue;
             control.PrintGrid(tabPage, obj, new Point(7, 110), new Size(1490, 480));
             tabControl1.SelectedTab = tabPage;
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure ?", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tlenglish_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage("en-US");
+        }
+
+        private void ChangeLanguage(string lang)
+        {
+            CultureInfo ci = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+            this.Controls.Clear();
+            this.InitializeComponent();
+        }
+
+        private void tlalbania_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage("sq");
         }
     }
 }

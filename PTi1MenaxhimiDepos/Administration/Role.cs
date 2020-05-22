@@ -133,5 +133,17 @@ namespace PTi1MenaxhimiDepos.Administration
             dgwRoles.DataSource = AdministrationBLL.GetRoles();
             txtname.Focus();
         }
+
+        private void Role_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure ?", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

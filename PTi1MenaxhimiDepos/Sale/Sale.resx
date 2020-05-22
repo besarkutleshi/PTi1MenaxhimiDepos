@@ -117,4 +117,802 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;radButton8.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radButton9.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;txtPayment.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="radButton2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;radButton9.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cmbPOS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 90</value>
+  </data>
+  <data name="txtsearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 57</value>
+  </data>
+  <data name="&gt;&gt;radButton2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="btnInsert.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtquantity.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radButton6.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtsearch.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="radButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 9</value>
+  </data>
+  <data name="&gt;&gt;dgwItems.Name" xml:space="preserve">
+    <value>dgwItems</value>
+  </data>
+  <data name="&gt;&gt;radButton3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnInsert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>995, 21</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radButton10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>827, 21</value>
+  </data>
+  <data name="cmbPOS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>381, 33</value>
+  </data>
+  <data name="&gt;&gt;txtsearch.Name" xml:space="preserve">
+    <value>txtsearch</value>
+  </data>
+  <data name="&gt;&gt;txtlirimi.Name" xml:space="preserve">
+    <value>txtlirimi</value>
+  </data>
+  <data name="&gt;&gt;cmbClients.Name" xml:space="preserve">
+    <value>cmbClients</value>
+  </data>
+  <data name="&gt;&gt;radButton1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="radButton6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1095, 9</value>
+  </data>
+  <data name="dgwitemtolist.MasterTemplate.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cmbClients.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;BtnSave.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="radButton7.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1335, 133</value>
+  </data>
+  <data name="btnInsert.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dgwitemtolist.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radButton10.Text" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="BtnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>701, 45</value>
+  </data>
+  <data name="txtdiscount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>827, 57</value>
+  </data>
+  <data name="radButton5.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;radButton1.Name" xml:space="preserve">
+    <value>radButton1</value>
+  </data>
+  <data name="txtdiscount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 21.25pt</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtquantity.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 30</value>
+  </data>
+  <data name="radButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 10</value>
+  </data>
+  <data name="radButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 30</value>
+  </data>
+  <data name="&gt;&gt;radButton10.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtPayment.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;dgwItems.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtPayment.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 34</value>
+  </data>
+  <data name="&gt;&gt;txtkusuri.Name" xml:space="preserve">
+    <value>txtkusuri</value>
+  </data>
+  <data name="&gt;&gt;txtkusuri.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="radButton10.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="BtnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;txtkusuri.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtvlera.Name" xml:space="preserve">
+    <value>txtvlera</value>
+  </data>
+  <data name="&gt;&gt;dgwitemtolist.Name" xml:space="preserve">
+    <value>dgwitemtolist</value>
+  </data>
+  <data name="radButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="txtsearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 21.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txttotali.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;txtvlera.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="txtDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;radButton9.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txttotali.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbPOS.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="txtkusuri.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 75</value>
+  </data>
+  <data name="radButton10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="cmbClients.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="btnInsert.Text" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="btnDelete.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="radButton3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="txtPayment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 33</value>
+  </data>
+  <data name="txtlirimi.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;radButton5.Name" xml:space="preserve">
+    <value>radButton5</value>
+  </data>
+  <data name="txtsearch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgwItems.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 13.25pt</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="radButton3.Text" xml:space="preserve">
+    <value>Value/Paid</value>
+  </data>
+  <data name="radButton8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 30</value>
+  </data>
+  <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 48</value>
+  </data>
+  <data name="txtquantity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="dgwitemtolist.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 13.25pt</value>
+  </data>
+  <data name="txttotali.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 177</value>
+  </data>
+  <data name="txtkusuri.Text" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;txtkusuri.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;radButton7.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="dgwitemtolist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>701, 326</value>
+  </data>
+  <data name="radButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="dgwitemtolist.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>618, 10</value>
+  </data>
+  <data name="&gt;&gt;txttotali.Name" xml:space="preserve">
+    <value>txttotali</value>
+  </data>
+  <data name="dgwItems.MasterTemplate.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;radButton6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radButton1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Sale</value>
+  </data>
+  <data name="cmbPOS.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtprice.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtPayment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtdiscount.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="&gt;&gt;radButton5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnInsert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 90</value>
+  </data>
+  <data name="radButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 30</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cmbPOS.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="radButton5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>861, 10</value>
+  </data>
+  <data name="radButton8.Text" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="&gt;&gt;radButton1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cmbPOS.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>699, 845</value>
+  </data>
+  <data name="txtvlera.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;cmbClients.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radButton6.Text" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;cmbPOS.Name" xml:space="preserve">
+    <value>cmbPOS</value>
+  </data>
+  <data name="txtlirimi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1095, 48</value>
+  </data>
+  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="radButton7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 21</value>
+  </data>
+  <data name="&gt;&gt;radButton9.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txtkusuri.Location" type="System.Drawing.Point, System.Drawing">
+    <value>861, 49</value>
+  </data>
+  <data name="dgwItems.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BtnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 83</value>
+  </data>
+  <data name="&gt;&gt;radButton5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radButton8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>498, 21</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtprice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>666, 57</value>
+  </data>
+  <data name="radButton2.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>693, 200</value>
+  </data>
+  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="txtdiscount.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;radButton7.Name" xml:space="preserve">
+    <value>radButton7</value>
+  </data>
+  <data name="&gt;&gt;txtDescription.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;radButton10.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txttotali.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Sale</value>
+  </data>
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="&gt;&gt;radButton3.Name" xml:space="preserve">
+    <value>radButton3</value>
+  </data>
+  <data name="&gt;&gt;txtPayment.Name" xml:space="preserve">
+    <value>txtPayment</value>
+  </data>
+  <data name="txtvlera.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.25pt</value>
+  </data>
+  <data name="radButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 30</value>
+  </data>
+  <data name="radButton9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>666, 21</value>
+  </data>
+  <data name="&gt;&gt;radButton10.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="radButton9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtprice.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtDescription.Name" xml:space="preserve">
+    <value>txtDescription</value>
+  </data>
+  <data name="dgwItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>674, 933</value>
+  </data>
+  <data name="&gt;&gt;txtsearch.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radButton8.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="&gt;&gt;radButton3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radButton8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="radButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 30</value>
+  </data>
+  <data name="cmbClients.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.25pt</value>
+  </data>
+  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;radButton5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtlirimi.Text" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="txtlirimi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 75</value>
+  </data>
+  <data name="&gt;&gt;radButton3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="radButton10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="radButton6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;cmbPOS.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;radButton2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;radButton7.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radButton9.Name" xml:space="preserve">
+    <value>radButton9</value>
+  </data>
+  <data name="cmbClients.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 48</value>
+  </data>
+  <data name="txtprice.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 21.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtlirimi.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="groupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="radButton7.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;txtvlera.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtPayment.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txtPayment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>618, 88</value>
+  </data>
+  <data name="&gt;&gt;txttotali.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BtnSave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;radButton8.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 75</value>
+  </data>
+  <data name="txtvlera.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 33</value>
+  </data>
+  <data name="&gt;&gt;txtdiscount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;radButton2.Name" xml:space="preserve">
+    <value>radButton2</value>
+  </data>
+  <data name="&gt;&gt;radButton7.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txtquantity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 21.25pt</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="dgwitemtolist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1333, 512</value>
+  </data>
+  <data name="txtvlera.Location" type="System.Drawing.Point, System.Drawing">
+    <value>618, 50</value>
+  </data>
+  <data name="&gt;&gt;dgwitemtolist.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radButton1.Text" xml:space="preserve">
+    <value>Costumer/POS</value>
+  </data>
+  <data name="&gt;&gt;txtDescription.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radButton6.Name" xml:space="preserve">
+    <value>radButton6</value>
+  </data>
+  <data name="&gt;&gt;txtquantity.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txttotali.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 85.25pt</value>
+  </data>
+  <data name="&gt;&gt;txttotali.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtvlera.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radButton10.Name" xml:space="preserve">
+    <value>radButton10</value>
+  </data>
+  <data name="&gt;&gt;txtprice.Name" xml:space="preserve">
+    <value>txtprice</value>
+  </data>
+  <data name="&gt;&gt;BtnSave.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="&gt;&gt;txtlirimi.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txttotali.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtprice.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtlirimi.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="radButton9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 30</value>
+  </data>
+  <data name="&gt;&gt;dgwItems.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtquantity.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtdiscount.Name" xml:space="preserve">
+    <value>txtdiscount</value>
+  </data>
+  <data name="&gt;&gt;dgwItems.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radButton5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 5</value>
+  </data>
+  <data name="txtDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 31.25pt</value>
+  </data>
+  <data name="txtlirimi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 31.25pt</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1917, 1055</value>
+  </data>
+  <data name="btnDelete.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;cmbClients.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="txttotali.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="radButton8.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="txtkusuri.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 31.25pt</value>
+  </data>
+  <data name="radButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 30</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1332, 119</value>
+  </data>
+  <data name="&gt;&gt;BtnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtprice.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="dgwItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 45</value>
+  </data>
+  <data name="&gt;&gt;dgwitemtolist.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radButton2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="txtsearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 53</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radButton9.Text" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="txtkusuri.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="txttotali.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1557, 15</value>
+  </data>
+  <data name="txtquantity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>498, 57</value>
+  </data>
+  <data name="&gt;&gt;radButton8.Name" xml:space="preserve">
+    <value>radButton8</value>
+  </data>
+  <data name="&gt;&gt;radButton6.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;BtnSave.Name" xml:space="preserve">
+    <value>BtnSave</value>
+  </data>
+  <data name="&gt;&gt;txtsearch.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="radButton1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="txttotali.Text" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="radButton6.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="cmbClients.Size" type="System.Drawing.Size, System.Drawing">
+    <value>381, 33</value>
+  </data>
+  <data name="&gt;&gt;txtquantity.Name" xml:space="preserve">
+    <value>txtquantity</value>
+  </data>
+  <data name="radButton5.Text" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="radButton7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="BtnSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="txtdiscount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 53</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.Name" xml:space="preserve">
+    <value>btnInsert</value>
+  </data>
+  <data name="txtprice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 53</value>
+  </data>
+  <data name="&gt;&gt;txtdiscount.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="radButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
 </root>

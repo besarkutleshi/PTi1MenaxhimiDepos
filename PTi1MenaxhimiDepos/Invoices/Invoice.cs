@@ -180,5 +180,17 @@ namespace PTi1MenaxhimiDepos.Invoices
             }
             //txtSearch.Text = "";
         }
+
+        private void Invoice_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure ?", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

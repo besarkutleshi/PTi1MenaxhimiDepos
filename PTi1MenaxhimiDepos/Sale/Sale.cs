@@ -187,5 +187,17 @@ namespace PTi1MenaxhimiDepos.Sale
         {
             dgwItems.DataSource = ItemBLL.GetItems();
         }
+
+        private void Sale_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure ?", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

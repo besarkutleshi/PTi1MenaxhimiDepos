@@ -118,53 +118,499 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        rkJggg==
-</value>
+  <data name="radLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtstreet.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.Name" xml:space="preserve">
+    <value>radLabel3</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblPhone.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="radLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="radLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 94</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radLabel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="txtcity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;txtCountry.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 30</value>
+  </data>
+  <data name="lblPhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 30</value>
+  </data>
+  <data name="&gt;&gt;txtID.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="lblPhone.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="btnClear.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtemail.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="radLabel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 37</value>
+  </data>
+  <data name="txtID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 56</value>
+  </data>
+  <data name="txtsurname.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 30</value>
+  </data>
+  <data name="&gt;&gt;txtemail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 30</value>
+  </data>
+  <data name="radLabel10.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="txtSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;radLabel6.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel10.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtcity.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;radLabel5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="&gt;&gt;radLabel4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtemail.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="txtsurname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 37</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+  <data name="lblPhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 94</value>
+  </data>
+  <data name="txtstreet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 37</value>
+  </data>
+  <data name="txtCountry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 37</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 57</value>
+  </data>
+  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 50</value>
+  </data>
+  <data name="radLabel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 30</value>
+  </data>
+  <data name="radLabel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 283</value>
+  </data>
+  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtname.Name" xml:space="preserve">
+    <value>txtname</value>
+  </data>
+  <data name="&gt;&gt;txtemail.Name" xml:space="preserve">
+    <value>txtemail</value>
+  </data>
+  <data name="dgwEmployees.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 13.25pt</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.Name" xml:space="preserve">
+    <value>radLabel2</value>
+  </data>
+  <data name="radLabel11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radLabel2.Text" xml:space="preserve">
+    <value>Citys</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="txtemail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="radLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 192</value>
+  </data>
+  <data name="txtPhone.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;txtPhone.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16.25pt</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="radLabel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 30</value>
+  </data>
+  <data name="&gt;&gt;txtPhone.Name" xml:space="preserve">
+    <value>txtPhone</value>
+  </data>
+  <data name="radLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="btnDelete.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="btnSave.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1083, 247</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="txtname.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="radLabel1.Text" xml:space="preserve">
+    <value>Countrys</value>
+  </data>
+  <data name="txtemail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="btnSearch.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;radLabel6.Name" xml:space="preserve">
+    <value>radLabel6</value>
+  </data>
+  <data name="&gt;&gt;radLabel6.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtPostalCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 234</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;radLabel5.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txtCountry.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="radLabel10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblName.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;txtsurname.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="&gt;&gt;txtsurname.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="txtsurname.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="txtname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 37</value>
+  </data>
+  <data name="radLabel4.Text" xml:space="preserve">
+    <value>Emails</value>
+  </data>
+  <data name="lblName.Text" xml:space="preserve">
+    <value>Names</value>
+  </data>
+  <data name="txtPostalCode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="txtcity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 135</value>
+  </data>
+  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 325</value>
+  </data>
+  <data name="txtstreet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 135</value>
+  </data>
+  <data name="&gt;&gt;radLabel6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1225, 752</value>
+  </data>
+  <data name="txtcity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 37</value>
+  </data>
+  <data name="radLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>864, 9</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 43</value>
+  </data>
+  <data name="dgwEmployees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 373</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.Name" xml:space="preserve">
+    <value>radLabel11</value>
+  </data>
+  <data name="&gt;&gt;txtname.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="dgwEmployees.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1203, 370</value>
+  </data>
+  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="txtsurname.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;txtname.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPostalCode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="dgwEmployees.MasterTemplate.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="btnUpdate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;dgwEmployees.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radLabel10.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;dgwEmployees.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtcity.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtPhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 135</value>
+  </data>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 42</value>
+  </data>
+  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 57</value>
+  </data>
+  <data name="txtID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="txtID.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;radLabel10.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblPhone.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txtstreet.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="txtcity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txtstreet.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;txtID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtemail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 37</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="txtPhone.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;txtcity.Name" xml:space="preserve">
+    <value>txtcity</value>
+  </data>
+  <data name="txtname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 50</value>
+  </data>
+  <data name="&gt;&gt;radLabel10.Name" xml:space="preserve">
+    <value>radLabel10</value>
+  </data>
+  <data name="&gt;&gt;radLabel5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.Name" xml:space="preserve">
+    <value>txtSearch</value>
+  </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1083, 311</value>
+  </data>
+  <data name="&gt;&gt;txtname.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="radLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="btnUpdate.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblPhone.Text" xml:space="preserve">
+    <value>Phones</value>
+  </data>
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Updates</value>
+  </data>
+  <data name="&gt;&gt;lblName.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="radLabel5.Text" xml:space="preserve">
+    <value>Surnames</value>
+  </data>
+  <data name="radLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 30</value>
+  </data>
+  <data name="&gt;&gt;radLabel4.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txtPostalCode.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblPhone.Name" xml:space="preserve">
+    <value>lblPhone</value>
+  </data>
+  <data name="&gt;&gt;txtstreet.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="btnUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -262,6 +708,12 @@
         pumv5h/FHk8AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="txtCountry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>864, 135</value>
+  </data>
   <data name="btnSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAB95JREFUWEe9
@@ -300,6 +752,57 @@
         dFZXT48t4ReHJtFId/AQPxuHhTAxt8D0WbawtLapUu/enQX6fxJKVWDbePRE86lp/GlWoMOspY+W1iZ6
         9n8zwNCDTkp9OtJX07vBhH5/TdQgkoFu3f4Cij/SwwVogBMAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Saves</value>
+  </data>
+  <data name="radLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="radLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtstreet.Name" xml:space="preserve">
+    <value>txtstreet</value>
+  </data>
+  <data name="&gt;&gt;txtPostalCode.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="btnDelete.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="radLabel11.Text" xml:space="preserve">
+    <value>IDs</value>
+  </data>
+  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 9</value>
+  </data>
+  <data name="&gt;&gt;dgwEmployees.Name" xml:space="preserve">
+    <value>dgwEmployees</value>
+  </data>
+  <data name="txtname.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="btnSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="radLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>864, 94</value>
+  </data>
+  <data name="radLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 30</value>
+  </data>
+  <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+  <data name="txtID.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="btnClear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -412,6 +915,66 @@
         aqJHLELCSxGLKmIsF2YH7jfHY/GooihTNRRmkJj7gWL8F6ak9H+MI9j9nz3Z0QAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="radLabel5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;radLabel10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtsurname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 50</value>
+  </data>
+  <data name="&gt;&gt;txtemail.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="dgwEmployees.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;txtcity.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel4.Name" xml:space="preserve">
+    <value>radLabel4</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
+    <value>btnUpdate</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radLabel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 9</value>
+  </data>
+  <data name="&gt;&gt;txtsurname.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtCountry.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>Clears</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="radLabel3.Text" xml:space="preserve">
+    <value>Postal Codes</value>
+  </data>
+  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="radLabel6.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="txtemail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>864, 50</value>
+  </data>
   <data name="btnDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAC3tJREFUaEPt
@@ -467,4 +1030,268 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="lblPhone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnUpdate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;radLabel5.Name" xml:space="preserve">
+    <value>radLabel5</value>
+  </data>
+  <data name="txtPostalCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 37</value>
+  </data>
+  <data name="txtcity.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1083, 325</value>
+  </data>
+  <data name="radLabel11.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;txtsurname.Name" xml:space="preserve">
+    <value>txtsurname</value>
+  </data>
+  <data name="btnDelete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="radLabel6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="txtPhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 37</value>
+  </data>
+  <data name="&gt;&gt;txtPhone.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtCountry.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="radLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 9</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPostalCode.Name" xml:space="preserve">
+    <value>txtPostalCode</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="txtCountry.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;lblPhone.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txtname.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
+    <value>txtID</value>
+  </data>
+  <data name="lblName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;lblName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radLabel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtstreet.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="lblName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;lblPhone.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>926, 311</value>
+  </data>
+  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.Name" xml:space="preserve">
+    <value>radLabel1</value>
+  </data>
+  <data name="radLabel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 30</value>
+  </data>
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="btnDelete.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="radLabel6.Text" xml:space="preserve">
+    <value>Streets</value>
+  </data>
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="txtPostalCode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dgwEmployees.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="radLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 94</value>
+  </data>
+  <data name="radLabel5.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="txtSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 42</value>
+  </data>
+  <data name="txtstreet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 325</value>
+  </data>
+  <data name="&gt;&gt;txtPhone.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;txtCountry.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        rkJggg==
+</value>
+  </data>
+  <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.25pt</value>
+  </data>
+  <data name="&gt;&gt;dgwEmployees.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Deletes</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
+  </data>
+  <data name="radLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 30</value>
+  </data>
+  <data name="txtPhone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="txtPostalCode.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;txtCountry.Name" xml:space="preserve">
+    <value>txtCountry</value>
+  </data>
+  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
+    <value>lblName</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
 </root>

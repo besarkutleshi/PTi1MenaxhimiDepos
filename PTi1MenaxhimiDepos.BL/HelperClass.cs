@@ -23,6 +23,9 @@ namespace PTi1MenaxhimiDepos.BL
             MessageBox.Show("Nothing to show", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             return false;
         }
+
+
+
         public static void DoesExist<T>(T obj,RadGridView grid)
         {
             if(obj == null)

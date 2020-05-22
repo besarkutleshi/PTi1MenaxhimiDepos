@@ -29,7 +29,9 @@ namespace PTi1MenaxhimiDepos
 
         private void RegisterItem_Load(object sender, EventArgs e)
         {
-            cmbcategory.DataSource = ItemBLL.GetCategories();cmbcategory.DisplayMember = "Name";cmbcategory.ValueMember = "ID";
+            cmbcategory.DataSource = ItemBLL.GetCategories();
+            cmbcategory.DisplayMember = "Name";
+            cmbcategory.ValueMember = "ID";
             cmbtype.DataSource = ItemBLL.GetItemTypes();cmbtype.DisplayMember = "Name"; cmbtype.ValueMember = "ID";
             cmbunit.DataSource = ItemBLL.GetItemUnits();cmbunit.DisplayMember = "Name"; cmbunit.ValueMember = "ID";
             cmdSupplier.DataSource = CollaborationBLL.GetSuppliers(); cmdSupplier.DisplayMember = "Name";cmdSupplier.ValueMember = "ID";
@@ -185,6 +187,18 @@ namespace PTi1MenaxhimiDepos
             txtstock.Text = item.StockQuantity.ToString();
             txtDescription.Text = item.Description;
             HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
+        }
+
+        private void RegisterItem_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure ?", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ namespace PTi1MenaxhimiDepos.DAL
             try
             {
                 if (!DataConnection.DoesExist("sp_DoesExist_Personel", "Name", obj.Name + " " + obj.Surname))
-                 {
+                {
                     int val = 0;
                     using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                     {
@@ -55,13 +55,15 @@ namespace PTi1MenaxhimiDepos.DAL
         {
             try
             {
+                int value = 0;
                 using (SqlConnection con = new SqlConnection(DataConnection.Constring))
                 {
                     con.Open();
                     SqlCommand cmd = new SqlCommand("sp_Delete_Personel", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ID", id);
-                    return HelperClass.GetValue(DataConnection.GetValue(cmd), "Delete");
+                    value = DataConnection.GetValue(cmd);
+                    return HelperClass.GetValue(value, "Delete");
                 }
             }
             catch (Exception ex)
@@ -76,7 +78,7 @@ namespace PTi1MenaxhimiDepos.DAL
             try
             {
                 List<Employee> employees = null;
-                using (var con = DataConnection.Connection()) // kto i ke msu ti kom kallxu ateher
+                using (var con = DataConnection.Connection())
                 {
                     con.Open();
                     var cmd = DataConnection.Command(con, "sp_GetAll_Personel", CommandType.StoredProcedure);
@@ -140,15 +142,15 @@ namespace PTi1MenaxhimiDepos.DAL
                     var cmd = DataConnection.Command(con, "sp_Get_Personel_By_Name", CommandType.StoredProcedure);
                     DataConnection.AddParameter(cmd, "@Name", name);
                     SqlDataReader sdr = cmd.ExecuteReader();
-                    if (sdr.HasRows) // nese ka rreshta qe na u kan kthhy hin meri
+                    if (sdr.HasRows)
                     {
                         while (sdr.Read())
                         {
-                            employee = Get(sdr); // qe qitu kthehet qaj objekt
+                            employee = Get(sdr);
                         }
                     }
                 }
-                return employee; // edhe qitu bohet return
+                return employee;
             }
             catch (Exception ex)
             {

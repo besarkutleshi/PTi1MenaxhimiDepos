@@ -22,35 +22,29 @@ namespace PTi1MenaxhimiDepos.POS
 
         private void POS_Load(object sender, EventArgs e)
         {
-            HelperClass.LoadGrid(PosBLL.GetPointofSales(), dgwPos);
+            dgwPos.DataSource = PosBLL.GetPointofSales();
         }
-
-        private void dgwPos_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            obj = new BO.PointofSale(
-                    int.Parse(HelpClass.GetValue(e,dgwPos,0)),
-                    HelpClass.GetValue(e,dgwPos,1),
-                    HelpClass.GetValue(e,dgwPos,2),
-                    HelpClass.GetValue(e,dgwPos,3),
-                    HelpClass.GetValue(e,dgwPos,4)
-                );
-            txtID.Text = obj.ID.ToString();txtName.Text = obj.Name;txtCity.Text = obj.City;txtDescription.Text = obj.Description;txtPhone.Text = obj.Phone.ToString();
-            btnSave.Visible = false;btndelete.Visible = btnUpdate.Visible = true;
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtSearch.Text.All(char.IsDigit))
             {
                 PointofSale obj = PosBLL.GetPointofSale(int.Parse(txtSearch.Text));
-                obj.Username = HelpClass.CurrentUser.UserName;
-                HelperClass.DoesExist(obj, dgwPos);
+                DisplaySearchResult(obj);
             }
             else
             {
                 PointofSale obj = PosBLL.GetPointofSale(txtSearch.Text);
-                obj.Username = HelpClass.CurrentUser.UserName;
-                HelperClass.DoesExist(obj, dgwPos);
+                DisplaySearchResult(obj);
+            }
+        }
+
+        private void DisplaySearchResult(BO.PointofSale obj)
+        {
+            List<BO.PointofSale> pointofSales = null;
+            if(HelperClass.DoesExists(obj,ref pointofSales))
+            {
+                dgwPos.DataSource = null;
+                dgwPos.DataSource = pointofSales;
             }
         }
 
@@ -58,7 +52,8 @@ namespace PTi1MenaxhimiDepos.POS
         {
             if(txtSearch.Text == "")
             {
-                HelperClass.LoadGrid(PosBLL.GetPointofSales(),dgwPos);
+                dgwPos.DataSource = null;
+                dgwPos.DataSource = PosBLL.GetPointofSales();
             }
         }
 
@@ -74,8 +69,7 @@ namespace PTi1MenaxhimiDepos.POS
                 obj.Username = "besarkutleshi";
                 if (PosBLL.UpdatePos(obj.ID, obj))
                 {
-                    HelperClass.LoadGrid(PosBLL.GetPointofSales(), dgwPos);
-                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
+                    Refresh();
                 }
             }
         }
@@ -86,8 +80,7 @@ namespace PTi1MenaxhimiDepos.POS
             {
                 if (PosBLL.DeletePos(int.Parse(txtID.Text)))
                 {
-                    HelperClass.LoadGrid(PosBLL.GetPointofSales(), dgwPos);
-                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
+                    Refresh();
                 }
             }
         }
@@ -104,15 +97,42 @@ namespace PTi1MenaxhimiDepos.POS
                 obj.Username = "besarkutleshi";
                 if (PosBLL.InsertPos(obj))
                 {
-                    HelperClass.LoadGrid(PosBLL.GetPointofSales(), dgwPos);
-                    HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
+                    Refresh();
                 }
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate, txtCity, txtDescription, txtName, txtPhone, txtID);
+            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
+            HelpClass.Delete(txtCity, txtDescription, txtID, txtName, txtPhone, txtSearch);
+        }
+
+        public override void Refresh()
+        {
+            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
+            HelpClass.Delete(txtCity, txtDescription, txtID, txtName, txtPhone, txtSearch);
+            dgwPos.DataSource = null;
+            dgwPos.DataSource = PosBLL.GetPointofSales();
+        }
+
+        private void POS_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure ?", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void dgwPos_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            obj = (BO.PointofSale)dgwPos.Rows[e.RowIndex].DataBoundItem;
+            txtID.Text = obj.ID.ToString(); txtName.Text = obj.Name; txtCity.Text = obj.City; txtDescription.Text = obj.Description; txtPhone.Text = obj.Phone.ToString();
+            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
         }
     }
 }

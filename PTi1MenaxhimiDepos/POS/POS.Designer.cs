@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(POS));
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.txtID = new Telerik.WinControls.UI.RadTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtName = new Telerik.WinControls.UI.RadTextBox();
@@ -40,9 +46,9 @@
             this.txtDescription = new Telerik.WinControls.UI.RadTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnSearch = new Telerik.WinControls.UI.RadButton();
             this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
             this.dgwPos = new Telerik.WinControls.UI.RadGridView();
+            this.btnSearch = new Telerik.WinControls.UI.RadButton();
             this.btnUpdate = new Telerik.WinControls.UI.RadButton();
             this.btnClear = new Telerik.WinControls.UI.RadButton();
             this.btndelete = new Telerik.WinControls.UI.RadButton();
@@ -52,10 +58,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPos.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btndelete)).BeginInit();
@@ -64,202 +70,149 @@
             // 
             // txtID
             // 
-            this.txtID.Enabled = false;
-            this.txtID.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtID.Location = new System.Drawing.Point(12, 49);
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(268, 37);
-            this.txtID.TabIndex = 0;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label4.Location = new System.Drawing.Point(12, 22);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 24);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "ID";
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtName.Location = new System.Drawing.Point(296, 49);
+            resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(268, 37);
-            this.txtName.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label1.Location = new System.Drawing.Point(296, 22);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 24);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Name";
             // 
             // txtCity
             // 
-            this.txtCity.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtCity.Location = new System.Drawing.Point(584, 49);
+            resources.ApplyResources(this.txtCity, "txtCity");
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(268, 37);
-            this.txtCity.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label2.Location = new System.Drawing.Point(584, 22);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 24);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "City";
             // 
             // txtPhone
             // 
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtPhone.Location = new System.Drawing.Point(12, 128);
+            resources.ApplyResources(this.txtPhone, "txtPhone");
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(268, 37);
-            this.txtPhone.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label3.Location = new System.Drawing.Point(8, 101);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 24);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Phone";
             // 
             // txtDescription
             // 
-            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtDescription.Location = new System.Drawing.Point(296, 128);
+            resources.ApplyResources(this.txtDescription, "txtDescription");
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(244, 37);
-            this.txtDescription.TabIndex = 4;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label5.Location = new System.Drawing.Point(292, 101);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 24);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Description";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label6.Location = new System.Drawing.Point(8, 232);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 24);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Search";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Search_icon;
-            this.btnSearch.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearch.Location = new System.Drawing.Point(276, 259);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(52, 38);
-            this.btnSearch.TabIndex = 7;
-            this.btnSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtSearch.Location = new System.Drawing.Point(12, 259);
+            resources.ApplyResources(this.txtSearch, "txtSearch");
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(258, 37);
-            this.txtSearch.TabIndex = 6;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgwPos
             // 
-            this.dgwPos.Font = new System.Drawing.Font("Segoe UI", 13.25F);
-            this.dgwPos.Location = new System.Drawing.Point(12, 302);
+            resources.ApplyResources(this.dgwPos, "dgwPos");
             // 
             // 
             // 
-            this.dgwPos.MasterTemplate.AllowDeleteRow = false;
+            this.dgwPos.MasterTemplate.AllowAddNewRow = false;
             this.dgwPos.MasterTemplate.AllowEditRow = false;
             this.dgwPos.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwPos.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgwPos.MasterTemplate.Caption = resources.GetString("dgwPos.MasterTemplate.Caption");
+            resources.ApplyResources(gridViewTextBoxColumn11, "gridViewTextBoxColumn11");
+            gridViewTextBoxColumn11.FieldName = "ID";
+            gridViewTextBoxColumn11.Name = "ID";
+            gridViewTextBoxColumn11.Width = 165;
+            resources.ApplyResources(gridViewTextBoxColumn12, "gridViewTextBoxColumn12");
+            gridViewTextBoxColumn12.FieldName = "Name";
+            gridViewTextBoxColumn12.Name = "Name";
+            gridViewTextBoxColumn12.Width = 165;
+            resources.ApplyResources(gridViewTextBoxColumn13, "gridViewTextBoxColumn13");
+            gridViewTextBoxColumn13.FieldName = "City";
+            gridViewTextBoxColumn13.Name = "City";
+            gridViewTextBoxColumn13.Width = 165;
+            resources.ApplyResources(gridViewTextBoxColumn14, "gridViewTextBoxColumn14");
+            gridViewTextBoxColumn14.FieldName = "Phone";
+            gridViewTextBoxColumn14.Name = "Phone";
+            gridViewTextBoxColumn14.Width = 165;
+            resources.ApplyResources(gridViewTextBoxColumn15, "gridViewTextBoxColumn15");
+            gridViewTextBoxColumn15.FieldName = "Description";
+            gridViewTextBoxColumn15.Name = "Description";
+            gridViewTextBoxColumn15.Width = 163;
+            this.dgwPos.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12,
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14,
+            gridViewTextBoxColumn15});
+            this.dgwPos.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dgwPos.Name = "dgwPos";
-            this.dgwPos.Size = new System.Drawing.Size(845, 331);
-            this.dgwPos.TabIndex = 8;
             this.dgwPos.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwPos_CellDoubleClick);
+            // 
+            // btnSearch
+            // 
+            resources.ApplyResources(this.btnSearch, "btnSearch");
+            this.btnSearch.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Search_icon;
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
             this.btnUpdate.Image = global::PTi1MenaxhimiDepos.Properties.Resources.update;
-            this.btnUpdate.Location = new System.Drawing.Point(720, 241);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(137, 56);
-            this.btnUpdate.TabIndex = 18;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Actions_edit_clear_icon;
-            this.btnClear.Location = new System.Drawing.Point(577, 241);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(137, 56);
-            this.btnClear.TabIndex = 19;
-            this.btnClear.Text = "Clear";
-            this.btnClear.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btndelete
             // 
-            this.btndelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btndelete, "btndelete");
             this.btndelete.Image = global::PTi1MenaxhimiDepos.Properties.Resources.cancel_icon;
-            this.btndelete.Location = new System.Drawing.Point(720, 179);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(137, 56);
-            this.btndelete.TabIndex = 20;
-            this.btndelete.Text = "Delete";
-            this.btndelete.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btndelete.Visible = false;
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.Image = global::PTi1MenaxhimiDepos.Properties.Resources.add_1_icon;
-            this.btnSave.Location = new System.Drawing.Point(720, 241);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(137, 56);
-            this.btnSave.TabIndex = 17;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // POS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 645);
+            this.Controls.Add(this.dgwPos);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dgwPos);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -275,18 +228,17 @@
             this.Controls.Add(this.txtID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "POS";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POS";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.POS_FormClosing);
             this.Load += new System.EventHandler(this.POS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPos.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btndelete)).EndInit();
@@ -311,10 +263,10 @@
         private System.Windows.Forms.Label label6;
         private Telerik.WinControls.UI.RadButton btnSearch;
         private Telerik.WinControls.UI.RadTextBox txtSearch;
-        private Telerik.WinControls.UI.RadGridView dgwPos;
         private Telerik.WinControls.UI.RadButton btnUpdate;
         private Telerik.WinControls.UI.RadButton btnClear;
         private Telerik.WinControls.UI.RadButton btndelete;
         private Telerik.WinControls.UI.RadButton btnSave;
+        private Telerik.WinControls.UI.RadGridView dgwPos;
     }
 }

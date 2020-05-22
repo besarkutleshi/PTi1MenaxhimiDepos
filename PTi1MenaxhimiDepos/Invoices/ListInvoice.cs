@@ -135,5 +135,17 @@ namespace PTi1MenaxhimiDepos.Invoices
                 dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeader();
             }
         }
+
+        private void ListInvoice_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure ?", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

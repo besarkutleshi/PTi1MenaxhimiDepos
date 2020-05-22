@@ -309,6 +309,7 @@
             this.Name = "ListInvoiceBodies";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListInvoiceBodies";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListInvoiceBodies_FormClosing);
             this.Load += new System.EventHandler(this.ListInvoiceBodies_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmbItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiscount)).EndInit();
