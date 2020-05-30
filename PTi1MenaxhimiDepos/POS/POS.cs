@@ -20,41 +20,12 @@ namespace PTi1MenaxhimiDepos.POS
             InitializeComponent();
         }
 
-        private void POS_Load(object sender, EventArgs e)
+        public POS(PointofSale obj)
         {
-            dgwPos.DataSource = PosBLL.GetPointofSales();
-        }
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (txtSearch.Text.All(char.IsDigit))
-            {
-                PointofSale obj = PosBLL.GetPointofSale(int.Parse(txtSearch.Text));
-                DisplaySearchResult(obj);
-            }
-            else
-            {
-                PointofSale obj = PosBLL.GetPointofSale(txtSearch.Text);
-                DisplaySearchResult(obj);
-            }
-        }
-
-        private void DisplaySearchResult(BO.PointofSale obj)
-        {
-            List<BO.PointofSale> pointofSales = null;
-            if(HelperClass.DoesExists(obj,ref pointofSales))
-            {
-                dgwPos.DataSource = null;
-                dgwPos.DataSource = pointofSales;
-            }
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
-            {
-                dgwPos.DataSource = null;
-                dgwPos.DataSource = PosBLL.GetPointofSales();
-            }
+            InitializeComponent();
+            this.obj = obj;
+            txtID.Text = obj.ID.ToString(); txtName.Text = obj.Name; txtCity.Text = obj.City; txtDescription.Text = obj.Description; txtPhone.Text = obj.Phone.ToString();
+            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -105,15 +76,7 @@ namespace PTi1MenaxhimiDepos.POS
         private void btnClear_Click(object sender, EventArgs e)
         {
             HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
-            HelpClass.Delete(txtCity, txtDescription, txtID, txtName, txtPhone, txtSearch);
-        }
-
-        public override void Refresh()
-        {
-            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
-            HelpClass.Delete(txtCity, txtDescription, txtID, txtName, txtPhone, txtSearch);
-            dgwPos.DataSource = null;
-            dgwPos.DataSource = PosBLL.GetPointofSales();
+            HelpClass.Delete(txtCity, txtDescription, txtID, txtName, txtPhone);
         }
 
         private void POS_FormClosing(object sender, FormClosingEventArgs e)
@@ -128,11 +91,9 @@ namespace PTi1MenaxhimiDepos.POS
             }
         }
 
-        private void dgwPos_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        private void POS_Load(object sender, EventArgs e)
         {
-            obj = (BO.PointofSale)dgwPos.Rows[e.RowIndex].DataBoundItem;
-            txtID.Text = obj.ID.ToString(); txtName.Text = obj.Name; txtCity.Text = obj.City; txtDescription.Text = obj.Description; txtPhone.Text = obj.Phone.ToString();
-            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
+
         }
     }
 }

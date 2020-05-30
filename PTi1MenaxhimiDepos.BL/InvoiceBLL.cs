@@ -37,6 +37,10 @@ namespace PTi1MenaxhimiDepos.BL
             radGridView.DataSource = null;
             radGridView.DataSource = invertoryBodies;
         }
+        public static List<InvertoryHeader> GetInvertoryHeadersToday() => _headerRepository.GetPurchaseInvertoryHeadersToday();
+        public static string GetTotalPurchaseInvertoryToday() => _headerRepository.GetTotalPurchaseInvertoryToday();
+        public static string GetTotalSalePurchaseInvertoryToday() => _headerRepository.GetTotalSaleInvertoryToday();
+        public static List<InvertoryHeader> GetSaleInvertoryToday() => _headerRepository.GetSaleInvertoryHeadersToday();
         #endregion
 
 

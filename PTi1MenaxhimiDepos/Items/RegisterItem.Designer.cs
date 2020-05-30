@@ -31,19 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterItem));
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
-            this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
             this.txtname = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
@@ -65,14 +52,11 @@
             this.cmdSupplier = new Telerik.WinControls.UI.RadDropDownList();
             this.txtid = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
-            this.dgwItems = new Telerik.WinControls.UI.RadGridView();
-            this.btnSearch = new Telerik.WinControls.UI.RadButton();
             this.btnUpdate = new Telerik.WinControls.UI.RadButton();
             this.btnSave = new Telerik.WinControls.UI.RadButton();
             this.btnDelete = new Telerik.WinControls.UI.RadButton();
             this.btnClear = new Telerik.WinControls.UI.RadButton();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).BeginInit();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.txtname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
@@ -94,25 +78,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwItems)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwItems.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             this.SuspendLayout();
-            // 
-            // radLabel10
-            // 
-            resources.ApplyResources(this.radLabel10, "radLabel10");
-            this.radLabel10.Name = "radLabel10";
-            // 
-            // txtSearch
-            // 
-            resources.ApplyResources(this.txtSearch, "txtSearch");
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // txtname
             // 
@@ -231,78 +202,6 @@
             resources.ApplyResources(this.radLabel11, "radLabel11");
             this.radLabel11.Name = "radLabel11";
             // 
-            // dgwItems
-            // 
-            resources.ApplyResources(this.dgwItems, "dgwItems");
-            // 
-            // 
-            // 
-            this.dgwItems.MasterTemplate.AllowAddNewRow = false;
-            this.dgwItems.MasterTemplate.AllowEditRow = false;
-            this.dgwItems.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwItems.MasterTemplate.Caption = resources.GetString("dgwItems.MasterTemplate.Caption");
-            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
-            gridViewTextBoxColumn1.FieldName = "ID";
-            gridViewTextBoxColumn1.Name = "ID";
-            gridViewTextBoxColumn1.Width = 143;
-            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
-            gridViewTextBoxColumn2.FieldName = "Barcode";
-            gridViewTextBoxColumn2.Name = "Barcode";
-            gridViewTextBoxColumn2.Width = 143;
-            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
-            gridViewTextBoxColumn3.FieldName = "Name";
-            gridViewTextBoxColumn3.Name = "Name";
-            gridViewTextBoxColumn3.Width = 143;
-            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
-            gridViewTextBoxColumn4.FieldName = "Unit.Name";
-            gridViewTextBoxColumn4.Name = "Unit";
-            gridViewTextBoxColumn4.Width = 143;
-            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
-            gridViewTextBoxColumn5.FieldName = "Category.Name";
-            gridViewTextBoxColumn5.Name = "Category";
-            gridViewTextBoxColumn5.Width = 143;
-            resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
-            gridViewTextBoxColumn6.FieldName = "Type.Name";
-            gridViewTextBoxColumn6.Name = "Type";
-            gridViewTextBoxColumn6.Width = 143;
-            resources.ApplyResources(gridViewTextBoxColumn7, "gridViewTextBoxColumn7");
-            gridViewTextBoxColumn7.FieldName = "Supplier.Name";
-            gridViewTextBoxColumn7.Name = "Supplier";
-            gridViewTextBoxColumn7.Width = 143;
-            resources.ApplyResources(gridViewTextBoxColumn8, "gridViewTextBoxColumn8");
-            gridViewTextBoxColumn8.FieldName = "Active";
-            gridViewTextBoxColumn8.Name = "Active";
-            gridViewTextBoxColumn8.Width = 143;
-            resources.ApplyResources(gridViewTextBoxColumn9, "gridViewTextBoxColumn9");
-            gridViewTextBoxColumn9.FieldName = "StockQuantity";
-            gridViewTextBoxColumn9.Name = "Stock Quantity";
-            gridViewTextBoxColumn9.Width = 143;
-            resources.ApplyResources(gridViewTextBoxColumn10, "gridViewTextBoxColumn10");
-            gridViewTextBoxColumn10.FieldName = "Description";
-            gridViewTextBoxColumn10.Name = "Description";
-            gridViewTextBoxColumn10.Width = 146;
-            this.dgwItems.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10});
-            this.dgwItems.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.dgwItems.Name = "dgwItems";
-            this.dgwItems.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwItems_CellDoubleClick);
-            // 
-            // btnSearch
-            // 
-            resources.ApplyResources(this.btnSearch, "btnSearch");
-            this.btnSearch.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Search_icon;
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // btnUpdate
             // 
             resources.ApplyResources(this.btnUpdate, "btnUpdate");
@@ -331,11 +230,15 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // radLabel10
+            // 
+            resources.ApplyResources(this.radLabel10, "radLabel10");
+            this.radLabel10.Name = "radLabel10";
+            // 
             // RegisterItem
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgwItems);
             this.Controls.Add(this.cmbtype);
             this.Controls.Add(this.cmdSupplier);
             this.Controls.Add(this.radDropDownList5);
@@ -353,13 +256,11 @@
             this.Controls.Add(this.radLabel3);
             this.Controls.Add(this.radLabel2);
             this.Controls.Add(this.radLabel11);
+            this.Controls.Add(this.radLabel10);
             this.Controls.Add(this.radLabel1);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.txtbarcode);
             this.Controls.Add(this.txtname);
-            this.Controls.Add(this.radLabel10);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
@@ -371,8 +272,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterItem_FormClosing);
             this.Load += new System.EventHandler(this.RegisterItem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
@@ -394,22 +293,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwItems.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwItems)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Telerik.WinControls.UI.RadLabel radLabel10;
-        private Telerik.WinControls.UI.RadButton btnSearch;
-        private Telerik.WinControls.UI.RadTextBox txtSearch;
         private Telerik.WinControls.UI.RadButton btnUpdate;
         private Telerik.WinControls.UI.RadButton btnSave;
         private Telerik.WinControls.UI.RadTextBox txtname;
@@ -435,6 +329,6 @@
         private Telerik.WinControls.UI.RadButton btnClear;
         private Telerik.WinControls.UI.RadTextBox txtid;
         private Telerik.WinControls.UI.RadLabel radLabel11;
-        private Telerik.WinControls.UI.RadGridView dgwItems;
+        private Telerik.WinControls.UI.RadLabel radLabel10;
     }
 }

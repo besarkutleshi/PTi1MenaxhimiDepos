@@ -20,11 +20,23 @@ namespace PTi1MenaxhimiDepos
         public RegisterItem()
         {
             InitializeComponent();
-            this.cmbActive.DropDownListElement.DropDownWidth = 380;
-            this.cmbcategory.DropDownListElement.DropDownWidth = 380;
-            this.cmbtype.DropDownListElement.DropDownWidth = 380;
-            this.cmbunit.DropDownListElement.DropDownWidth = 380;
-            this.cmdSupplier.DropDownListElement.DropDownWidth = 380;
+            this.cmbActive.DropDownListElement.DropDownWidth = 300;
+            this.cmbcategory.DropDownListElement.DropDownWidth = 300;
+            this.cmbtype.DropDownListElement.DropDownWidth = 300;
+            this.cmbunit.DropDownListElement.DropDownWidth = 300;
+            this.cmdSupplier.DropDownListElement.DropDownWidth = 300;
+        }
+
+        public RegisterItem(Item item)
+        {
+            this.item = item;
+            InitializeComponent();
+            this.cmbActive.DropDownListElement.DropDownWidth = 300;
+            this.cmbcategory.DropDownListElement.DropDownWidth = 300;
+            this.cmbtype.DropDownListElement.DropDownWidth = 300;
+            this.cmbunit.DropDownListElement.DropDownWidth = 300;
+            this.cmdSupplier.DropDownListElement.DropDownWidth = 300;
+            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
         }
 
         private void RegisterItem_Load(object sender, EventArgs e)
@@ -36,8 +48,21 @@ namespace PTi1MenaxhimiDepos
             cmbunit.DataSource = ItemBLL.GetItemUnits();cmbunit.DisplayMember = "Name"; cmbunit.ValueMember = "ID";
             cmdSupplier.DataSource = CollaborationBLL.GetSuppliers(); cmdSupplier.DisplayMember = "Name";cmdSupplier.ValueMember = "ID";
             cmbActive.SelectedIndex = 0;
-            dgwItems.DataSource = ItemBLL.GetItems();
-            dgwItems.TableElement.SearchHighlightColor = Color.LightBlue;
+            if(item != null)
+            {
+                ID = item.ID;
+                txtid.Text = ID.ToString();
+                Barcode = item.Barcode;
+                txtbarcode.Text = item.Barcode;
+                txtname.Text = item.Name;
+                cmbunit.Text = item.Unit.Name;
+                cmbcategory.Text = item.Category.Name;
+                cmbtype.Text = item.Type.Name;
+                cmdSupplier.Text = item.Supplier.Name;
+                cmbActive.SelectedIndex = 0;
+                txtstock.Text = item.StockQuantity.ToString();
+                txtDescription.Text = item.Description;
+            }
         }
 
 
@@ -59,47 +84,7 @@ namespace PTi1MenaxhimiDepos
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if(txtSearch.Text != "")
-            {
-                if (txtSearch.Text.All(char.IsDigit))
-                {
-                    BO.Item item = ItemBLL.GetItem(int.Parse(txtSearch.Text));
-                    DisplaySearchResult(item);
-                }
-                else
-                {
-                    BO.Item item = ItemBLL.GetItemByName(txtSearch.Text);
-                    DisplaySearchResult(item);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Search box is empty", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-            }
-        }
-
-        private void DisplaySearchResult(BO.Item obj)
-        {
-            List<BO.Item> items = null;
-            if(HelperClass.DoesExists(obj,ref items))
-            {
-                dgwItems.DataSource = null;
-                dgwItems.DataSource = items;
-            }
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
-            {
-                dgwItems.DataSource = null;
-                dgwItems.DataSource = ItemBLL.GetItems();
-            }
-        }
-
-
+       
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -160,33 +145,6 @@ namespace PTi1MenaxhimiDepos
         {
             HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
             HelpClass.Delete(txtbarcode, txtname, txtDescription, txtstock);
-        }
-
-        public override void Refresh()
-        {
-            HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
-            HelpClass.Delete(txtbarcode, txtname, txtDescription, txtstock);
-            dgwItems.DataSource = null;
-            dgwItems.DataSource = ItemBLL.GetItems();
-            item = null;
-        }
-
-        private void dgwItems_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            item = (BO.Item)dgwItems.Rows[e.RowIndex].DataBoundItem;
-            ID = item.ID;
-            txtid.Text = ID.ToString();
-            Barcode = item.Barcode;
-            txtbarcode.Text = item.Barcode;
-            txtname.Text = item.Name;
-            cmbunit.Text = item.Unit.Name;
-            cmbcategory.Text = item.Category.Name;
-            cmbtype.Text = item.Type.Name;
-            cmdSupplier.Text = item.Supplier.Name;
-            cmbActive.SelectedIndex = 0;
-            txtstock.Text = item.StockQuantity.ToString();
-            txtDescription.Text = item.Description;
-            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
         }
 
         private void RegisterItem_FormClosing(object sender, FormClosingEventArgs e)

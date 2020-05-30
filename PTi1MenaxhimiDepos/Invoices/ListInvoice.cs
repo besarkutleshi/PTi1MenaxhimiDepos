@@ -19,35 +19,38 @@ namespace PTi1MenaxhimiDepos.Invoices
         public ListInvoice()
         {
             InitializeComponent();
-            this.cmbSupplier.DropDownListElement.DropDownWidth = 380;
-            this.cmbPos.DropDownListElement.DropDownWidth = 380;
-            this.cmbInoviceType.DropDownListElement.DropDownWidth = 380;
+            this.cmbSupplier.DropDownListElement.DropDownWidth = 300;
+            this.cmbPos.DropDownListElement.DropDownWidth = 300;
+            this.cmbInoviceType.DropDownListElement.DropDownWidth = 300;
+        }
+
+        public ListInvoice(InvertoryHeader obj)
+        {
+            this.obj = obj;
+            InitializeComponent();
+            this.cmbSupplier.DropDownListElement.DropDownWidth = 300;
+            this.cmbPos.DropDownListElement.DropDownWidth = 300;
+            this.cmbInoviceType.DropDownListElement.DropDownWidth = 300;
         }
 
         private void ListInvoice_Load(object sender, EventArgs e)
         {
-            dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeader();
             cmbInoviceType.DataSource = InvoiceBLL.GetDocTypes();cmbInoviceType.DisplayMember = "Description";cmbInoviceType.ValueMember = "DocTypeID";
             cmbPos.DataSource = PosBLL.GetPointofSales();cmbPos.DisplayMember = "Name";cmbPos.ValueMember = "ID";
             cmbSupplier.DataSource = CollaborationBLL.GetSuppliers();cmbSupplier.DisplayMember = "Name";cmbSupplier.ValueMember = "ID";
+            if(obj != null)
+            {
+                txtDescription.Text = obj.Description;
+                txtID.Text = obj.InvertoryID.ToString();
+                txtInvoiceNumber.Text = obj.DocNo;
+                cmbInoviceType.Text = obj.DocType.Description;
+                cmbPos.Text = obj.POS.Name;
+                cmbSupplier.Text = obj.Supplier.Name;
+            }
         }
-
-        private void dgwInvoices_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            obj = (InvertoryHeader)dgwInvoices.Rows[e.RowIndex].DataBoundItem;
-            txtID.Text = obj.InvertoryID.ToString();
-            txtDescription.Text = obj.Description;
-            txtInvoiceNumber.Text = obj.DocNo.ToString();
-            cmbInoviceType.Text = obj.DocType.Description;
-            cmbPos.Text = obj.POS.Name;
-            cmbSupplier.Text = obj.Supplier.Name;
-            btnShowDetails.Visible = true;
-        }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             HelpClass.Delete(txtDescription, txtID, txtInvoiceNumber);
-            btnShowDetails.Visible = false;
             obj = null;
         }
 
@@ -85,7 +88,7 @@ namespace PTi1MenaxhimiDepos.Invoices
                     PointofSale pos = (PointofSale)cmbPos.SelectedItem.DataBoundItem;
                     Supplier supp = (Supplier)cmbSupplier.SelectedItem.DataBoundItem;
                     DocType docType = (DocType)cmbInoviceType.SelectedItem.DataBoundItem;
-                    obj = new InvertoryHeader(int.Parse(txtID.Text), txtInvoiceNumber.Text, docType.DocTypeID, pos.ID, txtDescription.Text, 0, supp.ID);
+                    obj = new InvertoryHeader(int.Parse(txtID.Text), txtInvoiceNumber.Text, docType.DocTypeID, pos.ID, txtDescription.Text,supp.ID);
                     obj.Username = HelpClass.CurrentUser.UserName;
                     if (InvoiceBLL.UpdatePurchaseInoviceHeader(obj.InvertoryID, obj))
                     {
@@ -98,41 +101,6 @@ namespace PTi1MenaxhimiDepos.Invoices
             else
             {
                 MessageBox.Show("Please double click\nin a specific row in table", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-            }
-        }
-
-        public override void Refresh()
-        {
-            dgwInvoices.DataSource = null;
-            dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeader();
-            obj = null;
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
-            {
-                MessageBox.Show("Please fill in search box", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);            
-            }
-            else
-            {
-                if (txtSearch.Text.All(char.IsDigit))
-                {
-                    InvertoryHeader header = InvoiceBLL.GetPurchaseInvoicesHeaderByDosNo(txtSearch.Text);
-                    List<InvertoryHeader> invertoryHeaders = new List<InvertoryHeader>();
-                    invertoryHeaders.Add(header);
-                    dgwInvoices.DataSource = null;
-                    dgwInvoices.DataSource = invertoryHeaders;
-                }
-            }
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
-            {
-                dgwInvoices.DataSource = null;
-                dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeader();
             }
         }
 

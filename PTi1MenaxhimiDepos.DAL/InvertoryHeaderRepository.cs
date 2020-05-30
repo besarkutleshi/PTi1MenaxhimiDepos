@@ -26,14 +26,7 @@ namespace PTi1MenaxhimiDepos.DAL
 					DataConnection.AddParameter(cmd, "@DoctypeID", invertory.DocTypeID);
 					DataConnection.AddParameter(cmd, "@PosiD", invertory.PosID);
 					DataConnection.AddParameter(cmd, "@Description", invertory.Description);
-					if(invertory.ClientID == 0)
-						DataConnection.AddParameter(cmd, "@ClientID", 3);
-					else
-						DataConnection.AddParameter(cmd, "@ClientID", invertory.ClientID);
-					if(invertory.SupplierID == 0)
-						DataConnection.AddParameter(cmd, "@SupplierID", 3);
-					else
-						DataConnection.AddParameter(cmd, "@SupplierID", invertory.SupplierID);
+					DataConnection.AddParameter(cmd, "@SupplierID", invertory.SupplierID);
 					DataConnection.AddParameter(cmd, "@details",ReturnDT(invertory.Bodies));
 					DataConnection.AddParameter(cmd, "@InsertBy",invertory.Username);
 					value = DataConnection.GetValue(cmd);
@@ -56,6 +49,62 @@ namespace PTi1MenaxhimiDepos.DAL
 				{
 					con.Open();
 					var cmd = DataConnection.Command(con, "sp_GetPurchaseInvoices", CommandType.StoredProcedure);
+					SqlDataReader sdr = cmd.ExecuteReader();
+					if (sdr.HasRows)
+					{
+						headers = new List<InvertoryHeader>();
+						while (sdr.Read())
+						{
+							headers.Add(Get(sdr));
+						}
+					}
+				}
+				return headers;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+				return null;
+			}
+		}
+
+		public List<InvertoryHeader> GetPurchaseInvertoryHeadersToday()
+		{
+			try
+			{
+				List<InvertoryHeader> headers = null;
+				using (var con = DataConnection.Connection())
+				{
+					con.Open();
+					var cmd = DataConnection.Command(con, "sp_GetPurchase_Invoices_Today", CommandType.StoredProcedure);
+					SqlDataReader sdr = cmd.ExecuteReader();
+					if (sdr.HasRows)
+					{
+						headers = new List<InvertoryHeader>();
+						while (sdr.Read())
+						{
+							headers.Add(Get(sdr));
+						}
+					}
+				}
+				return headers;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+				return null;
+			}
+		}
+
+		public List<InvertoryHeader> GetSaleInvertoryHeadersToday()
+		{
+			try
+			{
+				List<InvertoryHeader> headers = null;
+				using (var con = DataConnection.Connection())
+				{
+					con.Open();
+					var cmd = DataConnection.Command(con, "sp_GetSale_Invoices_Today", CommandType.StoredProcedure);
 					SqlDataReader sdr = cmd.ExecuteReader();
 					if (sdr.HasRows)
 					{
@@ -160,14 +209,7 @@ namespace PTi1MenaxhimiDepos.DAL
 					DataConnection.AddParameter(cmd, "@DocTypeID", invertory.DocTypeID);
 					DataConnection.AddParameter(cmd, "@PosID", invertory.PosID);
 					DataConnection.AddParameter(cmd, "@Description", invertory.Description);
-					if (invertory.ClientID == 0)
-						DataConnection.AddParameter(cmd, "@ClientID", 3);
-					else
-						DataConnection.AddParameter(cmd, "@ClientID", invertory.ClientID);
-					if (invertory.SupplierID == 0)
-						DataConnection.AddParameter(cmd, "@SupplierID", 3);
-					else
-						DataConnection.AddParameter(cmd, "@SupplierID", invertory.SupplierID);
+					DataConnection.AddParameter(cmd, "@SupplierID", invertory.SupplierID);
 					DataConnection.AddParameter(cmd, "@UpdateBy", invertory.Username);
 					value = DataConnection.GetValue(cmd);
 				}
@@ -268,6 +310,46 @@ namespace PTi1MenaxhimiDepos.DAL
 			{
 				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
 				return 0;
+			}
+		}
+
+		public string GetTotalPurchaseInvertoryToday()
+		{
+			try
+			{
+				double value = 0;
+				using (var con = DataConnection.Connection())
+				{
+					con.Open();
+					var cmd = DataConnection.Command(con, "sp_SUM_Purchase_Invoices_Today", CommandType.StoredProcedure);
+					value = DataConnection.GetSum(cmd);
+				}
+				return value.ToString(".00");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+				return "";
+			}
+		}
+
+		public string GetTotalSaleInvertoryToday()
+		{
+			try
+			{
+				double value = 0;
+				using (var con = DataConnection.Connection())
+				{
+					con.Open();
+					var cmd = DataConnection.Command(con, "sp_SUM_Sale_Invoices_Today", CommandType.StoredProcedure);
+					value = DataConnection.GetSum(cmd);
+				}
+				return value.ToString(".00");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+				return "";
 			}
 		}
 	}

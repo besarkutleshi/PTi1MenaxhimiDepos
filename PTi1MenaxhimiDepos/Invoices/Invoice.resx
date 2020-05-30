@@ -117,9 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 4</value>
+  <data name="&gt;&gt;txtInvoiceNumber.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;dgwBodies.Name" xml:space="preserve">
     <value>dgwBodies</value>
@@ -127,8 +126,15 @@
   <data name="&gt;&gt;btnInsert.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnUpdate.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;cmbItem.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="btnInsert.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -145,13 +151,13 @@
   <data name="&gt;&gt;lbldescription.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 56</value>
+  </data>
   <data name="cmbInoviceType.Text" xml:space="preserve">
     <value>radDropDownList1</value>
   </data>
   <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbldescription.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtID.ZOrder" xml:space="preserve">
@@ -159,9 +165,6 @@
   </data>
   <data name="btnInsert.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 180</value>
-  </data>
-  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="btndelete.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -178,6 +181,9 @@
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblDiscount.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="txtQuantity.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 37</value>
@@ -212,29 +218,17 @@
   <data name="&gt;&gt;btnInsert.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lblPrice.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="btnInsert.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="&gt;&gt;cmbItem.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblid.Text" xml:space="preserve">
-    <value>s</value>
-  </data>
   <data name="lblQuantity.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt</value>
   </data>
   <data name="lblDiscount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1311, 770</value>
-  </data>
-  <data name="cmbInoviceType.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -245,14 +239,20 @@
   <data name="lblPrice.Location" type="System.Drawing.Point, System.Drawing">
     <value>550, 98</value>
   </data>
+  <data name="lblQuantity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>821, 98</value>
+  </data>
   <data name="&gt;&gt;lblItem.Name" xml:space="preserve">
     <value>lblItem</value>
   </data>
-  <data name="&gt;&gt;lblPrice.ZOrder" xml:space="preserve">
-    <value>25</value>
+  <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Invoice</value>
+  </data>
+  <data name="lblItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 97</value>
   </data>
   <data name="&gt;&gt;lblPos.Parent" xml:space="preserve">
     <value>$this</value>
@@ -266,6 +266,9 @@
   <data name="&gt;&gt;lblsupplier.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.8pt</value>
+  </data>
   <data name="&gt;&gt;cmbSupplier.Name" xml:space="preserve">
     <value>cmbSupplier</value>
   </data>
@@ -275,17 +278,17 @@
   <data name="cmbPos.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
-  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Header Id</value>
+  <data name="&gt;&gt;cmbPos.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lblsupplier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1068, 4</value>
+  <data name="&gt;&gt;lblQuantity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="cmbItem.Location" type="System.Drawing.Point, System.Drawing">
     <value>283, 124</value>
   </data>
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1170, 315</value>
+  <data name="&gt;&gt;btndelete.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lblPrice.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -305,6 +308,9 @@
   <data name="cmbSupplier.Text" xml:space="preserve">
     <value>radDropDownList1</value>
   </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
   <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
@@ -314,17 +320,14 @@
   <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;lbldescription.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="cmbInoviceType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>Price</value>
   </data>
-  <data name="txtInvoiceNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
   </data>
   <data name="&gt;&gt;cmbSupplier.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -337,6 +340,9 @@
   </data>
   <data name="txtPrice.Size" type="System.Drawing.Size, System.Drawing">
     <value>248, 37</value>
+  </data>
+  <data name="&gt;&gt;cmbItem.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="&gt;&gt;lblsupplier.Name" xml:space="preserve">
     <value>lblsupplier</value>
@@ -371,8 +377,8 @@
   <data name="&gt;&gt;lblItem.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lbldescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 24</value>
+  <data name="&gt;&gt;txtInvoiceNumber.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblDiscount.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 24</value>
@@ -395,20 +401,14 @@
   <data name="txtDiscount.Size" type="System.Drawing.Size, System.Drawing">
     <value>235, 37</value>
   </data>
-  <data name="txtDescription.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
-  </data>
   <data name="lbldescription.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblPos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.8pt</value>
+  <data name="&gt;&gt;txtInvoiceNumber.Name" xml:space="preserve">
+    <value>txtInvoiceNumber</value>
   </data>
   <data name="&gt;&gt;cmbInoviceType.ZOrder" xml:space="preserve">
     <value>15</value>
-  </data>
-  <data name="lblQuantity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 24</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>813, 4</value>
@@ -431,8 +431,8 @@
   <data name="cmbItem.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="cmbInoviceType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 37</value>
+  <data name="&gt;&gt;txtDiscount.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPrice.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -440,8 +440,8 @@
   <data name="lblPrice.Text" xml:space="preserve">
     <value>Prices</value>
   </data>
-  <data name="&gt;&gt;txtDescription.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="txtQuantity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lblItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt</value>
@@ -470,9 +470,6 @@
   <data name="&gt;&gt;lblid.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="cmbItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 37</value>
-  </data>
   <data name="&gt;&gt;label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -481,9 +478,6 @@
   </data>
   <data name="&gt;&gt;lblPrice.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtDiscount.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>248, 37</value>
@@ -513,6 +507,12 @@
   <data name="&gt;&gt;cmbInoviceType.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="lblQuantity.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -540,11 +540,17 @@
   <data name="lblItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 24</value>
   </data>
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Item</value>
+  </data>
   <data name="btndelete.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
-    <value>txtID</value>
+  <data name="btnInsert.Text" xml:space="preserve">
+    <value>Inserts</value>
+  </data>
+  <data name="txtInvoiceNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 31</value>
   </data>
   <data name="txtInvoiceNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>248, 37</value>
@@ -558,38 +564,41 @@
   <data name="btndelete.Text" xml:space="preserve">
     <value>Deletes</value>
   </data>
-  <data name="&gt;&gt;txtSearch.Name" xml:space="preserve">
-    <value>txtSearch</value>
-  </data>
   <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
     <value>1170, 333</value>
-  </data>
-  <data name="&gt;&gt;cmbInoviceType.Name" xml:space="preserve">
-    <value>cmbInoviceType</value>
-  </data>
-  <data name="cmbPos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 37</value>
-  </data>
-  <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
   </data>
   <data name="lblPos.Text" xml:space="preserve">
     <value>POSs</value>
   </data>
+  <data name="cmbPos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 37</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbldescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>550, 4</value>
+  </data>
+  <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblid.Text" xml:space="preserve">
+    <value>s</value>
+  </data>
   <data name="lblid.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt</value>
   </data>
-  <data name="lblinvoicenumber.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;txtQuantity.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Invoice Types</value>
   </data>
   <data name="&gt;&gt;txtSearch.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="btnUpdate.Text" xml:space="preserve">
     <value>Updates</value>
-  </data>
-  <data name="&gt;&gt;lblDiscount.ZOrder" xml:space="preserve">
-    <value>17</value>
   </data>
   <data name="&gt;&gt;btnInsert.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -600,8 +609,8 @@
   <data name="&gt;&gt;lbldescription.Name" xml:space="preserve">
     <value>lbldescription</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Search</value>
+  <data name="lblinvoicenumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lblid.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -609,11 +618,11 @@
   <data name="&gt;&gt;dgwBodies.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;cmbInoviceType.Name" xml:space="preserve">
+    <value>cmbInoviceType</value>
   </data>
-  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;lblDiscount.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -630,11 +639,8 @@
   <data name="txtID.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="lblDiscount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1088, 98</value>
-  </data>
-  <data name="lblQuantity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>821, 98</value>
+  <data name="&gt;&gt;lbldescription.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lblPrice.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 24</value>
@@ -669,20 +675,23 @@
   <data name="cmbSupplier.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
-  <data name="btnInsert.Text" xml:space="preserve">
-    <value>Inserts</value>
+  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Header Id</value>
   </data>
   <data name="&gt;&gt;txtPrice.Name" xml:space="preserve">
     <value>txtPrice</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="cmbInoviceType.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;lblsupplier.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="txtDiscount.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
+  </data>
+  <data name="txtDiscount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1072, 126</value>
   </data>
   <data name="lblPos.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 24</value>
@@ -696,11 +705,14 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="txtQuantity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>821, 125</value>
+  </data>
   <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
     <value>btnUpdate</value>
   </data>
-  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbldescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btndelete.Name" xml:space="preserve">
     <value>btndelete</value>
@@ -711,14 +723,11 @@
   <data name="cmbPos.Text" xml:space="preserve">
     <value>radDropDownList1</value>
   </data>
-  <data name="&gt;&gt;btndelete.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lblPos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.8pt</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 306</value>
-  </data>
-  <data name="&gt;&gt;cmbPos.Name" xml:space="preserve">
-    <value>cmbPos</value>
   </data>
   <data name="lbldescription.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -726,8 +735,8 @@
   <data name="txtDescription.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;txtDiscount.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="&gt;&gt;cmbPos.Name" xml:space="preserve">
+    <value>cmbPos</value>
   </data>
   <data name="&gt;&gt;lblPos.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -738,14 +747,11 @@
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 24</value>
   </data>
-  <data name="txtQuantity.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
+  <data name="cmbItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 37</value>
   </data>
   <data name="&gt;&gt;lblinvoicenumber.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblinvoicenumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>283, 4</value>
   </data>
   <data name="btnUpdate.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -765,20 +771,17 @@
   <data name="btnSave.Text" xml:space="preserve">
     <value>Saves</value>
   </data>
-  <data name="&gt;&gt;cmbItem.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1170, 315</value>
   </data>
   <data name="btnInsert.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Invoice Types</value>
+  <data name="&gt;&gt;txtDescription.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;btnInsert.Name" xml:space="preserve">
-    <value>btnInsert</value>
-  </data>
-  <data name="&gt;&gt;lblQuantity.Name" xml:space="preserve">
-    <value>lblQuantity</value>
+  <data name="lblDiscount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1088, 98</value>
   </data>
   <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 333</value>
@@ -788,9 +791,6 @@
   </data>
   <data name="btnClear.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;btndelete.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblDiscount.Parent" xml:space="preserve">
     <value>$this</value>
@@ -803,6 +803,9 @@
   </data>
   <data name="lblItem.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
   </data>
   <data name="cmbSupplier.Location" type="System.Drawing.Point, System.Drawing">
     <value>1072, 31</value>
@@ -825,8 +828,8 @@
   <data name="&gt;&gt;dgwBodies.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt, style=Bold</value>
+  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
+    <value>txtID</value>
   </data>
   <data name="lblid.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 24</value>
@@ -834,17 +837,17 @@
   <data name="&gt;&gt;txtDescription.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="txtDiscount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1072, 126</value>
+  <data name="txtDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="&gt;&gt;lblDiscount.Name" xml:space="preserve">
     <value>lblDiscount</value>
   </data>
-  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1311, 770</value>
   </data>
-  <data name="&gt;&gt;txtInvoiceNumber.Name" xml:space="preserve">
-    <value>txtInvoiceNumber</value>
+  <data name="txtInvoiceNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;lblPos.Name" xml:space="preserve">
     <value>lblPos</value>
@@ -861,20 +864,20 @@
   <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lbldescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>550, 4</value>
+  <data name="&gt;&gt;btndelete.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;txtSearch.Name" xml:space="preserve">
+    <value>txtSearch</value>
   </data>
   <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
     <value>1027, 315</value>
   </data>
-  <data name="&gt;&gt;txtDiscount.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lblPrice.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
     <value>20</value>
@@ -882,17 +885,17 @@
   <data name="&gt;&gt;txtQuantity.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Item</value>
+  <data name="lbldescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 24</value>
   </data>
-  <data name="lblItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 97</value>
+  <data name="lblQuantity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 24</value>
   </data>
-  <data name="&gt;&gt;lblQuantity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblsupplier.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1068, 4</value>
   </data>
-  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Quantity</value>
+  <data name="&gt;&gt;txtDiscount.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
   <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -903,14 +906,11 @@
   <data name="lblQuantity.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="lblQuantity.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblinvoicenumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 4</value>
   </data>
   <data name="cmbInoviceType.Location" type="System.Drawing.Point, System.Drawing">
     <value>817, 31</value>
-  </data>
-  <data name="&gt;&gt;txtQuantity.Name" xml:space="preserve">
-    <value>txtQuantity</value>
   </data>
   <data name="txtSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 37</value>
@@ -918,8 +918,8 @@
   <data name="&gt;&gt;txtQuantity.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="txtInvoiceNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>283, 31</value>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 333</value>
@@ -927,11 +927,11 @@
   <data name="txtPrice.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
-  <data name="&gt;&gt;txtInvoiceNumber.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;txtDiscount.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.8pt</value>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -939,23 +939,23 @@
   <data name="dgwBodies.Size" type="System.Drawing.Size, System.Drawing">
     <value>1301, 393</value>
   </data>
-  <data name="&gt;&gt;cmbPos.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lblPrice.ZOrder" xml:space="preserve">
+    <value>25</value>
   </data>
   <data name="&gt;&gt;lblPrice.Name" xml:space="preserve">
     <value>lblPrice</value>
   </data>
-  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 56</value>
+  <data name="&gt;&gt;txtQuantity.Name" xml:space="preserve">
+    <value>txtQuantity</value>
   </data>
-  <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt, style=Bold</value>
+  <data name="lblid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 4</value>
   </data>
   <data name="&gt;&gt;txtDiscount.Name" xml:space="preserve">
     <value>txtDiscount</value>
   </data>
-  <data name="txtQuantity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>821, 125</value>
+  <data name="&gt;&gt;btnInsert.Name" xml:space="preserve">
+    <value>btnInsert</value>
   </data>
   <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
     <value>btnClear</value>
@@ -966,14 +966,14 @@
   <data name="&gt;&gt;btndelete.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;txtQuantity.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;cmbItem.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="cmbInoviceType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 37</value>
   </data>
-  <data name="&gt;&gt;txtInvoiceNumber.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;lblQuantity.Name" xml:space="preserve">
+    <value>lblQuantity</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

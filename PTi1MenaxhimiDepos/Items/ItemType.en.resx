@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 104</value>
+  </data>
+  <data name="txtdescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 220</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>464, 77</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 24</value>
   </data>
@@ -131,17 +140,23 @@
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 193</value>
+  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 24</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Description</value>
   </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="txtid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 104</value>
   </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 77</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 24</value>
@@ -149,11 +164,14 @@
   <data name="label4.Text" xml:space="preserve">
     <value>ID</value>
   </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>558, 263</value>
+  </data>
   <data name="btnSave.Text" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>651, 152</value>
+    <value>558, 263</value>
   </data>
   <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 56</value>
@@ -161,13 +179,31 @@
   <data name="btnUpdate.Text" xml:space="preserve">
     <value>Update</value>
   </data>
+  <data name="btndelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>558, 201</value>
+  </data>
   <data name="btndelete.Text" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 263</value>
   </data>
   <data name="btnClear.Text" xml:space="preserve">
     <value>Clear</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ItemType</value>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 9</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 24</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Insert Type</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 412</value>
   </data>
 </root>

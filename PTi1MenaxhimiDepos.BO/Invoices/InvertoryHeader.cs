@@ -8,14 +8,13 @@ namespace PTi1MenaxhimiDepos.BO.Invoices
 {
     public class InvertoryHeader : AuditionAtributtes
     {
-        public InvertoryHeader(int invertoryID, string docNo,int docTypeID,int posID,string description, int clientID=0,int supplierid =0)
+        public InvertoryHeader(int invertoryID, string docNo,int docTypeID,int posID,string description,int supplierid =0)
         {
             InvertoryID = invertoryID;
             DocNo = docNo;
             DocTypeID = docTypeID;
             PosID = posID;
             Description = description;
-            ClientID = clientID;
             SupplierID = supplierid;
             Bodies = new List<InvertoryBody>();
         }
@@ -36,8 +35,6 @@ namespace PTi1MenaxhimiDepos.BO.Invoices
         public int PosID { get; set; }
         public virtual PointofSale POS { get; set; }
         public string Description { get; set; }
-        public int ClientID { get; set; }
-        public virtual Client Client { get; set; }
         public int SupplierID { get; set; }
         public virtual Supplier Supplier { get; set; }
         public List<InvertoryBody> Bodies { get; set; }

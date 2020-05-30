@@ -117,43 +117,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnClear.Text" xml:space="preserve">
-    <value>Clear</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 102</value>
   </data>
-  <data name="btndelete.Text" xml:space="preserve">
-    <value>Delete</value>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 75</value>
   </data>
-  <data name="btnUpdate.Text" xml:space="preserve">
-    <value>Update</value>
+  <data name="txtName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>487, 102</value>
   </data>
-  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>ID</value>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 75</value>
   </data>
-  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>Name</value>
+  <data name="txtCity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 232</value>
   </data>
-  <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
-    <value>City</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 205</value>
   </data>
-  <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
-    <value>Phone</value>
+  <data name="txtPhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>487, 232</value>
   </data>
-  <data name="gridViewTextBoxColumn15.HeaderText" xml:space="preserve">
-    <value>Description</value>
+  <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 366</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Name</value>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 205</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>City</value>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 339</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Phone</value>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>618, 369</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Description</value>
+  <data name="btndelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>618, 307</value>
+  </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 369</value>
+  </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>618, 369</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 9</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
-    <value>Search</value>
+    <value>Insert Pos</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>869, 521</value>
   </data>
 </root>

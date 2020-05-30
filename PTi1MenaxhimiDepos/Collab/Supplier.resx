@@ -121,16 +121,22 @@
   <data name="radLabel10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
-  <data name="radLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 30</value>
+  <data name="&gt;&gt;radLabel6.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="txtphone.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 37</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
   <data name="btnUpdate.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
@@ -147,10 +153,10 @@
     <value>17, 30</value>
   </data>
   <data name="&gt;&gt;txtID.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
-  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
-    <value>btnSave</value>
+  <data name="&gt;&gt;txtdecription.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="btnClear.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -160,9 +166,6 @@
   </data>
   <data name="&gt;&gt;txtphone.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 37</value>
@@ -191,8 +194,8 @@
   <data name="dgwSuppliers.Size" type="System.Drawing.Size, System.Drawing">
     <value>1202, 373</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1227, 691</value>
+  <data name="&gt;&gt;radLabel6.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;radLabel10.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -207,13 +210,16 @@
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;txtemail.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Suppliers</value>
   </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>17</value>
   </data>
   <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 58</value>
@@ -254,8 +260,8 @@
   <data name="radLabel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>858, 5</value>
   </data>
-  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="btnDelete.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;txtdecription.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -263,14 +269,11 @@
   <data name="&gt;&gt;txtphone.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtphone.Name" xml:space="preserve">
-    <value>txtphone</value>
-  </data>
   <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 16.25pt</value>
   </data>
-  <data name="&gt;&gt;txtdecription.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -283,9 +286,6 @@
   </data>
   <data name="radLabel2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
-  </data>
-  <data name="btnDelete.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;txtdecription.Name" xml:space="preserve">
     <value>txtdecription</value>
@@ -302,17 +302,26 @@
   <data name="btnSearch.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
+  <data name="&gt;&gt;radLabel6.Name" xml:space="preserve">
+    <value>radLabel6</value>
+  </data>
+  <data name="&gt;&gt;radLabel6.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="&gt;&gt;radLabel5.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;radLabel2.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="txtdecription.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblName.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -326,11 +335,17 @@
   <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 42</value>
   </data>
+  <data name="radLabel4.Text" xml:space="preserve">
+    <value>s</value>
+  </data>
   <data name="lblName.Text" xml:space="preserve">
     <value>Names</value>
   </data>
   <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 258</value>
+  </data>
+  <data name="radLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 30</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Supplier</value>
@@ -382,13 +397,16 @@
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;txtphone.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="&gt;&gt;radLabel2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="txtcity.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;txtID.Parent" xml:space="preserve">
     <value>$this</value>
@@ -408,6 +426,9 @@
   <data name="&gt;&gt;txtcity.Name" xml:space="preserve">
     <value>txtcity</value>
   </data>
+  <data name="radLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
   <data name="&gt;&gt;radLabel10.Name" xml:space="preserve">
     <value>radLabel10</value>
   </data>
@@ -420,8 +441,8 @@
   <data name="&gt;&gt;txtname.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="radLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
+  <data name="&gt;&gt;txtphone.Name" xml:space="preserve">
+    <value>txtphone</value>
   </data>
   <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -439,7 +460,7 @@
     <value>Updates</value>
   </data>
   <data name="&gt;&gt;lblName.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="txtemail.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 123</value>
@@ -451,7 +472,7 @@
     <value>574, 41</value>
   </data>
   <data name="&gt;&gt;radLabel4.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -481,7 +502,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;radLabel3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="radLabel11.Text" xml:space="preserve">
     <value>ss</value>
@@ -492,8 +513,11 @@
   <data name="txtname.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radLabel4.Text" xml:space="preserve">
-    <value>s</value>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="radLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 12</value>
   </data>
   <data name="txtID.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -511,7 +535,7 @@
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;txtname.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -532,7 +556,7 @@
     <value>Fshijs</value>
   </data>
   <data name="&gt;&gt;radLabel11.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="radLabel3.Text" xml:space="preserve">
     <value>Phones</value>
@@ -545,6 +569,9 @@
   </data>
   <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 56</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="btnUpdate.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -603,8 +630,8 @@
   <data name="&gt;&gt;dgwSuppliers.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1227, 691</value>
   </data>
   <data name="txtname.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
@@ -621,6 +648,9 @@
   <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="radLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>522, 12</value>
+  </data>
   <data name="&gt;&gt;radLabel4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -636,6 +666,9 @@
   <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>ID</value>
   </data>
+  <data name="&gt;&gt;radLabel1.Name" xml:space="preserve">
+    <value>radLabel1</value>
+  </data>
   <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
     <value>Name</value>
   </data>
@@ -649,10 +682,10 @@
     <value>City</value>
   </data>
   <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>16</value>
   </data>
   <data name="&gt;&gt;txtdecription.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="radLabel5.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -662,6 +695,9 @@
   </data>
   <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>280, 258</value>
+  </data>
+  <data name="radLabel6.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
   </data>
   <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
     <value>$this</value>
@@ -682,7 +718,7 @@
     <value>Deletes</value>
   </data>
   <data name="&gt;&gt;txtcity.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="radLabel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 30</value>

@@ -45,6 +45,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.WinControls, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.ChartView, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.GridView, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
@@ -57,12 +58,24 @@
     <Compile Include="Administration\Role.Designer.cs">
       <DependentUpon>Role.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administration\RoleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\RoleList.Designer.cs">
+      <DependentUpon>RoleList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administration\Security.cs" />
     <Compile Include="Administration\User.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administration\User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
     <Compile Include="Collab\Client.cs">
       <SubType>Form</SubType>
@@ -76,11 +89,23 @@
     <Compile Include="Collab\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Collab\EmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collab\EmployeeList.Designer.cs">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Collab\EmployeePOS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Collab\EmployeePOS.Designer.cs">
       <DependentUpon>EmployeePOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Collab\EmployeePOSList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collab\EmployeePOSList.Designer.cs">
+      <DependentUpon>EmployeePOSList.cs</DependentUpon>
     </Compile>
     <Compile Include="Collab\Supplier.cs">
       <SubType>Form</SubType>
@@ -88,14 +113,62 @@
     <Compile Include="Collab\Supplier.Designer.cs">
       <DependentUpon>Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Collab\SupplierList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collab\SupplierList.Designer.cs">
+      <DependentUpon>SupplierList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ControlShow.cs" />
     <Compile Include="Controls\CreateControl.cs" />
+    <Compile Include="EntryExits\ClientRaports\ClientRaport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\ClientRaports\ClientRaport.Designer.cs">
+      <DependentUpon>ClientRaport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryExits\ClientRaports\ClientsInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\ClientRaports\ClientsInvoice.Designer.cs">
+      <DependentUpon>ClientsInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryExits\Entries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\Entries.Designer.cs">
+      <DependentUpon>Entries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryExits\ItemReports\ItemReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\ItemReports\ItemReport.Designer.cs">
+      <DependentUpon>ItemReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryExits\ListBodies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\ListBodies.Designer.cs">
+      <DependentUpon>ListBodies.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpClass.cs" />
     <Compile Include="Invoices\Invoice.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Invoices\Invoice.Designer.cs">
       <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\InvoiceBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\InvoiceBody.Designer.cs">
+      <DependentUpon>InvoiceBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\InvoiceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\InvoiceList.Designer.cs">
+      <DependentUpon>InvoiceList.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\ListInvoice.cs">
       <SubType>Form</SubType>
@@ -109,11 +182,23 @@
     <Compile Include="Invoices\ListInvoiceBodies.Designer.cs">
       <DependentUpon>ListInvoiceBodies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Items\CategoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\CategoryList.Designer.cs">
+      <DependentUpon>CategoryList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Items\ItemCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Items\ItemCategory.Designer.cs">
       <DependentUpon>ItemCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\ItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\ItemList.Designer.cs">
+      <DependentUpon>ItemList.cs</DependentUpon>
     </Compile>
     <Compile Include="Items\ItemType.cs">
       <SubType>Form</SubType>
@@ -127,6 +212,19 @@
     <Compile Include="Items\ItemUnit.Designer.cs">
       <DependentUpon>ItemUnit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Items\TypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\TypeList.Designer.cs">
+      <DependentUpon>TypeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\UnitList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\UnitList.Designer.cs">
+      <DependentUpon>UnitList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Languages\TranslateFormMultipleResource.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +242,12 @@
     </Compile>
     <Compile Include="POS\POS.Designer.cs">
       <DependentUpon>POS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS\PosList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS\PosList.Designer.cs">
+      <DependentUpon>PosList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -174,6 +278,15 @@
     <EmbeddedResource Include="Administration\Role.sq.resx">
       <DependentUpon>Role.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\RoleList.en.resx">
+      <DependentUpon>RoleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\RoleList.resx">
+      <DependentUpon>RoleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\RoleList.sq.resx">
+      <DependentUpon>RoleList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\User.en.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +295,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\User.sq.resx">
       <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\UserList.en.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\UserList.sq.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Collab\Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
@@ -195,6 +317,15 @@
     <EmbeddedResource Include="Collab\Employee.sq.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Collab\EmployeeList.en.resx">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\EmployeeList.resx">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\EmployeeList.sq.resx">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Collab\EmployeePOS.en.resx">
       <DependentUpon>EmployeePOS.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +334,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Collab\EmployeePOS.sq.resx">
       <DependentUpon>EmployeePOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\EmployeePOSList.en.resx">
+      <DependentUpon>EmployeePOSList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\EmployeePOSList.resx">
+      <DependentUpon>EmployeePOSList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\EmployeePOSList.sq.resx">
+      <DependentUpon>EmployeePOSList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Collab\Supplier.aa.resx">
       <DependentUpon>Supplier.cs</DependentUpon>
@@ -216,6 +356,30 @@
     <EmbeddedResource Include="Collab\Supplier.sq.resx">
       <DependentUpon>Supplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Collab\SupplierList.en.resx">
+      <DependentUpon>SupplierList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\SupplierList.resx">
+      <DependentUpon>SupplierList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collab\SupplierList.sq.resx">
+      <DependentUpon>SupplierList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\ClientRaports\ClientRaport.resx">
+      <DependentUpon>ClientRaport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\ClientRaports\ClientsInvoice.resx">
+      <DependentUpon>ClientsInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\Entries.resx">
+      <DependentUpon>Entries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\ItemReports\ItemReport.resx">
+      <DependentUpon>ItemReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\ListBodies.resx">
+      <DependentUpon>ListBodies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\Invoice.en.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,11 +389,50 @@
     <EmbeddedResource Include="Invoices\Invoice.sq.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\InvoiceBody.en.resx">
+      <DependentUpon>InvoiceBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\InvoiceBody.resx">
+      <DependentUpon>InvoiceBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\InvoiceBody.sq.resx">
+      <DependentUpon>InvoiceBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\InvoiceList.en.resx">
+      <DependentUpon>InvoiceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\InvoiceList.resx">
+      <DependentUpon>InvoiceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\InvoiceList.sq.resx">
+      <DependentUpon>InvoiceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\ListInvoice.en.resx">
+      <DependentUpon>ListInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\ListInvoice.resx">
       <DependentUpon>ListInvoice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\ListInvoice.sq.resx">
+      <DependentUpon>ListInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\ListInvoiceBodies.en.resx">
+      <DependentUpon>ListInvoiceBodies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\ListInvoiceBodies.resx">
       <DependentUpon>ListInvoiceBodies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\ListInvoiceBodies.sq.resx">
+      <DependentUpon>ListInvoiceBodies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\CategoryList.en.resx">
+      <DependentUpon>CategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\CategoryList.resx">
+      <DependentUpon>CategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\CategoryList.sq.resx">
+      <DependentUpon>CategoryList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Items\ItemCategory.en.resx">
       <DependentUpon>ItemCategory.cs</DependentUpon>
@@ -239,6 +442,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Items\ItemCategory.sq.resx">
       <DependentUpon>ItemCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\ItemList.en.resx">
+      <DependentUpon>ItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\ItemList.resx">
+      <DependentUpon>ItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\ItemList.sq.resx">
+      <DependentUpon>ItemList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Items\ItemType.aa.resx">
       <DependentUpon>ItemType.cs</DependentUpon>
@@ -267,6 +479,24 @@
     <EmbeddedResource Include="Items\RegisterItem.sq.resx">
       <DependentUpon>RegisterItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Items\TypeList.en.resx">
+      <DependentUpon>TypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\TypeList.resx">
+      <DependentUpon>TypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\TypeList.sq.resx">
+      <DependentUpon>TypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\UnitList.en.resx">
+      <DependentUpon>UnitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\UnitList.resx">
+      <DependentUpon>UnitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\UnitList.sq.resx">
+      <DependentUpon>UnitList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.en.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +505,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.sq.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.aa.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.en.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -293,6 +526,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="POS\POS.sq.resx">
       <DependentUpon>POS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS\PosList.en.resx">
+      <DependentUpon>PosList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS\PosList.resx">
+      <DependentUpon>PosList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS\PosList.sq.resx">
+      <DependentUpon>PosList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -451,5 +693,24 @@
   <ItemGroup>
     <None Include="Resources\update1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reload-2-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-clear-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exel.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

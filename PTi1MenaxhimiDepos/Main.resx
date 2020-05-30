@@ -153,9 +153,6 @@
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="albaniaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Albania</value>
-  </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
@@ -180,9 +177,6 @@
   <data name="btnhyrjet.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
-  <data name="&gt;&gt;btnshitja.Name" xml:space="preserve">
-    <value>btnshitja</value>
-  </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Daljet</value>
   </data>
@@ -191,9 +185,6 @@
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnhyrjet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>408, 8</value>
   </data>
   <data name="&gt;&gt;label6.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -204,7 +195,7 @@
   <data name="btnhyrjet.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnregister.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnbashkpunimet.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
@@ -218,12 +209,6 @@
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1817, 28</value>
-  </data>
-  <data name="albaniaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 26</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
   </data>
   <data name="&gt;&gt;button6.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -255,11 +240,11 @@
   <data name="label13.Text" xml:space="preserve">
     <value>Depot</value>
   </data>
-  <data name="&gt;&gt;languageToolStripMenuItem.Name" xml:space="preserve">
-    <value>languageToolStripMenuItem</value>
-  </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -297,6 +282,9 @@
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="btnregister.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt</value>
+  </data>
   <data name="btnbashkpunimet.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 66</value>
   </data>
@@ -324,14 +312,8 @@
   <data name="btndaljet.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
-  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 26</value>
-  </data>
   <data name="btnregister.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;albaniaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tabPage1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -339,8 +321,8 @@
   <data name="&gt;&gt;btnbashkpunimet.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 22</value>
+  <data name="&gt;&gt;btnshitja.Name" xml:space="preserve">
+    <value>btnshitja</value>
   </data>
   <data name="&gt;&gt;btnshitja.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -348,17 +330,14 @@
   <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Partneret</value>
   </data>
   <data name="&gt;&gt;btnbashkpunimet.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 22</value>
   </data>
   <data name="&gt;&gt;label13.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -399,9 +378,6 @@
   <data name="tabControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;englishToolStripMenuItem.Name" xml:space="preserve">
-    <value>englishToolStripMenuItem</value>
-  </data>
   <data name="btnhyrjet.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 66</value>
   </data>
@@ -421,7 +397,7 @@
     <value>107, 66</value>
   </data>
   <data name="tlalbania.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>83, 26</value>
   </data>
   <data name="btnbashkpunimet.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -429,8 +405,8 @@
   <data name="tabControl2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 24</value>
+  <data name="btndaljet.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
     <value>helpToolStripMenuItem</value>
@@ -449,9 +425,6 @@
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>687, 88</value>
-  </data>
-  <data name="btndaljet.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -486,23 +459,14 @@
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
-  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
   <data name="&gt;&gt;button6.Name" xml:space="preserve">
     <value>button6</value>
   </data>
   <data name="btnartikujt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;albaniaToolStripMenuItem.Name" xml:space="preserve">
-    <value>albaniaToolStripMenuItem</value>
-  </data>
   <data name="&gt;&gt;btnregister.Parent" xml:space="preserve">
     <value>tabPage1</value>
-  </data>
-  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
-    <value>English</value>
   </data>
   <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -546,8 +510,8 @@
   <data name="&gt;&gt;btnregister.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="btnbashkpunimet.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt</value>
+  <data name="btnhyrjet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>408, 8</value>
   </data>
   <data name="&gt;&gt;button6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -577,10 +541,10 @@
     <value>2</value>
   </data>
   <data name="tlenglish.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>83, 26</value>
   </data>
-  <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="button6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1788, 117</value>
@@ -608,6 +572,9 @@
   </data>
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;tlalbania.Name" xml:space="preserve">
+    <value>tlalbania</value>
   </data>
   <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -717,8 +684,8 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="button6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt</value>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
   <data name="btnregister.Location" type="System.Drawing.Point, System.Drawing">
     <value>139, 8</value>
@@ -757,7 +724,7 @@
     <value>tabControl2</value>
   </data>
   <data name="language.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 24</value>
+    <value>14, 24</value>
   </data>
   <data name="&gt;&gt;btnshitja.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -813,14 +780,11 @@
   <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;languageToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;language.Name" xml:space="preserve">
     <value>language</value>
   </data>
-  <data name="&gt;&gt;tlalbania.Name" xml:space="preserve">
-    <value>tlalbania</value>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>573, 88</value>

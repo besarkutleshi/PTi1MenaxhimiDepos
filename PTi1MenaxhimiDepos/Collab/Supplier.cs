@@ -17,10 +17,19 @@ namespace PTi1MenaxhimiDepos.Collab
         public Supplier()
         {
             InitializeComponent();
-        }
-        private void Supplier_Load(object sender, EventArgs e)
+        } 
+        
+        public Supplier(BO.Supplier supplier)
         {
-            dgwSuppliers.DataSource = CollaborationBLL.GetSuppliers();
+            InitializeComponent();
+            this.supplier = supplier;
+            txtID.Text = supplier.ID.ToString();
+            txtname.Text = supplier.Name;
+            txtcity.Text = supplier.City;
+            txtdecription.Text = supplier.Description;
+            txtphone.Text = supplier.Phone;
+            txtemail.Text = supplier.Mail;
+            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
         }
 
         private void btnRuaj_Click(object sender, EventArgs e)
@@ -77,62 +86,8 @@ namespace PTi1MenaxhimiDepos.Collab
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.Delete(txtID, txtcity, txtdecription, txtemail, txtname, txtphone, txtSearch);
+            HelpClass.Delete(txtID, txtcity, txtdecription, txtemail, txtname, txtphone);
             HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
-        }
-
-        private void dgwSuppliers_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            supplier = (BO.Supplier)dgwSuppliers.Rows[e.RowIndex].DataBoundItem;
-            txtID.Text = supplier.ID.ToString();
-            txtname.Text = supplier.Name;
-            txtcity.Text = supplier.City;
-            txtdecription.Text = supplier.Description;
-            txtphone.Text = supplier.Phone;
-            txtemail.Text = supplier.Mail;
-            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
-        }
-
-        public override void Refresh()
-        {
-            HelpClass.Delete(txtID, txtcity, txtdecription, txtemail, txtname, txtphone, txtSearch);
-            HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
-            dgwSuppliers.DataSource = null;
-            dgwSuppliers.DataSource = CollaborationBLL.GetSuppliers();
-            supplier = null;
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
-            {
-                dgwSuppliers.DataSource = null;
-                dgwSuppliers.DataSource = CollaborationBLL.GetSuppliers();
-            }
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (txtSearch.Text.All(char.IsDigit))
-            {
-                BO.Supplier obj = CollaborationBLL.GetSupplier(int.Parse(txtSearch.Text));
-                DisplaySearchResult(obj);
-            }
-            else
-            {
-                BO.Supplier obj = CollaborationBLL.GetSupplier(txtSearch.Text);
-                DisplaySearchResult(obj);
-            }
-        }
-
-        private void DisplaySearchResult(BO.Supplier obj)
-        {
-            List<BO.Supplier> suppliers = null;
-            if(HelperClass.DoesExists(obj,ref suppliers))
-            {
-                dgwSuppliers.DataSource = null;
-                dgwSuppliers.DataSource = suppliers;
-            }
         }
 
         private void Supplier_FormClosing(object sender, FormClosingEventArgs e)

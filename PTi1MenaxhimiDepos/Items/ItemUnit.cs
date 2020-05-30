@@ -19,9 +19,15 @@ namespace PTi1MenaxhimiDepos.Items
         {
             InitializeComponent();
         }
-        private void ItemUnit_Load(object sender, EventArgs e)
+
+        public ItemUnit(BO.ItemUnit unit)
         {
-            dgwUnits.DataSource = ItemBLL.GetItemUnits();
+            this.unit = unit;
+            InitializeComponent();
+            txtID.Text = unit.ID.ToString();
+            txtname.Text = unit.Name;
+            txtdescription.Text = unit.Description;
+            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -41,41 +47,7 @@ namespace PTi1MenaxhimiDepos.Items
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (txtSearch.Text.All(char.IsDigit))
-            {
-                BO.ItemUnit unit = ItemBLL.GetUnit(int.Parse(txtSearch.Text));
-                DisplaySearchResult(unit);
-            }
-            else
-            {
-                BO.ItemUnit unit = ItemBLL.GetUnit(txtSearch.Text);
-                DisplaySearchResult(unit);
-            }
-        }
-
-        private void DisplaySearchResult(BO.ItemUnit obj)
-        {
-            List<BO.ItemUnit> itemUnits = null;
-            if(HelperClass.DoesExists(obj,ref itemUnits))
-            {
-                dgwUnits.DataSource = null;
-                dgwUnits.DataSource = itemUnits;
-            }
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
-            {
-                dgwUnits.DataSource = null;
-                dgwUnits.DataSource = ItemBLL.GetItemUnits();
-            }
-        }
-
-        
-
+      
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if(unit.Name == txtname.Text && unit.Description == txtdescription.Text)
@@ -111,23 +83,6 @@ namespace PTi1MenaxhimiDepos.Items
             HelpClass.Delete(txtname, txtdescription, txtID);
         }
 
-        public override void Refresh()
-        {
-            HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
-            HelpClass.Delete(txtname, txtdescription, txtID);
-            dgwUnits.DataSource = null;
-            dgwUnits.DataSource = ItemBLL.GetItemUnits();
-        }
-
-        private void dgwUnits_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            unit = (BO.ItemUnit)dgwUnits.Rows[e.RowIndex].DataBoundItem;
-            txtID.Text = unit.ID.ToString();
-            txtname.Text = unit.Name;
-            txtdescription.Text = unit.Description;
-            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
-        }
-
         private void ItemUnit_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Are you sure ?", "Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -138,6 +93,11 @@ namespace PTi1MenaxhimiDepos.Items
             {
                 e.Cancel = true;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

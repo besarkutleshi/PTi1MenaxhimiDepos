@@ -19,6 +19,17 @@ namespace PTi1MenaxhimiDepos.Administration
             InitializeComponent();
         }
 
+        public Role(BO.Role role)
+        {
+            InitializeComponent();
+            this.role = role;
+            txtID.Text = role.ID.ToString();
+            txtname.Text = role.Name;
+            txtDescription.Text = role.Description;
+            txtCode.Text = role.Code;
+            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
+        }
+
 
         private void btndelete_Click(object sender, EventArgs e)
         {
@@ -56,7 +67,7 @@ namespace PTi1MenaxhimiDepos.Administration
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            HelpClass.Delete(txtCode, txtDescription, txtID, txtname, txtSearch);
+            HelpClass.Delete(txtCode, txtDescription, txtID, txtname);
             HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
         }
 
@@ -75,63 +86,6 @@ namespace PTi1MenaxhimiDepos.Administration
                     Refresh();
                 }
             }
-        }
-
-        private void dgwRoles_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            role = (BO.Role)dgwRoles.Rows[e.RowIndex].DataBoundItem;
-            txtID.Text = role.ID.ToString();
-            txtname.Text = role.Name;
-            txtDescription.Text = role.Description;
-            txtCode.Text = role.Code;
-            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
-            {
-                dgwRoles.DataSource = null;
-                dgwRoles.DataSource = AdministrationBLL.GetRoles();
-            }
-        }
-
-        private void Role_Load(object sender, EventArgs e)
-        {
-            dgwRoles.DataSource = AdministrationBLL.GetRoles();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (txtSearch.Text.All(char.IsDigit))
-            {
-                BO.Role obj = AdministrationBLL.GetRole(int.Parse(txtSearch.Text));
-                DisplaySearchResult(obj);
-            }
-            else
-            {
-                BO.Role obj = AdministrationBLL.GetRole(txtSearch.Text);
-                DisplaySearchResult(obj);
-            }
-        }
-
-        private void DisplaySearchResult(BO.Role obj)
-        {
-            List<BO.Role> roles = null;
-            if(HelperClass.DoesExists(obj,ref roles))
-            {
-                dgwRoles.DataSource = null;
-                dgwRoles.DataSource = roles;
-            }
-        }
-
-        public override void Refresh()
-        {
-            HelpClass.Delete(txtCode, txtDescription, txtID, txtname, txtSearch);
-            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
-            dgwRoles.DataSource = null;
-            dgwRoles.DataSource = AdministrationBLL.GetRoles();
-            txtname.Focus();
         }
 
         private void Role_FormClosing(object sender, FormClosingEventArgs e)

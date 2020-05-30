@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AdministrationBLL.cs" />
     <Compile Include="CollaborationBLL.cs" />
+    <Compile Include="EntriesExitsBL.cs" />
     <Compile Include="HelperClass.cs" />
     <Compile Include="InvoiceBLL.cs" />
     <Compile Include="ItemBLL.cs" />

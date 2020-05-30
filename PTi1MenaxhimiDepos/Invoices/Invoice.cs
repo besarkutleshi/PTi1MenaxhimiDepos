@@ -50,7 +50,7 @@ namespace PTi1MenaxhimiDepos.Invoices
                 if (invertoryHeader == null)
                 {
                     invertoryHeader = new InvertoryHeader(InvoiceBLL.MaxID(), txtInvoiceNumber.Text, (int)cmbInoviceType.SelectedValue, (int)cmbPos.SelectedValue, txtDescription.Text
-                        ,0,(int)cmbSupplier.SelectedValue);
+                        ,(int)cmbSupplier.SelectedValue);
                     invertoryHeader.Username = HelpClass.CurrentUser.UserName;
                 }
                 InvertoryBody obj1 = new InvertoryBody(counter++,InvoiceBLL.MaxID(), (int)cmbItem.SelectedValue, double.Parse(txtQuantity.Text), double.Parse(txtPrice.Text),

@@ -122,14 +122,26 @@
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>474, 342</value>
+  </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 24</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Pershkrimi</value>
   </data>
+  <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 370</value>
+  </data>
+  <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 37</value>
+  </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 203</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 24</value>
@@ -137,8 +149,17 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Fjalkalimi</value>
   </data>
+  <data name="txtPasword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 231</value>
+  </data>
+  <data name="txtPasword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 37</value>
+  </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 203</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 24</value>
@@ -146,8 +167,20 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Pordoruesi</value>
   </data>
+  <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 231</value>
+  </data>
+  <data name="txtUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 37</value>
+  </data>
+  <data name="cmbEmployee.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 97</value>
+  </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 69</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 24</value>
@@ -155,8 +188,17 @@
   <data name="label3.Text" xml:space="preserve">
     <value>Puntori</value>
   </data>
+  <data name="cmbRole.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 370</value>
+  </data>
+  <data name="cmbRole.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 37</value>
+  </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 344</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 24</value>
@@ -164,35 +206,20 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Roli</value>
   </data>
+  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 98</value>
+  </data>
   <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 70</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 24</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>ID</value>
-  </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>ID</value>
-  </data>
-  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
-    <value>Username</value>
-  </data>
-  <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>Employee</value>
-  </data>
-  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>Role</value>
-  </data>
-  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>Description</value>
   </data>
   <data name="btnUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -291,7 +318,7 @@
 </value>
   </data>
   <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>716, 227</value>
+    <value>602, 490</value>
   </data>
   <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 58</value>
@@ -410,8 +437,14 @@
         aqJHLELCSxGLKmIsF2YH7jfHY/GooihTNRRmkJj7gWL8F6ak9H+MI9j9nz3Z0QAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>445, 490</value>
+  </data>
   <data name="btnClear.Text" xml:space="preserve">
     <value>Pastro</value>
+  </data>
+  <data name="btndelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>602, 429</value>
   </data>
   <data name="btndelete.Text" xml:space="preserve">
     <value>Fshij</value>
@@ -464,50 +497,27 @@
         rkJggg==
 </value>
   </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>602, 491</value>
+  </data>
   <data name="btnSave.Text" xml:space="preserve">
     <value>Ruaj</value>
   </data>
-  <data name="btnSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 9</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Shto Perdorues</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Perdoruesi</value>

@@ -117,41 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="gridViewTextBoxColumn34.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
     <value>Barcode</value>
   </data>
-  <data name="gridViewTextBoxColumn35.HeaderText" xml:space="preserve">
-    <value>Item</value>
+  <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
+    <value>Name</value>
   </data>
-  <data name="gridViewTextBoxColumn36.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
     <value>Category</value>
   </data>
-  <data name="gridViewTextBoxColumn37.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn15.HeaderText" xml:space="preserve">
     <value>Type</value>
   </data>
-  <data name="gridViewTextBoxColumn38.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn16.HeaderText" xml:space="preserve">
     <value>Unit</value>
   </data>
-  <data name="gridViewTextBoxColumn39.HeaderText" xml:space="preserve">
-    <value>Quantity</value>
+  <data name="gridViewTextBoxColumn17.HeaderText" xml:space="preserve">
+    <value>Stock</value>
   </data>
-  <data name="gridViewTextBoxColumn40.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn18.HeaderText" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="gridViewTextBoxColumn41.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn19.HeaderText" xml:space="preserve">
     <value>Item</value>
   </data>
-  <data name="gridViewTextBoxColumn42.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn20.HeaderText" xml:space="preserve">
     <value>Quantity</value>
   </data>
-  <data name="gridViewTextBoxColumn43.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn21.HeaderText" xml:space="preserve">
     <value>Price</value>
   </data>
-  <data name="gridViewTextBoxColumn44.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn22.HeaderText" xml:space="preserve">
     <value>Discount</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 5</value>
+  </data>
+  <data name="btnDeleteAll.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="btnDeleteAll.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="btnDeleteAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 34</value>
   </data>
 </root>

@@ -18,6 +18,15 @@ namespace PTi1MenaxhimiDepos.Items
         {
             InitializeComponent();
         }
+        public ItemCategory(BO.ItemCategory category)
+        {
+            this.category = category;
+            InitializeComponent();
+            txtdescription.Text = category.Description;
+            txtID.Text = category.ID.ToString();
+            txtname.Text = category.Name;
+            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -36,38 +45,6 @@ namespace PTi1MenaxhimiDepos.Items
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (txtSearch.Text.All(char.IsDigit))
-            {
-                BO.ItemCategory category = ItemBLL.GetItemCategory(int.Parse(txtSearch.Text));
-                DisplaySearchResult(category);
-            }
-            else
-            {
-                BO.ItemCategory category = ItemBLL.GetItemCategory(txtSearch.Text);
-                DisplaySearchResult(category);
-            }
-        }
-
-        private void DisplaySearchResult(BO.ItemCategory obj)
-        {
-            List<BO.ItemCategory> itemCategories = null;
-            if(HelperClass.DoesExists(obj,ref itemCategories))
-            {
-                dgwCategories.DataSource = null;
-                dgwCategories.DataSource = itemCategories;
-            }
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
-            {
-                dgwCategories.DataSource = null;
-                dgwCategories.DataSource = ItemBLL.GetCategories();
-            }
-        }
 
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -101,32 +78,10 @@ namespace PTi1MenaxhimiDepos.Items
             }
         }
 
-        private void ItemCategory_Load(object sender, EventArgs e)
-        {
-            dgwCategories.DataSource = ItemBLL.GetCategories();
-        }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
             HelpClass.Delete(txtname, txtdescription, txtID);
-        }
-
-        public override void Refresh()
-        {
-            dgwCategories.DataSource = null;
-            dgwCategories.DataSource = ItemBLL.GetCategories();
-            HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
-            HelpClass.Delete(txtname, txtdescription, txtID);
-        }
-
-        private void dgwCategories_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            category = (BO.ItemCategory)dgwCategories.Rows[e.RowIndex].DataBoundItem;
-            txtID.Text = category.ID.ToString();
-            txtname.Text = category.Name;
-            txtdescription.Text = category.Description;
-            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
         }
 
         private void ItemCategory_FormClosing(object sender, FormClosingEventArgs e)

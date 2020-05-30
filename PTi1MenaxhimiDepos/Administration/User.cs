@@ -18,15 +18,33 @@ namespace PTi1MenaxhimiDepos.Administration
         public User()
         {
             InitializeComponent();
-            this.cmbEmployee.DropDownListElement.DropDownWidth = 380;
-            this.cmbRole.DropDownListElement.DropDownWidth = 380;
+            this.cmbEmployee.DropDownListElement.DropDownWidth = 300;
+            this.cmbRole.DropDownListElement.DropDownWidth = 300;
+        }
+
+        public User(BO.Account.User obj)
+        {
+            InitializeComponent();
+            this.obj = obj;
+            this.cmbEmployee.DropDownListElement.DropDownWidth = 300;
+            this.cmbRole.DropDownListElement.DropDownWidth = 300;
+            txtUsername.Text = obj.UserName;
+            txtPasword.Text = Security.Decrypt(obj.Password);
+            txtID.Text = obj.ID.ToString();
+            txtDescription.Text = obj.Description;
+            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
+            label7.Text = "Update User";
         }
 
         private void User_Load(object sender, EventArgs e)
         {
-            dgwUser.DataSource = AdministrationBLL.GetUsers();
             cmbRole.DataSource = AdministrationBLL.GetRoles(); cmbRole.DisplayMember = "Name"; cmbRole.ValueMember = "ID";
             cmbEmployee.DataSource = CollaborationBLL.GetEmployees(); cmbEmployee.DisplayMember = "Fullname"; cmbEmployee.ValueMember = "ID";
+            if(obj != null)
+            {
+                cmbRole.Text = obj.Role.Name;
+                cmbEmployee.Text = obj.Employee.Name;
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -46,39 +64,6 @@ namespace PTi1MenaxhimiDepos.Administration
             }
         }
 
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (txtSearch.Text.All(char.IsDigit))
-            {
-                BO.Account.User obj = AdministrationBLL.GetUser(int.Parse(txtSearch.Text));
-                DisplaySearchResult(obj);
-            }
-            else
-            {
-                BO.Account.User obj = AdministrationBLL.GetUser(txtSearch.Text);
-                DisplaySearchResult(obj);
-            }
-        }
-
-        private void DisplaySearchResult(BO.Account.User obj)
-        {
-            List<BO.Account.User> users = null;
-            if (HelperClass.DoesExists(obj, ref users))
-            {
-                dgwUser.DataSource = null;
-                dgwUser.DataSource = users;
-            }
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
-            {
-                dgwUser.DataSource = null;
-                dgwUser.DataSource = AdministrationBLL.GetUsers();
-            }
-        }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -117,25 +102,6 @@ namespace PTi1MenaxhimiDepos.Administration
             }
         }
 
-        public override void Refresh()
-        {
-            dgwUser.DataSource = null;
-            dgwUser.DataSource = AdministrationBLL.GetUsers();
-            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
-            HelpClass.Delete(txtDescription, txtID, txtPasword, txtUsername);
-        }
-
-        private void dgwUser_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            obj = (BO.Account.User)dgwUser.Rows[e.RowIndex].DataBoundItem;
-            cmbRole.Text = obj.Role.Name;
-            cmbEmployee.Text = obj.Employee.Name;
-            txtUsername.Text = obj.UserName; 
-            txtPasword.Text = Security.Decrypt(obj.Password); 
-            txtID.Text = obj.ID.ToString(); 
-            txtDescription.Text = obj.Description;
-            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
-        }
 
         private void User_FormClosing(object sender, FormClosingEventArgs e)
         {

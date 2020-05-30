@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="radLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>795, 78</value>
+  </data>
   <data name="radLabel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 30</value>
   </data>
   <data name="radLabel5.Text" xml:space="preserve">
     <value>Surname</value>
+  </data>
+  <data name="radLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 209</value>
   </data>
   <data name="radLabel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 30</value>
@@ -130,11 +136,17 @@
   <data name="radLabel4.Text" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="radLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 338</value>
+  </data>
   <data name="radLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 30</value>
   </data>
   <data name="radLabel3.Text" xml:space="preserve">
     <value>Postal Code</value>
+  </data>
+  <data name="radLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>789, 339</value>
   </data>
   <data name="radLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 30</value>
@@ -142,11 +154,17 @@
   <data name="radLabel1.Text" xml:space="preserve">
     <value>Country</value>
   </data>
+  <data name="lblPhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 209</value>
+  </data>
   <data name="lblPhone.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 30</value>
   </data>
   <data name="lblPhone.Text" xml:space="preserve">
     <value>Phone</value>
+  </data>
+  <data name="radLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>795, 209</value>
   </data>
   <data name="radLabel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 30</value>
@@ -154,11 +172,17 @@
   <data name="radLabel6.Text" xml:space="preserve">
     <value>Street</value>
   </data>
+  <data name="radLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 339</value>
+  </data>
   <data name="radLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 30</value>
   </data>
   <data name="radLabel2.Text" xml:space="preserve">
     <value>City</value>
+  </data>
+  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 78</value>
   </data>
   <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 30</value>
@@ -166,38 +190,53 @@
   <data name="lblName.Text" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="radLabel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 78</value>
+  </data>
   <data name="radLabel11.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 30</value>
   </data>
   <data name="radLabel11.Text" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>ID</value>
+  <data name="txtsurname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>795, 119</value>
   </data>
-  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>Name</value>
+  <data name="txtemail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 250</value>
   </data>
-  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>Surname</value>
+  <data name="txtemail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 37</value>
   </data>
-  <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
-    <value>Phone</value>
+  <data name="txtPostalCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 380</value>
   </data>
-  <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
-    <value>Email</value>
+  <data name="txtCountry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>789, 380</value>
   </data>
-  <data name="gridViewTextBoxColumn15.HeaderText" xml:space="preserve">
-    <value>Street</value>
+  <data name="txtPhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 250</value>
   </data>
-  <data name="gridViewTextBoxColumn16.HeaderText" xml:space="preserve">
-    <value>City</value>
+  <data name="txtPhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 37</value>
   </data>
-  <data name="gridViewTextBoxColumn17.HeaderText" xml:space="preserve">
-    <value>Country</value>
+  <data name="txtstreet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>795, 250</value>
   </data>
-  <data name="gridViewTextBoxColumn18.HeaderText" xml:space="preserve">
-    <value>Postal Code</value>
+  <data name="txtstreet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 37</value>
+  </data>
+  <data name="txtcity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 380</value>
+  </data>
+  <data name="txtcity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 37</value>
+  </data>
+  <data name="txtname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 119</value>
+  </data>
+  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 119</value>
   </data>
   <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -248,7 +287,7 @@
 </value>
   </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1083, 313</value>
+    <value>921, 509</value>
   </data>
   <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 55</value>
@@ -352,47 +391,11 @@
         pumv5h/FHk8AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>921, 507</value>
+  </data>
   <data name="btnUpdate.Text" xml:space="preserve">
     <value>Update</value>
-  </data>
-  <data name="btnSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAB95JREFUWEe9
-        VntYjdkeViI0jVsJuWQ3GZcoW1EoIVGDyf06NBg6eGhchi7ITFs1JCVSKVEuRR2FKLddu1K72rvd7q52
-        hW4So5Q4pnd+a59v/jzPjnOc93ne5/v2t9d617t+613r+7p1FRkymXpmQYHJY7l8NXEb3TsTl6TLZEZc
-        ky8DGtggu7AwIK+0tLGwshKlNTUo41hSXQ3ZkycQFxdXZBQUHBTl5/fnuv33oJl1z5TLD0vLyzuKq6pw
-        414qvE6GYafHUew6dBQuhwTYe1gA/+BwJKelo1ChYEaaycR6TuLzQbPunVVYmCSnGd9KzcJm9wDsOBEN
-        n5sZCJdU4IJcgciCSoRkl0IQ9xAux8/BVeAPoTgXZBhp+fn+nNSnQ5iXp0Yzv8EGD72eguXu4fglTopj
-        4jpEVLfhckMHYpveI+ZFBy7Vv0PokzfwElbB5aIImw8G4kbKI0jKyiCUSH7jJD8NqRLJdrau0Unp+M41
-        GluvlcP98Wv4FLXiVE07whrf4/yrD4ho/oCQ+g6cVLRDIGvB/tQmrA8TY7XrGdwVPUZOScmfD3NzrTjZ
-        ruFOenofKn2TuLgMDnsj4RhaAqeERuxMfQ33glb4VL9DIBu47SOCWz/Cn8x4VbTjQF4Ltt1vxvq4Oszz
-        FcHZ8yxyS0uRJpVmcNJdwy2hcANbQ/+rD2DhIcS80Cosi6mHU3Izdua0wJ0G837xAf5tf8Kv5SN+q3uP
-        /cVt2JbxButuNsHx0nPYBlXAYucVXLv7gIWy825m5lhOXjXuiEQxzMBaQSJMPeWYcbIC884/w5L4F9jw
-        6DV25LdiX+U7uNe+h9uzDuwua4czGVtLBr+PaYBtaA0sj5Vh/N50HAq6qqzCnYwMF05eNRLu3y9nAbI+
-        kIwxrvngHy3BjKAq2F2sg2NCE9aQiY3iFmyRtuInSSucMt9gZcorLLjWiDkRz2BJhk2OFMFoTx7WH7nM
-        coAkkeg8J68a8cnJ7cyApdsj8H7Jw7hDcpgdL4dVSA1so+uwgCqxJOklltOgy2jWjreaYB/bgNmRz2EZ
-        pIApGf6WjBu4iLFGkKA0EJOUlMzJq0Z0fHwnM+DolwUDNymMPGSYcLQYU05VwiriKeZcppBda4B9fCPm
-        xzViLuVjVtRzTAupBv9EOcYekYO3Lw+j9uVid+gDpYEzUVFCTl41jp0+/ZoZEMRLYeAlh6F3Eb71KcLE
-        U+Uwj6jGtMvPYX29Djbx9ZgZVw+r2FpYRD0FP0SB8X6l+OZIAQw9ZRjnVYCoFOVWhJu3dwInrxpbdu1K
-        y6VOmYU0a/8CjA5VwCi0EkbnKjEuugYT42ox6WY9+EkN4N9ugGlCHYxjnmFMhAKGQeUYHViGSWcrsCJM
-        iuyiItzPysJaZ+cjnLxqfLdsufuF2FjlSRaZVgjjcAVMbjRgfGIjvrnZCF7yCxg+fAnD1GYYCpvBu9cE
-        3s0GjKb9z4+nytyog/1lBRKy5aCXFw76+nYuc3KawMmrxsx580es2by5I10iQR6ZCE4rhkV8LayFrzE7
-        +y2sctswRdKGydJ2mNF1eu5b2IlbsTS7BStFr7Dq9nPEZhUpt98/U1Jgv3z5bU5aNdTV1dVMp1qqW9vN
-        P7bL1RU5hYXKSiRKSrDpwVM4pP+B1dI2/FTSge3lHdjFWPIO22Rv4URHtXtaDe7lFymN33/8GI5r17Xx
-        p00fw8l3CerafftpGPMna9nMd8hiJoTZ2crXLMtFYn4p/MRVcBPXYl9OIw7kNuLXnFqcyVXgrqxYGTjW
-        lrYyljo5deqPNNiq0aNHH6b7b3nVYA17UidN6qwzw3Zu6o87diD44kWI5XKUPX2KfHpJsbVlgzGye1lF
-        hfLjJDUnB54+vggMj+gcwTP8mbT0iQM53S5BjdiT2IeWo/dA3UG9jflmhymYbVv37IEgMBBXEhORLBLh
-        EVXmESU8SShE5PXrOODtjRUbN2Lr9h2dMQm3sNvV4+pAHd1Zampq/TjdLqM7kZWtL1Fbs1cvTb2h+vpj
-        J5p6TJ9tK1m4ctW/Vm3ajHXO/8CaLVux5If1mLNgUbPJFIvrw0fxFs+eZ3+eZzQaASHnEHTufKWVzawB
-        TPRT0YOoTdQh6hL7aWhoaGlpa2sO0NEdOHjYMP7QESNnDRk+wmrgID0jLe2vv+quocG+BUcZjTMWLHRc
-        jIBTpxF/OxlhUVfC6fkng5XsbxODiMOJI7jrUOIQjsOIPOJ44lTiXKrYRp8TAX/oDx+OFT844cyFS52e
-        v/stof8+C2w5ehHZ7NjAbDC2rYyJpsTJxClENji7NycummRmHmw2w7pziP4w/Ox2CIHnIl8ePPo76//Z
-        YEZYOL8iMjOsKqwCTHQwkSWdVYsFjhnZYGEzRzJsFA+mZubwCTgDgf+pe25e3p8Uxv8EJsK2FTPFrox/
-        C7N7PeKcHj0199k5Lm3t238AFi1bidOR0fAQ+O5RtvrCYNlh2XCgkIZPt7Xr1NUbjO179tP5cKHDxdVj
-        krLVFwYzMZL4vbnVTClvzFiMnTARvx4/CU9fv6KZtnZsub44WGZ4dKr+aLd4aWt/HR3YOizA8eAw2C1Y
-        dFZXT48t4ReHJtFId/AQPxuHhTAxt8D0WbawtLapUu/enQX6fxJKVWDbePRE86lp/GlWoMOspY+W1iZ6
-        9n8zwNCDTkp9OtJX07vBhH5/TdQgkoFu3f4Cij/SwwVogBMAAAAASUVORK5CYII=
-</value>
   </data>
   <data name="btnClear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -505,6 +508,9 @@
         aqJHLELCSxGLKmIsF2YH7jfHY/GooihTNRRmkJj7gWL8F6ak9H+MI9j9nz3Z0QAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>764, 507</value>
+  </data>
   <data name="btnClear.Text" xml:space="preserve">
     <value>Clear</value>
   </data>
@@ -563,8 +569,27 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>921, 446</value>
+  </data>
   <data name="btnDelete.Text" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="radLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radLabel7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="radLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 30</value>
+  </data>
+  <data name="radLabel7.Text" xml:space="preserve">
+    <value>Insert Employee</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1155, 648</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Employee</value>

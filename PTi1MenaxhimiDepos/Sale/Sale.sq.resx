@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnInsert.Text" xml:space="preserve">
+    <value>Shto</value>
+  </data>
   <data name="radButton10.Text" xml:space="preserve">
     <value>Zbritja</value>
   </data>
@@ -144,14 +147,50 @@
   <data name="radButton1.Text" xml:space="preserve">
     <value>Klienti/Depo</value>
   </data>
-  <data name="btnInsert.Text" xml:space="preserve">
-    <value>Shto</value>
+  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Barkodi</value>
+  </data>
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Emri</value>
+  </data>
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Kategoria</value>
+  </data>
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Lloji</value>
+  </data>
+  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>Njesia</value>
+  </data>
+  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Sasia</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dgwitemtolist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>700, 326</value>
+  </data>
+  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>Artikulli</value>
+  </data>
+  <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>Sasia</value>
+  </data>
+  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>Cmimi</value>
+  </data>
+  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+    <value>Zbritja</value>
   </data>
   <data name="BtnSave.Text" xml:space="preserve">
     <value>Ruaj</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 5</value>
+  </data>
+  <data name="btnDeleteAll.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="btnDeleteAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 34</value>
   </data>
 </root>

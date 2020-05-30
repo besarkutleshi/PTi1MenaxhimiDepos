@@ -21,9 +21,14 @@ namespace PTi1MenaxhimiDepos.Items
             InitializeComponent();
         }
 
-        private void ItemType_Load(object sender, EventArgs e)
+        public ItemType(BO.ItemType type)
         {
-            dgwTypes.DataSource = ItemBLL.GetItemTypes();
+            InitializeComponent();
+            this.type = type;
+            txtid.Text = type.ID.ToString();
+            txtname.Text = type.Name;
+            txtdescription.Text = type.Description;
+            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -36,38 +41,6 @@ namespace PTi1MenaxhimiDepos.Items
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (txtSearch.Text.All(char.IsDigit))
-            {
-                BO.ItemType item = ItemBLL.GetItemType(int.Parse(txtSearch.Text));
-                DisplaySearchResult(item);
-            }
-            else
-            {
-                BO.ItemType item = ItemBLL.GetItemType(txtSearch.Text);
-                DisplaySearchResult(item);
-            }
-        }
-
-        private void DisplaySearchResult(BO.ItemType obj)
-        {
-            List<BO.ItemType> itemTypes = null;
-            if(HelperClass.DoesExists(obj,ref itemTypes))
-            {
-                dgwTypes.DataSource = null;
-                dgwTypes.DataSource = itemTypes;
-            }
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
-            {
-                dgwTypes.DataSource = null;
-                dgwTypes.DataSource = ItemBLL.GetItemTypes();
-            }
-        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -104,23 +77,6 @@ namespace PTi1MenaxhimiDepos.Items
         {
             HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
             HelpClass.Delete(txtname, txtdescription, txtid);
-        }
-
-        public override void Refresh()
-        {
-            HelpClass.NotVisibleButton(btnSave, btndelete, btnUpdate);
-            HelpClass.Delete(txtname, txtdescription, txtid);
-            dgwTypes.DataSource = null;
-            dgwTypes.DataSource = ItemBLL.GetItemTypes();
-        }
-
-        private void dgwTypes_CellDoubleClick(object sender, GridViewCellEventArgs e)
-        {
-            type = (BO.ItemType)dgwTypes.Rows[e.RowIndex].DataBoundItem;
-            txtid.Text = type.ID.ToString();
-            txtname.Text = type.Name;
-            txtdescription.Text = type.Description;
-            HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
         }
 
         private void ItemType_FormClosing(object sender, FormClosingEventArgs e)

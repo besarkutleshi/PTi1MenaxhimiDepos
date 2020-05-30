@@ -19,8 +19,17 @@ namespace PTi1MenaxhimiDepos.Collab
         public EmployeePOS()
         {
             InitializeComponent();
-            this.cmbPos.DropDownListElement.DropDownWidth = 380;
-            this.cmbEmployee.DropDownListElement.DropDownWidth = 380;
+            this.cmbPos.DropDownListElement.DropDownWidth = 300;
+            this.cmbEmployee.DropDownListElement.DropDownWidth = 300;
+        }
+
+        public EmployeePOS(BO.Employees.EmployeePOS employee)
+        {
+            InitializeComponent();
+            this.emppos = employee;
+            this.cmbPos.DropDownListElement.DropDownWidth = 300;
+            this.cmbEmployee.DropDownListElement.DropDownWidth = 300;
+            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
         }
 
 
@@ -83,58 +92,13 @@ namespace PTi1MenaxhimiDepos.Collab
         {
             cmbEmployee.DataSource = CollaborationBLL.GetEmployees();cmbEmployee.DisplayMember = "Fullname";cmbEmployee.ValueMember = "ID";
             cmbPos.DataSource = PosBLL.GetPointofSales();cmbPos.DisplayMember = "Name";cmbPos.ValueMember = "ID";
-            dgwEmpPos.DataSource = CollaborationBLL.GetEmployeePos();
-        }
-
-        public override void Refresh()
-        {
-            dgwEmpPos.DataSource = null;
-            dgwEmpPos.DataSource = CollaborationBLL.GetEmployeePos();
-            HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
-            HelpClass.Delete(txtDescription, txtID);
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSearch.Text == "")
+            if(emppos != null)
             {
-                dgwEmpPos.DataSource = null;
-                dgwEmpPos.DataSource = CollaborationBLL.GetEmployeePos();
+                cmbEmployee.Text = emppos.Employee.Name;
+                cmbPos.Text = emppos.POS.Name;
+                txtID.Text = emppos.ID.ToString();
+                txtDescription.Text = emppos.Description;
             }
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (txtSearch.Text.All(char.IsDigit))
-            {
-                BO.Employees.EmployeePOS obj = CollaborationBLL.GetEmployeePos(int.Parse(txtSearch.Text));
-                DisplaySearchResult(obj);
-            }
-            else
-            {
-                BO.Employees.EmployeePOS obj = CollaborationBLL.GetEmployeePos(txtSearch.Text);
-                DisplaySearchResult(obj);
-            }
-        }
-
-        private void DisplaySearchResult(BO.Employees.EmployeePOS obj)
-        {
-            List<BO.Employees.EmployeePOS> employeePOs = null;
-            if(HelperClass.DoesExists(obj,ref employeePOs))
-            {
-                dgwEmpPos.DataSource = null;
-                dgwEmpPos.DataSource = employeePOs;
-            }
-        }
-
-        private void dgwEmpPos_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            emppos = (BO.Employees.EmployeePOS)dgwEmpPos.Rows[e.RowIndex].DataBoundItem;
-            cmbEmployee.Text = emppos.Employee.Name;
-            cmbPos.Text = emppos.POS.Name;
-            txtID.Text = emppos.ID.ToString();
-            txtDescription.Text = emppos.Description;
-            HelpClass.VisibleButton(btnSave, btnDelete, btnUpdate);
         }
 
         private void EmployeePOS_FormClosing(object sender, FormClosingEventArgs e)

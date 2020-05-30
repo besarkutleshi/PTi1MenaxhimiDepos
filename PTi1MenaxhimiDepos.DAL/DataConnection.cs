@@ -57,7 +57,7 @@ namespace PTi1MenaxhimiDepos.DAL
             SqlParameter sqlParameter = cmd.CreateParameter();
             sqlParameter.ParameterName = parametername;
             sqlParameter.Direction = parameterDirection;
-            sqlParameter.DbType = DbType.Int32;
+            sqlParameter.DbType = DbType.Double;
             cmd.Parameters.Add(sqlParameter);
         }
         public static int GetValue(SqlCommand cmd)
@@ -69,6 +69,17 @@ namespace PTi1MenaxhimiDepos.DAL
                 return 0;
             }
             return int.Parse(cmd.Parameters["@Value"].Value.ToString());
+        }
+
+        public static double GetSum(SqlCommand cmd)
+        {
+            AddParameter(cmd, "@Value", ParameterDirection.Output);
+            cmd.ExecuteNonQuery();
+            if (cmd.Parameters["@Value"].Value == DBNull.Value)
+            {
+                return 0;
+            }
+            return double.Parse(cmd.Parameters["@Value"].Value.ToString());
         }
 
         public static bool DoesExist(string procedure,object parametername,object value)

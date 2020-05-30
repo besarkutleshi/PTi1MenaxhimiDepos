@@ -231,13 +231,16 @@
     <value>Entries</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1895, 117</value>
+    <value>2012, 117</value>
+  </data>
+  <data name="tabControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 32</value>
   </data>
   <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1903, 150</value>
+    <value>2020, 150</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1895, 774</value>
+    <value>2020, 774</value>
   </data>
   <data name="tlenglish.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 26</value>
@@ -250,6 +253,9 @@
   </data>
   <data name="tlalbania.Text" xml:space="preserve">
     <value>Albania</value>
+  </data>
+  <data name="language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 24</value>
   </data>
   <data name="language.Text" xml:space="preserve">
     <value>Language</value>

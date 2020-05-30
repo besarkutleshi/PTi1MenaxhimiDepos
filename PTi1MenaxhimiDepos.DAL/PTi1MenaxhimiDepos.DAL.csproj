@@ -59,6 +59,9 @@
     <Compile Include="EmployeePosRepository.cs" />
     <Compile Include="EmployeeRepository.cs" />
     <Compile Include="DataConnection.cs" />
+    <Compile Include="EntriesExits\ClientReportRepository.cs" />
+    <Compile Include="EntriesExits\ItemReportRepository.cs" />
+    <Compile Include="EntriesExits\MonthProfitsRepository.cs" />
     <Compile Include="HelperClass.cs" />
     <Compile Include="Interface\IGetObject.cs" />
     <Compile Include="InvertoryBodyRepository.cs" />

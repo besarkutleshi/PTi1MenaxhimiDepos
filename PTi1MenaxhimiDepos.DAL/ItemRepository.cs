@@ -244,5 +244,30 @@ namespace PTi1MenaxhimiDepos.DAL
             obj.Unit = new ItemUnit(sdr["UNIT"].ToString());
             return obj;
         }
+
+        public List<Item> ReadAllLike(string name)
+        {
+            try
+            {
+                List<Item> dt = new List<Item>();
+                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                {
+                    con.Open();
+                    var cmd = DataConnection.Command(con, "sp_GetAll_Item_Like", CommandType.StoredProcedure);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        dt.Add(Get(sdr));
+                    }
+                }
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return null;
+            }
+        }
     }
 }

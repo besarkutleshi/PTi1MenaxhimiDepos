@@ -96,6 +96,7 @@
             this.btnhyrjet.Image = global::PTi1MenaxhimiDepos.Properties.Resources.chart1;
             this.btnhyrjet.Name = "btnhyrjet";
             this.btnhyrjet.UseVisualStyleBackColor = false;
+            this.btnhyrjet.Click += new System.EventHandler(this.btnhyrjet_Click);
             // 
             // label13
             // 
@@ -145,7 +146,6 @@
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label8
             // 
@@ -229,6 +229,7 @@
             this.helpToolStripMenuItem,
             this.language});
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // helpToolStripMenuItem
             // 
@@ -266,7 +267,6 @@
             this.MaximizeBox = false;
             this.Name = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.Shown += new System.EventHandler(this.Main_Shown);
             this.tabControl2.ResumeLayout(false);

@@ -21,13 +21,15 @@ namespace PTi1MenaxhimiDepos.Sale
         public Sale()
         {
             InitializeComponent();
-            this.cmbClients.DropDownListElement.DropDownWidth = 380;
-            this.cmbPOS.DropDownListElement.DropDownWidth = 380;
+            this.cmbClients.DropDownListElement.DropDownWidth = 300;
+            this.cmbPOS.DropDownListElement.DropDownWidth = 300;
+            BtnSave.Enabled = false;
         }
 
         private void Sale_Load(object sender, EventArgs e)
         {
-            cmbClients.DataSource = CollaborationBLL.GetClients();cmbClients.DisplayMember = "Name";cmbClients.ValueMember = "ID";
+            cmbClients.DataSource = CollaborationBLL.GetSuppliers();cmbClients.DisplayMember = "Name";cmbClients.ValueMember = "ID";
+            cmbClients.SelectedIndex = 2;
             cmbPOS.DataSource = PosBLL.GetPointofSales(); cmbPOS.DisplayMember = "Name"; cmbPOS.ValueMember = "ID";
             dgwItems.DataSource = ItemBLL.GetItems();
             txtsearch.Focus();
@@ -45,8 +47,7 @@ namespace PTi1MenaxhimiDepos.Sale
             Item obj = (Item)dgwItems.Rows[e.RowIndex].DataBoundItem;
             if(header == null)
             {
-                header = new InvertoryHeader(0, InvoiceBLL.MaxDocNo().ToString(), 2, (int)cmbPOS.SelectedValue, txtDescription.Text, (int)cmbClients.SelectedValue,
-                    0);
+                header = new InvertoryHeader(0, InvoiceBLL.MaxDocNo().ToString(), 2, (int)cmbPOS.SelectedValue, txtDescription.Text, (int)cmbClients.SelectedValue);
             }
             InvertoryBody body = new InvertoryBody(0, InvoiceBLL.MaxID(), obj.ID,1, 0.6,0);
             AddItems(obj, body);
@@ -73,36 +74,61 @@ namespace PTi1MenaxhimiDepos.Sale
         private void AddItems(Item obj,InvertoryBody body)
         {
             body.Item = obj;
-            bool inn = false;
-            if(body.Quantity > 1)
+            if (header.Bodies.Count == 0)
             {
-                body.Quantity -= 1;
                 header.Bodies.Add(body);
             }
-            if (header.Bodies.Any())
+            else
             {
-                foreach (var item in header.Bodies)
+                InvertoryBody invertory = header.Bodies.FirstOrDefault(b => b.Item.Barcode == obj.Barcode);
+                if(invertory != null)
                 {
-                    if (item.Item == obj)
+                    foreach (var item in header.Bodies)
                     {
-                        item.Quantity += 1;
-                        inn = true;
-                        break;
+                        if (item == invertory)
+                        {
+                            item.Quantity += body.Quantity;
+                            break;
+                        }
                     }
                 }
-                if (inn == false)
+                else
                 {
                     header.Bodies.Add(body);
                 }
             }
-            else
-            {
-                header.Bodies.Add(body);
-            }
+            BtnSave.Enabled = true;
+
+            //bool inn = false;
+            //if(body.Quantity > 1)
+            //{
+            //    body.Quantity -= 1;
+            //    header.Bodies.Add(body);
+            //}
+            //if (header.Bodies.Any())
+            //{
+            //    foreach (var item in header.Bodies)
+            //    {
+            //        if (item.Item == obj)
+            //        {
+            //            item.Quantity += 1;
+            //            inn = true;
+            //            break;
+            //        }
+            //    }
+            //    if (inn == false)
+            //    {
+            //        header.Bodies.Add(body);
+            //    }
+            //}
+            //else
+            //{
+            //    header.Bodies.Add(body);
+            //}
             dgwitemtolist.DataSource = null;
             dgwitemtolist.DataSource = header.Bodies;
             txttotali.Text = GetSum();
-            HelpClass.Delete(txtDescription, txtprice, txtquantity, txtsearch);
+            HelpClass.Delete(txtDescription, txtprice, txtquantity, txtsearch,txtdiscount);
         }
 
        
@@ -119,6 +145,7 @@ namespace PTi1MenaxhimiDepos.Sale
                 header = null;
                 dgwitemtolist.DataSource = null;
                 txttotali.Text = "0.00";
+                txtsearch.Text = "";
             }
         }
 
@@ -133,18 +160,28 @@ namespace PTi1MenaxhimiDepos.Sale
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (txtsearch.Text == "" || txtdiscount.Text == "" || txtprice.Text == "" || txtquantity.Text == "")
+            double discount = 0;
+            double price = 0;
+            double quantity = 0;
+            if (txtsearch.Text == "" || txtprice.Text == "" || txtquantity.Text == "")
             {
                 MessageBox.Show("Please fill in empty box's!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 return;
             }
+            if (!IsDigit(txtdiscount.Text, "Discount must be positive number", ref discount))
+                return;
+            if (!IsDigit(txtprice.Text, "Price must be positive number", ref price))
+                return;
+            if (!IsDigit(txtquantity.Text, "Quantity must be positive number", ref quantity))
+                return;
+            Discount(ref price, discount);
             Item obj = ItemBLL.GetItemByName(txtsearch.Text);
             if (headerbody != null)
             {
                 if(obj != null)
                 {
                     header.Bodies.Remove(headerbody);
-                    headerbody = new InvertoryBody(0, InvoiceBLL.MaxID(), obj.ID, double.Parse(txtquantity.Text), double.Parse(txtprice.Text), double.Parse(txtdiscount.Text));
+                    headerbody = new InvertoryBody(0, InvoiceBLL.MaxID(), obj.ID, quantity, price, discount);
                     headerbody.Username = HelpClass.CurrentUser.UserName;
                     AddItems(obj, headerbody);
                     txtsearch.Focus();
@@ -156,10 +193,9 @@ namespace PTi1MenaxhimiDepos.Sale
             {
                 if (header == null)
                 {
-                    header = new InvertoryHeader(0, InvoiceBLL.MaxDocNo().ToString(), 2, (int)cmbPOS.SelectedValue, txtDescription.Text, (int)cmbClients.SelectedValue,
-                        0);
+                    header = new InvertoryHeader(0, InvoiceBLL.MaxDocNo().ToString(), 2, (int)cmbPOS.SelectedValue, txtDescription.Text, (int)cmbClients.SelectedValue);
                 }
-                InvertoryBody body = new InvertoryBody(0, InvoiceBLL.MaxID(), obj.ID, double.Parse(txtquantity.Text), double.Parse(txtprice.Text), double.Parse(txtdiscount.Text));
+                InvertoryBody body = new InvertoryBody(0, InvoiceBLL.MaxID(), obj.ID, quantity, price, discount);
                 body.Username = HelpClass.CurrentUser.UserName;
                 AddItems(obj, body);
                 txtsearch.Focus();
@@ -171,11 +207,53 @@ namespace PTi1MenaxhimiDepos.Sale
             }
         }
 
+        private void Discount(ref double price , double discount)
+        {
+            if(discount > 0)
+            {
+                double persent = (price / 100) * discount;
+                price = price - persent;
+            }
+        }
+
+        private bool IsDigit(string text,string message,ref double money)
+        {
+            double.TryParse(text, out money);
+            if (text.Any(char.IsLetter))
+            {
+                MessageBox.Show(message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return false;
+            }
+            else if(money == 0)
+            {
+                if (message.Contains("Discount") && money >= 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            else if (money > 0)
+            {
+                return true;
+            }
+            MessageBox.Show(message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            return false;
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if(header != null && headerbody != null)
             {
                 header.Bodies.Remove(headerbody);
+                if(header.Bodies == null || header.Bodies.Count == 0)
+                {
+                    BtnSave.Enabled = false;
+                }
+                headerbody = null;
                 dgwitemtolist.DataSource = null;
                 dgwitemtolist.DataSource = header.Bodies;
                 txttotali.Text = GetSum();
@@ -185,7 +263,15 @@ namespace PTi1MenaxhimiDepos.Sale
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
-            dgwItems.DataSource = ItemBLL.GetItems();
+            if (txtsearch.Text != "")
+            {
+                dgwItems.DataSource = null;
+                dgwItems.DataSource = ItemBLL.GetItems(txtsearch.Text);
+            }
+            else
+            {
+                dgwItems.DataSource = ItemBLL.GetItems();
+            }
         }
 
         private void Sale_FormClosing(object sender, FormClosingEventArgs e)
@@ -197,6 +283,17 @@ namespace PTi1MenaxhimiDepos.Sale
             else
             {
                 e.Cancel = true;
+            }
+        }
+
+        private void btnDeleteAll_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure to delete all items","Sure",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                header.Bodies = null;
+                dgwitemtolist.DataSource = null;
+                dgwitemtolist.DataSource = header.Bodies;
+                txttotali.Text = "0.00";
             }
         }
     }

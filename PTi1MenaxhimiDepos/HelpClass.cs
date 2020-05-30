@@ -2,6 +2,7 @@
 using PTi1MenaxhimiDepos.BO.Account;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -106,6 +107,14 @@ namespace PTi1MenaxhimiDepos
             GridViewDataColumn column = new GridViewTextBoxColumn(uniquename, uniquename);
             column.HeaderText = uniquename;
             return column;
+        }
+
+        public static string SetText(string enText,string sqText)
+        {
+            if (CultureInfo.CurrentCulture.Name == "en-US")
+                return enText;
+            else
+                return sqText;
         }
     }
 }
