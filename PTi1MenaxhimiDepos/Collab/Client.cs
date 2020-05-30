@@ -22,7 +22,7 @@ namespace PTi1MenaxhimiDepos.Collab
 
         private void Client_Load(object sender, EventArgs e)
         {
-            dgwClients.DataSource = CollaborationBLL.GetClients();
+            dgwClients.DataSource = CollaborationBLL.GetClients(); 
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
