@@ -202,8 +202,15 @@ namespace PTi1MenaxhimiDepos
 
         private void btnhyrjet_Click(object sender, EventArgs e)
         {
-            ItemReport obj = new ItemReport();
-            obj.ShowDialog();
+            if (TabPages(HelpClass.SetText("Entries", "Hyrjet")))
+            {
+                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
+            }
+            TabPage tabPage = new TabPage(HelpClass.SetText("Entries", "Hyrjet"));
+            tabControl1.TabPages.Add(tabPage);
+            control.PrintEntriesButtons(tabPage);
+            //ItemReport obj = new ItemReport();
+            //obj.ShowDialog();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

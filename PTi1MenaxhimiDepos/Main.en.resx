@@ -242,6 +242,9 @@
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>2020, 774</value>
   </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 26</value>
+  </data>
   <data name="tlenglish.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 26</value>
   </data>
@@ -255,13 +258,13 @@
     <value>Albania</value>
   </data>
   <data name="language.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 24</value>
+    <value>88, 26</value>
   </data>
   <data name="language.Text" xml:space="preserve">
     <value>Language</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1924, 28</value>
+    <value>1924, 30</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1924, 990</value>

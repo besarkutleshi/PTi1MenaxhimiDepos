@@ -11,6 +11,10 @@ using PTi1MenaxhimiDepos.BL;
 using PTi1MenaxhimiDepos.Invoices;
 using PTi1MenaxhimiDepos.Collab;
 using PTi1MenaxhimiDepos.Administration;
+using PTi1MenaxhimiDepos.EntryExits.ItemReports;
+using PTi1MenaxhimiDepos.EntryExits.ClientRaports;
+using PTi1MenaxhimiDepos.EntryExits;
+
 namespace PTi1MenaxhimiDepos.Controls
 {
     public class CreateControl
@@ -269,6 +273,61 @@ namespace PTi1MenaxhimiDepos.Controls
         {
             SupplierList supplier = new SupplierList();
             supplier.ShowDialog();
+        }
+
+        #endregion
+
+        #region Entries
+        public void PrintEntriesButtons(TabPage tabPage)
+        {
+            RadButton btnItems = new RadButton();
+            btnItems.Click += BtnItems_Click;
+            Image invoice = CreateImage(new Bitmap(Properties.Resources.add_item_icon));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnItems, new Point(13, 20), new Size(75, 60), null, invoice));
+            Label lblinvoice = new Label();
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblinvoice, new Point(30, 85), new Size(75, 20), HelpClass.SetText("Items", "Artikujt")));
+            RadButton btnClients = new RadButton();
+            btnClients.Click += BtnClients_Click;
+            Image hapeimg = CreateImage(new Bitmap(Properties.Resources.Clients_icon));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnClients, new Point(100, 20), new Size(75, 60), null, hapeimg));
+            Label lblitem = new Label();
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblitem, new Point(112, 85), new Size(75, 20), HelpClass.SetText("Clients", "Klientat")));
+            RadButton btnMonths = new RadButton();
+            btnMonths.Click += BtnMonths_Click;
+            Image type = CreateImage(new Bitmap(Properties.Resources.month));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnMonths, new Point(187, 20), new Size(75, 60), null, type));
+            Label lbltype = new Label();
+            tabPage.Controls.Add(ControlShow.GetButtonss(lbltype, new Point(198, 85), new Size(75, 20), HelpClass.SetText("Months", "Muajt")));
+            RadButton btnWeek = new RadButton();
+            btnWeek.Click += BtnWeek_Click;
+            Image Emp = CreateImage(new Bitmap(Properties.Resources.week));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnWeek, new Point(275, 20), new Size(75, 60), null, Emp));
+            Label lblemp = new Label();
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblemp, new Point(290, 85), new Size(75, 20), HelpClass.SetText("Week", "Java")));
+        }
+
+        private void BtnWeek_Click(object sender, EventArgs e)
+        {
+            WeekProfits obj = new WeekProfits();
+            obj.ShowDialog();
+        }
+
+        private void BtnMonths_Click(object sender, EventArgs e)
+        {
+            MonthProfits obj = new MonthProfits();
+            obj.ShowDialog();
+        }
+
+        private void BtnClients_Click(object sender, EventArgs e)
+        {
+            ClientRaport obj = new ClientRaport();
+            obj.ShowDialog();
+        }
+
+        private void BtnItems_Click(object sender, EventArgs e)
+        {
+            ItemReport obj = new ItemReport();
+            obj.ShowDialog();
         }
 
         #endregion

@@ -151,6 +151,18 @@
     <Compile Include="EntryExits\ListBodies.Designer.cs">
       <DependentUpon>ListBodies.cs</DependentUpon>
     </Compile>
+    <Compile Include="EntryExits\MonthProfits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\MonthProfits.Designer.cs">
+      <DependentUpon>MonthProfits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryExits\WeekProfits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\WeekProfits.Designer.cs">
+      <DependentUpon>WeekProfits.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpClass.cs" />
     <Compile Include="Invoices\Invoice.cs">
       <SubType>Form</SubType>
@@ -379,6 +391,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EntryExits\ListBodies.resx">
       <DependentUpon>ListBodies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\MonthProfits.resx">
+      <DependentUpon>MonthProfits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\WeekProfits.resx">
+      <DependentUpon>WeekProfits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\Invoice.en.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
@@ -711,6 +729,11 @@
   <ItemGroup>
     <None Include="Resources\exel.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\month.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\week.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
