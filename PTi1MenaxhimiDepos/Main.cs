@@ -1,10 +1,6 @@
 ﻿using PTi1MenaxhimiDepos.BL;
 using PTi1MenaxhimiDepos.Collab;
 using PTi1MenaxhimiDepos.Controls;
-using PTi1MenaxhimiDepos.EntryExits;
-using PTi1MenaxhimiDepos.EntryExits.ClientRaports;
-using PTi1MenaxhimiDepos.EntryExits.ItemReports;
-using PTi1MenaxhimiDepos.Languages;
 using System;
 using System.Drawing;
 using System.Globalization;
@@ -151,27 +147,30 @@ namespace PTi1MenaxhimiDepos
 
         private void btnbashkpunimet_Click(object sender, EventArgs e)
         {
-            if (TabPages(HelpClass.SetText("Collaboration", "Partneret")))
-            {
-                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
-            }
-            TabPage tabPage = new TabPage(HelpClass.SetText("Collaboration", "Partneret"));
-            tabControl1.TabPages.Add(tabPage);
-            control.PrintButtonsCollaboration(tabPage);
-            RadGridView obj = new RadGridView();
-            obj.Columns.Add(HelpClass.GridViewDataColumn("ID"));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Name","Name", HelpClass.SetText("Name", "Emri")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("City","City", HelpClass.SetText("City", "Qyteti")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Phone","Phone", HelpClass.SetText("Phone", "Nr.Tel")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Email","Email", HelpClass.SetText("Email", "Mail")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Description","Description", HelpClass.SetText("Description", "Pershkrimi")));
-            obj.DataSource = CollaborationBLL.GetSuppliers();
-            obj.AllowSearchRow = true;
-            obj.AllowEditRow = false;
-            obj.AllowAddNewRow = false;
-            obj.TableElement.SearchHighlightColor = Color.LightBlue;
-            control.PrintGrid(tabPage, obj, new Point(7, 110), new Size(1490, 480));
-            tabControl1.SelectedTab = tabPage;
+            //if (TabPages(HelpClass.SetText("Collaboration", "Partneret")))
+            //{
+            //    tabControl1.TabPages.Remove(tabControl1.SelectedTab);
+            //}
+            //TabPage tabPage = new TabPage(HelpClass.SetText("Collaboration", "Partneret"));
+            //tabControl1.TabPages.Add(tabPage);
+            //control.PrintButtonsCollaboration(tabPage);
+            //RadGridView obj = new RadGridView();
+            //obj.Columns.Add(HelpClass.GridViewDataColumn("ID"));
+            //obj.Columns.Add(HelpClass.GridViewDataColumn("Name","Name", HelpClass.SetText("Name", "Emri")));
+            //obj.Columns.Add(HelpClass.GridViewDataColumn("City","City", HelpClass.SetText("City", "Qyteti")));
+            //obj.Columns.Add(HelpClass.GridViewDataColumn("Phone","Phone", HelpClass.SetText("Phone", "Nr.Tel")));
+            //obj.Columns.Add(HelpClass.GridViewDataColumn("Email","Email", HelpClass.SetText("Email", "Mail")));
+            //obj.Columns.Add(HelpClass.GridViewDataColumn("Description","Description", HelpClass.SetText("Description", "Pershkrimi")));
+            //obj.DataSource = CollaborationBLL.GetSuppliers();
+            //obj.AllowSearchRow = true;
+            //obj.AllowEditRow = false;
+            //obj.AllowAddNewRow = false;
+            //obj.TableElement.SearchHighlightColor = Color.LightBlue;
+            //control.PrintGrid(tabPage, obj, new Point(7, 110), new Size(1490, 480));
+            //tabControl1.SelectedTab = tabPage;
+
+            SupplierList supplier = new SupplierList();
+            supplier.ShowDialog();
         }
 
         private void tlenglish_Click(object sender, EventArgs e)
@@ -209,6 +208,7 @@ namespace PTi1MenaxhimiDepos
             TabPage tabPage = new TabPage(HelpClass.SetText("Entries", "Hyrjet"));
             tabControl1.TabPages.Add(tabPage);
             control.PrintEntriesButtons(tabPage);
+            tabControl1.SelectedTab = tabPage;
             //ItemReport obj = new ItemReport();
             //obj.ShowDialog();
         }
@@ -216,6 +216,18 @@ namespace PTi1MenaxhimiDepos
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void btndaljet_Click(object sender, EventArgs e)
+        {
+            if (TabPages(HelpClass.SetText("Exits", "Daljet")))
+            {
+                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
+            }
+            TabPage tabPage = new TabPage(HelpClass.SetText("Exits", "Daljet"));
+            tabControl1.TabPages.Add(tabPage);
+            control.PrintExitsButtons(tabPage);
+            tabControl1.SelectedTab = tabPage;
         }
     }
 }

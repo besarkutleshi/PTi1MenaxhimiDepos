@@ -139,6 +139,12 @@
     <Compile Include="EntryExits\Entries.Designer.cs">
       <DependentUpon>Entries.cs</DependentUpon>
     </Compile>
+    <Compile Include="EntryExits\ItemReports\ItemExitReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\ItemReports\ItemExitReports.Designer.cs">
+      <DependentUpon>ItemExitReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="EntryExits\ItemReports\ItemReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,11 +157,35 @@
     <Compile Include="EntryExits\ListBodies.Designer.cs">
       <DependentUpon>ListBodies.cs</DependentUpon>
     </Compile>
+    <Compile Include="EntryExits\MonthExits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\MonthExits.Designer.cs">
+      <DependentUpon>MonthExits.cs</DependentUpon>
+    </Compile>
     <Compile Include="EntryExits\MonthProfits.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EntryExits\MonthProfits.Designer.cs">
       <DependentUpon>MonthProfits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryExits\SupplierReports\SupplierInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\SupplierReports\SupplierInvoice.Designer.cs">
+      <DependentUpon>SupplierInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryExits\SupplierReports\SupplierReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\SupplierReports\SupplierReport.Designer.cs">
+      <DependentUpon>SupplierReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryExits\WeekExits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryExits\WeekExits.Designer.cs">
+      <DependentUpon>WeekExits.cs</DependentUpon>
     </Compile>
     <Compile Include="EntryExits\WeekProfits.cs">
       <SubType>Form</SubType>
@@ -386,14 +416,29 @@
     <EmbeddedResource Include="EntryExits\Entries.resx">
       <DependentUpon>Entries.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\ItemReports\ItemExitReports.resx">
+      <DependentUpon>ItemExitReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EntryExits\ItemReports\ItemReport.resx">
       <DependentUpon>ItemReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EntryExits\ListBodies.resx">
       <DependentUpon>ListBodies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\MonthExits.resx">
+      <DependentUpon>MonthExits.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EntryExits\MonthProfits.resx">
       <DependentUpon>MonthProfits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\SupplierReports\SupplierInvoice.resx">
+      <DependentUpon>SupplierInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\SupplierReports\SupplierReport.resx">
+      <DependentUpon>SupplierReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryExits\WeekExits.resx">
+      <DependentUpon>WeekExits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EntryExits\WeekProfits.resx">
       <DependentUpon>WeekProfits.cs</DependentUpon>

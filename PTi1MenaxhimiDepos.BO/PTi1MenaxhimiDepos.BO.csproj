@@ -54,6 +54,7 @@
     <Compile Include="EntiresExits\ClientReports\ClientReport.cs" />
     <Compile Include="EntiresExits\ItemReports\ItemReport.cs" />
     <Compile Include="EntiresExits\MonthProfits.cs" />
+    <Compile Include="EntiresExits\SupplierReports\SupplierReport.cs" />
     <Compile Include="EntiresExits\WeekProfits.cs" />
     <Compile Include="Interfaces\IBase.cs" />
     <Compile Include="Interfaces\ICrud.cs" />

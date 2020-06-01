@@ -137,6 +137,9 @@
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
   </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>573, 88</value>
+  </data>
   <data name="&gt;&gt;label8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -165,9 +168,6 @@
   <data name="btnbashkpunimet.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -176,9 +176,6 @@
   </data>
   <data name="btnhyrjet.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
-  </data>
-  <data name="&gt;&gt;btnshitja.Name" xml:space="preserve">
-    <value>btnshitja</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Daljet</value>
@@ -189,9 +186,6 @@
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnhyrjet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>408, 8</value>
-  </data>
   <data name="&gt;&gt;label6.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
@@ -200,12 +194,6 @@
   </data>
   <data name="btnhyrjet.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
-  </data>
-  <data name="btnbashkpunimet.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
     <value>805, 8</value>
@@ -222,6 +210,9 @@
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>440, 88</value>
   </data>
+  <data name="btnregister.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="&gt;&gt;tabControl2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -234,6 +225,9 @@
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>936, 8</value>
+  </data>
   <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -243,11 +237,11 @@
   <data name="&gt;&gt;btnregister.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>Depot</value>
-  </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -285,8 +279,8 @@
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="btnregister.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt</value>
+  <data name="btnbashkpunimet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>670, 8</value>
   </data>
   <data name="btnbashkpunimet.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 66</value>
@@ -312,6 +306,9 @@
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
   <data name="btndaljet.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
@@ -324,8 +321,8 @@
   <data name="&gt;&gt;btnbashkpunimet.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 22</value>
+  <data name="&gt;&gt;btnshitja.Name" xml:space="preserve">
+    <value>btnshitja</value>
   </data>
   <data name="&gt;&gt;btnshitja.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -342,14 +339,8 @@
   <data name="&gt;&gt;btnbashkpunimet.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Lista Artikujve</value>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 22</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>268, 88</value>
@@ -371,9 +362,6 @@
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>
-  </data>
-  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>972, 88</value>
   </data>
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -441,6 +429,9 @@
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
+  <data name="btnshitja.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
@@ -456,11 +447,11 @@
   <data name="&gt;&gt;btnartikujt.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="btnshitja.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
+  </data>
+  <data name="btnregister.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 8</value>
   </data>
   <data name="&gt;&gt;button6.Name" xml:space="preserve">
     <value>button6</value>
@@ -479,6 +470,9 @@
   </data>
   <data name="&gt;&gt;btndaljet.Name" xml:space="preserve">
     <value>btndaljet</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -513,8 +507,8 @@
   <data name="&gt;&gt;btnregister.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="btnshitja.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="btnbashkpunimet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
   <data name="&gt;&gt;button6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -567,14 +561,23 @@
   <data name="btndaljet.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>936, 8</value>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="label13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;tlalbania.Name" xml:space="preserve">
+    <value>tlalbania</value>
   </data>
   <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -609,9 +612,6 @@
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
   <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
@@ -645,11 +645,11 @@
   <data name="button6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnshitja.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
-  </data>
   <data name="btnartikujt.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -669,9 +669,6 @@
   <data name="&gt;&gt;button2.Name" xml:space="preserve">
     <value>button2</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 88</value>
-  </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 22</value>
   </data>
@@ -687,14 +684,14 @@
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
-  <data name="btnregister.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 8</value>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Depot</value>
   </data>
   <data name="&gt;&gt;btnbashkpunimet.Name" xml:space="preserve">
     <value>btnbashkpunimet</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="btnshitja.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 22</value>
@@ -705,20 +702,23 @@
   <data name="&gt;&gt;btndaljet.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt</value>
-  </data>
-  <data name="label13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 88</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1817, 990</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="btnhyrjet.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>13</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
   <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
     <value>tabControl2</value>
@@ -741,8 +741,8 @@
   <data name="&gt;&gt;tlalbania.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnbashkpunimet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 8</value>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>972, 88</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 22</value>
@@ -762,8 +762,8 @@
   <data name="&gt;&gt;tabControl2.Name" xml:space="preserve">
     <value>tabControl2</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
   <data name="tabControl2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
@@ -771,29 +771,29 @@
   <data name="btnregister.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="btnregister.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="btnregister.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
   <data name="&gt;&gt;btnhyrjet.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;language.Name" xml:space="preserve">
     <value>language</value>
   </data>
-  <data name="&gt;&gt;tlalbania.Name" xml:space="preserve">
-    <value>tlalbania</value>
+  <data name="btnhyrjet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>408, 8</value>
   </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>573, 88</value>
+  <data name="btnshitja.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Lista Artikujve</value>
   </data>
   <data name="&gt;&gt;btnhyrjet.Name" xml:space="preserve">
     <value>btnhyrjet</value>

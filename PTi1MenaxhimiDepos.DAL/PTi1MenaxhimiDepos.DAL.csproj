@@ -62,6 +62,7 @@
     <Compile Include="EntriesExits\ClientReportRepository.cs" />
     <Compile Include="EntriesExits\ItemReportRepository.cs" />
     <Compile Include="EntriesExits\MonthProfitsRepository.cs" />
+    <Compile Include="EntriesExits\SupplierReportRepository.cs" />
     <Compile Include="HelperClass.cs" />
     <Compile Include="Interface\IGetObject.cs" />
     <Compile Include="InvertoryBodyRepository.cs" />
