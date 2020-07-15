@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls.UI;
 
 namespace PTi1MenaxhimiDepos.Languages
 {
@@ -88,11 +89,11 @@ namespace PTi1MenaxhimiDepos.Languages
 
                     }
                 }
-                else if (control is DataGridView)
+                else if (control is RadGridView)
                 {
-                    foreach (DataGridViewColumn dataGridViewColumn in ((DataGridView)control).Columns)
+                    foreach (GridViewColumn dataGridViewColumn in ((RadGridView)control).Columns)
                     {
-                        string text = resources.GetString(dataGridViewColumn.Name + ".HeaderText", ci);
+                        string text = resources.GetString(dataGridViewColumn.Name + ".HeaderText",ci);
                         if (text != null)
                         {
                             dataGridViewColumn.HeaderText = text;

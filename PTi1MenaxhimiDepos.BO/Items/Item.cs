@@ -8,7 +8,8 @@ namespace PTi1MenaxhimiDepos.BO
 {
     public class Item : AuditionAtributtes
     {
-        public Item(int id,string barcode, string name, int unit, int category, int type,int supplier, bool active, int stockquantity,string description)
+        public Item(int id, string barcode, string name, int unit, int category, int type, int supplier,
+            bool active, double purchaseprice, double saleprice, int stockquantity,string description)
         {
             ID = id;
             Barcode = barcode;
@@ -18,16 +19,21 @@ namespace PTi1MenaxhimiDepos.BO
             TypeID = type;
             SupplierID = supplier;
             Active = active;
+            PurchasePrice = purchaseprice;
+            SalePrice = saleprice;
             Description = description;
             StockQuantity = stockquantity;
         }
 
-        public Item(int id,string barcode, string name, bool active, int stockquantity, string description)
+        public Item(int id,string barcode, string name, bool active,
+             double purchaseprice, double saleprice, int stockquantity, string description)
         {
             ID = id;
             Barcode = barcode;
             Name = name;
             Active = active;
+            PurchasePrice = purchaseprice;
+            SalePrice = saleprice;
             Description = description;
             StockQuantity = stockquantity;
         }
@@ -49,6 +55,8 @@ namespace PTi1MenaxhimiDepos.BO
         public virtual Supplier Supplier { get; set; }
         public int SupplierID { get; set; }
         public bool Active { get; set; }
+        public double PurchasePrice { get; set; }
+        public double SalePrice { get; set; }
         public int StockQuantity { get; set; }
         public string Description { get; set; }
     }

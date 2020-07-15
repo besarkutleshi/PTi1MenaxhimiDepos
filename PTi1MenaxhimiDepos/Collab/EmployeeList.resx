@@ -120,17 +120,20 @@
   <data name="&gt;&gt;dgwEmployees.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1420, 765</value>
+  </data>
   <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>ID</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dgwEmployees.Size" type="System.Drawing.Size, System.Drawing">
     <value>1396, 665</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1082, 46</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnInsertRole.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
@@ -146,8 +149,8 @@
   <data name="btnInsertRole.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 43</value>
   </data>
-  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1347, 46</value>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 38</value>
   </data>
   <data name="&gt;&gt;txtSearch.Parent" xml:space="preserve">
     <value>$this</value>
@@ -186,6 +189,9 @@
   <data name="&gt;&gt;btnRefresh.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="btnRefresh.Location" type="System.Drawing.Point, System.Drawing">
     <value>192, 40</value>
   </data>
@@ -209,6 +215,9 @@
   </data>
   <data name="&gt;&gt;dgwEmployees.Name" xml:space="preserve">
     <value>dgwEmployees</value>
+  </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1347, 46</value>
   </data>
   <data name="&gt;&gt;btnInsertRole.Parent" xml:space="preserve">
     <value>$this</value>
@@ -252,20 +261,14 @@
   <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
     <value>City</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dgwEmployees.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 13.25pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>EmployeeList</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Searchs</value>
-  </data>
   <data name="dgwEmployees.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
-  </data>
-  <data name="&gt;&gt;btnInsertRole.Name" xml:space="preserve">
-    <value>btnInsertRole</value>
   </data>
   <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
     <value>Country</value>
@@ -288,9 +291,6 @@
   <data name="txtSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 37</value>
   </data>
-  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1082, 46</value>
-  </data>
   <data name="&gt;&gt;txtSearch.Name" xml:space="preserve">
     <value>txtSearch</value>
   </data>
@@ -299,9 +299,6 @@
   </data>
   <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
     <value>btnSearch</value>
-  </data>
-  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 38</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -312,20 +309,23 @@
   <data name="btnInsertRole.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13.25pt</value>
   </data>
-  <data name="dgwEmployees.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13.25pt</value>
+  <data name="&gt;&gt;btnInsertRole.Name" xml:space="preserve">
+    <value>btnInsertRole</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1420, 765</value>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnRefresh.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
   <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Street</value>
+  </data>
+  <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 24</value>
@@ -336,8 +336,8 @@
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>1078, 20</value>
   </data>
-  <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Searchs</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

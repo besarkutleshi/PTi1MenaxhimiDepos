@@ -1,11 +1,6 @@
-﻿using PTi1MenaxhimiDepos.BL;
-using PTi1MenaxhimiDepos.BO.Account;
-using System;
-using System.Collections.Generic;
+﻿using PTi1MenaxhimiDepos.BO.Account;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
 namespace PTi1MenaxhimiDepos
@@ -115,6 +110,13 @@ namespace PTi1MenaxhimiDepos
                 return enText;
             else
                 return sqText;
+        }
+
+        public static void ShowHelp(Form parent, string htmlPage)
+        {
+            //Help.ShowHelp(null, @"C:\Users\Admin\Desktop\PTi1MenaxhimiDepos\UserMaunal.hmxz", HelpNavigator.Topic,htmlPage);
+            System.Windows.Forms.Help.ShowHelp(parent, @"C:\Users\Admin\Desktop\PTi1MenaxhimiDepos\UserMaunal.hmxz",
+            System.Windows.Forms.HelpNavigator.TopicId, htmlPage);
         }
     }
 }

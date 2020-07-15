@@ -107,6 +107,7 @@
             this.ClientSize = new System.Drawing.Size(1305, 752);
             this.Controls.Add(this.dgwClientInvoices);
             this.Controls.Add(this.radButton1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ClientsInvoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientsInvoice";

@@ -146,7 +146,7 @@
     <value>Active</value>
   </data>
   <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>Stock</value>
+    <value>Stock Quantity</value>
   </data>
   <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
     <value>Description</value>
@@ -156,7 +156,7 @@
     <value>1904, 791</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1714, 3</value>
+    <value>1715, 32</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 24</value>
@@ -165,16 +165,34 @@
     <value>Search</value>
   </data>
   <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1718, 29</value>
+    <value>1719, 58</value>
   </data>
   <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1979, 29</value>
+    <value>1984, 53</value>
   </data>
   <data name="btnRefresh.Text" xml:space="preserve">
     <value>Refresh</value>
   </data>
   <data name="btnInsertRole.Text" xml:space="preserve">
     <value>Insert Item</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1924, 28</value>
+  </data>
+  <data name="helpsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 24</value>
+  </data>
+  <data name="helpsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="albaniaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Albania</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1924, 880</value>

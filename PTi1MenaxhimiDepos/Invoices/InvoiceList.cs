@@ -31,11 +31,19 @@ namespace PTi1MenaxhimiDepos.Invoices
             {
                 if (txtSearch.Text.All(char.IsDigit))
                 {
-                    InvertoryHeader header = InvoiceBLL.GetPurchaseInvoicesHeaderByDosNo(txtSearch.Text);
-                    List<InvertoryHeader> invertoryHeaders = new List<InvertoryHeader>();
-                    invertoryHeaders.Add(header);
+                    //InvertoryHeader header = InvoiceBLL.GetPurchaseInvoicesHeaderByDosNo(txtSearch.Text);
+                    //List<InvertoryHeader> invertoryHeaders = new List<InvertoryHeader>();
+                    //invertoryHeaders.Add(header);
                     dgwInvoices.DataSource = null;
-                    dgwInvoices.DataSource = invertoryHeaders;
+                    dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeaderByDosNo(txtSearch.Text);
+                }
+                else
+                {
+                    //InvertoryHeader header = InvoiceBLL.GetPurchaseInvoicesHeaderBySupplier(txtSearch.Text);
+                    //List<InvertoryHeader> invertoryHeaders = new List<InvertoryHeader>();
+                    //invertoryHeaders.Add(header);
+                    dgwInvoices.DataSource = null;
+                    dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeaderBySupplier(txtSearch.Text);
                 }
             }
         }
@@ -45,7 +53,26 @@ namespace PTi1MenaxhimiDepos.Invoices
             if (txtSearch.Text == "")
             {
                 dgwInvoices.DataSource = null;
-                dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeader();
+                dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeader().Where(i => i.DocType.Description == "FATURE BLERJE");
+            }
+            else
+            {
+                if (txtSearch.Text.All(char.IsDigit))
+                {
+                    //InvertoryHeader header = InvoiceBLL.GetPurchaseInvoicesHeaderByDosNo(txtSearch.Text);
+                    //List<InvertoryHeader> invertoryHeaders = new List<InvertoryHeader>();
+                    //invertoryHeaders.Add(header);
+                    dgwInvoices.DataSource = null;
+                    dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeaderByDosNo(txtSearch.Text);
+                }
+                else
+                {
+                    //InvertoryHeader header = InvoiceBLL.GetPurchaseInvoicesHeaderBySupplier(txtSearch.Text);
+                    //List<InvertoryHeader> invertoryHeaders = new List<InvertoryHeader>();
+                    //invertoryHeaders.Add(header);
+                    dgwInvoices.DataSource = null;
+                    dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeaderBySupplier(txtSearch.Text);
+                }
             }
         }
 
@@ -57,7 +84,7 @@ namespace PTi1MenaxhimiDepos.Invoices
 
         private void InvoiceList_Load(object sender, EventArgs e)
         {
-            dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeader();
+            dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeader().Where(i => i.DocType.Description == "FATURE BLERJE");
         }
 
         private void dgwInvoices_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
@@ -70,7 +97,7 @@ namespace PTi1MenaxhimiDepos.Invoices
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             dgwInvoices.DataSource = null;
-            dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeader();
+            dgwInvoices.DataSource = InvoiceBLL.GetPurchaseInvoicesHeader().Where(i => i.DocType.Description == "FATURE BLERJE");
         }
     }
 }

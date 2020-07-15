@@ -89,10 +89,10 @@
             // 
             // btnhyrjet
             // 
-            resources.ApplyResources(this.btnhyrjet, "btnhyrjet");
             this.btnhyrjet.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnhyrjet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnhyrjet.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnhyrjet, "btnhyrjet");
             this.btnhyrjet.Image = global::PTi1MenaxhimiDepos.Properties.Resources.chart1;
             this.btnhyrjet.Name = "btnhyrjet";
             this.btnhyrjet.UseVisualStyleBackColor = false;
@@ -105,10 +105,10 @@
             // 
             // button6
             // 
-            resources.ApplyResources(this.button6, "button6");
             this.button6.BackColor = System.Drawing.SystemColors.MenuBar;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button6, "button6");
             this.button6.Image = global::PTi1MenaxhimiDepos.Properties.Resources.store_icon;
             this.button6.Name = "button6";
             this.button6.UseVisualStyleBackColor = false;
@@ -121,10 +121,10 @@
             // 
             // button2
             // 
-            resources.ApplyResources(this.button2, "button2");
             this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button2, "button2");
             this.button2.Image = global::PTi1MenaxhimiDepos.Properties.Resources.User_Files_icon;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
@@ -132,10 +132,10 @@
             // 
             // btnshitja
             // 
-            resources.ApplyResources(this.btnshitja, "btnshitja");
             this.btnshitja.BackColor = System.Drawing.SystemColors.Menu;
             this.btnshitja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnshitja.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnshitja, "btnshitja");
             this.btnshitja.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnshitja.Image = global::PTi1MenaxhimiDepos.Properties.Resources.sales;
             this.btnshitja.Name = "btnshitja";
@@ -154,10 +154,10 @@
             // 
             // btnbashkpunimet
             // 
-            resources.ApplyResources(this.btnbashkpunimet, "btnbashkpunimet");
             this.btnbashkpunimet.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnbashkpunimet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnbashkpunimet.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnbashkpunimet, "btnbashkpunimet");
             this.btnbashkpunimet.Image = global::PTi1MenaxhimiDepos.Properties.Resources.company;
             this.btnbashkpunimet.Name = "btnbashkpunimet";
             this.btnbashkpunimet.UseVisualStyleBackColor = false;
@@ -165,10 +165,10 @@
             // 
             // btnregister
             // 
-            resources.ApplyResources(this.btnregister, "btnregister");
             this.btnregister.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnregister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnregister.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnregister, "btnregister");
             this.btnregister.Image = global::PTi1MenaxhimiDepos.Properties.Resources.register;
             this.btnregister.Name = "btnregister";
             this.btnregister.UseVisualStyleBackColor = false;
@@ -181,10 +181,10 @@
             // 
             // btnartikujt
             // 
-            resources.ApplyResources(this.btnartikujt, "btnartikujt");
             this.btnartikujt.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnartikujt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnartikujt.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnartikujt, "btnartikujt");
             this.btnartikujt.Image = global::PTi1MenaxhimiDepos.Properties.Resources.productpng;
             this.btnartikujt.Name = "btnartikujt";
             this.btnartikujt.UseVisualStyleBackColor = false;
@@ -202,10 +202,10 @@
             // 
             // btndaljet
             // 
-            resources.ApplyResources(this.btndaljet, "btndaljet");
             this.btndaljet.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btndaljet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btndaljet.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btndaljet, "btndaljet");
             this.btndaljet.Image = global::PTi1MenaxhimiDepos.Properties.Resources.chart1;
             this.btndaljet.Name = "btndaljet";
             this.btndaljet.UseVisualStyleBackColor = false;
@@ -224,37 +224,37 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem,
             this.language});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // helpToolStripMenuItem
             // 
-            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             // 
             // language
             // 
-            resources.ApplyResources(this.language, "language");
             this.language.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlenglish,
             this.tlalbania});
             this.language.Name = "language";
+            resources.ApplyResources(this.language, "language");
             // 
             // tlenglish
             // 
-            resources.ApplyResources(this.tlenglish, "tlenglish");
             this.tlenglish.Name = "tlenglish";
+            resources.ApplyResources(this.tlenglish, "tlenglish");
             this.tlenglish.Click += new System.EventHandler(this.tlenglish_Click);
             // 
             // tlalbania
             // 
-            resources.ApplyResources(this.tlalbania, "tlalbania");
             this.tlalbania.Name = "tlalbania";
+            resources.ApplyResources(this.tlalbania, "tlalbania");
             this.tlalbania.Click += new System.EventHandler(this.tlalbania_Click);
             // 
             // Main

@@ -23,7 +23,10 @@ namespace PTi1MenaxhimiDepos.BL
         public static List<InvertoryHeader> GetPurchaseInvoicesHeader() => _headerRepository.GetPurchaseInvertoryHeaders();
         public static InvertoryHeader GetPuchaseInvoicesHeaderByID(int id) => _headerRepository.GetPurchaseInvertoryHeadersById(id);
         public static InvertoryBody GetInvertoryBodyByItem(string item, int headerid) => _bodyRepository.GetInvertoryBodyByItem(item, headerid);
-        public static InvertoryHeader GetPurchaseInvoicesHeaderByDosNo(string docno) => _headerRepository.GetPurchaseInvertoryHeadersByDocNo(docno);
+        public static List<InvertoryHeader> GetPurchaseInvoicesHeaderByDosNo(string docno) => _headerRepository.GetPurchaseInvertoryHeadersByDocNo(docno);
+        public static List<InvertoryHeader> GetPurchaseInvoicesHeaderBySupplier(string supplier) => _headerRepository.GetPurchaseInvertoryHeadersBySupplier(supplier);
+        public static List<InvertoryHeader> GetSaleInvoicesHeaderBySupplier(string supplier) => _headerRepository.GetSaleInvertoryHeadersBySupplier(supplier);
+        public static List<InvertoryHeader> GetSaleInvoicesHeaderByDosNo(string docno) => _headerRepository.GetSaleInvertoryHeadersByDocNo(docno);
         public static bool InsertBody(InvertoryBody obj) => _bodyRepository.Add(obj);
         public static bool DeleteBody(int id) => _bodyRepository.Delete(id);
         public static bool UpdateBody(int id, InvertoryBody obj) => _bodyRepository.Update(id, obj);
@@ -41,6 +44,8 @@ namespace PTi1MenaxhimiDepos.BL
         public static string GetTotalPurchaseInvertoryToday() => _headerRepository.GetTotalPurchaseInvertoryToday();
         public static string GetTotalSalePurchaseInvertoryToday() => _headerRepository.GetTotalSaleInvertoryToday();
         public static List<InvertoryHeader> GetSaleInvertoryToday() => _headerRepository.GetSaleInvertoryHeadersToday();
+
+
         #endregion
 
 

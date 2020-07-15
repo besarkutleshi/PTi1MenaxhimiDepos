@@ -128,6 +128,7 @@
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnInsertRole);
             this.Controls.Add(this.dgwRoles);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RoleList";
             this.Load += new System.EventHandler(this.RoleList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwRoles.MasterTemplate)).EndInit();

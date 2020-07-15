@@ -167,7 +167,7 @@
     <value>Barkodi</value>
   </data>
   <data name="radLabel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 560</value>
+    <value>877, 560</value>
   </data>
   <data name="radLabel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 30</value>
@@ -176,7 +176,7 @@
     <value>Pershkrimi</value>
   </data>
   <data name="radLabel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>877, 407</value>
+    <value>520, 561</value>
   </data>
   <data name="radLabel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 30</value>
@@ -185,10 +185,10 @@
     <value>Sasia</value>
   </data>
   <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 604</value>
+    <value>877, 604</value>
   </data>
   <data name="txtstock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>877, 451</value>
+    <value>520, 605</value>
   </data>
   <data name="radLabel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>164, 414</value>
@@ -200,7 +200,7 @@
     <value>Funitori</value>
   </data>
   <data name="radLabel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>521, 414</value>
+    <value>164, 568</value>
   </data>
   <data name="radLabel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 30</value>
@@ -221,7 +221,7 @@
     <value>521, 134</value>
   </data>
   <data name="cmbActive.Location" type="System.Drawing.Point, System.Drawing">
-    <value>521, 450</value>
+    <value>164, 604</value>
   </data>
   <data name="radDropDownList5.Location" type="System.Drawing.Point, System.Drawing">
     <value>164, 450</value>
@@ -241,45 +241,72 @@
   <data name="radLabel11.Text" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1001, 659</value>
+  <data name="radLabel12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>885, 414</value>
   </data>
-  <data name="btnUpdate.Text" xml:space="preserve">
-    <value>Ndrysho</value>
+  <data name="radLabel12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 30</value>
   </data>
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1001, 659</value>
+  <data name="radLabel12.Text" xml:space="preserve">
+    <value>Cmimi Shitjes</value>
   </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Ruaj</value>
+  <data name="txtsaleprice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>877, 450</value>
+  </data>
+  <data name="radLabel13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>521, 414</value>
+  </data>
+  <data name="radLabel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 30</value>
+  </data>
+  <data name="radLabel13.Text" xml:space="preserve">
+    <value>Cmimi Blerjes</value>
+  </data>
+  <data name="txtpurchaseprice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>520, 451</value>
+  </data>
+  <data name="btnDisplayUnits.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 289</value>
   </data>
   <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1001, 598</value>
+    <value>1001, 689</value>
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
     <value>Fshij</value>
   </data>
   <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>858, 659</value>
+    <value>858, 750</value>
   </data>
   <data name="btnClear.Text" xml:space="preserve">
     <value>Pastro</value>
   </data>
-  <data name="radLabel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>596, 12</value>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1001, 750</value>
   </data>
-  <data name="radLabel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 30</value>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Ndrysho</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="radLabel10.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1001, 750</value>
   </data>
-  <data name="radLabel10.Text" xml:space="preserve">
-    <value>Shto Artikull</value>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Ruaj</value>
+  </data>
+  <data name="btnDisplaySupplier.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 451</value>
+  </data>
+  <data name="btnDisplayCategories.Location" type="System.Drawing.Point, System.Drawing">
+    <value>788, 289</value>
+  </data>
+  <data name="btnDisplayTypes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1144, 289</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1334, 776</value>
+    <value>1334, 844</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Artikull</value>

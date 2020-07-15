@@ -1,14 +1,11 @@
 ﻿using PTi1MenaxhimiDepos.BL;
 using PTi1MenaxhimiDepos.BO;
 using PTi1MenaxhimiDepos.BO.Invoices;
+using PTi1MenaxhimiDepos.Languages;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace PTi1MenaxhimiDepos.Sale
@@ -37,9 +34,13 @@ namespace PTi1MenaxhimiDepos.Sale
 
         private void dgwItems_CellClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
-            Item obj = (Item)dgwItems.Rows[e.RowIndex].DataBoundItem;
-            txtsearch.Text = obj.Name;
-            txtquantity.Focus();
+            if(e.RowIndex >= 0)
+            {
+                Item obj = (Item)dgwItems.Rows[e.RowIndex].DataBoundItem;
+                txtsearch.Text = obj.Name;
+                txtprice.Text = obj.SalePrice.ToString();
+                txtquantity.Focus();
+            }
         }
 
         private void dgwItems_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
@@ -49,7 +50,7 @@ namespace PTi1MenaxhimiDepos.Sale
             {
                 header = new InvertoryHeader(0, InvoiceBLL.MaxDocNo().ToString(), 2, (int)cmbPOS.SelectedValue, txtDescription.Text, (int)cmbClients.SelectedValue);
             }
-            InvertoryBody body = new InvertoryBody(0, InvoiceBLL.MaxID(), obj.ID,1, 0.6,0);
+            InvertoryBody body = new InvertoryBody(0, InvoiceBLL.MaxID(), obj.ID, 1,double.Parse(txtprice.Text), 0);
             AddItems(obj, body);
             Console.Beep();
         }
@@ -146,6 +147,7 @@ namespace PTi1MenaxhimiDepos.Sale
                 dgwitemtolist.DataSource = null;
                 txttotali.Text = "0.00";
                 txtsearch.Text = "";
+                dgwItems.DataSource = ItemBLL.GetItems();
             }
         }
 
@@ -176,6 +178,11 @@ namespace PTi1MenaxhimiDepos.Sale
                 return;
             Discount(ref price, discount);
             Item obj = ItemBLL.GetItemByName(txtsearch.Text);
+            if (obj.StockQuantity < int.Parse(txtquantity.Text))
+            {
+                MessageBox.Show("Item does not have quantity!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return;
+            }
             if (headerbody != null)
             {
                 if(obj != null)
@@ -263,14 +270,22 @@ namespace PTi1MenaxhimiDepos.Sale
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
-            if (txtsearch.Text != "")
+            if (txtsearch.Text == "")
             {
-                dgwItems.DataSource = null;
-                dgwItems.DataSource = ItemBLL.GetItems(txtsearch.Text);
+                dgwItems.DataSource = ItemBLL.GetItems();
             }
             else
             {
-                dgwItems.DataSource = ItemBLL.GetItems();
+                if (txtsearch.Text.All(char.IsDigit))
+                {
+                    dgwItems.DataSource = null;
+                    dgwItems.DataSource = ItemBLL.GetItemsByBarcode(txtsearch.Text);
+                }
+                else
+                {
+                    dgwItems.DataSource = null;
+                    dgwItems.DataSource = ItemBLL.GetItems(txtsearch.Text);
+                }
             }
         }
 
@@ -295,6 +310,40 @@ namespace PTi1MenaxhimiDepos.Sale
                 dgwitemtolist.DataSource = header.Bodies;
                 txttotali.Text = "0.00";
             }
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpClass.ShowHelp(this, "Overview.html");
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //ChangeLanguage("en-US");
+            TranslateFormMultipleResource.ChangeLanguages("en-US");
+        }
+
+        private void albaniaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //ChangeLanguage("sq");
+            TranslateFormMultipleResource.ChangeLanguages("sq");
+        }
+        private void ChangeLanguage(string lang)
+        {
+            CultureInfo ci = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+            this.Controls.Clear();
+            this.InitializeComponent();
+            this.cmbClients.DropDownListElement.DropDownWidth = 300;
+            this.cmbPOS.DropDownListElement.DropDownWidth = 300;
+            BtnSave.Enabled = false;
+
+            cmbClients.DataSource = CollaborationBLL.GetSuppliers(); cmbClients.DisplayMember = "Name"; cmbClients.ValueMember = "ID";
+            cmbClients.SelectedIndex = 2;
+            cmbPOS.DataSource = PosBLL.GetPointofSales(); cmbPOS.DisplayMember = "Name"; cmbPOS.ValueMember = "ID";
+            dgwItems.DataSource = ItemBLL.GetItems();
+            txtsearch.Focus();
         }
     }
 }

@@ -143,7 +143,7 @@
     <value>Funitori</value>
   </data>
   <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
-    <value>Aktiv</value>
+    <value>Aktive</value>
   </data>
   <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
     <value>Sasia</value>
@@ -156,7 +156,7 @@
     <value>1900, 791</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1713, 9</value>
+    <value>1713, 33</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 24</value>
@@ -165,16 +165,37 @@
     <value>Kerko</value>
   </data>
   <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1717, 35</value>
+    <value>1717, 59</value>
   </data>
   <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1982, 35</value>
+    <value>1982, 59</value>
   </data>
   <data name="btnRefresh.Text" xml:space="preserve">
     <value>Rifresko</value>
   </data>
   <data name="btnInsertRole.Text" xml:space="preserve">
     <value>Shto Artikull</value>
+  </data>
+  <data name="helpsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="helpsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ndihma</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>Anglisht</value>
+  </data>
+  <data name="albaniaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Shqip</value>
+  </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 24</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Gjuha</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1924, 28</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1924, 880</value>

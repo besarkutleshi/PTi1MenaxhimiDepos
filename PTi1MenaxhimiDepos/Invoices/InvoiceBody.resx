@@ -146,9 +146,6 @@
   <data name="lblDiscount.Text" xml:space="preserve">
     <value>Discounts</value>
   </data>
-  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 35</value>
-  </data>
   <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -161,8 +158,8 @@
   <data name="lblQuantity.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 24</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>990, 561</value>
+  <data name="lblItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>516, 96</value>
   </data>
   <data name="lblQuantity.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -188,8 +185,8 @@
   <data name="lblPrice.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 24</value>
   </data>
-  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
-    <value>txtID</value>
+  <data name="txtPrice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 37</value>
   </data>
   <data name="&gt;&gt;btndelete.Name" xml:space="preserve">
     <value>btndelete</value>
@@ -197,8 +194,8 @@
   <data name="lblItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt</value>
   </data>
-  <data name="&gt;&gt;lblPrice.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPrice.Name" xml:space="preserve">
     <value>lblPrice</value>
@@ -209,6 +206,9 @@
   <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
     <value>480, 396</value>
   </data>
@@ -217,6 +217,9 @@
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Saves</value>
   </data>
   <data name="txtDiscount.Location" type="System.Drawing.Point, System.Drawing">
     <value>181, 362</value>
@@ -246,20 +249,14 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtQuantity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 239</value>
-  </data>
   <data name="txtPrice.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="txtQuantity.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
-  <data name="lblItem.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;lblDiscount.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;txtQuantity.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -273,8 +270,8 @@
   <data name="txtID.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="txtPrice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 37</value>
+  <data name="txtQuantity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>520, 239</value>
   </data>
   <data name="txtQuantity.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 37</value>
@@ -291,17 +288,14 @@
   <data name="&gt;&gt;txtPrice.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>InvoiceBody</value>
-  </data>
   <data name="&gt;&gt;lblQuantity.Name" xml:space="preserve">
     <value>lblQuantity</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
   </data>
-  <data name="btndelete.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="lblDiscount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
   </data>
   <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -311,6 +305,9 @@
   </data>
   <data name="txtDiscount.Size" type="System.Drawing.Size, System.Drawing">
     <value>248, 37</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>Clears</value>
   </data>
   <data name="&gt;&gt;lblDiscount.Parent" xml:space="preserve">
     <value>$this</value>
@@ -339,14 +336,14 @@
   <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtDiscount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
   <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;lblQuantity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="lblPrice.Text" xml:space="preserve">
     <value>Prices</value>
@@ -402,8 +399,8 @@
   <data name="&gt;&gt;lblItem.Name" xml:space="preserve">
     <value>lblItem</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;lblPrice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblQuantity.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -423,14 +420,14 @@
   <data name="&gt;&gt;txtID.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>623, 417</value>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 35</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>181, 96</value>
   </data>
-  <data name="btnClear.Text" xml:space="preserve">
-    <value>Clears</value>
+  <data name="lblItem.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lblItem.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -462,8 +459,8 @@
   <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
-  <data name="&gt;&gt;lblDiscount.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lblQuantity.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt</value>
@@ -483,8 +480,8 @@
   <data name="&gt;&gt;lblDiscount.Name" xml:space="preserve">
     <value>lblDiscount</value>
   </data>
-  <data name="txtDiscount.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
+  <data name="btndelete.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;cmbItem.Name" xml:space="preserve">
     <value>cmbItem</value>
@@ -492,8 +489,8 @@
   <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lblDiscount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 24</value>
+  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
+    <value>txtID</value>
   </data>
   <data name="&gt;&gt;txtPrice.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -501,11 +498,14 @@
   <data name="&gt;&gt;btndelete.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>623, 417</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>990, 561</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>InvoiceBody</value>
   </data>
   <data name="lblDiscount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -513,8 +513,8 @@
   <data name="&gt;&gt;txtQuantity.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
-    <value>btnClear</value>
+  <data name="&gt;&gt;lblQuantity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblPrice.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -522,14 +522,14 @@
   <data name="txtPrice.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Saves</value>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblPrice.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="lblItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>516, 96</value>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
   </data>
   <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 56</value>

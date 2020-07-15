@@ -117,8 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dgwInvoices.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
     <value>InvoiceNumber</value>
+  </data>
+  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+    <value>Invoice Type</value>
+  </data>
+  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
+    <value>POS</value>
+  </data>
+  <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
+    <value>Supplier</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -142,20 +164,5 @@
   </data>
   <data name="btnInsertRole.Text" xml:space="preserve">
     <value>Insert Invoice</value>
-  </data>
-  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>Invoice Type</value>
-  </data>
-  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
-    <value>POS</value>
-  </data>
-  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>Supplier</value>
   </data>
 </root>

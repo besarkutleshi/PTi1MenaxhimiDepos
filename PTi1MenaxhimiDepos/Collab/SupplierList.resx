@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1221, 767</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgwSuppliers.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -128,8 +124,8 @@
   <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>891, 37</value>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="btnInsertRole.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
@@ -143,11 +139,12 @@
   <data name="&gt;&gt;txtSearch.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnInsertRole.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 43</value>
   </data>
-  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1156, 37</value>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 38</value>
   </data>
   <data name="&gt;&gt;txtSearch.Parent" xml:space="preserve">
     <value>$this</value>
@@ -213,6 +210,9 @@
   <data name="btnRefresh.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1156, 37</value>
+  </data>
   <data name="&gt;&gt;btnInsertRole.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -261,9 +261,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>SupplierList</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Searchs</value>
-  </data>
   <data name="btnRefresh.Text" xml:space="preserve">
     <value>Refreshs</value>
   </data>
@@ -282,14 +279,14 @@
   <data name="txtSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 37</value>
   </data>
+  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>891, 37</value>
+  </data>
   <data name="&gt;&gt;txtSearch.Name" xml:space="preserve">
     <value>txtSearch</value>
   </data>
   <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
     <value>btnSearch</value>
-  </data>
-  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 38</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -303,14 +300,17 @@
   <data name="&gt;&gt;btnInsertRole.Name" xml:space="preserve">
     <value>btnInsertRole</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1221, 767</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Description</value>
+  </data>
+  <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 24</value>
@@ -321,8 +321,8 @@
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>887, 11</value>
   </data>
-  <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Searchs</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

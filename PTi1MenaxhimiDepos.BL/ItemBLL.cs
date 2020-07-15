@@ -1,14 +1,9 @@
 ﻿using PTi1MenaxhimiDepos.BO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PTi1MenaxhimiDepos.DAL;
 using System.Data;
 using System.Windows.Forms;
-using Telerik.WinControls.UI;
-
 namespace PTi1MenaxhimiDepos.BL
 {
     public class ItemBLL
@@ -125,6 +120,8 @@ namespace PTi1MenaxhimiDepos.BL
         public static List<Item> GetItems(string item) => Item.ReadAllLike(item);
 
         public static List<Item> GetTodayItems() => Item.ReadAllToday();
+
+        public static List<Item> GetItemsByBarcode(string barcode) => Item.ReadAllByBarcodeLike(barcode);
 
         public static bool InsertItem(Item obj)
         {

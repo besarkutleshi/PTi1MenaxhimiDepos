@@ -117,15 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;btnShowDetails.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnUpdate.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblinvoicenumber.Parent" xml:space="preserve">
     <value>$this</value>
@@ -145,6 +139,9 @@
   </data>
   <data name="btndelete.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
+  </data>
+  <data name="btnShowDetails.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -170,6 +167,9 @@
   <data name="lblid.Text" xml:space="preserve">
     <value>IDs</value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1100, 675</value>
+  </data>
   <data name="&gt;&gt;cmbSupplier.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -191,9 +191,6 @@
   <data name="btnShowDetails.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 56</value>
   </data>
-  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="&gt;&gt;cmbSupplier.Name" xml:space="preserve">
     <value>cmbSupplier</value>
   </data>
@@ -206,8 +203,8 @@
   <data name="btndelete.Location" type="System.Drawing.Point, System.Drawing">
     <value>717, 459</value>
   </data>
-  <data name="lblinvoicenumber.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPos.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -298,6 +295,9 @@
   </data>
   <data name="&gt;&gt;lblid.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="lblinvoicenumber.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
   </data>
   <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>248, 37</value>
@@ -501,9 +501,6 @@
   <data name="lblsupplier.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt</value>
   </data>
-  <data name="lblsupplier.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
   <data name="btnShowDetails.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
@@ -516,8 +513,8 @@
   <data name="txtDescription.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 675</value>
+  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="txtInvoiceNumber.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -533,6 +530,9 @@
   </data>
   <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
     <value>574, 521</value>
+  </data>
+  <data name="lblinvoicenumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>606, 85</value>
   </data>
   <data name="lbldescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 24</value>
@@ -552,14 +552,14 @@
   <data name="&gt;&gt;btnShowDetails.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lblinvoicenumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>606, 85</value>
+  <data name="lblsupplier.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
   </data>
   <data name="txtInvoiceNumber.Location" type="System.Drawing.Point, System.Drawing">
     <value>606, 112</value>
   </data>
-  <data name="btnShowDetails.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt, style=Bold</value>
+  <data name="&gt;&gt;btnShowDetails.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;txtInvoiceNumber.Parent" xml:space="preserve">
     <value>$this</value>

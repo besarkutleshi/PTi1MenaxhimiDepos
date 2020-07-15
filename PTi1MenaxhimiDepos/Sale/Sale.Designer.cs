@@ -71,6 +71,11 @@
             this.BtnSave = new Telerik.WinControls.UI.RadButton();
             this.btnDelete = new Telerik.WinControls.UI.RadButton();
             this.btnDeleteAll = new Telerik.WinControls.UI.RadButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.albaniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtdiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtprice)).BeginInit();
@@ -101,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteAll)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txttotali
@@ -287,20 +293,20 @@
             gridViewTextBoxColumn2.Name = "Name";
             gridViewTextBoxColumn2.Width = 250;
             resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
-            gridViewTextBoxColumn3.FieldName = "Category.Name";
-            gridViewTextBoxColumn3.Name = "Category";
+            gridViewTextBoxColumn3.FieldName = "StockQuantity";
+            gridViewTextBoxColumn3.Name = "Quantity";
             gridViewTextBoxColumn3.Width = 180;
             resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
-            gridViewTextBoxColumn4.FieldName = "Type.Name";
-            gridViewTextBoxColumn4.Name = "Type";
+            gridViewTextBoxColumn4.FieldName = "Category.Name";
+            gridViewTextBoxColumn4.Name = "Category";
             gridViewTextBoxColumn4.Width = 180;
             resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
-            gridViewTextBoxColumn5.FieldName = "Unit.Name";
-            gridViewTextBoxColumn5.Name = "Unit";
+            gridViewTextBoxColumn5.FieldName = "Type.Name";
+            gridViewTextBoxColumn5.Name = "Type";
             gridViewTextBoxColumn5.Width = 180;
             resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
-            gridViewTextBoxColumn6.FieldName = "StockQuantity";
-            gridViewTextBoxColumn6.Name = "Quantity";
+            gridViewTextBoxColumn6.FieldName = "Unit.Name";
+            gridViewTextBoxColumn6.Name = "Unit";
             gridViewTextBoxColumn6.Width = 180;
             this.dgwItems.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
@@ -330,7 +336,7 @@
             gridViewTextBoxColumn7.Width = 263;
             resources.ApplyResources(gridViewTextBoxColumn8, "gridViewTextBoxColumn8");
             gridViewTextBoxColumn8.FieldName = "Item.Name";
-            gridViewTextBoxColumn8.Name = "Item";
+            gridViewTextBoxColumn8.Name = "Item1";
             gridViewTextBoxColumn8.Width = 263;
             resources.ApplyResources(gridViewTextBoxColumn9, "gridViewTextBoxColumn9");
             gridViewTextBoxColumn9.FieldName = "Quantity";
@@ -379,6 +385,41 @@
             this.btnDeleteAll.Name = "btnDeleteAll";
             this.btnDeleteAll.Click += new System.EventHandler(this.btnDeleteAll_Click);
             // 
+            // menuStrip1
+            // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem,
+            this.languageToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // helpToolStripMenuItem
+            // 
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // languageToolStripMenuItem
+            // 
+            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.albaniaToolStripMenuItem});
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            // 
+            // englishToolStripMenuItem
+            // 
+            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // albaniaToolStripMenuItem
+            // 
+            resources.ApplyResources(this.albaniaToolStripMenuItem, "albaniaToolStripMenuItem");
+            this.albaniaToolStripMenuItem.Name = "albaniaToolStripMenuItem";
+            this.albaniaToolStripMenuItem.Click += new System.EventHandler(this.albaniaToolStripMenuItem_Click);
+            // 
             // Sale
             // 
             resources.ApplyResources(this, "$this");
@@ -391,6 +432,8 @@
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.btnDeleteAll);
             this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Sale";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -428,6 +471,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteAll)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,5 +508,10 @@
         private Telerik.WinControls.UI.RadButton BtnSave;
         private Telerik.WinControls.UI.RadButton btnDelete;
         private Telerik.WinControls.UI.RadButton btnDeleteAll;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem albaniaToolStripMenuItem;
     }
 }

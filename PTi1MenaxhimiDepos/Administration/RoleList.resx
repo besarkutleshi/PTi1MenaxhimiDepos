@@ -131,9 +131,6 @@
   <data name="dgwRoles.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
-    <value>btnSearch</value>
-  </data>
   <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>791, 30</value>
   </data>
@@ -213,8 +210,8 @@
   <data name="&gt;&gt;radButton2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="radButton1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13.25pt</value>
+  <data name="btnRefresh.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="radButton2.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 38</value>
@@ -252,6 +249,9 @@
   <data name="txtSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
+  <data name="btnInsertRole.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 30</value>
+  </data>
   <data name="radButton1.Text" xml:space="preserve">
     <value>Insert Role</value>
   </data>
@@ -279,20 +279,17 @@
   <data name="&gt;&gt;radButton1.Name" xml:space="preserve">
     <value>radButton1</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="dgwRoles.Size" type="System.Drawing.Size, System.Drawing">
     <value>1103, 607</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>RoleList</value>
   </data>
   <data name="radButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 25</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Search</value>
   </data>
   <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -318,8 +315,8 @@
   <data name="&gt;&gt;txtSearch.Name" xml:space="preserve">
     <value>txtSearch</value>
   </data>
-  <data name="btnInsertRole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 30</value>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
   </data>
   <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 30</value>
@@ -333,11 +330,14 @@
   <data name="&gt;&gt;btnInsertRole.Name" xml:space="preserve">
     <value>btnInsertRole</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="radButton1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 13.25pt</value>
   </data>
-  <data name="btnRefresh.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="&gt;&gt;btnRefresh.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -345,8 +345,8 @@
   <data name="dgwRoles.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Search</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

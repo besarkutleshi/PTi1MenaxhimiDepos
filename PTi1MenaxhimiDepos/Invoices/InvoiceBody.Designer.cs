@@ -151,6 +151,7 @@
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtPrice);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "InvoiceBody";
             this.Load += new System.EventHandler(this.InvoiceBody_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmbItem)).EndInit();

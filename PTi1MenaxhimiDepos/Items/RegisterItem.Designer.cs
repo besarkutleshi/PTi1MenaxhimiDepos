@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterItem));
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
             this.txtname = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
@@ -52,11 +52,18 @@
             this.cmdSupplier = new Telerik.WinControls.UI.RadDropDownList();
             this.txtid = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
-            this.btnUpdate = new Telerik.WinControls.UI.RadButton();
-            this.btnSave = new Telerik.WinControls.UI.RadButton();
+            this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
+            this.txtsaleprice = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
+            this.txtpurchaseprice = new Telerik.WinControls.UI.RadTextBox();
+            this.btnDisplayUnits = new Telerik.WinControls.UI.RadButton();
             this.btnDelete = new Telerik.WinControls.UI.RadButton();
             this.btnClear = new Telerik.WinControls.UI.RadButton();
-            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.btnUpdate = new Telerik.WinControls.UI.RadButton();
+            this.btnSave = new Telerik.WinControls.UI.RadButton();
+            this.btnDisplaySupplier = new Telerik.WinControls.UI.RadButton();
+            this.btnDisplayCategories = new Telerik.WinControls.UI.RadButton();
+            this.btnDisplayTypes = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
@@ -78,11 +85,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsaleprice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpurchaseprice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDisplayUnits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDisplaySupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDisplayCategories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDisplayTypes)).BeginInit();
             this.SuspendLayout();
             // 
             // txtname
@@ -173,12 +187,12 @@
             // 
             resources.ApplyResources(this.cmbActive, "cmbActive");
             this.cmbActive.ItemHeight = 40;
-            radListDataItem1.Text = "True";
-            resources.ApplyResources(radListDataItem1, "radListDataItem1");
-            radListDataItem2.Text = "False";
-            resources.ApplyResources(radListDataItem2, "radListDataItem2");
-            this.cmbActive.Items.Add(radListDataItem1);
-            this.cmbActive.Items.Add(radListDataItem2);
+            radListDataItem3.Text = "True";
+            resources.ApplyResources(radListDataItem3, "radListDataItem3");
+            radListDataItem4.Text = "False";
+            resources.ApplyResources(radListDataItem4, "radListDataItem4");
+            this.cmbActive.Items.Add(radListDataItem3);
+            this.cmbActive.Items.Add(radListDataItem4);
             this.cmbActive.Name = "cmbActive";
             // 
             // radDropDownList5
@@ -202,19 +216,34 @@
             resources.ApplyResources(this.radLabel11, "radLabel11");
             this.radLabel11.Name = "radLabel11";
             // 
-            // btnUpdate
+            // radLabel12
             // 
-            resources.ApplyResources(this.btnUpdate, "btnUpdate");
-            this.btnUpdate.Image = global::PTi1MenaxhimiDepos.Properties.Resources.update;
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            resources.ApplyResources(this.radLabel12, "radLabel12");
+            this.radLabel12.Name = "radLabel12";
             // 
-            // btnSave
+            // txtsaleprice
             // 
-            resources.ApplyResources(this.btnSave, "btnSave");
-            this.btnSave.Image = global::PTi1MenaxhimiDepos.Properties.Resources.add_1_icon;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            resources.ApplyResources(this.txtsaleprice, "txtsaleprice");
+            this.txtsaleprice.Name = "txtsaleprice";
+            this.txtsaleprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // radLabel13
+            // 
+            resources.ApplyResources(this.radLabel13, "radLabel13");
+            this.radLabel13.Name = "radLabel13";
+            // 
+            // txtpurchaseprice
+            // 
+            resources.ApplyResources(this.txtpurchaseprice, "txtpurchaseprice");
+            this.txtpurchaseprice.Name = "txtpurchaseprice";
+            this.txtpurchaseprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnDisplayUnits
+            // 
+            resources.ApplyResources(this.btnDisplayUnits, "btnDisplayUnits");
+            this.btnDisplayUnits.Image = global::PTi1MenaxhimiDepos.Properties.Resources.plus;
+            this.btnDisplayUnits.Name = "btnDisplayUnits";
+            this.btnDisplayUnits.Click += new System.EventHandler(this.btnDisplayUnits_Click);
             // 
             // btnDelete
             // 
@@ -230,18 +259,56 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // radLabel10
+            // btnUpdate
             // 
-            resources.ApplyResources(this.radLabel10, "radLabel10");
-            this.radLabel10.Name = "radLabel10";
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
+            this.btnUpdate.Image = global::PTi1MenaxhimiDepos.Properties.Resources.update;
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnSave
+            // 
+            resources.ApplyResources(this.btnSave, "btnSave");
+            this.btnSave.Image = global::PTi1MenaxhimiDepos.Properties.Resources.add_1_icon;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDisplaySupplier
+            // 
+            resources.ApplyResources(this.btnDisplaySupplier, "btnDisplaySupplier");
+            this.btnDisplaySupplier.Image = global::PTi1MenaxhimiDepos.Properties.Resources.plus;
+            this.btnDisplaySupplier.Name = "btnDisplaySupplier";
+            this.btnDisplaySupplier.Click += new System.EventHandler(this.btnDisplaySupplier_Click);
+            // 
+            // btnDisplayCategories
+            // 
+            resources.ApplyResources(this.btnDisplayCategories, "btnDisplayCategories");
+            this.btnDisplayCategories.Image = global::PTi1MenaxhimiDepos.Properties.Resources.plus;
+            this.btnDisplayCategories.Name = "btnDisplayCategories";
+            this.btnDisplayCategories.Click += new System.EventHandler(this.btnDisplayCategories_Click);
+            // 
+            // btnDisplayTypes
+            // 
+            resources.ApplyResources(this.btnDisplayTypes, "btnDisplayTypes");
+            this.btnDisplayTypes.Image = global::PTi1MenaxhimiDepos.Properties.Resources.plus;
+            this.btnDisplayTypes.Name = "btnDisplayTypes";
+            this.btnDisplayTypes.Click += new System.EventHandler(this.btnDisplayTypes_Click);
             // 
             // RegisterItem
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnDisplayTypes);
+            this.Controls.Add(this.btnDisplayCategories);
+            this.Controls.Add(this.btnDisplaySupplier);
+            this.Controls.Add(this.btnDisplayUnits);
+            this.Controls.Add(this.radLabel12);
             this.Controls.Add(this.cmbtype);
+            this.Controls.Add(this.txtsaleprice);
             this.Controls.Add(this.cmdSupplier);
+            this.Controls.Add(this.radLabel13);
             this.Controls.Add(this.radDropDownList5);
+            this.Controls.Add(this.txtpurchaseprice);
             this.Controls.Add(this.cmbActive);
             this.Controls.Add(this.cmbunit);
             this.Controls.Add(this.cmbcategory);
@@ -256,7 +323,6 @@
             this.Controls.Add(this.radLabel3);
             this.Controls.Add(this.radLabel2);
             this.Controls.Add(this.radLabel11);
-            this.Controls.Add(this.radLabel10);
             this.Controls.Add(this.radLabel1);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.txtbarcode);
@@ -293,11 +359,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsaleprice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpurchaseprice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDisplayUnits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDisplaySupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDisplayCategories)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDisplayTypes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,6 +402,13 @@
         private Telerik.WinControls.UI.RadButton btnClear;
         private Telerik.WinControls.UI.RadTextBox txtid;
         private Telerik.WinControls.UI.RadLabel radLabel11;
-        private Telerik.WinControls.UI.RadLabel radLabel10;
+        private Telerik.WinControls.UI.RadLabel radLabel12;
+        private Telerik.WinControls.UI.RadTextBox txtsaleprice;
+        private Telerik.WinControls.UI.RadLabel radLabel13;
+        private Telerik.WinControls.UI.RadTextBox txtpurchaseprice;
+        private Telerik.WinControls.UI.RadButton btnDisplayUnits;
+        private Telerik.WinControls.UI.RadButton btnDisplaySupplier;
+        private Telerik.WinControls.UI.RadButton btnDisplayCategories;
+        private Telerik.WinControls.UI.RadButton btnDisplayTypes;
     }
 }

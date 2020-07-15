@@ -33,6 +33,8 @@ namespace PTi1MenaxhimiDepos.DAL
                         cmd.Parameters.AddWithValue("@TypeID", obj.TypeID);
                         cmd.Parameters.AddWithValue("@SupplierID", obj.SupplierID);
                         cmd.Parameters.AddWithValue("@Active", obj.Active);
+                        cmd.Parameters.AddWithValue("@PurchasePrice", obj.PurchasePrice);
+                        cmd.Parameters.AddWithValue("@SalePrice", obj.SalePrice);
                         cmd.Parameters.AddWithValue("@StockQuantity", obj.StockQuantity);
                         cmd.Parameters.AddWithValue("@Description", obj.Description);
                         cmd.Parameters.AddWithValue("@InsertByUsername", obj.Username);
@@ -237,7 +239,8 @@ namespace PTi1MenaxhimiDepos.DAL
 
         public Item Get(SqlDataReader sdr)
         {
-            Item obj = new Item(int.Parse(sdr["ITEMID"].ToString()),sdr["BARCODE"].ToString(), sdr["NAME"].ToString(),bool.Parse(sdr["ACTIV"].ToString()), int.Parse(sdr["STOCKQUANTITY"].ToString()), sdr["DESCRIPTION"].ToString());
+            Item obj = new Item(int.Parse(sdr["ITEMID"].ToString()),sdr["BARCODE"].ToString(), sdr["NAME"].ToString(),bool.Parse(sdr["ACTIV"].ToString()), 
+                double.Parse(sdr["PURCHASEPRICE"].ToString()),double.Parse(sdr["SALEPRICE"].ToString()),int.Parse(sdr["STOCKQUANTITY"].ToString()), sdr["DESCRIPTION"].ToString());
             obj.Category = new ItemCategory(sdr["CATEGORY"].ToString());
             obj.Type = new ItemType(sdr["TYPE"].ToString());
             obj.Supplier = new Supplier(sdr["SUPPLIER"].ToString());
@@ -255,6 +258,31 @@ namespace PTi1MenaxhimiDepos.DAL
                     con.Open();
                     var cmd = DataConnection.Command(con, "sp_GetAll_Item_Like", CommandType.StoredProcedure);
                     cmd.Parameters.AddWithValue("@Name", name);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        dt.Add(Get(sdr));
+                    }
+                }
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public List<Item> ReadAllByBarcodeLike(string barcode)
+        {
+            try
+            {
+                List<Item> dt = new List<Item>();
+                using (SqlConnection con = new SqlConnection(DataConnection.Constring))
+                {
+                    con.Open();
+                    var cmd = DataConnection.Command(con, "sp_GetAll_Item_ByBarcodeLike", CommandType.StoredProcedure);
+                    cmd.Parameters.AddWithValue("@Barcode", barcode);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     while (sdr.Read())
                     {

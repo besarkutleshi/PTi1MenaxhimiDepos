@@ -1,5 +1,6 @@
 ﻿using PTi1MenaxhimiDepos.BL;
 using PTi1MenaxhimiDepos.BO;
+using PTi1MenaxhimiDepos.Languages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -82,6 +83,26 @@ namespace PTi1MenaxhimiDepos.Items
                 dgwItems.DataSource = null;
                 dgwItems.DataSource = ItemBLL.GetItems();
             }
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helpsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpClass.ShowHelp(this, "Regjistrimi-i-Produkteve.html");
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TranslateFormMultipleResource.ChangeLanguages("en-US");
+        }
+
+        private void albaniaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TranslateFormMultipleResource.ChangeLanguages("sq");
         }
     }
 }

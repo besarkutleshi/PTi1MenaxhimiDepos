@@ -117,13 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnRefresh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 29</value>
-  </data>
   <data name="txtSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 37</value>
   </data>
@@ -148,11 +146,11 @@
   <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 38</value>
   </data>
-  <data name="dgwEmpPos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>963, 610</value>
-  </data>
   <data name="&gt;&gt;btnInsertRole.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>646, 35</value>
   </data>
   <data name="&gt;&gt;btnRefresh.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -163,15 +161,14 @@
   <data name="btnInsertRole.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EmployeePOSList</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;label7.Parent" xml:space="preserve">
     <value>$this</value>
@@ -179,17 +176,21 @@
   <data name="&gt;&gt;btnInsertRole.Name" xml:space="preserve">
     <value>btnInsertRole</value>
   </data>
-  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgwEmpPos.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
   </data>
   <data name="&gt;&gt;btnRefresh.Name" xml:space="preserve">
     <value>btnRefresh</value>
   </data>
+  <data name="btnRefresh.Text" xml:space="preserve">
+    <value>Refreshs</value>
+  </data>
   <data name="&gt;&gt;dgwEmpPos.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>984, 701</value>
@@ -197,7 +198,6 @@
   <data name="btnInsertRole.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 30</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -213,17 +213,20 @@
   <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;dgwEmpPos.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;dgwEmpPos.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="dgwEmpPos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>963, 610</value>
   </data>
-  <data name="btnRefresh.Text" xml:space="preserve">
-    <value>Refreshs</value>
+  <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
   <data name="btnInsertRole.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 43</value>
@@ -234,8 +237,11 @@
   <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>911, 35</value>
   </data>
-  <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
+  <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
   </data>
   <data name="dgwEmpPos.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13.25pt</value>
@@ -246,17 +252,14 @@
   <data name="&gt;&gt;btnInsertRole.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
   <data name="btnInsertRole.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13.25pt</value>
   </data>
   <data name="&gt;&gt;txtSearch.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dgwEmpPos.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;btnRefresh.Parent" xml:space="preserve">
     <value>$this</value>
@@ -273,8 +276,8 @@
   <data name="btnRefresh.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13.25pt</value>
   </data>
-  <data name="txtSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
   </data>
   <data name="dgwEmpPos.MasterTemplate.Caption" xml:space="preserve">
     <value />
@@ -282,29 +285,26 @@
   <data name="&gt;&gt;label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>646, 35</value>
+  <data name="btnRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 29</value>
   </data>
-  <data name="btnSearch.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Searchs</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>EmployeePOSList</value>
   </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Searchs</value>
   </data>
   <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
-  <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="btnSearch.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

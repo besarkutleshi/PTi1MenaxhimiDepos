@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryList));
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn28 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn29 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn30 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition10 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.dgwCategories = new Telerik.WinControls.UI.RadGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
@@ -57,23 +57,23 @@
             this.dgwCategories.MasterTemplate.AllowEditRow = false;
             this.dgwCategories.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.dgwCategories.MasterTemplate.Caption = resources.GetString("dgwCategories.MasterTemplate.Caption");
-            resources.ApplyResources(gridViewTextBoxColumn28, "gridViewTextBoxColumn28");
-            gridViewTextBoxColumn28.FieldName = "ID";
-            gridViewTextBoxColumn28.Name = "ID";
-            gridViewTextBoxColumn28.Width = 335;
-            resources.ApplyResources(gridViewTextBoxColumn29, "gridViewTextBoxColumn29");
-            gridViewTextBoxColumn29.FieldName = "Name";
-            gridViewTextBoxColumn29.Name = "Name";
-            gridViewTextBoxColumn29.Width = 335;
-            resources.ApplyResources(gridViewTextBoxColumn30, "gridViewTextBoxColumn30");
-            gridViewTextBoxColumn30.FieldName = "Description";
-            gridViewTextBoxColumn30.Name = "Description";
-            gridViewTextBoxColumn30.Width = 336;
+            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
+            gridViewTextBoxColumn1.FieldName = "ID";
+            gridViewTextBoxColumn1.Name = "ID";
+            gridViewTextBoxColumn1.Width = 335;
+            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
+            gridViewTextBoxColumn2.FieldName = "Name";
+            gridViewTextBoxColumn2.Name = "Name";
+            gridViewTextBoxColumn2.Width = 335;
+            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
+            gridViewTextBoxColumn3.FieldName = "Description";
+            gridViewTextBoxColumn3.Name = "Description";
+            gridViewTextBoxColumn3.Width = 336;
             this.dgwCategories.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn28,
-            gridViewTextBoxColumn29,
-            gridViewTextBoxColumn30});
-            this.dgwCategories.MasterTemplate.ViewDefinition = tableViewDefinition10;
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3});
+            this.dgwCategories.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgwCategories.Name = "dgwCategories";
             this.dgwCategories.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwCategories_CellDoubleClick);
             this.dgwCategories.Click += new System.EventHandler(this.dgwCategories_Click);
@@ -122,6 +122,7 @@
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnInsertRole);
             this.Controls.Add(this.dgwCategories);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CategoryList";
             this.Load += new System.EventHandler(this.CategoryList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwCategories.MasterTemplate)).EndInit();

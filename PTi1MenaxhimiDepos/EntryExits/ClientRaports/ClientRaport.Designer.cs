@@ -52,15 +52,15 @@
             gridViewTextBoxColumn1.FieldName = "ID";
             gridViewTextBoxColumn1.HeaderText = "ClientID";
             gridViewTextBoxColumn1.Name = "ClientID";
-            gridViewTextBoxColumn1.Width = 347;
+            gridViewTextBoxColumn1.Width = 348;
             gridViewTextBoxColumn2.FieldName = "Name";
             gridViewTextBoxColumn2.HeaderText = "Client Name";
             gridViewTextBoxColumn2.Name = "Name";
-            gridViewTextBoxColumn2.Width = 347;
+            gridViewTextBoxColumn2.Width = 348;
             gridViewTextBoxColumn3.FieldName = "Amount";
             gridViewTextBoxColumn3.HeaderText = "Amount";
             gridViewTextBoxColumn3.Name = "Amount";
-            gridViewTextBoxColumn3.Width = 347;
+            gridViewTextBoxColumn3.Width = 348;
             this.dgwClientReports.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -89,6 +89,7 @@
             this.ClientSize = new System.Drawing.Size(1087, 754);
             this.Controls.Add(this.radButton1);
             this.Controls.Add(this.dgwClientReports);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ClientRaport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientRaport";

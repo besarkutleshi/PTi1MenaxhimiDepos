@@ -60,6 +60,8 @@ namespace PTi1MenaxhimiDepos
                 cmbtype.Text = item.Type.Name;
                 cmdSupplier.Text = item.Supplier.Name;
                 cmbActive.SelectedIndex = 0;
+                txtsaleprice.Text = item.SalePrice.ToString();
+                txtpurchaseprice.Text = item.PurchasePrice.ToString();
                 txtstock.Text = item.StockQuantity.ToString();
                 txtDescription.Text = item.Description;
             }
@@ -75,7 +77,8 @@ namespace PTi1MenaxhimiDepos
             }
             else
             {
-                Item obj = new Item(0,txtbarcode.Text, txtname.Text, (int)cmbunit.SelectedValue, (int)cmbcategory.SelectedValue, (int)cmbtype.SelectedValue, (int)cmdSupplier.SelectedValue,IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
+                Item obj = new Item(0,txtbarcode.Text, txtname.Text, (int)cmbunit.SelectedValue, (int)cmbcategory.SelectedValue, (int)cmbtype.SelectedValue, (int)cmdSupplier.SelectedValue,IsActive(),double.Parse(txtpurchaseprice.Text),
+                    double.Parse(txtsaleprice.Text),int.Parse(txtstock.Text), txtDescription.Text);
                 obj.Username = HelpClass.CurrentUser.UserName;
                 if (ItemBLL.InsertItem(obj))
                 {
@@ -104,7 +107,8 @@ namespace PTi1MenaxhimiDepos
                     int categoryid = categories.Where(c => c.Name == cmbcategory.Text).Select(c => c.ID).FirstOrDefault();
                     int typeid = type.Where(t => t.Name == cmbtype.Text).Select(t => t.ID).FirstOrDefault();
                     int supplierid = supplier.Where(s => s.Name == cmdSupplier.Text).Select(s => s.ID).FirstOrDefault();
-                    item = new Item(ID, txtbarcode.Text, txtname.Text, unitid, categoryid, typeid, supplierid, IsActive(), int.Parse(txtstock.Text), txtDescription.Text);
+                    item = new Item(ID, txtbarcode.Text, txtname.Text, unitid, categoryid, typeid, supplierid, IsActive(),double.Parse(txtpurchaseprice.Text),
+                        double.Parse(txtsaleprice.Text),int.Parse(txtstock.Text), txtDescription.Text);
                     item.Username = HelpClass.CurrentUser.UserName;
                     if (ItemBLL.UpdateItem(ID, item))
                     {
@@ -144,7 +148,7 @@ namespace PTi1MenaxhimiDepos
         private void btnClear_Click(object sender, EventArgs e)
         {
             HelpClass.NotVisibleButton(btnSave, btnDelete, btnUpdate);
-            HelpClass.Delete(txtbarcode, txtname, txtDescription, txtstock);
+            HelpClass.Delete(txtbarcode, txtname, txtDescription, txtstock,txtpurchaseprice,txtsaleprice);
         }
 
         private void RegisterItem_FormClosing(object sender, FormClosingEventArgs e)
@@ -157,6 +161,37 @@ namespace PTi1MenaxhimiDepos
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btnDisplayUnits_Click(object sender, EventArgs e)
+        {
+            PTi1MenaxhimiDepos.Items.ItemUnit obj = new Items.ItemUnit();
+            obj.ShowDialog();
+            cmbunit.DataSource = ItemBLL.GetItemUnits(); cmbunit.DisplayMember = "Name"; cmbunit.ValueMember = "ID";
+        }
+
+        private void btnDisplaySupplier_Click(object sender, EventArgs e)
+        {
+            PTi1MenaxhimiDepos.Collab.Supplier obj = new Collab.Supplier();
+            obj.ShowDialog();
+            cmdSupplier.DataSource = CollaborationBLL.GetSuppliers(); cmdSupplier.DisplayMember = "Name"; cmdSupplier.ValueMember = "ID";
+        }
+
+        private void btnDisplayCategories_Click(object sender, EventArgs e)
+        {
+            PTi1MenaxhimiDepos.Items.ItemCategory obj = new Items.ItemCategory();
+            obj.ShowDialog();
+            cmbunit.DataSource = ItemBLL.GetItemUnits(); cmbunit.DisplayMember = "Name"; cmbunit.ValueMember = "ID";
+            cmbcategory.DataSource = ItemBLL.GetCategories();
+            cmbcategory.DisplayMember = "Name";
+            cmbcategory.ValueMember = "ID";
+        }
+
+        private void btnDisplayTypes_Click(object sender, EventArgs e)
+        {
+            PTi1MenaxhimiDepos.Items.ItemType obj = new Items.ItemType();
+            obj.ShowDialog();
+            cmbtype.DataSource = ItemBLL.GetItemTypes(); cmbtype.DisplayMember = "Name"; cmbtype.ValueMember = "ID";
         }
     }
 }

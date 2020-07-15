@@ -154,20 +154,23 @@
     <value>Emri</value>
   </data>
   <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Kategoria</value>
+    <value>Sasia</value>
   </data>
   <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>Lloji</value>
+    <value>Kategoria</value>
   </data>
   <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
-    <value>Njesia</value>
+    <value>Lloji</value>
   </data>
   <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
-    <value>Sasia</value>
+    <value>Njesia</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dgwitemtolist.Location" type="System.Drawing.Point, System.Drawing">
     <value>700, 326</value>
+  </data>
+  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>ID</value>
   </data>
   <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
     <value>Artikulli</value>
@@ -184,13 +187,22 @@
   <data name="BtnSave.Text" xml:space="preserve">
     <value>Ruaj</value>
   </data>
-  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 5</value>
-  </data>
   <data name="btnDeleteAll.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
   <data name="btnDeleteAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 34</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ndihma</value>
+  </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 24</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Gjuha</value>
   </data>
 </root>

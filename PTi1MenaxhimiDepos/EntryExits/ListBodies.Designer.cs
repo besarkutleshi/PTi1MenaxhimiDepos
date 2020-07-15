@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.dgwBodies = new Telerik.WinControls.UI.RadGridView();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgwBodies)).BeginInit();
@@ -51,33 +51,33 @@
             this.dgwBodies.MasterTemplate.AllowAddNewRow = false;
             this.dgwBodies.MasterTemplate.AllowEditRow = false;
             this.dgwBodies.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn11.FieldName = "HeaderID";
-            gridViewTextBoxColumn11.HeaderText = "Header ID";
-            gridViewTextBoxColumn11.Name = "HeaderID";
-            gridViewTextBoxColumn11.Width = 257;
-            gridViewTextBoxColumn12.FieldName = "Item.Name";
-            gridViewTextBoxColumn12.HeaderText = "Item";
-            gridViewTextBoxColumn12.Name = "Item";
-            gridViewTextBoxColumn12.Width = 257;
-            gridViewTextBoxColumn13.FieldName = "Price";
-            gridViewTextBoxColumn13.HeaderText = "Price";
-            gridViewTextBoxColumn13.Name = "Price";
-            gridViewTextBoxColumn13.Width = 257;
-            gridViewTextBoxColumn14.FieldName = "Quantity";
-            gridViewTextBoxColumn14.HeaderText = "Quantity";
-            gridViewTextBoxColumn14.Name = "Quantity";
-            gridViewTextBoxColumn14.Width = 257;
-            gridViewTextBoxColumn15.FieldName = "Discount";
-            gridViewTextBoxColumn15.HeaderText = "Discount";
-            gridViewTextBoxColumn15.Name = "Discount";
-            gridViewTextBoxColumn15.Width = 255;
+            gridViewTextBoxColumn1.FieldName = "HeaderID";
+            gridViewTextBoxColumn1.HeaderText = "Header ID";
+            gridViewTextBoxColumn1.Name = "HeaderID";
+            gridViewTextBoxColumn1.Width = 257;
+            gridViewTextBoxColumn2.FieldName = "Item.Name";
+            gridViewTextBoxColumn2.HeaderText = "Item";
+            gridViewTextBoxColumn2.Name = "Item";
+            gridViewTextBoxColumn2.Width = 257;
+            gridViewTextBoxColumn3.FieldName = "Price";
+            gridViewTextBoxColumn3.HeaderText = "Price";
+            gridViewTextBoxColumn3.Name = "Price";
+            gridViewTextBoxColumn3.Width = 257;
+            gridViewTextBoxColumn4.FieldName = "Quantity";
+            gridViewTextBoxColumn4.HeaderText = "Quantity";
+            gridViewTextBoxColumn4.Name = "Quantity";
+            gridViewTextBoxColumn4.Width = 257;
+            gridViewTextBoxColumn5.FieldName = "Discount";
+            gridViewTextBoxColumn5.HeaderText = "Discount";
+            gridViewTextBoxColumn5.Name = "Discount";
+            gridViewTextBoxColumn5.Width = 255;
             this.dgwBodies.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
-            gridViewTextBoxColumn13,
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15});
-            this.dgwBodies.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5});
+            this.dgwBodies.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgwBodies.Name = "dgwBodies";
             this.dgwBodies.Size = new System.Drawing.Size(1300, 681);
             this.dgwBodies.TabIndex = 9;
@@ -100,6 +100,7 @@
             this.ClientSize = new System.Drawing.Size(1319, 742);
             this.Controls.Add(this.radButton1);
             this.Controls.Add(this.dgwBodies);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ListBodies";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListBodies";

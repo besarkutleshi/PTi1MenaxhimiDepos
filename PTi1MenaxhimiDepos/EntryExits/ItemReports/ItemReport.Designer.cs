@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.dgwItemReport = new Telerik.WinControls.UI.RadGridView();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgwItemReport)).BeginInit();
@@ -48,23 +48,23 @@
             // 
             this.dgwItemReport.MasterTemplate.AllowAddNewRow = false;
             this.dgwItemReport.MasterTemplate.AllowEditRow = false;
-            gridViewTextBoxColumn10.FieldName = "Barcode";
-            gridViewTextBoxColumn10.HeaderText = "Barcode";
-            gridViewTextBoxColumn10.Name = "Barcode";
-            gridViewTextBoxColumn10.Width = 353;
-            gridViewTextBoxColumn11.FieldName = "Name";
-            gridViewTextBoxColumn11.HeaderText = "Name";
-            gridViewTextBoxColumn11.Name = "Name";
-            gridViewTextBoxColumn11.Width = 353;
-            gridViewTextBoxColumn12.FieldName = "Quantity";
-            gridViewTextBoxColumn12.HeaderText = "Quantity";
-            gridViewTextBoxColumn12.Name = "Quantity";
-            gridViewTextBoxColumn12.Width = 352;
+            gridViewTextBoxColumn1.FieldName = "Barcode";
+            gridViewTextBoxColumn1.HeaderText = "Barcode";
+            gridViewTextBoxColumn1.Name = "Barcode";
+            gridViewTextBoxColumn1.Width = 353;
+            gridViewTextBoxColumn2.FieldName = "Name";
+            gridViewTextBoxColumn2.HeaderText = "Name";
+            gridViewTextBoxColumn2.Name = "Name";
+            gridViewTextBoxColumn2.Width = 353;
+            gridViewTextBoxColumn3.FieldName = "Quantity";
+            gridViewTextBoxColumn3.HeaderText = "Quantity";
+            gridViewTextBoxColumn3.Name = "Quantity";
+            gridViewTextBoxColumn3.Width = 352;
             this.dgwItemReport.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12});
-            this.dgwItemReport.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3});
+            this.dgwItemReport.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgwItemReport.Name = "dgwItemReport";
             this.dgwItemReport.Size = new System.Drawing.Size(1077, 667);
             this.dgwItemReport.TabIndex = 0;
@@ -87,6 +87,7 @@
             this.ClientSize = new System.Drawing.Size(1101, 742);
             this.Controls.Add(this.radButton1);
             this.Controls.Add(this.dgwItemReport);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ItemReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItemReport";

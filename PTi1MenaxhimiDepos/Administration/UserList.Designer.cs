@@ -142,6 +142,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnInsertRole);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UserList";
             this.Load += new System.EventHandler(this.UserList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();

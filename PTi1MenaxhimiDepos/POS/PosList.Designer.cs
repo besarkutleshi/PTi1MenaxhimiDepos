@@ -133,6 +133,7 @@
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnInsertRole);
             this.Controls.Add(this.dgwPos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PosList";
             this.Load += new System.EventHandler(this.PosList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwPos.MasterTemplate)).EndInit();

@@ -1,6 +1,8 @@
 ﻿using PTi1MenaxhimiDepos.BL;
+using PTi1MenaxhimiDepos.BO;
 using PTi1MenaxhimiDepos.Collab;
 using PTi1MenaxhimiDepos.Controls;
+using PTi1MenaxhimiDepos.Languages;
 using System;
 using System.Drawing;
 using System.Globalization;
@@ -76,7 +78,7 @@ namespace PTi1MenaxhimiDepos
             }
             return false;
         }
-
+        RadGridView dgwEmployees;
         private void button2_Click(object sender, EventArgs e)
         {
             if (TabPages(HelpClass.SetText("Administration", "Administrata")))
@@ -86,23 +88,31 @@ namespace PTi1MenaxhimiDepos
             TabPage tabPage = new TabPage(HelpClass.SetText("Administration", "Administrata"));
             tabControl1.TabPages.Add(tabPage);
             control.PrintButtonsAdministration(tabPage); 
-            RadGridView obj = new RadGridView();
-            obj.Columns.Add(HelpClass.GridViewDataColumn("ID"));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Name","Name", HelpClass.SetText("Name", "Emri")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Surname","Surname", HelpClass.SetText("Surname", "Mbiemri")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Email","Email", HelpClass.SetText("Email", "Mail")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Phone","Phone", HelpClass.SetText("Phone", "Nr.Tel")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Street","Address.Street", HelpClass.SetText("Street","Rruga")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("City", "Address.City", HelpClass.SetText("City", "Qyteti")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("Country", "Address.Country", HelpClass.SetText("Country", "Shteti")));
-            obj.Columns.Add(HelpClass.GridViewDataColumn("PostalCode", "Address.PostalCode", HelpClass.SetText("Postal Code", "Kodi Postar")));
-            obj.DataSource = CollaborationBLL.GetEmployees();
-            obj.AllowSearchRow = true;
-            obj.AllowEditRow = false;
-            obj.AllowAddNewRow = false;
-            obj.TableElement.SearchHighlightColor = Color.LightBlue;
-            control.PrintGrid(tabPage, obj, new Point(7, 110), new Size(1490, 480));
+            dgwEmployees = new RadGridView();
+            dgwEmployees.CellDoubleClick += DgwEmployees_CellDoubleClick;
+            dgwEmployees.Columns.Add(HelpClass.GridViewDataColumn("ID"));
+            dgwEmployees.Columns.Add(HelpClass.GridViewDataColumn("Name","Name", HelpClass.SetText("Name", "Emri")));
+            dgwEmployees.Columns.Add(HelpClass.GridViewDataColumn("Surname","Surname", HelpClass.SetText("Surname", "Mbiemri")));
+            dgwEmployees.Columns.Add(HelpClass.GridViewDataColumn("Email","Email", HelpClass.SetText("Email", "Mail")));
+            dgwEmployees.Columns.Add(HelpClass.GridViewDataColumn("Phone","Phone", HelpClass.SetText("Phone", "Nr.Tel")));
+            dgwEmployees.Columns.Add(HelpClass.GridViewDataColumn("Street","Address.Street", HelpClass.SetText("Street","Rruga")));
+            dgwEmployees.Columns.Add(HelpClass.GridViewDataColumn("City", "Address.City", HelpClass.SetText("City", "Qyteti")));
+            dgwEmployees.Columns.Add(HelpClass.GridViewDataColumn("Country", "Address.Country", HelpClass.SetText("Country", "Shteti")));
+            dgwEmployees.Columns.Add(HelpClass.GridViewDataColumn("PostalCode", "Address.PostalCode", HelpClass.SetText("Postal Code", "Kodi Postar")));
+            dgwEmployees.DataSource = CollaborationBLL.GetEmployees();
+            dgwEmployees.AllowSearchRow = true;
+            dgwEmployees.AllowEditRow = false;
+            dgwEmployees.AllowAddNewRow = false;
+            dgwEmployees.TableElement.SearchHighlightColor = Color.LightBlue;
+            control.PrintGrid(tabPage, dgwEmployees, new Point(7, 110), new Size(1490, 480));
             tabControl1.SelectedTab = tabPage;
+        }
+
+        private void DgwEmployees_CellDoubleClick(object sender, GridViewCellEventArgs e)
+        {
+            BO.Employee obj = (BO.Employee)dgwEmployees.Rows[e.RowIndex].DataBoundItem;
+            Collab.Employee employee = new Collab.Employee(obj);
+            employee.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -176,7 +186,7 @@ namespace PTi1MenaxhimiDepos
         private void tlenglish_Click(object sender, EventArgs e)
         {
             ChangeLanguage("en-US");
-            //TranslateFormMultipleResource.ChangeLanguages("sq");
+            //TranslateFormMultipleResource.ChangeLanguages("en-US");
         }
 
         private void ChangeLanguage(string lang)
@@ -191,7 +201,7 @@ namespace PTi1MenaxhimiDepos
         private void tlalbania_Click(object sender, EventArgs e)
         {
             ChangeLanguage("sq");
-           //TranslateFormMultipleResource.ChangeLanguages("sq");
+            //TranslateFormMultipleResource.ChangeLanguages("sq");
         }
 
         private void Main_Load(object sender, EventArgs e)

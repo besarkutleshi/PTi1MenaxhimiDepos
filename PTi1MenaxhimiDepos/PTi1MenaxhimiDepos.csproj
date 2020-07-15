@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-cash-register-50.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -310,6 +313,12 @@
     </Compile>
     <Compile Include="Sale\Sale.Designer.cs">
       <DependentUpon>Sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\SaleInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\SaleInvoices.Designer.cs">
+      <DependentUpon>SaleInvoices.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Administration\Role.en.resx">
       <DependentUpon>Role.cs</DependentUpon>
@@ -625,6 +634,9 @@
     <EmbeddedResource Include="Sale\Payment.sq.resx">
       <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Sale.bin.resx">
+      <DependentUpon>Sale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sale\Sale.en.resx">
       <DependentUpon>Sale.cs</DependentUpon>
     </EmbeddedResource>
@@ -633,6 +645,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sale\Sale.sq.resx">
       <DependentUpon>Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\SaleInvoices.resx">
+      <DependentUpon>SaleInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -643,6 +658,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UserMaunal.hmxz" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -779,6 +795,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\week.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8-cash-register-50.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

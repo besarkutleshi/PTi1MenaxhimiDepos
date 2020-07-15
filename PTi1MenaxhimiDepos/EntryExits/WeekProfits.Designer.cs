@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.dgwWeekProfits = new Telerik.WinControls.UI.RadGridView();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgwWeekProfits)).BeginInit();
@@ -48,18 +48,18 @@
             this.dgwWeekProfits.MasterTemplate.AllowAddNewRow = false;
             this.dgwWeekProfits.MasterTemplate.AllowEditRow = false;
             this.dgwWeekProfits.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn3.FieldName = "Day";
-            gridViewTextBoxColumn3.HeaderText = "Day";
-            gridViewTextBoxColumn3.Name = "Day";
-            gridViewTextBoxColumn3.Width = 542;
-            gridViewTextBoxColumn4.FieldName = "Profit";
-            gridViewTextBoxColumn4.HeaderText = "Profit";
-            gridViewTextBoxColumn4.Name = "Profit";
-            gridViewTextBoxColumn4.Width = 542;
+            gridViewTextBoxColumn1.FieldName = "Day";
+            gridViewTextBoxColumn1.HeaderText = "Day";
+            gridViewTextBoxColumn1.Name = "Day";
+            gridViewTextBoxColumn1.Width = 542;
+            gridViewTextBoxColumn2.FieldName = "Profit";
+            gridViewTextBoxColumn2.HeaderText = "Profit";
+            gridViewTextBoxColumn2.Name = "Profit";
+            gridViewTextBoxColumn2.Width = 542;
             this.dgwWeekProfits.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4});
-            this.dgwWeekProfits.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2});
+            this.dgwWeekProfits.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgwWeekProfits.Name = "dgwWeekProfits";
             this.dgwWeekProfits.Size = new System.Drawing.Size(1104, 656);
             this.dgwWeekProfits.TabIndex = 0;
@@ -82,6 +82,7 @@
             this.ClientSize = new System.Drawing.Size(1128, 721);
             this.Controls.Add(this.radButton1);
             this.Controls.Add(this.dgwWeekProfits);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "WeekProfits";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WeekProfits";

@@ -117,43 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>Barcode</value>
   </data>
-  <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
-    <value>Category</value>
-  </data>
-  <data name="gridViewTextBoxColumn15.HeaderText" xml:space="preserve">
-    <value>Type</value>
-  </data>
-  <data name="gridViewTextBoxColumn16.HeaderText" xml:space="preserve">
-    <value>Unit</value>
-  </data>
-  <data name="gridViewTextBoxColumn17.HeaderText" xml:space="preserve">
-    <value>Stock</value>
-  </data>
-  <data name="gridViewTextBoxColumn18.HeaderText" xml:space="preserve">
-    <value>ID</value>
-  </data>
-  <data name="gridViewTextBoxColumn19.HeaderText" xml:space="preserve">
-    <value>Item</value>
-  </data>
-  <data name="gridViewTextBoxColumn20.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>Quantity</value>
   </data>
-  <data name="gridViewTextBoxColumn21.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
     <value>Price</value>
   </data>
-  <data name="gridViewTextBoxColumn22.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
     <value>Discount</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 5</value>
-  </data>
   <data name="btnDeleteAll.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
   </data>
@@ -162,5 +159,23 @@
   </data>
   <data name="btnDeleteAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 34</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 24</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 24</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="albaniaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
 </root>

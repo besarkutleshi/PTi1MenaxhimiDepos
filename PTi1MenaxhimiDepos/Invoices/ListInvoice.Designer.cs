@@ -167,6 +167,7 @@
             this.Controls.Add(this.txtInvoiceNumber);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.txtID);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ListInvoice";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListInvoice_FormClosing);
             this.Load += new System.EventHandler(this.ListInvoice_Load);

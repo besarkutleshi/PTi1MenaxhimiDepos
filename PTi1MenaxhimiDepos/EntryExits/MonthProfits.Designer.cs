@@ -51,11 +51,11 @@
             gridViewTextBoxColumn1.FieldName = "Month";
             gridViewTextBoxColumn1.HeaderText = "Month";
             gridViewTextBoxColumn1.Name = "Month";
-            gridViewTextBoxColumn1.Width = 540;
+            gridViewTextBoxColumn1.Width = 541;
             gridViewTextBoxColumn2.FieldName = "Profit";
             gridViewTextBoxColumn2.HeaderText = "Profit";
             gridViewTextBoxColumn2.Name = "Profit";
-            gridViewTextBoxColumn2.Width = 540;
+            gridViewTextBoxColumn2.Width = 541;
             this.dgwMonthProfits.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2});
@@ -82,6 +82,7 @@
             this.ClientSize = new System.Drawing.Size(1126, 737);
             this.Controls.Add(this.radButton1);
             this.Controls.Add(this.dgwMonthProfits);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MonthProfits";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MonthProfits";

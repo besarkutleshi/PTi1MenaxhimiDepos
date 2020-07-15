@@ -149,11 +149,11 @@ namespace PTi1MenaxhimiDepos.DAL
 			}
 		}
 
-		public InvertoryHeader GetPurchaseInvertoryHeadersByDocNo(string docno)
+		public List<InvertoryHeader> GetPurchaseInvertoryHeadersByDocNo(string docno)
 		{
 			try
 			{
-				InvertoryHeader headers = null;
+				List<InvertoryHeader> headers = new List<InvertoryHeader>();
 				using (var con = DataConnection.Connection())
 				{
 					con.Open();
@@ -162,7 +162,82 @@ namespace PTi1MenaxhimiDepos.DAL
 					SqlDataReader sdr = cmd.ExecuteReader(); 
 					while (sdr.Read())
 					{
-						return Get(sdr);
+						headers.Add(Get(sdr));
+					}
+				}
+				return headers;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+				return null;
+			}
+		}
+
+		public List<InvertoryHeader> GetPurchaseInvertoryHeadersBySupplier(string supplier)
+		{
+			try
+			{
+				List<InvertoryHeader> headers = new List<InvertoryHeader>();
+				using (var con = DataConnection.Connection())
+				{
+					con.Open();
+					var cmd = DataConnection.Command(con, "sp_GetPurchaseInvertoryHeadersBySupplier", CommandType.StoredProcedure);
+					DataConnection.AddParameter(cmd, "@Supplier", supplier);
+					SqlDataReader sdr = cmd.ExecuteReader();
+					while (sdr.Read())
+					{
+						headers.Add(Get(sdr));
+					}
+				}
+				return headers;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+				return null;
+			}
+		}
+
+		public List<InvertoryHeader> GetSaleInvertoryHeadersBySupplier(string supplier)
+		{
+			try
+			{
+				List<InvertoryHeader> headers = new List<InvertoryHeader>();
+				using (var con = DataConnection.Connection())
+				{
+					con.Open();
+					var cmd = DataConnection.Command(con, "sp_GetSaleInvertoryHeadersBySupplier", CommandType.StoredProcedure);
+					DataConnection.AddParameter(cmd, "@Supplier", supplier);
+					SqlDataReader sdr = cmd.ExecuteReader();
+					while (sdr.Read())
+					{
+					    headers.Add(Get(sdr));
+					}
+				}
+				return headers;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+				return null;
+			}
+		}
+
+		public List<InvertoryHeader> GetSaleInvertoryHeadersByDocNo(string docno)
+		{
+			try
+			{
+				List<InvertoryHeader> headers = new List<InvertoryHeader>(); 
+				using (var con = DataConnection.Connection())
+				{
+					con.Open();
+					var cmd = DataConnection.Command(con, "sp_GetSaleInvertoryHeadersByDocNo", CommandType.StoredProcedure);
+					DataConnection.AddParameter(cmd, "@DocNo", docno);
+					SqlDataReader sdr = cmd.ExecuteReader();
+					while (sdr.Read())
+					{
+						headers.Add(Get(sdr));
 					}
 				}
 				return headers;

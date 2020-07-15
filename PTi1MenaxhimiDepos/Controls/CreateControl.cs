@@ -15,6 +15,7 @@ using PTi1MenaxhimiDepos.EntryExits.ItemReports;
 using PTi1MenaxhimiDepos.EntryExits.ClientRaports;
 using PTi1MenaxhimiDepos.EntryExits;
 using PTi1MenaxhimiDepos.EntryExits.SupplierReports;
+using PTi1MenaxhimiDepos.Sale;
 
 namespace PTi1MenaxhimiDepos.Controls
 {
@@ -92,15 +93,22 @@ namespace PTi1MenaxhimiDepos.Controls
             tabPage.Controls.Add(ControlShow.GetButtonss(btnSale, new Point(13, 20), new Size(75, 60), null, hapeimg));
             Label sale = new Label();
             tabPage.Controls.Add(ControlShow.GetButtonss(sale, new Point(32, 85), new Size(75, 20), HelpClass.SetText("Sale", "Shitja")));
-            RadButton btnRegisterInvoice = new RadButton();
-            btnRegisterInvoice.Click += BtnRegisterInvoice_Click;
+            RadButton btnSaleInvoices = new RadButton();
+            btnSaleInvoices.Click += BtnSaleInvoices_Click;
             Image invoice = CreateImage(new Bitmap(Properties.Resources.invoice));
-            tabPage.Controls.Add(ControlShow.GetButtonss(btnRegisterInvoice, new Point(100, 20), new Size(75, 60), null, invoice));
+            tabPage.Controls.Add(ControlShow.GetButtonss(btnSaleInvoices, new Point(100, 20), new Size(75, 60), null, invoice));
             Label lblinvoice = new Label();
             tabPage.Controls.Add(ControlShow.GetButtonss(lblinvoice, new Point(110, 85), new Size(75, 20), HelpClass.SetText("Invoices", "Faturat")));
             values[0] = InvoiceBLL.GetTotalSalePurchaseInvertoryToday();
             PrintControls(tabPage, obj, values);
         }
+
+        private void BtnSaleInvoices_Click(object sender, EventArgs e)
+        {
+            SaleInvoices obj = new SaleInvoices();
+            obj.ShowDialog();
+        }
+
         private void BtnSale_Click(object sender, EventArgs e)
         {
             Sale.Sale s = new Sale.Sale();
@@ -196,38 +204,38 @@ namespace PTi1MenaxhimiDepos.Controls
         #region Administrate
         public void PrintButtonsAdministration(TabPage tabPage)
         {
-            RadButton Employee = new RadButton();
-            Employee.Click += Employee_Click;
+            //RadButton Employee = new RadButton();
+            //Employee.Click += Employee_Click;
             Image invoice = CreateImage(new Bitmap(Properties.Resources.employee));
-            tabPage.Controls.Add(ControlShow.GetButtonss(Employee, new Point(13, 20), new Size(75, 60), null, invoice));
-            Label lblinvoice = new Label();
-            tabPage.Controls.Add(ControlShow.GetButtonss(lblinvoice, new Point(19, 85), new Size(75, 20), HelpClass.SetText("Employee","Puntori")));
+            //tabPage.Controls.Add(ControlShow.GetButtonss(Employee, new Point(13, 20), new Size(75, 60), null, invoice));
+            //Label lblinvoice = new Label();
+            //tabPage.Controls.Add(ControlShow.GetButtonss(lblinvoice, new Point(19, 85), new Size(75, 20), HelpClass.SetText("Employee","Puntori")));
             RadButton User = new RadButton();
             User.Click += User_Click;
             Image hapeimg = CreateImage(new Bitmap(Properties.Resources.Admin_icon));
-            tabPage.Controls.Add(ControlShow.GetButtonss(User, new Point(100, 20), new Size(75, 60), null, hapeimg));
+            tabPage.Controls.Add(ControlShow.GetButtonss(User, new Point(13, 20), new Size(75, 60), null, hapeimg));
             if(HelpClass.SetText("User", "Perdorues") == "Perdorues")
             {
                 Label lblitem = new Label();
-                tabPage.Controls.Add(ControlShow.GetButtonss(lblitem, new Point(103, 85), new Size(75, 20), "Perdorues"));
+                tabPage.Controls.Add(ControlShow.GetButtonss(lblitem, new Point(16, 85), new Size(75, 20), "Perdorues"));
             }
             else
             {
                 Label lblitem = new Label();
-                tabPage.Controls.Add(ControlShow.GetButtonss(lblitem, new Point(115, 85), new Size(75, 20), "User"));
+                tabPage.Controls.Add(ControlShow.GetButtonss(lblitem, new Point(28, 85), new Size(75, 20), "User"));
             }
             RadButton Role = new RadButton();
             Role.Click += Role_Click;
             Image type = CreateImage(new Bitmap(Properties.Resources.TinkerTool_icon));
-            tabPage.Controls.Add(ControlShow.GetButtonss(Role, new Point(187, 20), new Size(75, 60), null, type));
+            tabPage.Controls.Add(ControlShow.GetButtonss(Role, new Point(100, 20), new Size(75, 60), null, type));
             Label lbltype = new Label();
-            tabPage.Controls.Add(ControlShow.GetButtonss(lbltype, new Point(203, 85), new Size(75, 20), HelpClass.SetText("Role", "Roli")));
+            tabPage.Controls.Add(ControlShow.GetButtonss(lbltype, new Point(116, 85), new Size(75, 20), HelpClass.SetText("Role", "Roli")));
             RadButton EmpPos = new RadButton();
             EmpPos.Click += EmpPos_Click;
             Image Emp = CreateImage(new Bitmap(Properties.Resources.TinkerTool_icon));
-            tabPage.Controls.Add(ControlShow.GetButtonss(EmpPos, new Point(275, 20), new Size(75, 60), null, invoice));
+            tabPage.Controls.Add(ControlShow.GetButtonss(EmpPos, new Point(187, 20), new Size(75, 60), null, invoice));
             Label lblemp = new Label();
-            tabPage.Controls.Add(ControlShow.GetButtonss(lblemp, new Point(274, 85), new Size(75, 20), HelpClass.SetText("EMPPOS", "PunDepo")));
+            tabPage.Controls.Add(ControlShow.GetButtonss(lblemp, new Point(192, 85), new Size(75, 20), HelpClass.SetText("EMPPOS", "PunDepo")));
         }
 
         private void EmpPos_Click(object sender, EventArgs e)

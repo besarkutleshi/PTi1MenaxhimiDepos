@@ -207,6 +207,9 @@
   <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
   </data>
+  <data name="btnRefresh.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="&gt;&gt;btnInsertRole.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -248,9 +251,6 @@
   </data>
   <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
     <value>Supplier</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dgwInvoices.Size" type="System.Drawing.Size, System.Drawing">
     <value>1526, 784</value>
@@ -312,8 +312,8 @@
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="btnRefresh.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Description</value>

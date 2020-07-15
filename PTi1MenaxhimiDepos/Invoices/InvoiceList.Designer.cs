@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceList));
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.dgwInvoices = new Telerik.WinControls.UI.RadGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSearch = new Telerik.WinControls.UI.RadTextBox();
@@ -62,43 +62,43 @@
             this.dgwInvoices.MasterTemplate.AutoGenerateColumns = false;
             this.dgwInvoices.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.dgwInvoices.MasterTemplate.Caption = resources.GetString("dgwInvoices.MasterTemplate.Caption");
-            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
-            gridViewTextBoxColumn1.FieldName = "InvertoryID";
-            gridViewTextBoxColumn1.Name = "ID";
-            gridViewTextBoxColumn1.Width = 217;
-            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
-            gridViewTextBoxColumn2.FieldName = "DocNo";
-            gridViewTextBoxColumn2.Name = "Invoice Number";
-            gridViewTextBoxColumn2.Width = 217;
-            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
-            gridViewTextBoxColumn3.FieldName = "DocDate";
-            gridViewTextBoxColumn3.Name = "Date";
-            gridViewTextBoxColumn3.Width = 217;
-            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
-            gridViewTextBoxColumn4.FieldName = "DocType.Description";
-            gridViewTextBoxColumn4.Name = "Invoice Type";
-            gridViewTextBoxColumn4.Width = 217;
-            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
-            gridViewTextBoxColumn5.FieldName = "POS.Name";
-            gridViewTextBoxColumn5.Name = "POS";
-            gridViewTextBoxColumn5.Width = 217;
-            resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
-            gridViewTextBoxColumn6.FieldName = "Description";
-            gridViewTextBoxColumn6.Name = "Description";
-            gridViewTextBoxColumn6.Width = 217;
-            resources.ApplyResources(gridViewTextBoxColumn7, "gridViewTextBoxColumn7");
-            gridViewTextBoxColumn7.FieldName = "Supplier.Name";
-            gridViewTextBoxColumn7.Name = "Supplier";
-            gridViewTextBoxColumn7.Width = 209;
+            resources.ApplyResources(gridViewTextBoxColumn8, "gridViewTextBoxColumn8");
+            gridViewTextBoxColumn8.FieldName = "InvertoryID";
+            gridViewTextBoxColumn8.Name = "ID";
+            gridViewTextBoxColumn8.Width = 217;
+            resources.ApplyResources(gridViewTextBoxColumn9, "gridViewTextBoxColumn9");
+            gridViewTextBoxColumn9.FieldName = "DocNo";
+            gridViewTextBoxColumn9.Name = "Invoice Number";
+            gridViewTextBoxColumn9.Width = 217;
+            resources.ApplyResources(gridViewTextBoxColumn10, "gridViewTextBoxColumn10");
+            gridViewTextBoxColumn10.FieldName = "DocDate";
+            gridViewTextBoxColumn10.Name = "Date";
+            gridViewTextBoxColumn10.Width = 217;
+            resources.ApplyResources(gridViewTextBoxColumn11, "gridViewTextBoxColumn11");
+            gridViewTextBoxColumn11.FieldName = "DocType.Description";
+            gridViewTextBoxColumn11.Name = "Invoice Type";
+            gridViewTextBoxColumn11.Width = 217;
+            resources.ApplyResources(gridViewTextBoxColumn12, "gridViewTextBoxColumn12");
+            gridViewTextBoxColumn12.FieldName = "POS.Name";
+            gridViewTextBoxColumn12.Name = "POS";
+            gridViewTextBoxColumn12.Width = 217;
+            resources.ApplyResources(gridViewTextBoxColumn13, "gridViewTextBoxColumn13");
+            gridViewTextBoxColumn13.FieldName = "Description";
+            gridViewTextBoxColumn13.Name = "Description";
+            gridViewTextBoxColumn13.Width = 217;
+            resources.ApplyResources(gridViewTextBoxColumn14, "gridViewTextBoxColumn14");
+            gridViewTextBoxColumn14.FieldName = "Supplier.Name";
+            gridViewTextBoxColumn14.Name = "Supplier";
+            gridViewTextBoxColumn14.Width = 209;
             this.dgwInvoices.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7});
-            this.dgwInvoices.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12,
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14});
+            this.dgwInvoices.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.dgwInvoices.Name = "dgwInvoices";
             this.dgwInvoices.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dgwInvoices_CellDoubleClick);
             // 
@@ -146,6 +146,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgwInvoices);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "InvoiceList";
             this.Load += new System.EventHandler(this.InvoiceList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwInvoices.MasterTemplate)).EndInit();
