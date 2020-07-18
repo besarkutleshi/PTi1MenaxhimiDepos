@@ -1,12 +1,15 @@
 ﻿using PTi1MenaxhimiDepos.Administration;
 using PTi1MenaxhimiDepos.BL;
+using PTi1MenaxhimiDepos.Languages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -52,6 +55,26 @@ namespace PTi1MenaxhimiDepos
         {
             txtpassword.Text = "besar123";
             txtusername.Text = "besarkutleshi";
+        }
+
+        private void radButton1_Click(object sender, EventArgs e)
+        {
+            //ChangeLanguage("sq");
+            TranslateFormMultipleResource.ChangeLanguages("sq");
+        }
+
+        private void ChangeLanguage(string lang)
+        {
+            CultureInfo ci = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+            this.Controls.Clear();
+            this.InitializeComponent();
+        }
+
+        private void radButton2_Click(object sender, EventArgs e)
+        {
+            TranslateFormMultipleResource.ChangeLanguages("en-US");
         }
     }
 }

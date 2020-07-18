@@ -34,9 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnclose = new System.Windows.Forms.Button();
             this.btnlogin = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,10 +70,24 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // radButton2
+            // 
+            this.radButton2.Image = global::PTi1MenaxhimiDepos.Properties.Resources.English_Language_Flag_1_icon;
+            resources.ApplyResources(this.radButton2, "radButton2");
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
+            // 
+            // radButton1
+            // 
+            this.radButton1.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Albania_Flag_icon;
+            resources.ApplyResources(this.radButton1, "radButton1");
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
+            // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::PTi1MenaxhimiDepos.Properties.Resources.user_icon;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -93,6 +111,8 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radButton2);
+            this.Controls.Add(this.radButton1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtusername);
@@ -101,9 +121,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,5 +143,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Telerik.WinControls.UI.RadButton radButton1;
+        private Telerik.WinControls.UI.RadButton radButton2;
     }
 }

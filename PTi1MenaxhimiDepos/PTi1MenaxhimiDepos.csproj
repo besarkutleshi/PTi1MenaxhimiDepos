@@ -789,6 +789,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8-cash-register-50.ico" />
+    <None Include="Resources\English-Language-Flag-1-icon.png" />
+    <None Include="Resources\Albania-Flag-icon.png" />
+    <None Include="Resources\alb-flag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

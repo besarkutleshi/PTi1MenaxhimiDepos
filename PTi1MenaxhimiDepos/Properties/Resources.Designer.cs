@@ -133,6 +133,26 @@ namespace PTi1MenaxhimiDepos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alb_flag {
+            get {
+                object obj = ResourceManager.GetObject("alb-flag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Albania_Flag_icon {
+            get {
+                object obj = ResourceManager.GetObject("Albania-Flag-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bank_icon {
             get {
                 object obj = ResourceManager.GetObject("bank-icon", resourceCulture);
@@ -246,6 +266,16 @@ namespace PTi1MenaxhimiDepos.Properties {
         internal static System.Drawing.Bitmap employee {
             get {
                 object obj = ResourceManager.GetObject("employee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Language_Flag_1_icon {
+            get {
+                object obj = ResourceManager.GetObject("English-Language-Flag-1-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
