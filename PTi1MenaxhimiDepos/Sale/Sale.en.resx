@@ -117,6 +117,39 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnInsert.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="radButton10.Text" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="radButton9.Text" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="radButton8.Text" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="radButton7.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="radButton6.Text" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="radButton5.Text" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="radButton3.Text" xml:space="preserve">
+    <value>Value/Paid</value>
+  </data>
+  <data name="radButton2.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="radButton1.Text" xml:space="preserve">
+    <value>Consumator/POS</value>
+  </data>
+  <data name="dgwItems.MasterTemplate.Caption" xml:space="preserve">
+    <value />
+  </data>
   <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>Barcode</value>
   </data>
@@ -135,6 +168,9 @@
   <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Unit</value>
   </data>
+  <data name="dgwitemtolist.MasterTemplate.Caption" xml:space="preserve">
+    <value />
+  </data>
   <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
     <value>ID</value>
   </data>
@@ -151,20 +187,23 @@
     <value>Discount</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnDeleteAll.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
-  </data>
-  <data name="btnDeleteAll.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="btnDeleteAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 34</value>
-  </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 24</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="albaniaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <data name="albaniaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Albania</value>
   </data>
   <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 24</value>
@@ -172,10 +211,7 @@
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>Language</value>
   </data>
-  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="albaniaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+  <data name="BtnSave.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
 </root>

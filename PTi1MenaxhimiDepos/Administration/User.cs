@@ -33,7 +33,6 @@ namespace PTi1MenaxhimiDepos.Administration
             txtID.Text = obj.ID.ToString();
             txtDescription.Text = obj.Description;
             HelpClass.VisibleButton(btnSave, btndelete, btnUpdate);
-            label7.Text = "Update User";
         }
 
         private void User_Load(object sender, EventArgs e)

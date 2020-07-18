@@ -57,22 +57,20 @@
             this.dgwRoles.MasterTemplate.AllowAddNewRow = false;
             this.dgwRoles.MasterTemplate.AllowEditRow = false;
             this.dgwRoles.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgwRoles.MasterTemplate.Caption = resources.GetString("dgwRoles.MasterTemplate.Caption");
-            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
             gridViewTextBoxColumn1.FieldName = "ID";
+            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
             gridViewTextBoxColumn1.Name = "ID";
             gridViewTextBoxColumn1.Width = 272;
-            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
             gridViewTextBoxColumn2.FieldName = "Name";
+            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
             gridViewTextBoxColumn2.Name = "Name";
             gridViewTextBoxColumn2.Width = 272;
-            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
             gridViewTextBoxColumn3.FieldName = "Code";
+            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
             gridViewTextBoxColumn3.Name = "Code";
             gridViewTextBoxColumn3.Width = 272;
-            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
             gridViewTextBoxColumn4.FieldName = "Description";
-            gridViewTextBoxColumn4.HeaderTextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
             gridViewTextBoxColumn4.Name = "Description";
             gridViewTextBoxColumn4.Width = 269;
             this.dgwRoles.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
@@ -97,8 +95,8 @@
             // 
             // btnSearch
             // 
-            resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.Image = global::PTi1MenaxhimiDepos.Properties.Resources.Search_icon;
+            resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Click += new System.EventHandler(this.radButton2_Click);
             // 

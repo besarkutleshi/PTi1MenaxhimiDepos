@@ -206,7 +206,11 @@ namespace PTi1MenaxhimiDepos
 
         private void Main_Load(object sender, EventArgs e)
         {
-            //CultureInfo.CurrentUICulture = new CultureInfo("en-US",false);
+            //CultureInfo ci = new CultureInfo("sq");
+            //Thread.CurrentThread.CurrentCulture = ci;
+            //Thread.CurrentThread.CurrentUICulture = ci;
+            //this.Controls.Clear();
+            //this.InitializeComponent();
         }
 
         private void btnhyrjet_Click(object sender, EventArgs e)
@@ -238,6 +242,11 @@ namespace PTi1MenaxhimiDepos
             tabControl1.TabPages.Add(tabPage);
             control.PrintExitsButtons(tabPage);
             tabControl1.SelectedTab = tabPage;
+        }
+
+        private void language_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

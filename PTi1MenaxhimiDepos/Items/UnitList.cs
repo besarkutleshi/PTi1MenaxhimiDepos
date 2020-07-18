@@ -66,7 +66,7 @@ namespace PTi1MenaxhimiDepos.Items
 
         private void btnInsertRole_Click(object sender, EventArgs e)
         {
-            ItemUnit obj = new ItemUnit(unit);
+            ItemUnit obj = new ItemUnit();
             obj.ShowDialog();
         }
 

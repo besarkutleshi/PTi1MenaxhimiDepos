@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTi1MenaxhimiDepos.BO", "PT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTi1MenaxhimiDepos.DAL", "PTi1MenaxhimiDepos.DAL\PTi1MenaxhimiDepos.DAL.csproj", "{089139B8-C651-4F8C-AA1E-4577D07600BC}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Bes.Project", "Bes.Project\Bes.Project.vdproj", "{C69D1CD7-1A6C-42A2-B22E-352DAC05AC60}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{2CEB44FC-F204-4CBA-944C-A5509E134AD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,8 +35,8 @@ Global
 		{089139B8-C651-4F8C-AA1E-4577D07600BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{089139B8-C651-4F8C-AA1E-4577D07600BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{089139B8-C651-4F8C-AA1E-4577D07600BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C69D1CD7-1A6C-42A2-B22E-352DAC05AC60}.Debug|Any CPU.ActiveCfg = Debug
-		{C69D1CD7-1A6C-42A2-B22E-352DAC05AC60}.Release|Any CPU.ActiveCfg = Release
+		{2CEB44FC-F204-4CBA-944C-A5509E134AD2}.Debug|Any CPU.ActiveCfg = Debug
+		{2CEB44FC-F204-4CBA-944C-A5509E134AD2}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

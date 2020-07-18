@@ -326,16 +326,10 @@
     <EmbeddedResource Include="Administration\Role.resx">
       <DependentUpon>Role.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administration\Role.sq.resx">
-      <DependentUpon>Role.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Administration\RoleList.en.resx">
       <DependentUpon>RoleList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\RoleList.resx">
-      <DependentUpon>RoleList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administration\RoleList.sq.resx">
       <DependentUpon>RoleList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\User.en.resx">
@@ -578,9 +572,6 @@
     <EmbeddedResource Include="Login.sq.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.aa.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main.en.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -641,9 +632,6 @@
       <DependentUpon>Sale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale\Sale.resx">
-      <DependentUpon>Sale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sale\Sale.sq.resx">
       <DependentUpon>Sale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale\SaleInvoices.resx">

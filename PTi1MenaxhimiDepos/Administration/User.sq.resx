@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>474, 342</value>
+    <value>450, 299</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 24</value>
@@ -132,16 +132,13 @@
     <value>Pershkrimi</value>
   </data>
   <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 370</value>
-  </data>
-  <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 37</value>
+    <value>454, 327</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 203</value>
+    <value>133, 174</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 24</value>
@@ -150,37 +147,34 @@
     <value>Fjalkalimi</value>
   </data>
   <data name="txtPasword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 231</value>
-  </data>
-  <data name="txtPasword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 37</value>
+    <value>133, 202</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 203</value>
+    <value>450, 49</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 24</value>
+    <value>98, 24</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Pordoruesi</value>
+    <value>Perdorues</value>
   </data>
   <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 231</value>
-  </data>
-  <data name="txtUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 37</value>
+    <value>450, 77</value>
   </data>
   <data name="cmbEmployee.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 97</value>
+    <value>454, 202</value>
+  </data>
+  <data name="cmbEmployee.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 37</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 69</value>
+    <value>454, 174</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 24</value>
@@ -189,7 +183,7 @@
     <value>Puntori</value>
   </data>
   <data name="cmbRole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 370</value>
+    <value>133, 325</value>
   </data>
   <data name="cmbRole.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 37</value>
@@ -198,7 +192,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 344</value>
+    <value>133, 299</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 24</value>
@@ -207,13 +201,13 @@
     <value>Roli</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 98</value>
+    <value>133, 77</value>
   </data>
   <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 70</value>
+    <value>133, 49</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 24</value>
@@ -318,10 +312,10 @@
 </value>
   </data>
   <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 490</value>
+    <value>582, 492</value>
   </data>
   <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 58</value>
+    <value>137, 55</value>
   </data>
   <data name="btnUpdate.Text" xml:space="preserve">
     <value>Ndrysho</value>
@@ -438,13 +432,13 @@
 </value>
   </data>
   <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>445, 490</value>
+    <value>425, 489</value>
   </data>
   <data name="btnClear.Text" xml:space="preserve">
     <value>Pastro</value>
   </data>
   <data name="btndelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 429</value>
+    <value>582, 428</value>
   </data>
   <data name="btndelete.Text" xml:space="preserve">
     <value>Fshij</value>
@@ -498,28 +492,12 @@
 </value>
   </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 491</value>
+    <value>582, 490</value>
   </data>
   <data name="btnSave.Text" xml:space="preserve">
     <value>Ruaj</value>
   </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 9</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 24</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Shto Perdorues</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Perdoruesi</value>
   </data>
 </root>
