@@ -98,11 +98,31 @@ namespace PTi1MenaxhimiDepos.Items
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TranslateFormMultipleResource.ChangeLanguages("en-US");
+            dgwItems.Columns[0].HeaderText = "ID";
+            dgwItems.Columns[1].HeaderText = "Barcode";
+            dgwItems.Columns[2].HeaderText = "Name";
+            dgwItems.Columns[3].HeaderText = "Unit";
+            dgwItems.Columns[4].HeaderText = "Category";
+            dgwItems.Columns[5].HeaderText = "Type";
+            dgwItems.Columns[6].HeaderText = "Supplier";
+            dgwItems.Columns[7].HeaderText = "Active";
+            dgwItems.Columns[8].HeaderText = "Stock Quantity";
+            dgwItems.Columns[9].HeaderText = "Description";
         }
 
         private void albaniaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TranslateFormMultipleResource.ChangeLanguages("sq");
+            dgwItems.Columns[0].HeaderText = "ID";
+            dgwItems.Columns[1].HeaderText = "Barkodi";
+            dgwItems.Columns[2].HeaderText = "Emri";
+            dgwItems.Columns[3].HeaderText = "Njeisa";
+            dgwItems.Columns[4].HeaderText = "Kategoria";
+            dgwItems.Columns[5].HeaderText = "Lloji";
+            dgwItems.Columns[6].HeaderText = "Funitori";
+            dgwItems.Columns[7].HeaderText = "Aktiv";
+            dgwItems.Columns[8].HeaderText = "Sasia";
+            dgwItems.Columns[9].HeaderText = "Pershkrimi";
         }
     }
 }

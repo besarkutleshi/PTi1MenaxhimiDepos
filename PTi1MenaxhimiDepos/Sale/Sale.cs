@@ -321,12 +321,34 @@ namespace PTi1MenaxhimiDepos.Sale
         {
             //ChangeLanguage("en-US");
             TranslateFormMultipleResource.ChangeLanguages("en-US");
+            dgwItems.Columns[0].HeaderText = "Barcode";
+            dgwItems.Columns[1].HeaderText = "Name";
+            dgwItems.Columns[2].HeaderText = "Quantity";
+            dgwItems.Columns[3].HeaderText = "Category";
+            dgwItems.Columns[4].HeaderText = "Type";
+            dgwItems.Columns[5].HeaderText = "Unit";
+            dgwitemtolist.Columns[0].HeaderText = "ID";
+            dgwitemtolist.Columns[1].HeaderText = "Item";
+            dgwitemtolist.Columns[2].HeaderText = "Quantity";
+            dgwitemtolist.Columns[3].HeaderText = "Price";
+            dgwitemtolist.Columns[4].HeaderText = "Discount";
         }
 
         private void albaniaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //ChangeLanguage("sq");
             TranslateFormMultipleResource.ChangeLanguages("sq");
+            dgwItems.Columns[0].HeaderText = "Barkodi";
+            dgwItems.Columns[1].HeaderText = "Emri";
+            dgwItems.Columns[2].HeaderText = "Sasia";
+            dgwItems.Columns[3].HeaderText = "Kategoria";
+            dgwItems.Columns[4].HeaderText = "Lloji";
+            dgwItems.Columns[5].HeaderText = "Njesia";
+            dgwitemtolist.Columns[0].HeaderText = "ID";
+            dgwitemtolist.Columns[1].HeaderText = "Artikulii";
+            dgwitemtolist.Columns[2].HeaderText = "Sasia";
+            dgwitemtolist.Columns[3].HeaderText = "Cmimi";
+            dgwitemtolist.Columns[4].HeaderText = "Zbritja";
         }
         private void ChangeLanguage(string lang)
         {

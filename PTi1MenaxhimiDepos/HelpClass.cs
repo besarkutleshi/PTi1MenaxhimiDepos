@@ -8,6 +8,7 @@ namespace PTi1MenaxhimiDepos
     public static class HelpClass
     {
         public static User CurrentUser = null;
+        public static string language = "";
         public static void VisibleButton(RadButton btnsave, RadButton btndelete, RadButton btnupdate, params RadTextBox[] radTextBoxes)
         {
             btnsave.Visible = false; btndelete.Visible = btnupdate.Visible = true;

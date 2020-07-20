@@ -61,20 +61,12 @@ namespace PTi1MenaxhimiDepos
         {
             //ChangeLanguage("sq");
             TranslateFormMultipleResource.ChangeLanguages("sq");
+            HelpClass.language = "sq";
         }
-
-        private void ChangeLanguage(string lang)
-        {
-            CultureInfo ci = new CultureInfo(lang);
-            Thread.CurrentThread.CurrentCulture = ci;
-            Thread.CurrentThread.CurrentUICulture = ci;
-            this.Controls.Clear();
-            this.InitializeComponent();
-        }
-
         private void radButton2_Click(object sender, EventArgs e)
         {
             TranslateFormMultipleResource.ChangeLanguages("en-US");
+            HelpClass.language = "en-US";
         }
     }
 }
