@@ -206,16 +206,6 @@ namespace PTi1MenaxhimiDepos
 
         private void Main_Load(object sender, EventArgs e)
         {
-            if(HelpClass.language != "en-US")
-            {
-                HelpClass.language = "en-US";
-            }
-            else
-            {
-                CultureInfo ci = new CultureInfo(HelpClass.language);
-                Thread.CurrentThread.CurrentCulture = ci;
-                Thread.CurrentThread.CurrentUICulture = ci;
-            }
         }
 
         private void btnhyrjet_Click(object sender, EventArgs e)
