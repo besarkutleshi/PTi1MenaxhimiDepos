@@ -50,6 +50,11 @@ namespace PTi1MenaxhimiDepos.DAL
             }
         }
 
+        public string aa()
+        {
+            return "";
+        }
+
         public bool Delete(int id)
         {
             try
